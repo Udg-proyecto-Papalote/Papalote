@@ -1,8 +1,23 @@
-# React + Vite
+# Papalote
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para correr el proyecto, es necesario tener instalado [Node.js](https://nodejs.org/en/).
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clonar el repositorio
+2. Instalar las dependencias con `npm install`
+3. Correr el proyecto con `npm run dev`
+
+## Estructura de archivos
+
+- `src/`: Carpeta con el código fuente del proyecto
+- `components/`: Componentes de React
+- `pages/`: Páginas de la aplicación
+- `App.js`: Componente principal de la aplicación
+- `main.jsx`: Punto de entrada de la aplicación
+
+## Estándares
+
+- Nombres de archivos y componentes en PascalCase
+- Nombres de variables y funciones en camelCase
+- Especificar bien la descripción de los commits. Ejemplo: "Se agregó el componente de botón", "Se corrigió el estilo del header", etc.
