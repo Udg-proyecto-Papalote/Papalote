@@ -6,7 +6,7 @@ import { Logo } from "./Logo"
 
 export const ExtendedNavBar = () => {
     return (
-        <Stack direction='row' alignItems='center' container justifyContent='space-around' gap='10px'>
+        <Stack direction='row' alignItems='center' justifyContent='space-around' gap='10px'>
             <Logo />
             <NavBar />
             <ModeToggle />
