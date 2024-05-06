@@ -1,12 +1,11 @@
-import { Typography } from '@mui/joy'
-import ModeToggle from './components/ToggleTheme'
+import { Grid } from '@mui/joy'
+import { ExtendedNavBar } from './components/ExtendedNavBar'
 
 function App() {
 	return (
-		<>
-			<ModeToggle />
-			<Typography level='h1' align='center'>Papalote</Typography>
-		</>
+		<Grid width='100%'>
+			<ExtendedNavBar />
+		</Grid>
 	)
 }
 

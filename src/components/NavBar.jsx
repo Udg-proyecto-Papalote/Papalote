@@ -5,7 +5,6 @@ import { tabClasses } from '@mui/joy/Tab';
 import { House, Leaf, Microphone } from '@phosphor-icons/react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import { Tooltip } from '@mui/joy';
 import { NavBarTab } from './NavBarTab';
 
 
@@ -16,7 +15,6 @@ export default function NavBar() {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const iconSize = isMobile ? 28 : 24;
-    console.log('isMobile', isMobile);
     const tabs = [
         {
             name: 'Inicio',
@@ -70,11 +68,7 @@ export default function NavBar() {
             >
                 {
                     tabs.map((tab, i) => (
-                        isMobile ?
-                            <Tooltip title={tab.name} color={tab.color} placement="top" variant='soft' key={i}>
-                                <NavBarTab isSelected={i === index} {...tab} />
-                            </Tooltip> :
-                            <NavBarTab isSelected={i === index} {...tab} key={i} />
+                        <NavBarTab isSelected={i === index} {...tab} key={i} />
                     ))
                 }
             </TabList>

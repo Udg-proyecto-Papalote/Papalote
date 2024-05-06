@@ -20,11 +20,12 @@ function ModeSwitcher() {
     }
     return (
         <Button
-            variant="soft"
-            color="neutral"
+            variant="solid"
+            color= {mode !== 'dark' ? 'primary' : 'warning'}
+            sx={{ borderRadius: '100px', p: 1.5 }}
             onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
         >
-            {mode === 'dark' ? <Sun size={32} /> : <MoonStars size={32} />}
+            {mode === 'dark' ? <Sun size={32} weight='duotone' /> : <MoonStars size={32} weight='duotone' />}
         </Button>
     );
 }
@@ -55,11 +56,7 @@ export default function ModeToggle() {
                 id="mode-toggle"
                 sx={{
                     textAlign: 'center',
-                    flexGrow: 1,
-                    mt: 2,
-                    borderRadius: [0, 'sm'],
-                    top: 0,
-                    position: 'fixed',
+                    borderRadius: '100px'
                 }}
             >
                 <ModeSwitcher />

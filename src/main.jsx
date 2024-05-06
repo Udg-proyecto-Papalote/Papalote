@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 			disableNestedContext
 		>
 			<CssBaseline />
-			<Grid container justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
+			<Grid container justifyContent="center" sx={{ height: '100vh', m: 5 }}>
 				<App />
 			</Grid>
 		</CssVarsProvider>
