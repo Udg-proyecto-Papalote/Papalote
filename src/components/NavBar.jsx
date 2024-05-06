@@ -20,19 +20,22 @@ export default function NavBar() {
             name: 'Inicio',
             icon: <House size={iconSize} />,
             selected: <House weight='duotone' size={iconSize} />,
-            color: 'primary'
+            color: 'primary',
+            link: '/'
         },
         {
             name: 'Ejercicios',
             icon: <Leaf size={iconSize} />,
             selected: <Leaf weight='duotone' size={iconSize} />,
-            color: 'success'
+            color: 'success',
+            link: '/ejercicios'
         },
         {
             name: 'Diagnóstico',
             icon: <Microphone size={iconSize} />,
             selected: <Microphone weight='duotone' size={iconSize} />,
-            color: 'warning'
+            color: 'warning',
+            link: '/diagnostico'
         }
     ]
 
