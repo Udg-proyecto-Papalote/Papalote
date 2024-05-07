@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import { tabClasses } from '@mui/joy/Tab';
@@ -6,10 +6,12 @@ import { House, Leaf, Microphone } from '@phosphor-icons/react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { NavBarTab } from './NavBarTab';
+import { useLocation } from 'react-router-dom';
 
 
 export default function NavBar() {
-    const [index, setIndex] = useState(0);
+    const { pathname } = useLocation()
+    const [ index, setIndex ] = useState(null);
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -39,12 +41,18 @@ export default function NavBar() {
         }
     ]
 
+    useEffect(() => {
+        if(pathname === '/') setIndex(0);
+        else if(pathname === '/ejercicios') setIndex(1);
+        else setIndex(2);
+    }, [ pathname ])
+
+
     return (
         <Tabs
             size="lg"
             aria-label="Bottom Navigation"
-            value={index}
-            onChange={(event, value) => setIndex(value)}
+            value={ index }
             variant='soft'
             sx={() => ({
                 p: 1,
@@ -71,7 +79,7 @@ export default function NavBar() {
             >
                 {
                     tabs.map((tab, i) => (
-                        <NavBarTab isSelected={i === index} {...tab} key={i} />
+                        <NavBarTab isSelected={index === i} {...tab} key={i} />
                     ))
                 }
             </TabList>
