@@ -1,7 +1,10 @@
+import { Grid, Typography } from "@mui/joy"
 
 
 export const Diagnostico = () => {
     return (
-        <div>Diagnostico</div>
+        <Grid>
+            <Typography level='h1'>Diagnóstico</Typography>
+        </Grid>
     )
 }
