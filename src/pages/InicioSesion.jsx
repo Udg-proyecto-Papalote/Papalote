@@ -1,9 +1,12 @@
-import { FormControl, Grid, Input, FormLabel, Typography, Button, Stack, Divider } from "@mui/joy"
+import { FormControl, Grid, Input, FormLabel, Typography, Button, Stack, Divider, useTheme, Link, FormHelperText } from "@mui/joy"
 import ModeToggle from "../components/ToggleTheme"
-import { Google, Mail, Person } from "@mui/icons-material"
+import { Google, Mail } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
 import { Star } from "@phosphor-icons/react"
 import { keyframes } from '@emotion/react';
+import { useMediaQuery } from "@mui/material"
+import { useForm } from "../hooks/useForm"
+import { useState } from "react"
 
 const gradient = keyframes`
   0% {background-position: 0% 50%;}
@@ -11,49 +14,96 @@ const gradient = keyframes`
   100% {background-position: 0% 50%;}
 `;
 
-export const InicioSesion = () => {
-	return (
-		<Grid container height='100%'>
+const formData = {
+    email: "",
+    password: "",
+};
 
-			<Grid lg={6} md={6} p='30px' alignContent='center' justifyContent='center' sx={{borderRight: '2px solid var(--demo-palette-neutral-outlinedBorder)'}}>
-				<Stack spacing={4} useFlexGap={false}>
+const formValidations = {
+    email: [(value) => String(value)
+		.toLowerCase()
+		.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/), 
+		"El correo no es válido"],
+    password: [
+        (value) => String(value).length >= 8 && String(value).length <= 16,
+		"La contraseña debe tener entre 8 y 16 caracteres",
+    ],
+};
+
+export const InicioSesion = () => {
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+	const [isPasswordValid, setIsPasswordValid] = useState(true)
+	const [isEmailValid, setIsEmailValid] = useState(true)
+
+	const {
+        email,
+        password,
+        onInputChange,
+        emailValid,
+        passwordValid,
+        isFormValid,
+        setFormStates,
+        formState,
+    } = useForm(formData, formValidations);
+
+	const handleClick = () => {
+		console.log(formState)
+		setFormStates(formData)
+
+		if(!isFormValid) {
+
+			!!emailValid && setIsEmailValid(false)
+			!!passwordValid && setIsPasswordValid(false)
+		}
+	}
+
+	const handleFocus = () => {
+		setIsEmailValid(true)
+		setIsPasswordValid(true)
+	}
+
+	return (
+		<Grid container height='100vh'>
+
+			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center'>
+				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 
 					<h1>Inicio de Sesión</h1>
 					<ModeToggle />
 					<Button startDecorator={<Google />} variant='outlined' color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
-
 					<Divider><Star weight="fill" /></Divider>
-
-					<FormControl>
-						<FormLabel sx={{ fontWeight: 'bold' }}>Nombre completo</FormLabel>
-						<Input variant='soft' startDecorator={<Person color='primary' />} />
-					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
-						<Input variant='soft' type='email' startDecorator={<Mail color='warning' />} />
+						<Input variant='soft' type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
+						{
+							!isEmailValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ emailValid }</FormHelperText>
+						}
 					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Contraseña</FormLabel>
-						<Input variant='soft' type='password' startDecorator={<Key />} />
-						{/* <FormHelperText>This is a helper text.</FormHelperText> */}
+						<Input variant='soft' type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
+						{
+							!isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ passwordValid }</FormHelperText>
+						}
 					</FormControl>
-					<FormControl>
-						<FormLabel sx={{ fontWeight: 'bold' }}>Repite contraseña</FormLabel>
-						<Input variant='soft' type='password' startDecorator={<Key />} />
-						{/* <FormHelperText>This is a helper text.</FormHelperText> */}
-					</FormControl>
+					<Button onClick={ handleClick }>Iniciar sesión</Button>
+					
+					<Typography level='body-xs'>¿Aún no tienes cuenta? <Link>Regístrate</Link></Typography>
 				</Stack>
 			</Grid>
-			<Grid lg={6}
-				md={6}
-				sx={{
-					background: 'linear-gradient(45deg, #64DCFF, #DD4AFF, #64DCFF)',
-					backgroundSize: '600% 600%',
-					animation: `${gradient} 6s ease infinite`
-				}}>
-
-			</Grid>
-
+			{
+				!isMobile &&
+				<Grid lg={6}
+					md={6}
+					sx={{
+						background: 'linear-gradient(45deg, #572dff, #13b2f7, #2de3c2)',
+						backgroundSize: '600% 600%',
+						animation: `${gradient} 4s ease infinite`
+					}}>
+				</Grid>
+			}
 		</Grid>
 	)
 }
