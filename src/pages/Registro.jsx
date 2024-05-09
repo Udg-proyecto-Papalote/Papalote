@@ -2,7 +2,7 @@ import { FormControl, Grid, Input, FormLabel, Typography, Button, Stack, Divider
 import ModeToggle from "../components/ToggleTheme"
 import { Google, Mail, Person } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
-import { Star } from "@phosphor-icons/react"
+import { Star, Repeat } from "@phosphor-icons/react"
 import { keyframes } from '@emotion/react';
 import { useMediaQuery } from "@mui/material"
 import { useForm } from "../hooks/useForm"
@@ -128,7 +128,7 @@ export const Registro = () => {
 					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Repite contraseña</FormLabel>
-                            <Input variant='soft' type='password' name='repeatedPassword' startDecorator={<Key />} value={ repeatedPassword } onChange={ onInputChange } onFocus={ handleFocus }/>
+                            <Input variant='soft' type='password' name='repeatedPassword' startDecorator={<Repeat size={22} weight="bold"/>} value={ repeatedPassword } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isRepeatedPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ repeatedPasswordValid }</FormHelperText>
 						}
