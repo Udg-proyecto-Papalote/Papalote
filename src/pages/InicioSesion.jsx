@@ -7,6 +7,7 @@ import { keyframes } from '@emotion/react';
 import { useMediaQuery } from "@mui/material"
 import { useForm } from "../hooks/useForm"
 import { useState } from "react"
+import { Link as LinkRouter } from "react-router-dom"
 
 const gradient = keyframes`
   0% {background-position: 0% 50%;}
@@ -66,11 +67,9 @@ export const InicioSesion = () => {
 
 	return (
 		<Grid container height='100vh'>
-
 			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center'>
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
-
-					<h1>Inicio de Sesión</h1>
+					<h1>Inicio de sesión</h1>
 					<ModeToggle />
 					<Button startDecorator={<Google />} variant='outlined' color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
 					<Divider><Star weight="fill" /></Divider>
@@ -90,7 +89,7 @@ export const InicioSesion = () => {
 					</FormControl>
 					<Button onClick={ handleClick }>Iniciar sesión</Button>
 					
-					<Typography level='body-xs'>¿Aún no tienes cuenta? <Link>Regístrate</Link></Typography>
+					<Typography level='body-xs'>¿Aún no tienes cuenta? <Link component={LinkRouter} to='/registro'>Regístrate</Link></Typography>
 				</Stack>
 			</Grid>
 			{
