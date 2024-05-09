@@ -39,7 +39,7 @@ function ModeSwitcher() {
         <Button
             variant="plain"
             sx={{
-                borderRadius: '100px', p: 1.5, height: '45px', width: '45px',
+                borderRadius: '100px', p: 1.5, height: '55px', width: '55px',
                 ...styles
             }}
             onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
