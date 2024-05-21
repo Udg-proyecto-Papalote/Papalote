@@ -96,8 +96,6 @@ export const Registro = () => {
 					}}>
 				</Grid>
 			}
-			{/* <div className="animate__backInLeft"> */}
-
 			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInLeft" sx={{backgroundColor: 'var(--joy-palette-background-body)'}}>
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 
@@ -138,7 +136,6 @@ export const Registro = () => {
 					<Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
 				</Stack>
 			</Grid>
-						{/* </div> */}
 		</Grid>
 	)
 }
