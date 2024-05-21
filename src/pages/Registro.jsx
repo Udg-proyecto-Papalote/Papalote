@@ -61,13 +61,11 @@ export const Registro = () => {
         passwordValid,
         repeatedPasswordValid,
         isFormValid,
-        setFormStates,
         formState,
     } = useForm(formData, formValidations);
 
 	const handleClick = () => {
 		console.log(formState)
-		setFormStates(formData)
 
 		if(!isFormValid || repeatedPassword !== password) {
 
@@ -86,7 +84,7 @@ export const Registro = () => {
 	}
 
 	return (
-		<Grid container height='100vh'>
+		<Grid container height='100vh' >
             {
 				!isMobile &&
 				<Grid lg={6}
@@ -98,7 +96,9 @@ export const Registro = () => {
 					}}>
 				</Grid>
 			}
-			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center'>
+			{/* <div className="animate__backInLeft"> */}
+
+			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInLeft" sx={{backgroundColor: 'var(--joy-palette-background-body)'}}>
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 
 					<h1>Crea una cuenta</h1>
@@ -138,6 +138,7 @@ export const Registro = () => {
 					<Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
 				</Stack>
 			</Grid>
+						{/* </div> */}
 		</Grid>
 	)
 }

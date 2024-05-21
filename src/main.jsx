@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { CssBaseline, CssVarsProvider, Grid } from '@mui/joy'
 import { BrowserRouter } from 'react-router-dom'
+import 'animate.css';
 
 import { extendTheme } from '@mui/joy/styles'
 const theme = extendTheme({
