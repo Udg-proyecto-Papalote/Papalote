@@ -1,20 +1,28 @@
 import { Card, CardContent, Grid, Step, StepIndicator, Stepper, Typography } from "@mui/joy"
 import PropTypes from "prop-types";
 import { Heart } from "@phosphor-icons/react"
+import { useEffect, useState } from "react";
 
-export const StreakDays = ({ days = 12, lastWeek = ['Lunes', 'Miércoles', 'Jueves' ] }) => {
-    const weekDays = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+const weekDays = ['Lunes', 'Martes', 'Xiércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
 
+export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles', 'Jueves' ] }) => {
+    const today = new Date().getDay()
+    const [days, setDays] = useState(weekDays)
     const isDay = (day) => lastWeek.includes(day)
 
+    useEffect(() => {
+        setDays([...weekDays.slice(today), ...weekDays.slice(0, today)])
+        // eslint-disable-next-line
+    }, [])
+
     return (
-        <Grid lg={4} md={4}>
-            <Card invertedColors>
+        <Grid width='300px'>
+            <Card sx={{padding:'34px'}}>
                 <CardContent orientation="horizontal">
                     <Heart size={65} weight="duotone" color="#fb7185" />
                     <CardContent>
                         <Typography level="body-md">racha de días</Typography>
-                        <Typography level="h2">{days} días</Typography>
+                        <Typography level="h2">{streakDays} días</Typography>
                     </CardContent>
                 </CardContent>
                 <CardContent orientation="horizontal">
@@ -22,7 +30,7 @@ export const StreakDays = ({ days = 12, lastWeek = ['Lunes', 'Miércoles', 'Juev
 
                         <Stepper>
                             {
-                                weekDays.map((day, index) => (
+                                days.map((day, index) => (
                                     <Step key={index} indicator={
                                         <StepIndicator color={isDay(day) ? 'success' : 'neutral'}>
                                             <Typography fontWeight="lg" level="title-sm" color="neutral">
@@ -45,6 +53,6 @@ export const StreakDays = ({ days = 12, lastWeek = ['Lunes', 'Miércoles', 'Juev
 
 // props
 StreakDays.propTypes = {
-    days: PropTypes.number,
+    streakDays: PropTypes.number,
     lastWeek: PropTypes.array
 }
