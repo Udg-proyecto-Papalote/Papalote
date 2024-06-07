@@ -101,32 +101,32 @@ export const Registro = () => {
 
 					<h1>Crea una cuenta</h1>
 					<ModeToggle />
-					<Button startDecorator={<Google />} variant='outlined' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
+					<Button startDecorator={<Google />} variant='soft' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
 					<Divider><Star weight="fill" /></Divider>
                     <FormControl>
                         <FormLabel sx={{ fontWeight: 'bold' }}>Nombre</FormLabel>
-                        <Input variant='soft' type='text' name="name" startDecorator={<Person color='primary' />} value={ name } onChange={ onInputChange } onFocus={ handleFocus }/>
+                        <Input type='text' name="name" startDecorator={<Person color='primary' />} value={ name } onChange={ onInputChange } onFocus={ handleFocus }/>
                         {
                             !isNameValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ nameValid }</FormHelperText>
                         }
                     </FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
-						<Input variant='soft' type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
+						<Input type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isEmailValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ emailValid }</FormHelperText>
 						}
 					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Contraseña</FormLabel>
-						<Input variant='soft' type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
+						<Input type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ passwordValid }</FormHelperText>
 						}
 					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Repite contraseña</FormLabel>
-                            <Input variant='soft' type='password' name='repeatedPassword' startDecorator={<Repeat size={22} weight="bold"/>} value={ repeatedPassword } onChange={ onInputChange } onFocus={ handleFocus }/>
+                            <Input type='password' name='repeatedPassword' startDecorator={<Repeat size={22} weight="bold"/>} value={ repeatedPassword } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isRepeatedPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ repeatedPasswordValid }</FormHelperText>
 						}

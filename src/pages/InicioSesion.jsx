@@ -69,18 +69,18 @@ export const InicioSesion = () => {
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 					<h1>Inicio de sesión</h1>
 					<ModeToggle />
-					<Button startDecorator={<Google />} variant='outlined' color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
+					<Button variant='soft' startDecorator={<Google />} color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
 					<Divider><Star weight="fill" /></Divider>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
-						<Input variant='soft' type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
+						<Input type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isEmailValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ emailValid }</FormHelperText>
 						}
 					</FormControl>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Contraseña</FormLabel>
-						<Input variant='soft' type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
+						<Input type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ passwordValid }</FormHelperText>
 						}
