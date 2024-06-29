@@ -2,7 +2,7 @@ import { FormControl, Grid, Input, FormLabel, Typography, Button, Stack, Divider
 import ModeToggle from "../components/ToggleTheme"
 import { Google, Mail, Person } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
-import { Star, Repeat } from "@phosphor-icons/react"
+import { Star } from "@phosphor-icons/react"
 import { keyframes } from '@emotion/react';
 import { useMediaQuery } from "@mui/material"
 import { useForm } from "../hooks/useForm"
@@ -18,8 +18,7 @@ const gradient = keyframes`
 const formData = {
     name: "",
     email: "",
-    password: "",
-    repeatedPassword: "",
+    password: ""
 };
 
 const formValidations = {
@@ -34,11 +33,7 @@ const formValidations = {
     password: [
         (value) => String(value).length >= 8 && String(value).length <= 16,
 		"La contraseña debe tener entre 8 y 16 caracteres",
-    ],
-    repeatedPassword: [
-        (value, currentPassword) => String(value) === currentPassword,
-        "Las contraseñas no coinciden",
-    ],
+    ]
 };
 
 export const Registro = () => {
@@ -47,19 +42,16 @@ export const Registro = () => {
 
 	const [isPasswordValid, setIsPasswordValid] = useState(true)
 	const [isEmailValid, setIsEmailValid] = useState(true)
-    const [isRepeatedPasswordValid, setIsRepeatedPasswordValid] = useState(true)
     const [isNameValid, setIsNameValid] = useState(true)
 
 	const {
         name,
         email,
         password,
-        repeatedPassword,
         onInputChange,
         nameValid,
         emailValid,
         passwordValid,
-        repeatedPasswordValid,
         isFormValid,
         formState,
     } = useForm(formData, formValidations);
@@ -67,11 +59,10 @@ export const Registro = () => {
 	const handleClick = () => {
 		console.log(formState)
 
-		if(!isFormValid || repeatedPassword !== password) {
+		if(!isFormValid) {
 
 			!!emailValid && setIsEmailValid(false)
 			!!passwordValid && setIsPasswordValid(false)
-            repeatedPassword !== password && setIsRepeatedPasswordValid(false)
             !!nameValid && setIsNameValid(false)
 		}
 	}
@@ -79,7 +70,6 @@ export const Registro = () => {
 	const handleFocus = () => {
 		setIsEmailValid(true)
 		setIsPasswordValid(true)
-        setIsRepeatedPasswordValid(true)
         setIsNameValid(true)
 	}
 
@@ -122,13 +112,6 @@ export const Registro = () => {
 						<Input type='password' name='password' startDecorator={<Key />} value={ password } onChange={ onInputChange } onFocus={ handleFocus }/>
 						{
 							!isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ passwordValid }</FormHelperText>
-						}
-					</FormControl>
-					<FormControl>
-						<FormLabel sx={{ fontWeight: 'bold' }}>Repite contraseña</FormLabel>
-                            <Input type='password' name='repeatedPassword' startDecorator={<Repeat size={22} weight="bold"/>} value={ repeatedPassword } onChange={ onInputChange } onFocus={ handleFocus }/>
-						{
-							!isRepeatedPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{ repeatedPasswordValid }</FormHelperText>
 						}
 					</FormControl>
 					<Button onClick={ handleClick }>Registrarse</Button>
