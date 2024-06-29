@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 
 export const ProgressBar = ({ percentage = 20 }) => {
 	return (
-		<Grid md={2}>
-
+		<Grid md={2.5} lg={2.5}>
 			<Card>
 				<CardContent>
 					<CircularProgress sx={{ '--CircularProgress-size': '140px', '--CircularProgress-thickness': '12px' }} determinate value={ percentage }>
@@ -14,7 +13,6 @@ export const ProgressBar = ({ percentage = 20 }) => {
 							<Typography level="h3">20%</Typography>
 							<Typography level="body-sm">Ejercicios</Typography>
 							<Typography level="body-sm">realizados</Typography>
-
 						</Box>
 					</CircularProgress>
 				</CardContent>
