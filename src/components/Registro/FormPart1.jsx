@@ -28,7 +28,7 @@ const formValidations = {
     ]
 };
 
-export const FormPart1 = ( {nextFunction} ) => {
+export const FormPart1 = ({ nextFunction }) => {
     const [isPasswordValid, setIsPasswordValid] = useState(true)
     const [isEmailValid, setIsEmailValid] = useState(true)
     const [isNameValid, setIsNameValid] = useState(true)
@@ -68,33 +68,32 @@ export const FormPart1 = ( {nextFunction} ) => {
     return (
 
         <>
-                <Button startDecorator={<Google />} variant='soft' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
-                <Divider><Star weight="fill" /></Divider>
-                <FormControl>
-                    <FormLabel sx={{ fontWeight: 'bold' }}>Nombre</FormLabel>
-                    <Input type='text' name="name" startDecorator={<Person color='primary' />} value={name} onChange={onInputChange} onFocus={handleFocus} />
-                    {
-                        !isNameValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{nameValid}</FormHelperText>
-                    }
-                </FormControl>
-                <FormControl>
-                    <FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
-                    <Input type='email' name="email" startDecorator={<Mail color='warning' />} value={email} onChange={onInputChange} onFocus={handleFocus} />
-                    {
-                        !isEmailValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{emailValid}</FormHelperText>
-                    }
-                </FormControl>
-                <FormControl>
-                    <FormLabel sx={{ fontWeight: 'bold' }}>Contraseña</FormLabel>
-                    <Input type='password' name='password' startDecorator={<Key />} value={password} onChange={onInputChange} onFocus={handleFocus} />
-                    {
-                        !isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{passwordValid}</FormHelperText>
-                    }
-                </FormControl>
-                <Button onClick={handleClick}>Registrarse</Button>
+            <Button startDecorator={<Google />} variant='soft' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
+            <Divider><Star weight="fill" /></Divider>
+            <FormControl>
+                <FormLabel sx={{ fontWeight: 'bold' }}>Nombre</FormLabel>
+                <Input type='text' name="name" startDecorator={<Person color='primary' />} value={name} onChange={onInputChange} onFocus={handleFocus} />
+                {
+                    !isNameValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{nameValid}</FormHelperText>
+                }
+            </FormControl>
+            <FormControl>
+                <FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
+                <Input type='email' name="email" startDecorator={<Mail color='warning' />} value={email} onChange={onInputChange} onFocus={handleFocus} />
+                {
+                    !isEmailValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{emailValid}</FormHelperText>
+                }
+            </FormControl>
+            <FormControl>
+                <FormLabel sx={{ fontWeight: 'bold' }}>Contraseña</FormLabel>
+                <Input type='password' name='password' startDecorator={<Key />} value={password} onChange={onInputChange} onFocus={handleFocus} />
+                {
+                    !isPasswordValid && <FormHelperText sx={{ fontSize: '0.8rem' }}>{passwordValid}</FormHelperText>
+                }
+            </FormControl>
+            <Button onClick={handleClick}>Registrarse</Button>
 
-                <Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
-            {/* </Stack> */}
+            <Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
         </>
     )
 }
