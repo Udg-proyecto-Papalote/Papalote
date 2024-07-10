@@ -10,7 +10,7 @@ export const ProgressBar = ({ percentage = 20 }) => {
 						<Box
 							sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 }}
 						>
-							<Typography level="h3">20%</Typography>
+							<Typography level="h3">{ percentage }%</Typography>
 							<Typography level="body-sm">Ejercicios</Typography>
 							<Typography level="body-sm">realizados</Typography>
 						</Box>
