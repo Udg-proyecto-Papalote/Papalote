@@ -17,7 +17,7 @@ export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles',
 
     return (
         <Grid width='300px'>
-            <Card sx={{padding:'34px'}}>
+            <Card sx={{padding:'34px', height: '180px'}}>
                 <CardContent orientation="horizontal">
                     <Heart size={65} weight="duotone" color="#fb7185" />
                     <CardContent>

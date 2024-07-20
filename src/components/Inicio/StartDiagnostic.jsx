@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 export const StartDiagnostic = ({ isFirstTime = true }) => {
     return (
         isFirstTime &&
-        <Grid md={3} sm={3}>
+        <Grid width='185px'>
             <Link to='/diagnostico' style={{ textDecoration: 'none' }}>
-            <Card sx={{paddingY:'25px'}} >
+            <Card sx={{paddingY:'25px', height:'180px'}}>
                 <CardContent>
                     <Box
                         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 }}
