@@ -21,7 +21,7 @@ export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles',
                 <CardContent orientation="horizontal">
                     <Heart size={65} weight="duotone" color="#fb7185" />
                     <CardContent>
-                        <Typography level="body-md">racha de días</Typography>
+                        <Typography level="body-md">Racha de días</Typography>
                         <Typography level="h2">{streakDays} días</Typography>
                     </CardContent>
                 </CardContent>

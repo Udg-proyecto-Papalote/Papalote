@@ -7,17 +7,17 @@ const slides = [
 	{
 		title: 'Ejercicio 1',
 		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis nec nisl ultricies aliquam. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Ear size={130} color='#7dd3fc' weight='duotone' />
+		icon: <Ear size={110} color='#7dd3fc' weight='duotone' />
 	},
 	{
 		title: 'Ejercicio 2',
 		content: 'Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <MicrophoneStage size={130} color='#7dd3fc' weight='duotone' />
+		icon: <MicrophoneStage size={110} color='#7dd3fc' weight='duotone' />
 	},
 	{
 		title: 'Ejercicio 3',
 		content: 'Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Star size={130} color='#7dd3fc' weight='duotone' />
+		icon: <Star size={110} color='#7dd3fc' weight='duotone' />
 	}
 ]
 
@@ -44,7 +44,7 @@ const Carousel = () => {
 		setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 	};
 	return (
-		<Grid md={12} lg={12}>
+		<Grid md={11} lg={11}>
 			<Card>
 				<CardContent>
 					<CardContent orientation='horizontal'>
@@ -57,11 +57,11 @@ const Carousel = () => {
 					<Box sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
 						<IconButton onClick={prevSlide}><ArrowLeft /></IconButton>
 						<CardContent orientation='horizontal'>
-							<CardContent sx={{ mr: 7 }}>
+							<CardContent sx={{ mr: 4 }}>
 								<Typography level='h4'>{slides[currentSlide].title}</Typography>
 								<Typography>{slides[currentSlide].content}</Typography>
 							</CardContent>
-							<Stack mx={5} gap={1} >
+							<Stack mx={1} gap={1} >
 								{
 									slides[currentSlide].icon
 								}
