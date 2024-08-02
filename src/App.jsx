@@ -14,7 +14,7 @@ function App() {
 			{
 				pathname !== '/iniciarsesion' && pathname !== '/registro' && <ExtendedNavBar />
 			}
-			<Grid>
+			<Grid justifyContent='center' alignContent='center'>
 				<Routes>
 					<Route path='*' element={<Inicio />} />
 					<Route path='/ejercicios' element={<Ejercicios />} />
