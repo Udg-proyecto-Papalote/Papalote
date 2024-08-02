@@ -3,44 +3,12 @@ import { Grid, Typography, Box, Card, Button, Stack, IconButton, CardContent, Bu
 import { useMediaQuery } from "@mui/material";
 import { NumberCircleOne, CaretCircleDoubleLeft, CaretCircleDoubleRight, NumberCircleTwo, Play, NumberCircleThree, PlayCircle, Question, TextB } from "@phosphor-icons/react"
 import { useState } from "react";
-
-
-// const Instruction = () => {
-//     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('md'));
-
-//     const textProps = {
-//         fontSize: isSmallScreen ? "18px" : "25px",
-//     };
-//     return (
-//         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, paddingY: 5 }}>
-
-//             <Stack py={5} spacing={2}>
-//                 <Typography level='h3' justifyContent='center'>Aquí empieza tu diagnóstico</Typography>
-//                 <Typography
-//                     sx={textProps}
-//                     // startDecorator={<NumberCircleOne size={28} weight="duotone" color="#818cf8"/>}
-//                     startDecorator={<div></div>}
-//                 >
-//                     Presiona <PlayCircle size={30} weight="duotone" style={{ marginLeft: 5, marginRight: 5 }} /> para empezar a hablar
-//                 </Typography>
-//                 <Button variant='outlined' size='lg' fullWidth><Typography level="h4">Entendido</Typography></Button>
-//             </Stack>
-//         </Box>
-
-//     )
-// }
-
-const HelpButton = () => {
-    return (
-        <IconButton>
-            <Question size={20} weight="duotone" />
-        </IconButton>
-    )
-}
+import DiagnosticHelpModal from "../components/Modal/DiagnosticHelpModal";
 
 export const Diagnostico = () => {
     const [isBold, setIsBold] = useState(false);
     const [fontSize, setFontSize] = useState(16);
+    const [openModal, setOpenModal] = useState(false)
 
     const text = `Instrucciones. Hola. Soy un texto de prueba. Estoy aquí para que puedas leerme.
     Nisi aliqua proident exercitation anim amet aute amet veniam in consequat. Nulla id laborum aliquip ad est ipsum reprehenderit reprehenderit fugiat eiusmod pariatur enim. Mollit ad Lorem sunt cupidatat duis reprehenderit ipsum proident elit ipsum. Dolor aute nisi aliquip qui laboris amet elit aliquip occaecat tempor ipsum duis. Cillum ullamco esse pariatur veniam adipisicing consectetur esse officia. Proident tempor do consequat eiusmod ad elit ex nisi anim et enim do.
@@ -56,8 +24,7 @@ export const Diagnostico = () => {
     Consequat officia pariatur est et cillum est eiusmod nisi nisi ipsum. Exercitation esse sit enim pariatur eiusmod mollit et ut minim irure dolore aliquip et. Proident in nisi eu laboris non tempor excepteur sit elit reprehenderit. Voluptate eiusmod consequat sint proident incididunt esse irure qui voluptate id sunt adipisicing.
     Nulla quis labore labore sint cillum do culpa amet. Culpa sint culpa aute est dolore dolor elit nulla consequat proident occaecat. Anim ea nostrud ea pariatur veniam ut nisi fugiat dolor ipsum laboris anim exercitation. Laborum est cupidatat culpa tempor aliquip. Amet elit incididunt Lorem laborum nisi adipisicing. Do adipisicing nostrud et cupidatat.
     Amet quis et enim ea. Id eiusmod pariatur reprehenderit consequat deserunt dolore exercitation. Anim anim fugiat anim et incididunt duis. Sint deserunt sunt irure sint.
-    Sit consectetur consequat minim nostrud cupidatat laboris. Dolor fugiat anim esse est consectetur do officia eu in duis consectetur id sint magna. Occaecat deserunt exercitation enim magna anim velit minim.
-    `
+    Sit consectetur consequat minim nostrud cupidatat laboris. Dolor fugiat anim esse est consectetur do officia eu in duis consectetur id sint magna. Occaecat deserunt exercitation enim magna anim velit minim.`
 
     const clickOnBold = () => {
         setIsBold(!isBold);
@@ -72,6 +39,7 @@ export const Diagnostico = () => {
     }
 
     return (
+        <>
         <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
             <Card sx={{ width: '100%', height: 'calc(100vh - 200px)' }} >
                 <Grid container width='100%' height='90%' pt={1}>
@@ -88,7 +56,7 @@ export const Diagnostico = () => {
                                     <TextDecrease size={32} />
                                 </IconButton>
                             </ButtonGroup>
-                            <IconButton>
+                            <IconButton onClick={() => setOpenModal(true)}>
                                 <Question size={20} weight="duotone" />
                             </IconButton>
                         </Stack>
@@ -106,10 +74,14 @@ export const Diagnostico = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid>
-                    <Button variant='soft' size='lg' fullWidth>Entendido</Button>
+                <Grid justifyContent='center' alignContent='center' container>
+                    <IconButton variant="solid" size="lg" >
+                        <PlayCircle size={40} />
+                    </IconButton>
                 </Grid>
             </Card>
         </Grid>
+        <DiagnosticHelpModal open={openModal} onClose={() => setOpenModal(false)} />
+        </>
     )
 }
