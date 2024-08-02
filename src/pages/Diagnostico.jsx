@@ -1,14 +1,15 @@
-import { TextDecrease, TextIncrease, FormatBold } from "@mui/icons-material";
-import { Grid, Typography, Box, Card, Button, Stack, IconButton, CardContent, ButtonGroup, CardOverflow } from "@mui/joy"
+import { TextDecrease, TextIncrease, FormatBold, Close, InfoOutlined } from "@mui/icons-material";
+import { Grid, Typography, Box, Card, Button, Stack, IconButton, CardContent, ButtonGroup, CardOverflow, Alert } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
-import { NumberCircleOne, CaretCircleDoubleLeft, CaretCircleDoubleRight, NumberCircleTwo, Play, NumberCircleThree, PlayCircle, Question, TextB } from "@phosphor-icons/react"
+import { NumberCircleOne, CaretCircleDoubleLeft, CaretCircleDoubleRight, NumberCircleTwo, Play, NumberCircleThree, PlayCircle, Question, TextB, Info } from "@phosphor-icons/react"
 import { useState } from "react";
 import DiagnosticHelpModal from "../components/Modal/DiagnosticHelpModal";
 
 export const Diagnostico = () => {
     const [isBold, setIsBold] = useState(false);
     const [fontSize, setFontSize] = useState(16);
-    const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+    const [displayInfo, setDisplayInfo] = useState(true);
 
     const text = `Instrucciones. Hola. Soy un texto de prueba. Estoy aquí para que puedas leerme.
     Nisi aliqua proident exercitation anim amet aute amet veniam in consequat. Nulla id laborum aliquip ad est ipsum reprehenderit reprehenderit fugiat eiusmod pariatur enim. Mollit ad Lorem sunt cupidatat duis reprehenderit ipsum proident elit ipsum. Dolor aute nisi aliquip qui laboris amet elit aliquip occaecat tempor ipsum duis. Cillum ullamco esse pariatur veniam adipisicing consectetur esse officia. Proident tempor do consequat eiusmod ad elit ex nisi anim et enim do.
@@ -40,48 +41,64 @@ export const Diagnostico = () => {
 
     return (
         <>
-        <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
-            <Card sx={{ width: '100%', height: 'calc(100vh - 200px)' }} >
-                <Grid container width='100%' height='90%' pt={1}>
-                    <Grid xs={2} sm={1} lg={.5} justifyContent='center'>
-                        <Stack>
-                            <ButtonGroup orientation="vertical" size="lg">
-                                <IconButton onClick={clickOnBold} >
-                                    <FormatBold size={32} color={isBold ? 'primary' : 'neutral'} />
+            <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
+                <Card sx={{ width: '100%', height: 'calc(100vh - 200px)' }} >
+                    {
+                        displayInfo && <Alert
+                            startDecorator={<InfoOutlined size={24} color='primary' />}
+                            variant="outlined"
+                            color="primary"
+                            endDecorator={
+                                <IconButton variant="soft" size="sm" onClick={() => setDisplayInfo(false)}>
+                                    <Close size={16} />
                                 </IconButton>
-                                <IconButton onClick={clickOnIncrease} disabled={fontSize === 36}>
-                                    <TextIncrease size={32} />
+                            }
+                            sx={{ justifyContent: 'center', alignContent: 'center' }}
+                        >
+                            Aquí empieza tu diagnóstico:
+                            presiona el botón para empezar a hablar y lee el siguiente texto en voz alta.
+                        </Alert>
+                    }
+                    <Grid container width='100%' height={!displayInfo ? '88%' : '77%'} pt={1}>
+                        <Grid xs={2} sm={1} lg={.5} justifyContent='center'>
+                            <Stack spacing={2}>
+                                <ButtonGroup orientation="vertical" size="lg" mb={2}>
+                                    <IconButton onClick={clickOnBold} >
+                                        <FormatBold size={32} color={isBold ? 'primary' : 'neutral'} />
+                                    </IconButton>
+                                    <IconButton onClick={clickOnIncrease} disabled={fontSize === 36}>
+                                        <TextIncrease size={32} />
+                                    </IconButton>
+                                    <IconButton onClick={clickOnDecrease} disabled={fontSize === 12}>
+                                        <TextDecrease size={32} />
+                                    </IconButton>
+                                </ButtonGroup>
+                                <IconButton onClick={() => setOpenModal(true)} color='primary' mt={50}>
+                                    <Question size={28} weight="duotone" />
                                 </IconButton>
-                                <IconButton onClick={clickOnDecrease} disabled={fontSize === 12}>
-                                    <TextDecrease size={32} />
-                                </IconButton>
-                            </ButtonGroup>
-                            <IconButton onClick={() => setOpenModal(true)}>
-                                <Question size={20} weight="duotone" />
-                            </IconButton>
-                        </Stack>
-                    </Grid>
-                    <Grid xs={10} sm={11} lg={11.5} height='100%' >
-                        <Grid overflow='auto' height='100%' pl={2}>
-                            <CardContent>
-                                <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>Título</Typography>
-                                {
-                                    text.split('\n').map((sentence, index) => (
-                                        <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>{sentence}</Typography>
-                                    ))
-                                }
-                            </CardContent>
+                            </Stack>
+                        </Grid>
+                        <Grid xs={10} sm={11} lg={11.5} height='100%' >
+                            <Grid overflow='auto' height='100%' pl={2}>
+                                <CardContent>
+                                    <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>Título</Typography>
+                                    {
+                                        text.split('\n').map((sentence, index) => (
+                                            <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>{sentence}</Typography>
+                                        ))
+                                    }
+                                </CardContent>
+                            </Grid>
                         </Grid>
                     </Grid>
-                </Grid>
-                <Grid justifyContent='center' alignContent='center' container>
-                    <IconButton variant="solid" size="lg" >
-                        <PlayCircle size={40} />
-                    </IconButton>
-                </Grid>
-            </Card>
-        </Grid>
-        <DiagnosticHelpModal open={openModal} onClose={() => setOpenModal(false)} />
+                    <Grid justifyContent='center' alignContent='center' container>
+                        <IconButton variant="plain" size="sm" >
+                            <PlayCircle size={displayInfo ? 35 : 50} color="#818cf8" weight="duotone" />
+                        </IconButton>
+                    </Grid>
+                </Card>
+            </Grid>
+            <DiagnosticHelpModal open={openModal} onClose={() => setOpenModal(false)} />
         </>
     )
 }
