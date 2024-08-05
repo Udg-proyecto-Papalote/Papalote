@@ -1,7 +1,6 @@
-import { Button, DialogContent, DialogTitle, Modal, ModalClose, ModalDialog, Typography } from '@mui/joy'
+import { Button, DialogContent, DialogTitle, Modal, ModalDialog, Typography } from '@mui/joy'
 import { DialogActions } from '@mui/material'
 import { NumberCircleOne, NumberCircleTwo, PlayCircle } from '@phosphor-icons/react'
-import React from 'react'
 
 const DiagnosticHelpModal = ({ open, onClose }) => {
     return (
@@ -21,7 +20,6 @@ const DiagnosticHelpModal = ({ open, onClose }) => {
                     </Typography>
                 </DialogContent>
                 <DialogActions>
-
                     <Button variant='outlined' size='sm' fullWidth onClick={onClose}>Entendido</Button>
                 </DialogActions>
             </ModalDialog>
