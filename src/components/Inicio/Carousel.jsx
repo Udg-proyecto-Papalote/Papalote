@@ -54,18 +54,26 @@ const Carousel = () => {
 						</Typography>
 					</CardContent>
 					<Divider sx={{ my: 1 }}></Divider>
-					<Box sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
+					<Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
 						<IconButton onClick={prevSlide}><ArrowLeft /></IconButton>
 						<CardContent orientation='horizontal'>
-							<CardContent sx={{ mr: 4 }}>
-								<Typography level='h4'>{slides[currentSlide].title}</Typography>
-								<Typography>{slides[currentSlide].content}</Typography>
-							</CardContent>
-							<Stack mx={1} gap={1} >
-								{
-									slides[currentSlide].icon
-								}
-								<Button variant='soft' size='lg'>Iniciar</Button>
+							<Stack direction={{ xs: 'column', md: 'row' }} gap={2} >
+								<CardContent >
+									<Typography level='h4'>{slides[currentSlide].title}</Typography>
+									<Typography align="justify">{slides[currentSlide].content}</Typography>
+								</CardContent>
+								<Stack mx={1} gap={1} alignContent='center' justifyContent='center'>
+									<IconButton sx={{
+										cursor: 'unset', '&:hover': {
+											backgroundColor: 'transparent',
+										}
+									}}>
+										{
+											slides[currentSlide].icon
+										}
+									</IconButton>
+									<Button variant='soft' size='lg'>Iniciar</Button>
+								</Stack>
 							</Stack>
 						</CardContent>
 						<IconButton onClick={nextSlide}><ArrowRight /></IconButton>
