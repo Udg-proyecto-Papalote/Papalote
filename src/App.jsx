@@ -6,9 +6,12 @@ import { Diagnostico } from './pages/Diagnostico'
 import { Ejercicios } from './pages/Ejercicios'
 import { InicioSesion } from './pages/InicioSesion'
 import { Registro } from './pages/Registro'
+import { useMediaQuery } from '@mui/material'
+import ModeToggle from './components/ToggleTheme'
 
 function App() {
 	const { pathname } = useLocation()
+	const isMobile  = useMediaQuery('(min-width: 400px)')
 	return (
 		<Grid width='100%'>
 			{
@@ -22,6 +25,12 @@ function App() {
 					<Route path='/iniciarsesion' element={<InicioSesion />} />
 					<Route path='/registro' element={<Registro />} />
 				</Routes>
+			</Grid>
+			<Grid container justifyContent='center' alignContent='center'>
+
+			{
+				!isMobile && <ModeToggle />
+			}
 			</Grid>
 		</Grid>
 	)

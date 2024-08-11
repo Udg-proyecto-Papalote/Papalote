@@ -7,8 +7,10 @@ import Carousel from "../components/Inicio/Carousel"
 export const Inicio = () => {
     
     return (
-        <Grid mx={10} sx={{ '@media (min-width: 1500px)': { mx: '400px' } }}>
-            <Grid container gap={2}>
+        <Grid 
+        //  sx={{ '@media (min-width: 1500px)': { mx: '400px' } }}
+         >
+            <Grid container gap={2} mx={3}>
                 <StreakDays />
                 <ProgressBar percentage={20} />
                 <StartDiagnostic isFirstTime={true} />
