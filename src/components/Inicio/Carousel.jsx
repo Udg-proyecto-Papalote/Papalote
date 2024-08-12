@@ -7,17 +7,17 @@ const slides = [
 	{
 		title: 'Ejercicio 1',
 		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis nec nisl ultricies aliquam. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Ear size={110} color='#7dd3fc' weight='duotone' />
+		icon: <Ear size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>
 	},
 	{
 		title: 'Ejercicio 2',
 		content: 'Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <MicrophoneStage size={110} color='#7dd3fc' weight='duotone' />
+		icon: <MicrophoneStage size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>
 	},
 	{
 		title: 'Ejercicio 3',
 		content: 'Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Star size={110} color='#7dd3fc' weight='duotone' />
+		icon: <Star size={110} color='#7dd3fc' weight='duotone'style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }} />
 	}
 ]
 
