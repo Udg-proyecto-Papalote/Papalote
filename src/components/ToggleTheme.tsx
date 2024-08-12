@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
-import Box from '@mui/joy/Box';
 import { MoonStars, Sun } from '@phosphor-icons/react';
 import { Button, IconButton } from '@mui/joy';
 import { useLocation } from 'react-router-dom';
 
-const useEnhancedEffect =
-    typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
 
-
-function ModeSwitcher() {
+function ModeSwitcher({ size }) {
     const { mode, setMode } = useColorScheme();
     const [mounted, setMounted] = React.useState(false);
 
@@ -33,13 +29,12 @@ function ModeSwitcher() {
         return null;
     }
 
-
-
+    const widthHeight = size ? size : 55;
     return (
         <Button
             variant="plain"
             sx={{
-                borderRadius: '100px', p: 1.5, height: '55px', width: '55px',
+                borderRadius: '100px', p: 1.5, height: widthHeight, width: widthHeight,
                 ...styles
             }}
             onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
@@ -49,13 +44,13 @@ function ModeSwitcher() {
     );
 }
 
-export default function ModeToggle() {
+export default function ModeToggle({ size }) {
     return (
         <CssVarsProvider
             colorSchemeSelector="#mode-toggle"
             modeStorageKey="mode-toggle-demo"
         >
-            <ModeSwitcher />
+            <ModeSwitcher size={ size }/>
         </CssVarsProvider>
     );
 }

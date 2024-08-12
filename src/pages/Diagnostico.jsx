@@ -1,9 +1,10 @@
 import { TextDecrease, TextIncrease, FormatBold, InfoOutlined } from "@mui/icons-material";
-import { Grid, Typography, Card, Button, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip } from "@mui/joy"
+import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
-import { PlayCircle, Question, Record, XCircle } from "@phosphor-icons/react"
+import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
 import DiagnosticHelpModal from "../components/Modal/DiagnosticHelpModal";
+import ModeToggle from "../components/ToggleTheme"
 
 const text = `Instrucciones. Hola. Soy un texto de prueba. Estoy aquí para que puedas leerme.
 Nisi aliqua proident exercitation anim amet aute amet veniam in consequat. Nulla id laborum aliquip ad est ipsum reprehenderit reprehenderit fugiat eiusmod pariatur enim. Mollit ad Lorem sunt cupidatat duis reprehenderit ipsum proident elit ipsum. Dolor aute nisi aliquip qui laboris amet elit aliquip occaecat tempor ipsum duis. Cillum ullamco esse pariatur veniam adipisicing consectetur esse officia. Proident tempor do consequat eiusmod ad elit ex nisi anim et enim do.
@@ -24,8 +25,6 @@ export const Diagnostico = () => {
     // text
     const [isBold, setIsBold] = useState(false);
     const [fontSize, setFontSize] = useState(16);
-    const [openModal, setOpenModal] = useState(false);
-    const [displayInfo, setDisplayInfo] = useState(true);
 
     // audio 
     const [isRecording, setIsRecording] = useState(false);
@@ -39,8 +38,10 @@ export const Diagnostico = () => {
 
     // time
     const [time, setTime] = useState(0);
-
     const intervalRef = useRef(null);
+
+    // switch theme
+    const isNotMobile = useMediaQuery('(min-width: 400px)');
 
     const startRecording = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -89,6 +90,7 @@ export const Diagnostico = () => {
     };
 
     const sendDiagnostic = () => {
+        setAudioURL(null);
         // mediaRecorder.ondataavailable = (event) => {
         //     const audioBlob = new Blob([event.data], { type: 'audio/wav' });
         //     const formData = new FormData();
@@ -126,20 +128,21 @@ export const Diagnostico = () => {
     return (
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
-                <Card sx={{ width: '100%', height: 'calc(100vh - 160px)' }} >
-                    {
-                        displayInfo && <Alert
-                            startDecorator={<InfoOutlined size={24} color='primary' />}
-                            variant="outlined"
-                            color="primary"
-                            sx={{ justifyContent: 'center', alignContent: 'center' }}
-                        >
-                            Aquí empieza tu diagnóstico:
-                            presiona el botón para empezar a hablar y lee el siguiente texto en voz alta.
-                        </Alert>
-                    }
-                    <Grid container width='100%' height={isMidScreen ? (audioURL ? '62%': '75%') : '81%'} pt={1}>
-                        <Grid xs={2} sm={1} lg={.5} justifyContent='center'>
+                <Card sx={{ width: '100%', 
+                    height: 'calc(100vh - 150px)', 
+                    maxHeight: '800px',
+                    }} >
+                    <Alert
+                        startDecorator={<InfoOutlined size={24} color='primary' />}
+                        variant="outlined"
+                        color="primary"
+                        sx={{ justifyContent: 'center', alignContent: 'center' }}
+                    >
+                        Aquí empieza tu diagnóstico:
+                        presiona el botón para empezar a hablar y lee el siguiente texto en voz alta.
+                    </Alert>
+                    <Grid container width='100%' height={{ xs: isNotMobile ? '80%' : '73%', sm: '80%', md: '80%', lg: '79%' }}  maxHeight={ '900px!important' } pt={1} spacing={1}>
+                        <Grid xs={2} sm={1} lg={1} justifyContent='center'>
                             <Stack spacing={2}>
                                 <ButtonGroup orientation="vertical" size="lg" mb={2}>
                                     <IconButton onClick={clickOnBold} >
@@ -152,12 +155,10 @@ export const Diagnostico = () => {
                                         <TextDecrease size={32} />
                                     </IconButton>
                                 </ButtonGroup>
-                                <IconButton onClick={() => setOpenModal(true)} color='primary' mt={50}>
-                                    <Question size={28} weight="duotone" />
-                                </IconButton>
+                                { !isNotMobile && <ModeToggle size={ 45 }/> }
                             </Stack>
                         </Grid>
-                        <Grid xs={10} sm={11} lg={11.5} height='100%' >
+                        <Grid xs={10} sm={11} lg={11} height='100%' >
                             <Grid overflow='auto' height='100%' pl={2}>
                                 <CardContent>
                                     <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>Título</Typography>
@@ -192,25 +193,11 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <Stack
-                                direction={{ sm: 'column', md: 'row' }}
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={1}
-                            >
-                                <audio ref={audioRef} src={audioURL} controls/>
-                                <IconButton onClick={deleteRecording} sx={{ borderRadius: '100px' }}>
-                                    <XCircle size={45} color='#ef4444' />
-                                </IconButton>
-                                <Button onClick={sendDiagnostic} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg">
-                                    Enviar diagnóstico
-                                </Button>
-                            </Stack>
+                            <DiagnosticHelpModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL}/>
                         )}
                     </Grid>
                 </Card>
             </Grid>
-            <DiagnosticHelpModal open={openModal} onClose={() => setOpenModal(false)} />
         </>
     )
 }

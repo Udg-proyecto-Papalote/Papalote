@@ -29,7 +29,7 @@ function App() {
 			<Grid container justifyContent='center' alignContent='center'>
 
 			{
-				!isMobile && <ModeToggle />
+				!isMobile && pathname !== '/diagnostico' && <ModeToggle />
 			}
 			</Grid>
 		</Grid>

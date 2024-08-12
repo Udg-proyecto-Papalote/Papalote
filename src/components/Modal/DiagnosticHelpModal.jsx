@@ -1,27 +1,33 @@
-import { Button, DialogContent, DialogTitle, Modal, ModalDialog, Typography } from '@mui/joy'
+import { Button, DialogContent, DialogTitle, IconButton, Modal, ModalDialog, Stack, Typography } from '@mui/joy'
 import { DialogActions } from '@mui/material'
-import { NumberCircleOne, NumberCircleTwo, PlayCircle } from '@phosphor-icons/react'
+import { ArrowCounterClockwise, Checks, NumberCircleOne, NumberCircleTwo, PlayCircle, XCircle } from '@phosphor-icons/react'
 
-const DiagnosticHelpModal = ({ open, onClose }) => {
+const DiagnosticHelpModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL }) => {
     return (
-        <Modal open={open} onClose={onClose}>
+        <Modal open={open}
+            disableBackdropClick={true}
+            disableEscapeKeyDown={true}
+        >
             <ModalDialog variant='outlined' size='lg'>
-                <DialogTitle>Instrucciones</DialogTitle>
+                <DialogTitle>Audio grabado</DialogTitle>
                 <DialogContent>
-                    <Typography
-                        startDecorator={<NumberCircleOne size={28} weight="duotone" color="#818cf8"/>}
+                    Comprueba que el audio grabado sea claro y audible. Si no es así, puedes volver a grabar el audio.
+                    <Stack
+                        direction={{ sm: 'column', md: 'row' }}
+                        justifyContent="center"
+                        alignItems="center"
+                        gap={2}
                     >
-                        Presiona <PlayCircle size={30} weight="duotone" style={{ marginLeft: 5, marginRight: 5 }} /> para empezar a hablar
-                    </Typography>
-                    <Typography
-                        startDecorator={<NumberCircleTwo size={28} weight="duotone" color="#818cf8"/>}
-                    >
-                        Da acceso para que la página pueda escucharte
-                    </Typography>
+                        <audio ref={audioRef} src={audioURL} controls
+                        />
+                        <Button startDecorator={<ArrowCounterClockwise size={32} />} onClick={deleteRecording} sx={{ borderRadius: '100px' }} color='neutral' variant='outlined' size='lg'>
+                            Volver a grabar
+                        </Button>
+                        <Button startDecorator={<Checks size={32} />} onClick={sendRecording} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg">
+                            Enviar diagnóstico
+                        </Button>
+                    </Stack>
                 </DialogContent>
-                <DialogActions>
-                    <Button variant='outlined' size='sm' fullWidth onClick={onClose}>Entendido</Button>
-                </DialogActions>
             </ModalDialog>
         </Modal>
     )
