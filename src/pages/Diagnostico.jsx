@@ -3,7 +3,7 @@ import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Al
 import { useMediaQuery } from "@mui/material";
 import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
-import DiagnosticHelpModal from "../components/Modal/DiagnosticHelpModal";
+import CheckAudioModal from "../components/Modal/CheckAudioModal";
 import ModeToggle from "../components/ToggleTheme"
 
 const text = `Instrucciones. Hola. Soy un texto de prueba. Estoy aquí para que puedas leerme.
@@ -193,7 +193,7 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <DiagnosticHelpModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL}/>
+                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL}/>
                         )}
                     </Grid>
                 </Card>
