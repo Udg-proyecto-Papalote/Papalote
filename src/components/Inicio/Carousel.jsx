@@ -44,7 +44,7 @@ const Carousel = () => {
 		setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 	};
 	return (
-		<Grid md={11} lg={11}>
+		<Grid md={12} lg={12}>
 			<Card>
 				<CardContent>
 					<CardContent orientation='horizontal'>

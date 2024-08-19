@@ -5,12 +5,10 @@ import { StartDiagnostic } from "../components/Inicio/StartDiagnostic"
 import Carousel from "../components/Inicio/Carousel"
 
 export const Inicio = () => {
-    
+
     return (
-        <Grid 
-        //  sx={{ '@media (min-width: 1500px)': { mx: '400px' } }}
-         >
-            <Grid container gap={2} mx={3}>
+        <Grid container >
+            <Grid container lg={8} lgOffset={2} gap={2} mx={3}>
                 <StreakDays />
                 <ProgressBar percentage={20} />
                 <StartDiagnostic isFirstTime={true} />

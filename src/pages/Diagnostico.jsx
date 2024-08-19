@@ -1,30 +1,30 @@
-import { TextDecrease, TextIncrease, FormatBold, InfoOutlined } from "@mui/icons-material";
-import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip } from "@mui/joy"
+import { TextDecrease, TextIncrease, FormatBold, InfoOutlined, Info } from "@mui/icons-material";
+import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
 import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
 import CheckAudioModal from "../components/Modal/CheckAudioModal";
 import ModeToggle from "../components/ToggleTheme"
 
-const text = `Instrucciones. Hola. Soy un texto de prueba. Estoy aquí para que puedas leerme.
-Nisi aliqua proident exercitation anim amet aute amet veniam in consequat. Nulla id laborum aliquip ad est ipsum reprehenderit reprehenderit fugiat eiusmod pariatur enim. Mollit ad Lorem sunt cupidatat duis reprehenderit ipsum proident elit ipsum. Dolor aute nisi aliquip qui laboris amet elit aliquip occaecat tempor ipsum duis. Cillum ullamco esse pariatur veniam adipisicing consectetur esse officia. Proident tempor do consequat eiusmod ad elit ex nisi anim et enim do.
-Anim nisi irure non ad sunt velit sit duis commodo sit laboris deserunt laboris amet. Ullamco laboris fugiat consectetur aute eiusmod aliqua ad consectetur dolor ea ipsum fugiat Lorem. Minim aute in excepteur sint dolor ipsum. Officia dolore dolor amet pariatur officia id mollit ipsum eu ad laborum.
-Aute veniam culpa ad ullamco esse labore tempor ex. Sunt irure aute in labore minim eu. Culpa tempor sint officia dolor enim cillum cupidatat ipsum Lorem nulla enim eiusmod. Ullamco adipisicing excepteur dolor aliqua culpa. Et in cillum culpa proident.
-Nisi ipsum velit excepteur qui ut officia. Anim fugiat Lorem cupidatat consectetur adipisicing ullamco non sit Lorem. Culpa et aliquip commodo duis et voluptate officia incididunt dolor. Sint ex eu enim laboris adipisicing ut ea aute ut ad ut ea esse fugiat. Voluptate aute do in esse. Laborum aute duis Lorem labore labore. Sunt excepteur sint consequat esse occaecat ad reprehenderit anim et duis amet.
-Ex laborum velit amet minim do officia. Dolor enim sint ut nisi duis mollit proident magna cillum cillum minim aliqua non. Anim tempor enim dolore ipsum enim cillum. Quis amet consectetur dolore Lorem magna laboris exercitation consectetur. Amet cupidatat laborum aute id minim dolor laboris nulla excepteur officia deserunt quis.
-Id officia sit nulla consectetur id consectetur commodo pariatur ex sint eu ullamco. Irure sint sint voluptate eu proident amet qui ad esse ullamco proident do incididunt. Sunt magna non in eu ut enim anim. Velit dolore esse aliquip occaecat quis enim minim pariatur. Ut eiusmod in voluptate in ullamco. Elit nulla est nisi consectetur nostrud irure amet veniam. Lorem elit magna fugiat eu elit.
-Mollit minim ullamco non est aute aliquip. Officia ut Lorem dolore mollit aute consectetur mollit amet nulla eiusmod magna velit velit quis. Exercitation proident aute ea proident tempor anim esse cupidatat nulla cillum. Cupidatat nostrud cillum commodo exercitation Lorem. Commodo eiusmod dolor ut et ex labore nisi deserunt dolore irure enim. Ad non in eu et ea consequat sint velit. Excepteur non enim ex minim voluptate cillum veniam incididunt nostrud.
-Excepteur consectetur id adipisicing ex elit veniam ipsum id velit consectetur enim excepteur enim sint. Veniam veniam laboris veniam duis sunt. Excepteur nulla aute cillum est veniam amet nisi ea do. Cillum velit non ut adipisicing minim cupidatat adipisicing esse. Non nulla nostrud duis amet. Commodo nulla nulla nulla aute commodo.
-Ut enim nisi pariatur laboris laborum et pariatur magna in consequat. Nisi qui in cupidatat veniam id ipsum Lorem labore sit irure. Esse enim cillum do pariatur ipsum excepteur amet aliqua esse culpa ex anim est consequat.
-Mollit ut aliquip ex commodo sunt in adipisicing commodo anim. Do veniam dolor elit voluptate magna nisi elit ex anim. Nulla elit deserunt cupidatat id nisi culpa. Fugiat dolore culpa anim occaecat adipisicing adipisicing est commodo cupidatat laborum.
-Consequat officia pariatur est et cillum est eiusmod nisi nisi ipsum. Exercitation esse sit enim pariatur eiusmod mollit et ut minim irure dolore aliquip et. Proident in nisi eu laboris non tempor excepteur sit elit reprehenderit. Voluptate eiusmod consequat sint proident incididunt esse irure qui voluptate id sunt adipisicing.
-Nulla quis labore labore sint cillum do culpa amet. Culpa sint culpa aute est dolore dolor elit nulla consequat proident occaecat. Anim ea nostrud ea pariatur veniam ut nisi fugiat dolor ipsum laboris anim exercitation. Laborum est cupidatat culpa tempor aliquip. Amet elit incididunt Lorem laborum nisi adipisicing. Do adipisicing nostrud et cupidatat.
-Amet quis et enim ea. Id eiusmod pariatur reprehenderit consequat deserunt dolore exercitation. Anim anim fugiat anim et incididunt duis. Sint deserunt sunt irure sint.
-Sit consectetur consequat minim nostrud cupidatat laboris. Dolor fugiat anim esse est consectetur do officia eu in duis consectetur id sint magna. Occaecat deserunt exercitation enim magna anim velit minim.`
+const text = `Los primeros reportes de actividad aeronáutica irregular detectada sobre los municipios del Sotavento (Veracruz, Boca del Río, Alvarado y Tlalixcoyan, principalmente) datan de finales de los años ochenta. Los habitantes de las zonas agrestes -dedicados principalmente a la pesca y la cría de ganado- estaban ya habituados a la presencia de las luces nocturnas. Los más viejos las llamaban "brujas"; los más informados, "avionetas". Incluso conocían el lugar en donde las luces descendían: el Llano de la Víbora, una brecha natural bordeada de matorrales y espinos que el Ejército y la Policía Judicial Federal empleaban a menudo como pista de aterrizaje.
+
+
+En esa planicie natural que se elevaba entre charcas y esteros, la presencia de soldados y agentes federales era algo común para los habitantes de la zona. Después de todo, la pista de La Víbora era usada por las fuerzas armadas para realizar maniobras especiales. Por ello a nadie le extrañó que, a finales de octubre de mil novecientos noventa y uno, llegaran cuadrillas de soldados a tusar la maleza tupida a golpe de machete y limpiar el sendero de obstáculos.
+Pero justo una semana después, la mañana del siete de noviembre de ese mismo año, el Ejército, las autoridades federales y una avioneta Cessna de origen colombiano se vieron envueltos en un sangriento escándalo que logró burlar el apretado cerco de censura del gobierno: integrantes del Batallón de Infantería del Ejército abrieron fuego contra un grupo de agentes de la procuraduría que habían llegado a La Víbora supuestamente a detener a los tripulantes de una avioneta de procedencia colombiana que había sido detectada desde las costas de Nicaragua por el Servicio de Aduanas estadounidense. La avioneta Cessna, supuestamente tripulada por traficantes colombianos, aterrizó sobre el Llano de la Víbora en la mañana de aquel siete de noviembre, seguida de los judiciales. Los tripulantes de la avioneta -un hombre afroamericano y una mujer rubia, según los testimonios, abandonaron su cargamento de trescientos cincuenta y cinco kilos de cocaína en costales y desaparecieron en el monte, mientras que los soldados del Batallón de Infantería, apostados en dos columnas a lo largo de la pista, aguardaron a que los agentes federales descendieran de su aeronave para abrir fuego contra ellos para "neutralizarlos".
+
+
+De aquel suceso recuerdo dos fotos que aparecieron en el periódico local Notiver. En una de ellas, siete hombres yacían en hilera sobre el pasto, boca abajo. Eran los agentes acribillados por el Ejército. Cinco de ellos vestían ropas oscuras y los otros dos iban de paisano, y aunque portaban chamarras negras, sucias de tierra y zacate, ninguno llevaba zapatos. La segunda fotografía mostraba a un agente federal sentado en el suelo, con el cañón de un fusil anónimo apuntándole a la cabeza. El sujeto, que portaba las siglas de la procuraduría en el pecho, miraba directo hacia la lente. Sus labios, congelados a mitad de un espasmo de angustia, dejaban entrever una lengua hinchada y reseca: se trataba del único judicial que había sobrevivido al ataque.
+
+
+Era diciembre -o quizás enero o febrero- cuando vi aquellas fotos, impresas en una de las páginas de aquel periódico viejo que extendí en el suelo para recoger la hojarasca que pasé la tarde barriendo en el patio. Y digo que debió haber sido en estas fechas porque es la única época del año en que los frentes fríos dejan desnudas las copas para entonces anaranjadas de los almendros tropicales en el puerto. Me recuerdo acuclillada en aquel patio, mirando las imágenes y leyendo con curiosidad las noticias de la sección policiaca extendida sobre el suelo de cemento, pero tuvieron que pasar más de diez años para que yo pudiera relacionar aquellas dos imágenes -la fotografía de los judiciales muertos y el recuerdo de las extrañas luces de colores que vi en el cielo el verano en que cumplí nueve años- y concluir con tristeza que aquel objeto volador no identificado nunca transportó ningún extraterrestre sino puras pacas de cocaína colombiana.
+Después del tiroteo de La Víbora y de otros incidentes semejantes ocurridos en Nopaltepec, Cosamaloapan y Carlos A. Carillo, y de varios accidentes automovilísticos protagonizados por adolescentes borrachos, el gobierno de Boca del Río prohibió las visitas nocturnas a las playas durante algunos meses, así que, después de esa última y decepcionante visita, no volvimos a Playa del Muerto sino hasta finales del noventa y dos, y el sitio, para entonces, había perdido todo su encanto. Nuevas escolleras habían ganado terreno al mar y aquello era un hervidero de vendedores ambulantes y turistas. Incluso habían retirado los escabrosos letreros con calaveras que advertían de las pozas, y con el tiempo, el nombre de Playa del Muerto cayó en desuso a favor de un apelativo más turístico y mucho menos tétrico: Playa Los Arcos.
+Creo que jamás en la vida volví a creer en algo con tanta fe como creí en los extraterrestres. Ni siquiera en el Ratón de los Dientes, en Santa Claus o en el Hombre sin Cabeza (del que mi padre contaba que todas las noches se aparecía en el Playón de Hornos buscando entre el agua su testa, arrancada por un cañonazo durante la invasión estadounidense del catorce), mucho menos en la mantarraya gigante-antropófaga-voladora de las Islas Fiji, y más tarde, ni siquiera Dios se salvaría de mi incredulidad. Todo era pura mentira, inventos de los grandes. Todos esos seres maravillosos con poderes inauditos no eran más que el fruto de la imaginación de los padres.
+Dicen los actuales habitantes de la zona que, cuando la luna está ausente, extrañas luces de colores aún atraviesan la noche para aterrizar en el llano. Pero yo ya no tengo ánimos para buscar extraterrestres. Aquella pequeña y regordeta vigilante intergaláctica ya no existe, como tampoco existe Playa del Muerto ni los valientes idiotas que ahí se ahogaron.
+`
 export const Diagnostico = () => {
     // text
     const [isBold, setIsBold] = useState(false);
-    const [fontSize, setFontSize] = useState(16);
+    const [fontSize, setFontSize] = useState(22);
 
     // audio 
     const [isRecording, setIsRecording] = useState(false);
@@ -122,16 +122,17 @@ export const Diagnostico = () => {
     }
 
     const clickOnIncrease = () => {
-        setFontSize(Math.min(fontSize + 2, 36));
+        setFontSize(Math.min(fontSize + 2, 40));
     }
 
     return (
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
-                <Card sx={{ width: '100%', 
-                    height: 'calc(100vh - 150px)', 
+                <Card sx={{
+                    width: '100%',
+                    height: 'calc(100vh - 150px)',
                     maxHeight: '800px',
-                    }} >
+                }} >
                     <Alert
                         startDecorator={<InfoOutlined size={24} color='primary' />}
                         variant="outlined"
@@ -141,30 +142,35 @@ export const Diagnostico = () => {
                         Aquí empieza tu diagnóstico:
                         presiona el botón para empezar a hablar y lee el siguiente texto en voz alta.
                     </Alert>
-                    <Grid container width='100%' height={{ xs: isNotMobile ? '80%' : '73%', sm: '80%', md: '80%', lg: '79%' }}  maxHeight={ '900px!important' } pt={1} spacing={1}>
-                        <Grid xs={2} sm={1} lg={1} justifyContent='center'>
-                            <Stack spacing={2}>
+                    <Grid container width='100%' height={{ xs: isNotMobile ? '80%' : '73%', sm: '80%', md: '80%', lg: '79%' }} maxHeight={'900px!important'} pt={1} spacing={0}>
+                        <Grid xs={2} sm={1} md={1} lg={1} justifyContent='center'>
+                            <Stack spacing={2} px={2}>
                                 <ButtonGroup orientation="vertical" size="lg" mb={2}>
                                     <IconButton onClick={clickOnBold} >
                                         <FormatBold size={32} color={isBold ? 'primary' : 'neutral'} />
                                     </IconButton>
-                                    <IconButton onClick={clickOnIncrease} disabled={fontSize === 36}>
+                                    <IconButton onClick={clickOnIncrease} disabled={fontSize === 40}>
                                         <TextIncrease size={32} />
                                     </IconButton>
                                     <IconButton onClick={clickOnDecrease} disabled={fontSize === 12}>
                                         <TextDecrease size={32} />
                                     </IconButton>
                                 </ButtonGroup>
-                                { !isNotMobile && <ModeToggle size={ 45 }/> }
+                                <Tooltip title="Texto de Melchor, F. (2021). Aquí no es Miami. Debolsillo" placement="right" size="lg" arrow>
+                                    <IconButton variant='outlined' color='neutral'>
+                                        <Info size={28} />
+                                    </IconButton>
+                                </Tooltip>
+                                {!isNotMobile && <ModeToggle size={45} />}
                             </Stack>
                         </Grid>
                         <Grid xs={10} sm={11} lg={11} height='100%' >
-                            <Grid overflow='auto' height='100%' pl={2}>
+                            <Grid overflow='auto' height='100%' px={2}>
                                 <CardContent>
-                                    <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>Título</Typography>
+                                    <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>Aquí no es Miami</Typography>
                                     {
                                         text.split('\n').map((sentence, index) => (
-                                            <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}>{sentence}</Typography>
+                                            <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize} textAlign='justify'>{sentence}</Typography>
                                         ))
                                     }
                                 </CardContent>
@@ -193,11 +199,11 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL}/>
+                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} />
                         )}
                     </Grid>
-                </Card>
-            </Grid>
+                </Card >
+            </Grid >
         </>
     )
 }
