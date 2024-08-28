@@ -50,7 +50,7 @@ const allExercises = [
 
 export const Ejercicios = () => {
 	return (
-		<Grid mx={20} my={3}>
+		<Grid mx={4} my={3}>
 			<Typography level="h1" my={2}>Recomendados</Typography>
 
 			<Grid container spacing={2}>
