@@ -3,9 +3,10 @@ import { Google, Mail, Person } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
 import { Star } from "@phosphor-icons/react"
 import { useForm } from "../../hooks/useForm"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link as LinkRouter } from "react-router-dom"
 import PropTypes from 'prop-types'
+import { UserContext } from "../../App"
 
 const formData = {
     name: "",
@@ -33,6 +34,8 @@ export const FormPart1 = ({ nextFunction }) => {
     const [isEmailValid, setIsEmailValid] = useState(true)
     const [isNameValid, setIsNameValid] = useState(true)
 
+    const { user, setUser } = useContext(UserContext)
+
     const {
         name,
         email,
@@ -46,8 +49,6 @@ export const FormPart1 = ({ nextFunction }) => {
     } = useForm(formData, formValidations);
 
     const handleClick = () => {
-        console.log(formState)
-
         if (!isFormValid) {
 
             !!emailValid && setIsEmailValid(false)
@@ -55,6 +56,7 @@ export const FormPart1 = ({ nextFunction }) => {
             !!nameValid && setIsNameValid(false)
         }
         else {
+            setUser({ ...user, ...formState })
             nextFunction()
         }
     }

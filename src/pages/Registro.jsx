@@ -5,7 +5,7 @@ import { useMediaQuery } from "@mui/material"
 import { FormPart2 } from "../components/Registro/FormPart2"
 import { FormPart3 } from "../components/Registro/FormPart3"
 import { FormPart1 } from "../components/Registro/FormPart1"
-import { useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const gradient = keyframes`
   0% {background-position: 0% 50%;}
@@ -18,7 +18,20 @@ export const Registro = () => {
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const [nForm, setnForm] = useState(1);
-	console.log(nForm)
+
+	const setNumberForm = (number) => {
+		setnForm(number)
+		// Store the number in the local storage
+		localStorage.setItem('formNumber', number)
+	}
+
+	useEffect(() => {
+		const number = localStorage.getItem('formNumber') || 1
+		if (number) {
+			setnForm(parseInt(number))
+		}
+	}, [])
+
 	return (
 		<Grid container height='100vh' >
 			{
@@ -39,13 +52,13 @@ export const Registro = () => {
 					<ModeToggle />
 
 					{
-						nForm === 1 &&<FormPart1 nextFunction={() => setnForm(2)}/>
+						nForm === 1 && <FormPart1 nextFunction={() => setNumberForm(2)} />
 					}
 					{
-						nForm === 2 && <FormPart2 nextFunction={() => setnForm(3)} prevFunction={() => setnForm(1)}/>
+						nForm === 2 && <FormPart2 nextFunction={() => setNumberForm(3)} prevFunction={() => setNumberForm(1)} />
 					}
 					{
-						nForm === 3 && <FormPart3 nextFunction={() => setnForm(1)} prevFunction={() => setnForm(2)}/>
+						nForm === 3 && <FormPart3 prevFunction={() => setNumberForm(2)} nextFunction={() => setNumberForm(1)} />
 					}
 			</Stack>
 			</Grid>

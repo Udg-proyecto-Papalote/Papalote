@@ -8,11 +8,18 @@ import { InicioSesion } from './pages/InicioSesion'
 import { Registro } from './pages/Registro'
 import { useMediaQuery } from '@mui/material'
 import ModeToggle from './components/ToggleTheme'
+import { createContext, useState } from 'react'
+
+export const UserContext = createContext()
 
 function App() {
 	const { pathname } = useLocation()
 	const isMobile  = useMediaQuery('(min-width: 400px)')
+
+	const [user, setUser] = useState({})
+
 	return (
+		<UserContext.Provider value={{ user, setUser }}>
 		<Grid width='100%'>
 			{
 				pathname !== '/iniciarsesion' && pathname !== '/registro' && <ExtendedNavBar />
@@ -33,6 +40,7 @@ function App() {
 			}
 			</Grid>
 		</Grid>
+		</UserContext.Provider>
 	)
 }
 

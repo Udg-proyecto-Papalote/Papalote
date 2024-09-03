@@ -1,8 +1,9 @@
 import { Button, ButtonGroup, DialogActions, DialogContent, DialogTitle, Divider, FormControl, FormLabel, Grid, Modal, ModalDialog, Stack, Typography } from "@mui/joy";
 import { ArrowLeft, Warning } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 
 const style = { backgroundColor: 'var(--joy-palette-neutral-outlinedHoverBg)' }
 
@@ -10,6 +11,8 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
     const [isIll, setIsIll] = useState();
     const [understood, setUnderstood] = useState(false)
     const [open, setOpen] = useState(false)
+
+    const { user, setUser } = useContext(UserContext)
 
     const onClick = () => {
         setIsIll(true)
@@ -20,6 +23,13 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
         setOpen(false)
         setUnderstood(true)
     }
+
+    const handleClick = () => {
+        setUser({ ...user, enfermedad: isIll })
+        nextFunction()
+        console.log(user);
+    }
+
     return (
         <Stack spacing={3} >
 
@@ -40,7 +50,7 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
                 </Grid>
                 <Grid sm={6} md={6} lg={6} xs={6} xl={6}>
                     <Link to='/'>
-                        <Button disabled={isIll ? !understood : isIll} variant='soft' color="success" size="lg" onClick={nextFunction} fullWidth>Listo</Button>
+                        <Button disabled={isIll ? !understood : isIll} variant='soft' color="success" size="lg" onClick={handleClick} fullWidth>Listo</Button>
                     </Link>
                 </Grid>
             </Grid>
