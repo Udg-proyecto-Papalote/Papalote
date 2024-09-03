@@ -8,7 +8,6 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
     const presetName = 'papalote'
 
     const [loading, setLoading] = useState(false)
-    const [uploadSuccess, setUploadSuccess] = useState(false)
 
     const urlToBlob = async (url) => {
         const response = await fetch(url);
@@ -37,9 +36,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                 formData
             );
 
-            console.log('Audio subido con éxito:', response.data.url);
             setLoading(false);
-            setUploadSuccess(true);
             sendRecording(response.data.url); // Llama a esta función con la URL del archivo subido
 
         } catch (error) {

@@ -89,27 +89,9 @@ export const Diagnostico = () => {
         setAudioURL(null);
     };
 
-    const sendDiagnostic = () => {
+    const sendDiagnostic = ( url ) => {
         setAudioURL(null);
-        // mediaRecorder.ondataavailable = (event) => {
-        //     const audioBlob = new Blob([event.data], { type: 'audio/wav' });
-        //     const formData = new FormData();
-        //     formData.append('audio', audioBlob, 'recording.wav');
-
-        //     // Send the audio file to the backend
-        //     // fetch('/upload', {
-        //     //     method: 'POST',
-        //     //     body: formData,
-        //     // })
-        //     //     .then(response => response.json())
-        //     //     .then(data => {
-        //     //         console.log('File uploaded successfully:', data);
-        //     //         setAudioURL(data.filePath); // Assuming the backend returns the file path
-        //     //     })
-        //     //     .catch(error => {
-        //     //         console.error('Error uploading file:', error);
-        //     //     });
-        // };
+        
     }
 
     // rich text
