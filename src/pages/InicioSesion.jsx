@@ -3,17 +3,11 @@ import ModeToggle from "../components/ToggleTheme"
 import { Google, Mail } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
 import { Star } from "@phosphor-icons/react"
-import { keyframes } from '@emotion/react';
 import { useMediaQuery } from "@mui/material"
 import { useForm } from "../hooks/useForm"
 import { useState } from "react"
 import { Link as LinkRouter } from "react-router-dom"
-
-const gradient = keyframes`
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-`;
+import LandingPage from "../components/Registro/LandingPage"
 
 const formData = {
     email: "",
@@ -33,7 +27,7 @@ const formValidations = {
 
 export const InicioSesion = () => {
 	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
 	const [isPasswordValid, setIsPasswordValid] = useState(true)
 	const [isEmailValid, setIsEmailValid] = useState(true)
@@ -91,15 +85,7 @@ export const InicioSesion = () => {
 				</Stack>
 			</Grid>
 			{
-				!isMobile &&
-				<Grid lg={6}
-					md={6}
-					sx={{
-						background: 'linear-gradient(45deg, #572dff, #13b2f7, #2de3c2)',
-						backgroundSize: '600% 600%',
-						animation: `${gradient} 4s ease infinite`
-					}}>
-				</Grid>
+				!isMobile && <LandingPage />
 			}
 		</Grid>
 	)
