@@ -1,13 +1,13 @@
 import { Info, LibraryBooks } from "@mui/icons-material"
-import { Alert, Card, CardContent, Chip, Grid, Typography } from "@mui/joy"
+import { Alert, Card, CardContent, Chip, Grid, Typography, useColorScheme } from "@mui/joy"
 import trab from '../../assets/trabalenguas.json'
 
 export const Trabalenguas = ({ title = 'Trabalenguas', theme = 'Dicción', instructions = 'Repetir los siguientes trabalenguas', content = trab }) => {
-
+    const { mode } = useColorScheme()
     const { tigres } = trab
     
     const handleMouseOver = (e) => {
-        e.target.style.backgroundColor = '#A3E635'
+        e.target.style.backgroundColor = mode === 'dark' ? '#4d7c0f' : '#a3e635'
         e.target.style.borderRadius = '5px'
         // Transition
         e.target.style.transition = 'ease 0.2s'
