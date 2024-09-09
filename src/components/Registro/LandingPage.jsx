@@ -1,5 +1,5 @@
 import { keyframes } from "@emotion/react";
-import { AspectRatio, Box, Card, Grid, Typography } from "@mui/joy";
+import { AspectRatio, Card, Grid, Typography } from "@mui/joy";
 
 const gradient = keyframes`
   0% {background-position: 0% 50%;}
@@ -40,40 +40,40 @@ const phrases = [
 
 
 const LandingPage = () => {
-  return (
-    <Grid container lg={6}
-					md={6}
-				sx={{
-					background: 'linear-gradient(45deg, #572dff, #13b2f7, #2de3c2)',
-					backgroundSize: '600% 600%',
-					animation: `${gradient} 4s ease infinite`
-				}}
-					alignContent='center' justifyContent='center' p='20px'
-					// sx={{ backgroundColor: 'var(--joy-palette-background-body)', borderRight: '2px solid var(--joy-palette-primary-outlinedBorder)', padding: '20px' }} className="animate__animated animate__slideInRight"
-					>
-					<div style={{ textAlign: 'center', mb:3 }}>
-						<Typography fontSize='36px' fontWeight='500'>Bienvenidx a</Typography><Typography ml={-1.5} fontSize='36px' color="primary" fontStyle='italic' fontWeight='600'>Papalote</Typography>
-					</div>
-					<Grid container spacing={3} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }} pt={1}>
-						{
-							phrases.map((item, index) => (
-								<Grid item xs={12} sm={6} md={6} lg={4} key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
-									<Card sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'start', borderRadius: 25, backgroundColor: "rgba(255, 245, 255, 0.8)", filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1))', backdropFilter: 'blur(100px)', borderColor: 'var(--joy-palette-neutral-300, #CDD7E1)' }}>
-										<Box sx={{ borderRadius:100, backgroundColor: 'var(--joy-palette-neutral-300, #CDD7E1)' }} p={2} m='auto' width={90} height={90} >
-											<AspectRatio ratio='1' color='none'>
-												 
-											{item.icon}
-											</AspectRatio>
-										</Box>
-										<Typography level="title-md" fontStyle='italic' textColor='#171A1C'>{item.title}</Typography>
-										<Typography level="body-xs" textColor='#555E68'>{item.description}</Typography>
-									</Card>
-								</Grid>
-							))
-						}
-					</Grid>
-				</Grid>
-  )
+	return (
+		<Grid container lg={6}
+			md={6}
+			sx={{
+				background: 'linear-gradient(45deg, #572dff, #13b2f7, #2de3c2)',
+				backgroundSize: '600% 600%',
+				animation: `${gradient} 4s ease infinite`
+			}}
+			alignContent='center' justifyContent='center' p='20px'
+		// sx={{ backgroundColor: 'var(--joy-palette-background-body)', borderRight: '2px solid var(--joy-palette-primary-outlinedBorder)', padding: '20px' }} className="animate__animated animate__slideInRight"
+		>
+			<div style={{ textAlign: 'center', mb: 3 }}>
+				<AspectRatio ratio='1' color='none'>
+					<img src='/kite.png' alt='Papalote' style={{ width: '100%' }} />
+				</AspectRatio>
+				<Typography ml={-1.5} fontSize='36px' textColor='#fff' fontStyle='italic' fontWeight='600'>Papalote</Typography>
+			</div>
+			<Grid container spacing={2} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }} pt={1}>
+				{
+					phrases.map((item, index) => (
+						<Grid item xs={12} sm={6} md={6} lg={4} key={index} sx={{ display: 'flex', flexDirection: 'column' }}>
+							<Card sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'start', borderRadius: 25, backgroundColor: "rgba(255, 245, 255, 0.8)", filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1))', backdropFilter: 'blur(100px)', borderColor: 'var(--joy-palette-neutral-300, #CDD7E1)' }}>
+									<AspectRatio ratio='1' color='none' sx={{width: 40}}>
+										{item.icon}
+									</AspectRatio>
+								<Typography level="title-md" fontStyle='italic' textColor='#171A1C'>{item.title}</Typography>
+								<Typography level="body-xs" textColor='#555E68'>{item.description}</Typography>
+							</Card>
+						</Grid>
+					))
+				}
+			</Grid>
+		</Grid>
+	)
 }
 
 export default LandingPage
