@@ -41,8 +41,8 @@ const phrases = [
 
 const LandingPage = () => {
 	return (
-		<Grid container lg={6}
-			md={6}
+		<Grid container lg={7}
+			md={7}
 			sx={{
 				background: 'linear-gradient(45deg, #572dff, #13b2f7, #2de3c2)',
 				backgroundSize: '600% 600%',
@@ -57,7 +57,7 @@ const LandingPage = () => {
 				</AspectRatio>
 				<Typography ml={-1.5} fontSize='36px' textColor='#fff' fontStyle='italic' fontWeight='600'>Papalote</Typography>
 			</div>
-			<Grid container spacing={2} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }} pt={1}>
+			<Grid container spacing={3} p={5} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }} pt={1}>
 				{
 					phrases.map((item, index) => (
 						<Grid item xs={12} sm={6} md={6} lg={4} key={index} sx={{ display: 'flex', flexDirection: 'column' }}>

@@ -59,7 +59,7 @@ export const InicioSesion = () => {
 
 	return (
 		<Grid container height='100vh' >
-			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInRight" sx={{backgroundColor: 'var(--joy-palette-background-body)'}}>
+			<Grid lg={5} md={5} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInRight" sx={{backgroundColor: 'var(--joy-palette-background-body)'}}>
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 					<h1>Inicio de sesión</h1>
 					<ModeToggle />

@@ -32,7 +32,7 @@ export const Registro = () => {
 			{
 				!isMobile && <LandingPage />
 			}
-			<Grid lg={6} md={6} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInLeft" sx={{ backgroundColor: 'var(--joy-palette-background-body)' }}>
+			<Grid lg={5} md={5} xs={12} p='30px' alignContent='center' justifyContent='center' className="animate__animated animate__slideInLeft" sx={{ backgroundColor: 'var(--joy-palette-background-body)' }}>
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 
 					<h1>Crea una cuenta</h1>
