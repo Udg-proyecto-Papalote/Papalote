@@ -12,5 +12,8 @@ export const exercises = {
             ['Había una gallina ética perlética pelapelambrética peluda ', 'y pelepelembrúda que tuvo a los hijos éticos perléticos pelapelambréticos peludos y pelapelambrúdos. ', 'Si la gallina no sería ética perlética pelapelambrética peluda y ','pelepelembrúda sus hijos no serían éticos perléticos pelapelambréticos peludos y pelapelambrúdos.'],
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Diccion2': {
+        'title': 'Trabalenguas Populares II',
     }
 }
