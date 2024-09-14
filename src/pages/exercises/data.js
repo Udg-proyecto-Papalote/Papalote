@@ -1,7 +1,6 @@
 export const exercises = {
     'Diccion1': {
         'title': 'Trabalenguas Populares I',
-        'description': 'Ejercicios de dicción con trabalenguas populares.',
         'theme': 'Dicción',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
@@ -15,5 +14,15 @@ export const exercises = {
     },
     'Diccion2': {
         'title': 'Trabalenguas Populares II',
+    },
+    'Diccion7': {
+        'title': 'Palabras con letra "D"',
+        'theme': 'Dicción',
+        'intructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'ACTIVIDAD', 'ACTITUD', 'ACTUALIDAD', 'ADVERSIDAD', 'ALUD', 'ALTITUD', 'AMISTAD', 'ANTIGÜEDAD', 'AUTORIDAD', 'BONDAD', 'CADUCIDAD', 'CALIDAD', 'CANTIDAD',  'CAPACIDAD', 'CARIDAD', 'CIUDAD', 'CLARIDAD', 'COMODIDAD', 'COMPLICIDAD', 'CULPABILIDAD', 'DEBILIDAD', 'DIFICULTAD', 'EDAD', 'ELASTICIDAD', 'ENFERMEDAD', 'FACILIDAD', 'FALSEDAD', 'FELICIDAD', 'HUÉSPED', 'HUMANIDAD', 'HUMEDAD', 'INQUIETUD', 'JUVENTUD', 'LATITUD', 'LAÚD', 'LIBERTAD', 'LONGITUD', 'MAGNITUD', 'MALDAD', 'MITAD', 'NAVIDAD', 'NECESIDAD', 'OBESIDAD', 'OSCURIDAD', 'PARED', 'PROFUNDIDAD', 'PROPIEDAD', 'PULCRITUD', 'PUNTUALIDAD', 'RED', 'RESPONSABILIDAD', 'SALUD', 'SERIEDAD', 'SOCIEDAD', 'SOLEDAD', 'SOLICITUD', 'JUVENTUD ESTUDIOSA', 'LIBERTAD ABSOLUTA', 'EDAD MEDIA', 'EDAD DORADA', 'CON VOLUNTAD', 'TODO ES POSIBLE', 'ES UNA GRAN VERDAD DE LA HUMANIDAD'
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     }
 }
