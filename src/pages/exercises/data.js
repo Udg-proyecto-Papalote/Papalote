@@ -42,6 +42,21 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
     },
+    'Diccion6': {
+        'title': 'Sonido KS',
+        'theme': 'Dicción',
+        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 1': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'ANEXO', 'APROXIMAR', 'ASFIXIA', 'AXILA', 'AXIOLOGÍA', 'BOXEADOR', 'BOXER', 'CLAXON', 'CLÍMAX', 'COEXISTIR', 'COMPLEXIÓN', 'CONEXIÓN', 'CONTEXTO', 'CONTEXTUALIZAR', 'CONTEXTURA', 'CONVEXO', 'FLEXIBILIZAR', 'HETERODOXO', 'HEXÁGONO', 'HIPERTEXTO', 'INEXACTO', 'INTOXICAR', 'LÁTEX', 'LEXICOGRAFÍA', 'LUXACIÓN', 'MONÓXIDO', 'PROXIMIDAD', 'SAXOFONISTA', 'SINTAXIS', 'TOXICOLOGÍA', 'APROXIMADAMENTE', 'AUTOEXPLICATIVA', 'EXAMINANDO', 'EXAGERARLA', 'EXCLAMAMOS', 'EXCLUÍRTELE', 'EXISTENCIALISMO', 'EXITOSO'
+        ],
+        'instructions 2': 'Pronuncia en voz alta la siguiente frase con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 2': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'sentences': [
+            'Hubo un extraño experto que exploraba,', 'esperando expandir experiencias increíbles, ', 'y extrañado de no extraer nada.', 'Quedó decimosexto en el torneo en Texas.', ' El experto declaró,', 'esperar tener más éxito en el próximo año.',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Diccion7': {
         'title': 'Palabras con letra "D"',
         'theme': 'Dicción',
@@ -49,6 +64,61 @@ export const exercises = {
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'ACTIVIDAD', 'ACTITUD', 'ACTUALIDAD', 'ADVERSIDAD', 'ALUD', 'ALTITUD', 'AMISTAD', 'ANTIGÜEDAD', 'AUTORIDAD', 'BONDAD', 'CADUCIDAD', 'CALIDAD', 'CANTIDAD',  'CAPACIDAD', 'CARIDAD', 'CIUDAD', 'CLARIDAD', 'COMODIDAD', 'COMPLICIDAD', 'CULPABILIDAD', 'DEBILIDAD', 'DIFICULTAD', 'EDAD', 'ELASTICIDAD', 'ENFERMEDAD', 'FACILIDAD', 'FALSEDAD', 'FELICIDAD', 'HUÉSPED', 'HUMANIDAD', 'HUMEDAD', 'INQUIETUD', 'JUVENTUD', 'LATITUD', 'LAÚD', 'LIBERTAD', 'LONGITUD', 'MAGNITUD', 'MALDAD', 'MITAD', 'NAVIDAD', 'NECESIDAD', 'OBESIDAD', 'OSCURIDAD', 'PARED', 'PROFUNDIDAD', 'PROPIEDAD', 'PULCRITUD', 'PUNTUALIDAD', 'RED', 'RESPONSABILIDAD', 'SALUD', 'SERIEDAD', 'SOCIEDAD', 'SOLEDAD', 'SOLICITUD', 'JUVENTUD ESTUDIOSA', 'LIBERTAD ABSOLUTA', 'EDAD MEDIA', 'EDAD DORADA', 'CON VOLUNTAD', 'TODO ES POSIBLE', 'ES UNA GRAN VERDAD DE LA HUMANIDAD'
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Diccion12': {
+        'title': 'Combinación consonántica “GN”',
+        'theme': 'Dicción',
+        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'DIGNO', 'SIGNO', 'IGNORAR', 'DESIGNAR', 'REGENERAR', 'MAGNÍFICO', 'MAGNITUD', 'DIGNIDAD', 'CONDIGNAR', 'FIGNAR', 'IGNORANCIA', 'RESIGNAR', 'LIGNITO', 'SIGNIFICAR', 'DIAGNÓSTICO', 'IGNICIÓN', 'PREGNANTE', 'INDIGNACIÓN', 'IMPREGNAR', 'DESIGNIO', 'MAGNATE', 'FEIGNIR', 'REGNAR', 'IMPUGNACIÓN', 'RESIGNACIÓN', 'INDIGNO', 'COGNITIVO', 'MAGNÍFICO', 'LIGNIFICAR', 'CONSIGNAR'
+        ],
+        'instructions 2': 'Pronuncia en voz alta las siguientes frases con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 2': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'sentences': [
+            ['EL DIGNO CABALLERO FUE HONRADO POR SU VALENTÍA.'],
+            ['EL SIGNO DEL ZODIACO DE JUAN ES LEO.'],
+            ['NO DEBES IGNORAR LAS SEÑALES DE ADVERTENCIA.'],
+            ['MARÍA FUE DESIGNADA COMO LA NUEVA LÍDER DEL EQUIPO.'],
+            ['LA MAGNITUD DEL PROBLEMA ES ALARMANTE.'],
+            ['LA DIGNIDAD ES UN VALOR FUNDAMENTAL EN NUESTRA SOCIEDAD.'],
+            ['LA INDIGNACIÓN DEL PÚBLICO FUE EVIDENTE DURANTE LA PROTESTA.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Diccion13': {
+        'title': 'Fonema /ɲ/',
+        'theme': 'Dicción',
+        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'NIÑO', 'MAÑANA', 'AÑO', 'ESPAÑA', 'SEÑOR', 'ENSEÑAR', 'COMPAÑÍA', 'CARIÑO', 'DUEÑO', 'MONTAÑA', 'CAÑA', 'BAÑO', 'PEQUEÑO', 'LEÑA', 'PIÑA', 'ÑANDÚ', 'CASTAÑA', 'ARAÑA', 'RAÑA', 'REBAÑO', 'CAMPAÑA', 'AÑADIR', 'AÑORANZA', 'TIÑA', 'ÑOÑO', 'RETOÑO', 'SUEÑO', 'CASTAÑUELA', 'CABAÑA', 'MIÑO', 'CEÑO', 'ÑAPA', 'GRUÑÓN', 'RUÑIR', 'TAMAÑO', 'ÑANGO', 'ÑAME', 'PUÑAL', 'OTOÑO', 'MONTAÑÉS', 'TAMAÑO', 'CASTAÑAR', 'MOÑO', 'BAÑADOR', 'AÑICOS', 'PUÑO', 'GAÑIDO', 'ÑOQUIS', 'AÑADIDO', 'TOÑO'
+        ],
+        'instructions 2': 'Pronuncia en voz alta las siguientes frases con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 2': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'sentences': [
+            ['EL NIÑO JUEGA EN LA MONTAÑA CADA MAÑANA.'],
+            ['MI SEÑOR ENSEÑA CON MUCHO CARIÑO.'],
+            ['LA COMPAÑÍA DE ESPAÑA LANZÓ UN NUEVO PRODUCTO ESTE AÑO.'],
+            ['EL DUEÑO DEL NEGOCIO ES UN SEÑOR MUY AMABLE.'],
+            ['EN ESPAÑA, HAY MUCHAS CIUDADES HERMOSAS PARA VISITAR.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Diccion15': {
+        'title': 'Molde articulatorio fonema /P/',
+        'theme': 'Dicción',
+        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'PAN', 'CAPÍTULO', 'PAPA', 'COMPUTADORA', 'PATO', 'IMPONER', 'PIPA', 'IMPORTAR', 'PERA', 'CAMPANA', 'PILA', 'CAMPAMENTO', 'PINO', 'TAPAR', 'PURO', 'MAPA', 'PISO', 'SOPA', 'PESA', 'APIO', 'PAGA', 'CAPO', 'PELO', 'TAPA', 'PASA', 'SOPLAR', 'PITA', 'CAPACITAR', 'POCA', 'COPIA', 'PECA', 'OPERAR', 'PALO', 'CAPAZ', 'PUPA', 'CAPTURA', 'PASA', 'ESPEJO', 'PATA', 'TEMPLO', 'POMO', 'CAMPO', 'PALA', 'COMPRA', 'PEPE', 'DESPACHO', 'PULA', 'RÁPIDO', 'PLUMA', 'TRANSPORTE', 'PLANTA', 'CUMPLEAÑOS', 'PREMIO', 'HELIPUERTO', 'PROBAR', 'OPORTUNIDAD', 'PAPEL', 'DESPERTAR', 'PULPO', 'IMPRESIÓN',
+        ],
+        'instructions 2': 'Pronuncia en voz alta la siguiente frase con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations 2': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'sentences': [
+            'EL PRISMA ÓPTICO INTERCEPTA LA LUZ Y NOS PERMITE CAPTAR LA DESCOMPOSICIÓN DE ESTA:', 'OBTENEMOS ASÍ LOS SIETE COLORES DEL ESPECTRO VISIBLE Y OBSERVAMOS NÍTIDAMENTE SU POLICROMÍA',
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     }
