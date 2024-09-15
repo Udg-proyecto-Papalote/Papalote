@@ -121,5 +121,25 @@ export const exercises = {
             'EL PRISMA ÓPTICO INTERCEPTA LA LUZ Y NOS PERMITE CAPTAR LA DESCOMPOSICIÓN DE ESTA:', 'OBTENEMOS ASÍ LOS SIETE COLORES DEL ESPECTRO VISIBLE Y OBSERVAMOS NÍTIDAMENTE SU POLICROMÍA',
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Palabras de difícil pronunciación1': {
+        'title': 'Parte 1',
+        'theme': 'Palabras de dificil pronunciación',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'APOCALÍPTICO', 'ARBATRISTA', 'ARCHIMANDRITA', 'BILBILITANO', 'BONIFICACIÓN', 'CAAGUAZENSE', 'CAMASTRONERÍA', 'CANALÍCULO', 'CANELONENSE', 'CATECÚMENO', 'DICOTILEDONA', 'CELASTRÁCEAS', 'CILINDROAXIL', 'CIRCUNSPECTO', 'COGNOSCITIVO', 'DESHINIBIDO', 'ENCALABERNARSE', 'ENJALBEGADURA', 'ENLADRILLADURA', 'FLATULENTO', 'FLEBOTOMISTA', 'FRUMENTICIO', 'FRUSTRATORIO', 'GENITOURINARIO', 'GIMNOSPERMAS', 'GLANDÍGERO', 'GORGOJEARSE', 'GRANDÍLOCUA',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Palabras de difícil pronunciación2': {
+        'title': 'Parte 2',
+        'theme': 'Palabras de dificil pronunciación',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'HABITABILIDAD', 'HAMAMELICLÁCEAS', 'HEBDOMADARIO', 'HIERÁTICAMENTE', 'HIEROSOLIMITANO', 'HIPERCLORHÍDRICO', 'HIDRARGIRISMO', 'HIDROSULFURO', 'HIPOCONDRÍACO', 'HOMOGEIZACIÓN', 'IMPALPABILIDAD', 'IMPARIDÍGITO', 'IMPENETRABILIDAD', 'IMPENSADAMENTE', 'GUANGOCHO', 'GUANGOCHO', 'IMPERMEABILIZACIÓN', 'IMPLACABLEMENTE', 'IGNOMIOSAMENTE', 'ILESGIBLE', 'IMPERCEPTIBLEMENTE', 'IMPOSTERGABLE', 'IMPERTURBABLEMENTE', 'KAFKIANO', 'MALTRATAMIENTO', 'MIRAMAMOLÍN', 'MIRAMELINDOS', 'MOJIGATERÍA', 'MORONGADA', 'MUNICIPALIZACIÓN',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     }
 }
