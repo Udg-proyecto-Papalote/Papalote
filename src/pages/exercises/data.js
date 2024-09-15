@@ -21,11 +21,26 @@ export const exercises = {
             ['Yo no llegue a ser agnóstico,', 'pero si experimentado al yacer en un arca subacuática.'],
             ['El imperialismo e hiperinflacionario éxtasis,', 'provocaba la desarticulación del excepcional accionar dogmático y de incógnito.'],
             ['Exquisita,', 'exquisitez para ex accionistas.'],
-            ['El planeamiento exonerable y desburocratizado,', ' es inconteniblemente inexpugnable.'],
+            ['El planeamiento exonerable y desburocratizado,', 'es inconteniblemente inexpugnable.'],
             ['El texto es anticonstitucional e interrumpe el descrédito, ', 'subrogado con exacerbada exactitud interinstitucional.'],
             ['En el campo había noches en que la luna estaba encapotada y el cielo se engarabintantingulizaba,', 'y todos se decían:', ' ¿Quién descapotará la luna?', 'Y al Cielo…', '¿Quién lo desengarabintantingulizará?', 'El que lo descapotare y desengarabintantingulizare,', 'buen descapotador y desengarabintantingulizador será.'],
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Diccion3': {
+        'title': 'Trabalenguas Populares III',
+        'theme': 'Dicción',
+        'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [
+            ['Cantinflas frota con franela su frasco flamenco,', 'on franela Cantinflas frota su flamenco frasco.'],
+            ['Mientras Heredoto Ditirambos dicte teniendo en detalle toditos los datos,', 'importa un ardite la dote de taide, si Dante en su tienda detonantes vende.'],
+            ['Ahita de Yantar yace la hiena entre hierbas y hielos en el yermo,', 'oliendo a yodo y añorando el hierro que a la yegua marcara entre las hiedras.'],
+            ['En tres trastos trozados,', 'tres tristes tigres trigo trillado tragaban,', 'tigre tras tigre,', 'tras tigre,', 'tras tigre,', 'tras tigre.'],
+            ['¿Qué crees que es un creso, Cleto?', '¿Un queso de crema crasa?', '¿Crees, Crespo Cleto, que el queso de crema crasa se crece?', '¡Creso no es queso, cretino!', 'Créeme,', 'Crespo Cleto, créeme!', 'Creo es un craso que come queso crema que no crece.'],
+            ['Illanes Bellido,', 'el niño callado,', 'lloró por el daño del paño sellado y añadió la falla de reñir por ello con llata el cuñado,', 'quien con la botella le hizo seña llena llamándolo al llano desde aquella peña.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
     },
     'Diccion7': {
         'title': 'Palabras con letra "D"',
