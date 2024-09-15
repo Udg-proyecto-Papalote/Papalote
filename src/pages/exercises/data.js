@@ -122,6 +122,17 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Impostación1':{
+        'title': 'Calentamiento de voz - Primera semana',
+        'theme': 'Impostacion',
+        'instructions': 'Discutir con Ximena',
+        'excercise': [
+            '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
+            '2. Al exhalar, vamos a pronunciar una B, con los labios y mejillas distendidas, la cual hará que se inflen levemente. No debe haber tensión en este ejercicio. Con el sonido emitido por la letra b que ya es vibrante, empezarás a sentir comienza a vibrar tu garganta, torax e incluso tu cabeza. Puedes subir o variar la intensidad del sonido producido para notar aún mejor cómo se activan tus resonadores naturales.',
+            '3. Puedes realizar este ejercicio tres veces al día (una vez en la mañana, otra en la tarde y otra en la noche) de 3 a 5 minutos. Este simple ejercicio que no te llevará más de 15 minutos diarios te ayudará a familiarizarte con los diferentes resonadores del cuerpo y realizándose de forma paulatina, pero constante, notarás que tu voz comienza a tomar más resonancia.',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Palabras de difícil pronunciación1': {
         'title': 'Parte 1',
         'theme': 'Palabras de dificil pronunciación',
