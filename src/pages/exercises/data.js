@@ -133,6 +133,50 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'LetraR1': {
+        'title': 'Soy un motor',
+        'theme': 'Letra R',
+        'instructions': 'Discutir con Ximena',
+        'recommendations 1': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
+        'excercise': [
+            'Imitar el sonido de un motor. Primero hay que inflar el abdomen y luego hacer el sonido “rrrrrrrrrrrr” hasta que nos quedemos sin aire.',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'LetraR2': {
+        'title': 'Trabalenguas con R',
+        'theme': 'Letra R',
+        'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'Recomendación' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
+        'trabalenguas': [
+            ['Parra tenía una perra. ', 'Guerra tenía una parra. ', 'La perra de Parra subió a la parra de Guerra. ', 'Guerra pegó con la porra a la perra de Parra. ', 'Y Parra le dijo a Guerra: ', '¿Por qué ha pegado Guerra con la porra a la perra de Parra? ', 'Y Guerra le contestó: ', 'Si la perra de Parra no hubiera subido a la parra de Guerra, ', 'Guerra no habría pegado con la porra a la perra de Parra.'],
+            ['Erre con erre cigarro,', 'erre con erre barril,', 'rápido corren los carros,', 'cargados de azúcar al ferrocarril.'],
+            ['La rana y el ratón juegan a la ruleta.', 'Y cuando tienen hambre, preparan la receta.'],
+            ['El perro Toro corre con los toros,', 'los toros corren más rápido que el perro Toro.', 'Los toros se cansan y el perro Toro los alcanza.'],
+            ['¿Cuánta madera roería un roedor si los roedores royeran madera?'],
+            ['Tres tristes tigres tragaban trigo en un trigal,', 'en un trigal tragaban trigo tres tristes tigres.'],
+            ['Tres grandes torres de trigo en un trigal se encontraron tres tristes tigres y no pudieron tres trigales tragar.'],
+            ['Erre con erre doble,', 'erre con erre barril,', 'qué rápido ruedan las ruedas del ferrocarril.'],
+            ['Rosa Rosales cortó una rosa,', 'una rosa Rosales cortó.', '¡Qué rosa tan rara cortó Rosa Rosales!'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'LetraR3': {
+        'title': 'Combinaciones consonantes con R',
+        'theme': 'Letra R',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'Recomendación' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            ['CRANEO', 'INCRUSTAR', 'CRISANTEMO', 'CRUDO', 'CRÁTER', 'ACRÓBATA', 'CRITERIO', 'ACROSTICO', 'DEMACRADO', 'HIPÓCRITA', 'CRISIS', 'CREMA', 'LACRADO', 'SACRAMENTO', 'SECRETARIA', 'CREDO', 'CRIN', 'CRUCIGRAMA'],
+            ['DRAMA', 'DRAMATICO', 'DROMEDARIO', 'DRENAR', 'DRAGON', 'DRAGA', 'CUADRA', 'CATEDRAL', 'LADRILLO', 'LIENDRE', 'DRON', 'DRAMATIZAR', 'ESCUADRON', 'CUADRUPEDO', 'CUADRADO', 'ADRIATICO', 'DRAMATURGO'],
+            ['BRUMA', 'HAMBRE', 'BRUNO', 'CABRA', 'BRAZO', 'BROCHA', 'BRONQUITIS', 'BRUJULA', 'BREVE', 'BRECHA', 'BRINDIS', 'BRISA', 'BRAVO', 'BRINCAR', 'BREVAJE', 'BRAVÍO', 'BRILLANTES', 'BRONCEADOR', 'BRUSCO', 'BRONCE'],
+            ['COFRE', 'FRESA', 'FRANCIA', 'FRASCO', 'FRENOS', 'OFRECER', 'REFRESCAR', 'FRÍVOLO', 'RESFRIADO', 'FRONDA', 'SUFRO', 'DESCIFRÓ', 'AFRONTAR', 'FRONTERA', 'AFRODITA', 'FRUTOS', 'FRANQUEZA', 'REFRIGERADOR', 'FRÍO'],
+            ['GRANDE', 'GRUÑON', 'GRULLA', 'ENGRANAJE', 'GRUPO', 'ENGRANDECER', 'GRILLO', 'GRANITO', 'BAGRE', 'CANGREJO', 'EGRESAR', 'ENGRUDO', 'ESGRIMA', 'LOGRO', 'GRUMOSO', 'GRANATE', 'GRAMO', 'GRÁFICO', 'GROSELLA', 'GRASA'],
+            ['TROMPO', 'TRONCO', 'TRUCO', 'TRINEO', 'TRAZO', 'TEATRO', 'TRIGO', 'TRISTE', 'CICATRIZ', 'FILTRO', 'TRAICIÓN', 'TRÁFICO', 'TRANSICIÓN', 'TRACTOR', 'ENTRENAMIENTO', 'LETRA', 'KILÓMETRO', 'INSTRUMENTO', 'INTRIGA', 'CENTRO'],
+            ['PREMIO', 'PRIMO', 'PRADO', 'PRESA', 'PRINCESA', 'PROTEGER', 'PROBLEMA', 'PREDICAR', 'COMPRA', 'EXPRIMIR', 'PAPRIKA', 'COMPROBAR', 'REPROBAR', 'PROCRASTINAR', 'PRISA', 'PRIMARIA', 'APRENDER', 'PRUSIA', 'PRIVILEGIO'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Palabras de difícil pronunciación1': {
         'title': 'Parte 1',
         'theme': 'Palabras de dificil pronunciación',
