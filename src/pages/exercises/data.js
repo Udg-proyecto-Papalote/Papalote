@@ -14,6 +14,18 @@ export const exercises = {
     },
     'Diccion2': {
         'title': 'Trabalenguas Populares II',
+        'theme': 'Dicción',
+        'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [
+            ['Yo no llegue a ser agnóstico,', 'pero si experimentado al yacer en un arca subacuática.'],
+            ['El imperialismo e hiperinflacionario éxtasis,', 'provocaba la desarticulación del excepcional accionar dogmático y de incógnito.'],
+            ['Exquisita,', 'exquisitez para ex accionistas.'],
+            ['El planeamiento exonerable y desburocratizado,', ' es inconteniblemente inexpugnable.'],
+            ['El texto es anticonstitucional e interrumpe el descrédito, ', 'subrogado con exacerbada exactitud interinstitucional.'],
+            ['En el campo había noches en que la luna estaba encapotada y el cielo se engarabintantingulizaba,', 'y todos se decían:', ' ¿Quién descapotará la luna?', 'Y al Cielo…', '¿Quién lo desengarabintantingulizará?', 'El que lo descapotare y desengarabintantingulizare,', 'buen descapotador y desengarabintantingulizador será.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
     'Diccion7': {
         'title': 'Palabras con letra "D"',
