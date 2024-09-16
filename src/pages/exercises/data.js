@@ -187,7 +187,16 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Con la práctica diaria, ve aumentando progresivamente el tiempo de soplo, manteniendo siempre el control sin apresurarte. Recuerda registrar los segundos que logres para medir tu avance y así mejoraras tu caudal y control de aire'
     },
-
+    'Potencia2': {
+        'title': 'Inflar un globo',
+        'theme': 'Potencia',
+        'instructions': 'Discutir con Ximena',
+        'excercise': [
+            ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
+            ['Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
+    },
     'Palabras de difícil pronunciación1': {
         'title': 'Parte 1',
         'theme': 'Palabras de dificil pronunciación',
