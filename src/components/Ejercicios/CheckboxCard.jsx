@@ -1,25 +1,33 @@
 import { HouseOutlined } from "@mui/icons-material"
-import { Card, CardContent, Checkbox, Grid, Typography } from "@mui/joy"
+import { Card, CardContent, Checkbox, Typography } from "@mui/joy"
+import { useState } from "react"
 
-const CheckboxCard = ({ icon = <HouseOutlined />, title = "Escucha", coso = <audio controls src={'https://res.cloudinary.com/ds8hfmrth/video/upload/v1725379369/papalote/wgx7snrtak1blwi8jqhy.webm'} style={{maxWidth: '100%', zoom: 0.8 }}/> }) => {
-    const audioLink = 'https://res.cloudinary.com/ds8hfmrth/video/upload/v1725379369/papalote/wgx7snrtak1blwi8jqhy.webm';
-    
+const CheckboxCard = ({ icon = <HouseOutlined />, title = "Escucha", coso = <></>, description = '', word = '', setCheckedBoxes, setUncheckedBoxes, checkedBoxes
+ }) => {
+
+    const [checked, setChecked] = useState(false)
 
     return (
-        <Grid lg={4} sm={4} md={4} xs={12}>
-            <Card >
-                <CardContent orientation="horizontal" sx={{ justifyContent: 'space-between' }}>
+        <Card sx={{ flex: 1 }}>
+            <CardContent sx={{ flexDirection: 'column', gap: 2, justifyContent: 'center', justifyItems:'center' }}>
+                <CardContent orientation="horizontal" sx={{ justifyContent: 'space-between', flex: 1 }}>
                     <CardContent orientation="horizontal" sx={{ gap: 1 }}>
                         {icon}
                         <Typography level="title-lg">{title}</Typography>
                     </CardContent>
-                    <Checkbox variant='outlined' color='neutral' />
+                    <Checkbox variant='outlined' color='neutral' checked={checked} onChange={(e) => {
+                        setChecked(e.target.checked)
+                        e.target.checked ? setCheckedBoxes(checkedBoxes + 1) : setUncheckedBoxes(checkedBoxes - 1)
+                    }} />
                 </CardContent>
-                <CardContent sx={{ alignItems: 'center' }}>
-                    { coso }
+                <CardContent sx={{ alignItems: 'center', flex: 2, gap:2 }}>
+                    {coso || word}
+                    <Typography level='body-lg' textAlign='center' px={4}>
+                        {description}
+                    </Typography>
                 </CardContent>
-            </Card>
-        </Grid>
+            </CardContent>
+        </Card>
     )
 }
 
