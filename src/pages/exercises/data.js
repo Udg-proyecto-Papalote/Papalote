@@ -147,7 +147,7 @@ export const exercises = {
         'title': 'Trabalenguas con R',
         'theme': 'Letra R',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'Recomendación' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
+        'recommendations' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
         'trabalenguas': [
             ['Parra tenía una perra. ', 'Guerra tenía una parra. ', 'La perra de Parra subió a la parra de Guerra. ', 'Guerra pegó con la porra a la perra de Parra. ', 'Y Parra le dijo a Guerra: ', '¿Por qué ha pegado Guerra con la porra a la perra de Parra? ', 'Y Guerra le contestó: ', 'Si la perra de Parra no hubiera subido a la parra de Guerra, ', 'Guerra no habría pegado con la porra a la perra de Parra.'],
             ['Erre con erre cigarro,', 'erre con erre barril,', 'rápido corren los carros,', 'cargados de azúcar al ferrocarril.'],
@@ -165,7 +165,7 @@ export const exercises = {
         'title': 'Combinaciones consonantes con R',
         'theme': 'Letra R',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'Recomendación' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'recommendations' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             ['CRANEO', 'INCRUSTAR', 'CRISANTEMO', 'CRUDO', 'CRÁTER', 'ACRÓBATA', 'CRITERIO', 'ACROSTICO', 'DEMACRADO', 'HIPÓCRITA', 'CRISIS', 'CREMA', 'LACRADO', 'SACRAMENTO', 'SECRETARIA', 'CREDO', 'CRIN', 'CRUCIGRAMA'],
             ['DRAMA', 'DRAMATICO', 'DROMEDARIO', 'DRENAR', 'DRAGON', 'DRAGA', 'CUADRA', 'CATEDRAL', 'LADRILLO', 'LIENDRE', 'DRON', 'DRAMATIZAR', 'ESCUADRON', 'CUADRUPEDO', 'CUADRADO', 'ADRIATICO', 'DRAMATURGO'],
@@ -208,6 +208,45 @@ export const exercises = {
             ['Repetir: Repite este proceso durante 5-10 minutos cada día.']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu respiración. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Vocalización 1':{
+        'title': 'De aire a sonido',
+        'theme': 'Vocalización',
+        'instructions': 'Discutir con Ximena, .Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'excercise': [
+            ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+            ['EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'],
+            ['IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII'],
+            ['OOOOOOOOOOOOOOOOOOOOOOOOOOOO'],
+            ['UUUUUUUUUUUUUUUUUUUUUUUUUUUUU'],
+            ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+            ['EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'],
+            ['IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII'],
+            ['OOOOOOOOOOOOOOOOOOOOOOOOOOOO'],
+            ['UUUUUUUUUUUUUUUUUUUUUUUUUUUUU'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Vocalización 2':{
+        'title': 'De aire a sonido',
+        'theme': 'Vocalización',
+        'instructions': 'Pronuncia en voz alta las siguientes vocales con claridad y precisión. Respeta el molde de cada una de las letras para que el sonido sea lo más diferenciado posible. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'excercise': [
+            ['AEIOU'],
+            ['UOIEA'],
+            ['AIUEO'],
+            ['UEIAO'],
+            ['IOEAU'],
+            ['EOUAI'],
+            ['AAA - AEA - AIA - AOA - AUA'],
+            ['EAE - EEE - EIE - EOE - EUE'],
+            ['IAI - IEI - III - IOI - IUI'],
+            ['OAO - OEO - OIO - OOO - OUO'],
+            ['UAU - UEU - UIU - UOU - UUU'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
     'Palabras de difícil pronunciación1': {
         'title': 'Parte 1',
