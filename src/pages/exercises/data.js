@@ -267,5 +267,27 @@ export const exercises = {
             'HABITABILIDAD', 'HAMAMELICLÁCEAS', 'HEBDOMADARIO', 'HIERÁTICAMENTE', 'HIEROSOLIMITANO', 'HIPERCLORHÍDRICO', 'HIDRARGIRISMO', 'HIDROSULFURO', 'HIPOCONDRÍACO', 'HOMOGEIZACIÓN', 'IMPALPABILIDAD', 'IMPARIDÍGITO', 'IMPENETRABILIDAD', 'IMPENSADAMENTE', 'GUANGOCHO', 'GUANGOCHO', 'IMPERMEABILIZACIÓN', 'IMPLACABLEMENTE', 'IGNOMIOSAMENTE', 'ILESGIBLE', 'IMPERCEPTIBLEMENTE', 'IMPOSTERGABLE', 'IMPERTURBABLEMENTE', 'KAFKIANO', 'MALTRATAMIENTO', 'MIRAMAMOLÍN', 'MIRAMELINDOS', 'MOJIGATERÍA', 'MORONGADA', 'MUNICIPALIZACIÓN',
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
-    }
+    },
+    'Articulación1': {
+        'title': 'Leer sin voz',
+        'theme': 'Articulación',
+        'instructions': 'Lee el siguiente texto en silencio, moviendo tus labios lentamente y asegurándote de articular correctamente cada palabra. Mantén un ritmo moderado, prestando especial atención a la precisión de los movimientos de tu boca.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada palabra para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
+        'excercise': [
+            ['Las ondas sonoras se producen cuando un cuerpo vibra rápidamente. La frecuencia es el número de vibraciones u oscilaciones completas que se efectúan por segundo. La intensidad de un sonido está relacionada con el cuadrado de la amplitud de presión de la onda sonora. Un sonido grave corresponde a onda sonora con frecuencia baja, mientras que los sonidos agudos se corresponden con frecuencias más altas.'],
+            ['La articulación es crucial en la comunicación efectiva, ya que permite que las palabras se pronuncien con claridad y precisión, facilitando la comprensión entre hablantes. Una articulación adecuada asegura que el mensaje llegue de manera clara y sin malentendidos, lo cual es vital en discursos, presentaciones y conversaciones cotidianas. Además, una buena articulación refleja profesionalismo y confianza, aspectos importantes en entornos laborales y académicos.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Articulación2': {
+        'title': 'Leer separado en sílabas',
+        'theme': 'Articulación',
+        'instructions': 'Lee en voz alta el siguiente texto, que está separado en sílabas, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
+        'excercise': [
+            ['LAS ON-DAS SO-NO-RAS SE PRO-DU-CEN CUAN-DO UN CUER-PO VI-BRA RÁ-PI-DA-MEN-TE. LA FRE-CUEN-CIA ES EL NÚ-ME-RO DE VI-BRA-CIO-NES U O-SCI-LA-CIO-NES COM-PLE-TAS QUE E-FEC-TÚ-AN POR SE-GUN-DO. LA IN-TEN-SI-DAD DE UN SO-NI-DO ES-TÁ RE-LA-CIO-NA- DA CON EL CUA-DRA-DO DE LA AM-PLI-TUD DE PRE-SIÓN DE LA ON-DA SO-NO-RA. UN SO-NI-DO GRA-VE CO-RRES-PON-DE A ON-DA SO-NO-RA CON FRE-CUEN-CIA BA-JA, MIEN-TRAS QUE LOS SO-NI-DOS A-GU-DOS SE CO-RRES-PON-DEN CON FRE-CUEN-CIAS MÁS AL-TAS.'],
+            ['LA AR-TI-CU-LA-CIÓN ES CRU-CIAL EN LA CO-MU-NI-CA-CIÓN E-FEC-TI-VA, YA QUE PER-MI-TE QUE LAS PA-LA-BRAS SE PRO-NUN-CIEN CON CLA-RI-DAD Y PRE-CI-SIÓN, FA-CI-LI-TAN-DO LA COM-PREN-SIÓN EN-TRE HA-BLAN-TES. U-NA AR-TI-CU-LA-CIÓN A-DE-CUA-DA A-SE-GU-RA QUE EL MEN-SA-JE LLE-GUE DE MA-NE-RA CLA-RA Y SIN MA-LEN-TEN-DI-DOS, LO CUAL ES VI-TAL EN DIS-CUR-SOS, PRE-SEN-TA-CIO-NES Y CON-VER-SA-CIO-NES CO-TI-DIA-NAS. A-DE-MÁS, U-NA BUE-NA AR-TI-CU-LA-CIÓN RE-FLE-JA PRO-FE-SIO-NA-LIS-MO Y CON-FIAN-ZA, AS-PEC-TOS IM-POR-TAN-TES EN EN-TOR-NOS LA-BO-RA-LES Y A-CA-DÉ-MI-COS.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
 }
