@@ -2,7 +2,7 @@ export const exercises = {
     'Dicción 1': {
         'title': 'Trabalenguas Populares I',
         'theme': 'Dicción',
-        'type': 'Trabalenguas',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -16,7 +16,7 @@ export const exercises = {
     'Dicción 2': {
         'title': 'Trabalenguas Populares II',
         'theme': 'Dicción',
-        'type': 'Trabalenguas',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -32,7 +32,7 @@ export const exercises = {
     'Dicción 3': {
         'title': 'Trabalenguas Populares III',
         'theme': 'Dicción',
-        'type': 'Trabalenguas',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -48,7 +48,7 @@ export const exercises = {
     'Dicción 6': {
         'title': 'Sonido KS',
         'theme': 'Dicción',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations 1': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -64,7 +64,7 @@ export const exercises = {
     'Dicción 7': {
         'title': 'Palabras con letra "D"',
         'theme': 'Dicción',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'intructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -75,7 +75,7 @@ export const exercises = {
     'Dicción 12': {
         'title': 'Combinación consonántica “GN”',
         'theme': 'Dicción',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -97,7 +97,7 @@ export const exercises = {
     'Dicción 13': {
         'title': 'Fonema /ɲ/',
         'theme': 'Dicción',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -117,7 +117,7 @@ export const exercises = {
     'Dicción 15': {
         'title': 'Molde articulatorio fonema /P/',
         'theme': 'Dicción',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -156,7 +156,7 @@ export const exercises = {
     'Letra R II': {
         'title': 'Trabalenguas con R',
         'theme': 'Letra R',
-        'type': 'Trabalenguas',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
         'trabalenguas': [
@@ -175,7 +175,7 @@ export const exercises = {
     'Letra R III': {
         'title': 'Combinaciones consonantes con R',
         'theme': 'Letra R',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -268,7 +268,7 @@ export const exercises = {
     'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
         'theme': 'Palabras de difícil pronunciación',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -279,7 +279,7 @@ export const exercises = {
     'Palabras de difícil pronunciación II': {
         'title': 'Parte 2',
         'theme': 'Palabras de difícil pronunciación',
-        'type': 'Escucha y Repite',
+        'type': 'escuchayrepite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [

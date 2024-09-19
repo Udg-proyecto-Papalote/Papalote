@@ -9,37 +9,42 @@ import { Registro } from './pages/Registro'
 import { useMediaQuery } from '@mui/material'
 import ModeToggle from './components/ToggleTheme'
 import { createContext, useState } from 'react'
+import ExercisesRoutes from './pages/routes/ExercisesRoutes'
+import { Trabalenguas } from './pages/exercises/Trabalenguas'
+import EscuchaYRepite from './pages/exercises/EscuchaYRepite'
 
 export const UserContext = createContext()
 
 function App() {
 	const { pathname } = useLocation()
-	const isMobile  = useMediaQuery('(min-width: 400px)')
+	const isMobile = useMediaQuery('(min-width: 400px)')
 
 	const [user, setUser] = useState({})
 
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
-		<Grid width='100%'>
-			{
-				pathname !== '/iniciarsesion' && pathname !== '/registro' && <ExtendedNavBar />
-			}
-			<Grid justifyContent='center' alignContent='center'>
-				<Routes>
-					<Route path='*' element={<Inicio />} />
-					<Route path='/ejercicios' element={<Ejercicios />} />
-					<Route path='/diagnostico' element={<Diagnostico />} />
-					<Route path='/iniciarsesion' element={<InicioSesion />} />
-					<Route path='/registro' element={<Registro />} />
-				</Routes>
-			</Grid>
-			<Grid container justifyContent='center' alignContent='center'>
+			<Grid width='100%'>
+				{
+					pathname !== '/iniciarsesion' && pathname !== '/registro' && <ExtendedNavBar />
+				}
+				<Grid justifyContent='center' alignContent='center'>
+					<Routes>
+						<Route path='/' element={<Inicio />} />
+						<Route path='/diagnostico' element={<Diagnostico />} />
+						<Route path='/iniciarsesion' element={<InicioSesion />} />
+						<Route path='/registro' element={<Registro />} />
+						<Route path="/ejercicios" element={<Ejercicios />} />
+						<Route path="/ejercicios/trabalenguas/:id" element={<Trabalenguas />} />
+						<Route path="/ejercicios/escuchayrepite/:id" element={<EscuchaYRepite />} />
+					</Routes>
+				</Grid>
+				<Grid container justifyContent='center' alignContent='center'>
 
-			{
-				!isMobile && pathname !== '/diagnostico' && <ModeToggle />
-			}
+					{
+						!isMobile && pathname !== '/diagnostico' && <ModeToggle />
+					}
+				</Grid>
 			</Grid>
-		</Grid>
 		</UserContext.Provider>
 	)
 }

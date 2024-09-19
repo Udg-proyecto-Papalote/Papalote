@@ -41,10 +41,10 @@ export default function NavBar() {
         }
     ]
 
-    useEffect(() => {
+    useEffect(() => {        
         if(pathname === '/') setIndex(0);
-        else if(pathname === '/ejercicios') setIndex(1);
-        else setIndex(2);
+        else if(pathname.startsWith('/ejercicios')) setIndex(1);
+        else if(pathname.startsWith('/diagnostico')) setIndex(2);
     }, [ pathname ])
 
 

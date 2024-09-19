@@ -1,7 +1,5 @@
 import { Grid, Typography } from "@mui/joy"
 import ExerciseCard from "../components/Ejercicios/ExerciseCard"
-import EscuchaYRepite from "./exercises/EscuchaYRepite"
-import { Trabalenguas } from "./exercises/Trabalenguas"
 import { exercises } from "./exercises/data";
 
 
@@ -19,8 +17,9 @@ export const Ejercicios = () => {
 							<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }}>
 								<ExerciseCard
 									title={exercise.title}
-									description={key}
+									id={key}
 									theme={exercise.theme}
+									type={exercise.type}
 								/>
 							</Grid>
 						)

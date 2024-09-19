@@ -5,9 +5,13 @@ import { useEffect, useState } from "react"
 import Instructions from "../../components/Ejercicios/Instructions"
 import Title from "../../components/Ejercicios/Title"
 import Ending from "../../components/Ejercicios/Ending"
+import { useParams } from "react-router-dom"
 
-export const Trabalenguas = ({ exerciseName = 'Diccion1' }) => {
-    const { title, theme, instructions, recommendations, trabalenguas, ending } = exercises[exerciseName]
+export const Trabalenguas = () => {
+    const { id } = useParams()
+    console.log(exercises[id], id);
+    
+    const { title, theme, instructions, recommendations, trabalenguas, ending } = exercises[id]
     const [trabalengua, setTrabalengua] = useState(0)
     const [maxTrabalengua, setMaxTrabalengua] = useState(0)
     const [ready, setReady] = useState(false)
@@ -31,11 +35,11 @@ export const Trabalenguas = ({ exerciseName = 'Diccion1' }) => {
 
     useEffect(() => {
         setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
-        localStorage.setItem(exerciseName, maxTrabalengua)
+        localStorage.setItem(id, maxTrabalengua)
     }, [trabalengua]);
 
     useEffect(() => {
-        setMaxTrabalengua(localStorage.getItem(exerciseName) || 0)
+        setMaxTrabalengua(localStorage.getItem(id) || 0)
     }, []);
 
     return (
