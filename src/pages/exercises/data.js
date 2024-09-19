@@ -1,7 +1,8 @@
 export const exercises = {
-    'Diccion1': {
+    'Dicción 1': {
         'title': 'Trabalenguas Populares I',
         'theme': 'Dicción',
+        'type': 'Trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -12,9 +13,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion2': {
+    'Dicción 2': {
         'title': 'Trabalenguas Populares II',
         'theme': 'Dicción',
+        'type': 'Trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -27,9 +29,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion3': {
+    'Dicción 3': {
         'title': 'Trabalenguas Populares III',
         'theme': 'Dicción',
+        'type': 'Trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -42,9 +45,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
     },
-    'Diccion6': {
+    'Dicción 6': {
         'title': 'Sonido KS',
         'theme': 'Dicción',
+        'type': 'Escucha y Repite',
         'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations 1': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -57,9 +61,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion7': {
+    'Dicción 7': {
         'title': 'Palabras con letra "D"',
         'theme': 'Dicción',
+        'type': 'Escucha y Repite',
         'intructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -67,11 +72,12 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion12': {
+    'Dicción 12': {
         'title': 'Combinación consonántica “GN”',
         'theme': 'Dicción',
-        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'type': 'Escucha y Repite',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'DIGNO', 'SIGNO', 'IGNORAR', 'DESIGNAR', 'REGENERAR', 'MAGNÍFICO', 'MAGNITUD', 'DIGNIDAD', 'CONDIGNAR', 'FIGNAR', 'IGNORANCIA', 'RESIGNAR', 'LIGNITO', 'SIGNIFICAR', 'DIAGNÓSTICO', 'IGNICIÓN', 'PREGNANTE', 'INDIGNACIÓN', 'IMPREGNAR', 'DESIGNIO', 'MAGNATE', 'FEIGNIR', 'REGNAR', 'IMPUGNACIÓN', 'RESIGNACIÓN', 'INDIGNO', 'COGNITIVO', 'MAGNÍFICO', 'LIGNIFICAR', 'CONSIGNAR'
         ],
@@ -88,11 +94,12 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion13': {
+    'Dicción 13': {
         'title': 'Fonema /ɲ/',
         'theme': 'Dicción',
-        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'type': 'Escucha y Repite',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'NIÑO', 'MAÑANA', 'AÑO', 'ESPAÑA', 'SEÑOR', 'ENSEÑAR', 'COMPAÑÍA', 'CARIÑO', 'DUEÑO', 'MONTAÑA', 'CAÑA', 'BAÑO', 'PEQUEÑO', 'LEÑA', 'PIÑA', 'ÑANDÚ', 'CASTAÑA', 'ARAÑA', 'RAÑA', 'REBAÑO', 'CAMPAÑA', 'AÑADIR', 'AÑORANZA', 'TIÑA', 'ÑOÑO', 'RETOÑO', 'SUEÑO', 'CASTAÑUELA', 'CABAÑA', 'MIÑO', 'CEÑO', 'ÑAPA', 'GRUÑÓN', 'RUÑIR', 'TAMAÑO', 'ÑANGO', 'ÑAME', 'PUÑAL', 'OTOÑO', 'MONTAÑÉS', 'TAMAÑO', 'CASTAÑAR', 'MOÑO', 'BAÑADOR', 'AÑICOS', 'PUÑO', 'GAÑIDO', 'ÑOQUIS', 'AÑADIDO', 'TOÑO'
         ],
@@ -107,11 +114,12 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Diccion15': {
+    'Dicción 15': {
         'title': 'Molde articulatorio fonema /P/',
         'theme': 'Dicción',
-        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'recommendations 1': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'type': 'Escucha y Repite',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'PAN', 'CAPÍTULO', 'PAPA', 'COMPUTADORA', 'PATO', 'IMPONER', 'PIPA', 'IMPORTAR', 'PERA', 'CAMPANA', 'PILA', 'CAMPAMENTO', 'PINO', 'TAPAR', 'PURO', 'MAPA', 'PISO', 'SOPA', 'PESA', 'APIO', 'PAGA', 'CAPO', 'PELO', 'TAPA', 'PASA', 'SOPLAR', 'PITA', 'CAPACITAR', 'POCA', 'COPIA', 'PECA', 'OPERAR', 'PALO', 'CAPAZ', 'PUPA', 'CAPTURA', 'PASA', 'ESPEJO', 'PATA', 'TEMPLO', 'POMO', 'CAMPO', 'PALA', 'COMPRA', 'PEPE', 'DESPACHO', 'PULA', 'RÁPIDO', 'PLUMA', 'TRANSPORTE', 'PLANTA', 'CUMPLEAÑOS', 'PREMIO', 'HELIPUERTO', 'PROBAR', 'OPORTUNIDAD', 'PAPEL', 'DESPERTAR', 'PULPO', 'IMPRESIÓN',
         ],
@@ -125,6 +133,7 @@ export const exercises = {
     'Impostación1':{
         'title': 'Calentamiento de voz - Primera semana',
         'theme': 'Impostacion',
+        'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
         'excercise': [
             '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
@@ -133,19 +142,21 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'LetraR1': {
+    'Letra R I': {
         'title': 'Soy un motor',
         'theme': 'Letra R',
+        'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
-        'recommendations 1': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
+        'recommendations': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
         'excercise': [
             'Imitar el sonido de un motor. Primero hay que inflar el abdomen y luego hacer el sonido “rrrrrrrrrrrr” hasta que nos quedemos sin aire.',
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'LetraR2': {
+    'Letra R II': {
         'title': 'Trabalenguas con R',
         'theme': 'Letra R',
+        'type': 'Trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
         'trabalenguas': [
@@ -161,9 +172,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'LetraR3': {
+    'Letra R III': {
         'title': 'Combinaciones consonantes con R',
         'theme': 'Letra R',
+        'type': 'Escucha y Repite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -177,9 +189,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Caudal1': {
+    'Caudal I': {
         'title': 'La tira de papel',
         'theme': 'Caudal y control de aire',
+        'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
         'excercise': [
             ['Colocar una tira de papel a 20 centímetros lejos de tu boca y soplar. Hay que controlar el aire del aire y gastarlo de una manera paulatina, la tira de papel te indicará qué tan fuerte está soplando. La idea del ejercicio es contar los segundos que demoramos en que se nos acabe el aire, luego ir practicando cada dia e ir aumentando los segundos en los que se nos acaba el aire.'],
@@ -187,9 +200,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Con la práctica diaria, ve aumentando progresivamente el tiempo de soplo, manteniendo siempre el control sin apresurarte. Recuerda registrar los segundos que logres para medir tu avance y así mejoraras tu caudal y control de aire'
     },
-    'Potencia2': {
+    'Potencia II': {
         'title': 'Inflar un globo',
         'theme': 'Potencia',
+        'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
         'excercise': [
             ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
@@ -197,9 +211,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
-    'Respiracion1':{
+    'Respiracion I':{
         'title': 'Respiración diafragmática',
         'theme': 'Respiración',
+        'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
         'excercise': [
             ['Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.'],
@@ -209,9 +224,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu respiración. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Vocalización 1':{
+    'Vocalización I':{
         'title': 'De aire a sonido',
         'theme': 'Vocalización',
+        'type': 'TBD',
         'instructions': 'Discutir con Ximena, .Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'excercise': [
@@ -228,9 +244,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Vocalización 2':{
+    'Vocalización II':{
         'title': 'De aire a sonido',
         'theme': 'Vocalización',
+        'type': 'TBD',
         'instructions': 'Pronuncia en voz alta las siguientes vocales con claridad y precisión. Respeta el molde de cada una de las letras para que el sonido sea lo más diferenciado posible. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'excercise': [
@@ -248,9 +265,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Palabras de difícil pronunciación1': {
+    'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
-        'theme': 'Palabras de dificil pronunciación',
+        'theme': 'Palabras de difícil pronunciación',
+        'type': 'Escucha y Repite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -258,9 +276,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Palabras de difícil pronunciación2': {
+    'Palabras de difícil pronunciación II': {
         'title': 'Parte 2',
-        'theme': 'Palabras de dificil pronunciación',
+        'theme': 'Palabras de difícil pronunciación',
+        'type': 'Escucha y Repite',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -268,9 +287,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Articulación1': {
+    'Articulación I': {
         'title': 'Leer sin voz',
         'theme': 'Articulación',
+        'type': 'TBD',
         'instructions': 'Lee el siguiente texto en silencio, moviendo tus labios lentamente y asegurándote de articular correctamente cada palabra. Mantén un ritmo moderado, prestando especial atención a la precisión de los movimientos de tu boca.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada palabra para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'excercise': [
@@ -279,9 +299,10 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Articulación2': {
+    'Articulación II': {
         'title': 'Leer separado en sílabas',
         'theme': 'Articulación',
+        'type': 'TBD',
         'instructions': 'Lee en voz alta el siguiente texto, que está separado en sílabas, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'excercise': [
