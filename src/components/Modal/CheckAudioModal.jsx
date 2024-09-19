@@ -1,11 +1,14 @@
 import { Button, CircularProgress, DialogContent, DialogTitle, Modal, ModalDialog, Stack, Typography } from '@mui/joy'
 import { ArrowCounterClockwise, Checks } from '@phosphor-icons/react'
 import axios from 'axios'
+import { Cloudinary } from 'cloudinary-core';
 import { useState } from 'react'
 
+const cloudName = 'ds8hfmrth'
+const presetName = 'papalote'
+const cld = new Cloudinary({ cloud_name: cloudName });
+
 const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL }) => {
-    const cloudName = 'ds8hfmrth'
-    const presetName = 'papalote'
 
     const [loading, setLoading] = useState(false)
 
@@ -14,36 +17,48 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
         const blob = await response.blob();
         return blob;
     };
-
+    
     const uploadAudio = async () => {
         if (!audioURL) return;
 
         try {
-            // Mostrar un indicador de carga
             setLoading(true);
 
-            // Convertir URL de audio en Blob
+            // Convert URL of the recorded audio into Blob
             const audioBlob = await urlToBlob(audioURL);
 
-            // Crear FormData y agregar archivo Blob
+            // Create FormData and add the .webm audio Blob
             const formData = new FormData();
-            formData.append('file', audioBlob, 'audio.mp3'); // Puedes cambiar el nombre del archivo aquí
-            formData.append('upload_preset', presetName);
+            formData.append('file', audioBlob, 'audio.webm');
+            formData.append('upload_preset', presetName); // Replace with your Cloudinary upload preset
 
-            // Enviar la solicitud a Cloudinary
+            // Upload the audio file to Cloudinary
             const response = await axios.post(
                 `https://api.cloudinary.com/v1_1/${cloudName}/upload`,
                 formData
             );
 
+            console.log('Audio uploaded:', response.url);
+
+            const publicId = response.data.public_id;
+
+            const wavURL = cld.url(publicId, { 
+                resource_type: 'video', 
+                format: 'wav', 
+                transformation: [{ start_offset: "0", duration: "180" }] 
+            });
+
+            console.log('Audio in .wav format:', wavURL);
+
             setLoading(false);
-            sendRecording(response.data.url); // Llama a esta función con la URL del archivo subido
+            sendRecording(wavURL); // Send the transformed .wav URL
 
         } catch (error) {
             setLoading(false);
-            console.error('Error al subir el audio:', error);
+            console.error('Error uploading audio:', error);
         }
     };
+    
 
     return (
         <Modal open={open}

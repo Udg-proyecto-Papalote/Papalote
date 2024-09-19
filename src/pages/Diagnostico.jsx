@@ -34,7 +34,6 @@ export const Diagnostico = () => {
 
     // width
     const isMidScreen = useMediaQuery('(max-width: 1150px)');
-    const isSmallScreen = useMediaQuery('(max-width: 800px)');
 
     // time
     const [time, setTime] = useState(0);
@@ -68,6 +67,7 @@ export const Diagnostico = () => {
         setIsRecording(false);
 
         mediaRecorder.stop();
+        mediaRecorder.stream.getTracks().forEach(track => track.stop());
     };
 
     useEffect(() => {
