@@ -126,7 +126,7 @@ export const Diagnostico = () => {
                     </Alert>
                     <Grid container width='100%' height={{ xs: isNotMobile ? '80%' : '73%', sm: '80%', md: '80%', lg: '79%' }} maxHeight={'900px!important'} pt={1} spacing={0}>
                         <Grid xs={2} sm={1} md={1} lg={1} justifyContent='center'>
-                            <Stack spacing={2} px={2}>
+                            <Stack spacing={2}>
                                 <ButtonGroup orientation="vertical" size="lg" mb={2}>
                                     <IconButton onClick={clickOnBold} >
                                         <FormatBold size={32} color={isBold ? 'primary' : 'neutral'} />
