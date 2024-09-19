@@ -9,7 +9,6 @@ import { Registro } from './pages/Registro'
 import { useMediaQuery } from '@mui/material'
 import ModeToggle from './components/ToggleTheme'
 import { createContext, useState } from 'react'
-import ExercisesRoutes from './pages/routes/ExercisesRoutes'
 import { Trabalenguas } from './pages/exercises/Trabalenguas'
 import EscuchaYRepite from './pages/exercises/EscuchaYRepite'
 
