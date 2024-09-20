@@ -7,6 +7,10 @@ import 'animate.css';
 import './style.css';
 
 import { extendTheme } from '@mui/joy/styles'
+import { Provider } from 'react-redux'
+import { store } from './store/store.js'
+import { persistStore } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
 const theme = extendTheme({
 	components: {
 		JoyButton: {
@@ -26,19 +30,25 @@ const theme = extendTheme({
 	},
 })
 
+let persistor = persistStore(store)
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<CssVarsProvider
-				defaultMode='dark'
-				theme={theme}
-				disableNestedContext
-			>
-				<CssBaseline />
-				<Grid container justifyContent="center" sx={{ height: '100vh' }}>
-					<App />
-				</Grid>
-			</CssVarsProvider>
-		</BrowserRouter>
+		<Provider store={store}>
+			<PersistGate persistor={persistor} loading={null}>
+				<BrowserRouter>
+					<CssVarsProvider
+						defaultMode='dark'
+						theme={theme}
+						disableNestedContext
+					>
+						<CssBaseline />
+						<Grid container justifyContent="center" sx={{ height: '100vh' }}>
+							<App />
+						</Grid>
+					</CssVarsProvider>
+				</BrowserRouter>
+			</PersistGate>
+		</Provider>
 	</React.StrictMode>
 )

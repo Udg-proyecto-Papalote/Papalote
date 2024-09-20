@@ -6,7 +6,8 @@ import { useForm } from "../../hooks/useForm"
 import { useContext, useState } from "react"
 import { Link as LinkRouter } from "react-router-dom"
 import PropTypes from 'prop-types'
-import { UserContext } from "../../App"
+import { useDispatch } from "react-redux"
+import { setNameEmailPassword } from "../../store/slices/userSlice"
 
 const formData = {
     name: "",
@@ -34,7 +35,7 @@ export const FormPart1 = ({ nextFunction }) => {
     const [isEmailValid, setIsEmailValid] = useState(true)
     const [isNameValid, setIsNameValid] = useState(true)
 
-    const { user, setUser } = useContext(UserContext)
+    const dispatch = useDispatch()
 
     const {
         name,
@@ -56,7 +57,7 @@ export const FormPart1 = ({ nextFunction }) => {
             !!nameValid && setIsNameValid(false)
         }
         else {
-            setUser({ ...user, ...formState })
+            dispatch(setNameEmailPassword(formState))
             nextFunction()
         }
     }

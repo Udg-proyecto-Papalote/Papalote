@@ -1,20 +1,22 @@
 import { Button, FormControl, FormLabel, Grid, Input, Option, Select } from "@mui/joy"
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react"
+import { ArrowRight } from "@phosphor-icons/react"
 import PropTypes from 'prop-types'
-import { useContext, useState } from "react"
-import { UserContext } from "../../App"
+import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { setAge as ssetAge, setGender } from "../../store/slices/userSlice"
 
 const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
 
 export const FormPart2 = ({ prevFunction, nextFunction }) => {
-	const { user, setUser } = useContext(UserContext);
-	const [userGenre, setUserGenre] = useState(user.genero || '')
+	const [userGenre, setUserGenre] = useState('')
 	const [age, setAge] = useState(0)
+	const dispatch = useDispatch()
 
 
 	const handleClick = () => {
 		if (userGenre && age) {
-			setUser({ ...user, genero: userGenre, edad: age })
+			dispatch(setGender(userGenre))
+			dispatch(ssetAge(age))
 			nextFunction()
 		}
 	}
@@ -28,10 +30,10 @@ export const FormPart2 = ({ prevFunction, nextFunction }) => {
 						<FormLabel sx={{ fontWeight: 'bold' }}>Género</FormLabel>
 						<Select
 							placeholder="Selecciona tu género"
-							name="genero"
-							required
+							// name="genero"
+							// required
 							variant="soft"
-							value={userGenre}
+							// value={userGenre}
 							onChange={(e) => setUserGenre(e?.target?.textContent)}
 						>
 							{
@@ -50,10 +52,10 @@ export const FormPart2 = ({ prevFunction, nextFunction }) => {
 				</Grid>
 			</Grid>
 			<Grid container spacing={1}>
-				<Grid sm={6} xs={6} md={6} lg={6} xl={6} gap={1}>
+				{/* <Grid sm={6} xs={6} md={6} lg={6} xl={6} gap={1}>
 					<Button mt={2} fullWidth variant="soft" onClick={prevFunction}><ArrowLeft size={30} /></Button>
-				</Grid>
-				<Grid sm={6} xs={6} md={6} lg={6} xl={6} gap={1}>
+				</Grid> */}
+				<Grid sm={12} xs={12} md={12} lg={12} xl={12} gap={1}>
 					<Button mt={2} fullWidth variant="soft" onClick={handleClick} disabled={
 						!userGenre || !age
 					}><ArrowRight size={30} /></Button>

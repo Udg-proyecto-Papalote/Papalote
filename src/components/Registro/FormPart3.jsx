@@ -1,18 +1,19 @@
 import { Button, ButtonGroup, DialogActions, DialogContent, DialogTitle, Divider, FormControl, FormLabel, Grid, Modal, ModalDialog, Stack, Typography } from "@mui/joy";
 import { ArrowLeft, Warning } from "@phosphor-icons/react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
-import { UserContext } from "../../App";
+import { useDispatch } from "react-redux";
+import { setIllness } from "../../store/slices/userSlice";
 
 const style = { backgroundColor: 'var(--joy-palette-neutral-outlinedHoverBg)' }
 
 export const FormPart3 = ({ prevFunction, nextFunction }) => {
-    const [isIll, setIsIll] = useState();
+    const [isIll, setIsIll] = useState(false);
     const [understood, setUnderstood] = useState(false)
     const [open, setOpen] = useState(false)
 
-    const { user, setUser } = useContext(UserContext)
+    const dispatch = useDispatch()
 
     const onClick = () => {
         setIsIll(true)
@@ -25,9 +26,8 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
     }
 
     const handleClick = () => {
-        setUser({ ...user, enfermedad: isIll })
+        dispatch(setIllness(isIll))
         nextFunction()
-        console.log(user);
     }
 
     return (
