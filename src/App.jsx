@@ -11,6 +11,7 @@ import ModeToggle from './components/ToggleTheme'
 import { createContext, useState } from 'react'
 import { Trabalenguas } from './pages/exercises/Trabalenguas'
 import EscuchaYRepite from './pages/exercises/EscuchaYRepite'
+import Result from './pages/Result'
 
 export const UserContext = createContext()
 
@@ -30,6 +31,7 @@ function App() {
 					<Routes>
 						<Route path='/' element={<Inicio />} />
 						<Route path='/diagnostico' element={<Diagnostico />} />
+						<Route path='/diagnostico/resultado' element={<Result />} />
 						<Route path='/iniciarsesion' element={<InicioSesion />} />
 						<Route path='/registro' element={<Registro />} />
 						<Route path="/ejercicios" element={<Ejercicios />} />

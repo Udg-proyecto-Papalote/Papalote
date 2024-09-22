@@ -1,9 +1,15 @@
 import { Grid, Typography } from "@mui/joy"
 import ExerciseCard from "../components/Ejercicios/ExerciseCard"
 import { exercises } from "./exercises/data";
+import { useSelector } from "react-redux";
 
 
 export const Ejercicios = () => {
+	const { exercisesDone } = useSelector((state) => state.user)
+
+	const isClicked = (id) => {
+		return exercisesDone.hasOwnProperty(id)
+	}
 	return (
 		<Grid mx={4} my={3} >
 			<Grid container spacing={2} lg={8} lgOffset={2} md={12} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }}>
@@ -14,12 +20,13 @@ export const Ejercicios = () => {
 					Object.keys(exercises).map((key) => {
 						const exercise = exercises[key];
 						return (
-							<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+							<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }} key={key}>
 								<ExerciseCard
 									title={exercise.title}
 									id={key}
 									theme={exercise.theme}
 									type={exercise.type}
+									level={isClicked(key) ? exercisesDone[key].percentage : 0}
 								/>
 							</Grid>
 						)

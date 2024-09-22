@@ -6,16 +6,21 @@ import Instructions from "../../components/Ejercicios/Instructions"
 import Title from "../../components/Ejercicios/Title"
 import Ending from "../../components/Ejercicios/Ending"
 import { useParams } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { setTrabalenguasExercise } from "../../store/slices/userSlice"
 
 export const Trabalenguas = () => {
     const { id } = useParams()
-    console.log(exercises[id], id);
+
+    const { exercisesDone } = useSelector((state) => state.user)
     
     const { title, theme, instructions, recommendations, trabalenguas, ending } = exercises[id]
     const [trabalengua, setTrabalengua] = useState(0)
     const [maxTrabalengua, setMaxTrabalengua] = useState(0)
     const [ready, setReady] = useState(false)
     const { mode } = useColorScheme()
+
+    const dispatch = useDispatch()
 
     const handleMouseOver = (e) => {
         e.target.style.backgroundColor = mode === 'dark' ? '#4d7c0f' : '#a3e635'
@@ -34,13 +39,20 @@ export const Trabalenguas = () => {
     }
 
     useEffect(() => {
-        setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
-        localStorage.setItem(id, maxTrabalengua)
-    }, [trabalengua]);
+        Object.keys(exercisesDone).length > 0 &&
+            Object.keys(exercisesDone).includes(id) &&
+            setTrabalengua(exercisesDone[id].maxLevel - 1)
+    }, []);
 
     useEffect(() => {
-        setMaxTrabalengua(localStorage.getItem(id) || 0)
-    }, []);
+        setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
+    }, [trabalengua]);
+    
+    useEffect(() => {
+        dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua + 1, percentage: (100 * (maxTrabalengua + 1) / trabalenguas.length) }))
+    }, [maxTrabalengua]);
+
+
 
     return (
         <Grid container width='100%' direction='column' gap={1} lg={6} mx='auto' sm={12} md={8}>

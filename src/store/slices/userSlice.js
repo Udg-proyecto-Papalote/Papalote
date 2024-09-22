@@ -6,7 +6,8 @@ const initialState = {
     password: "",
     gender: "",
     age: "",
-    illness: false
+    illness: false,
+    exercisesDone: {}
 };
 
 export const userSlice = createSlice({
@@ -27,7 +28,15 @@ export const userSlice = createSlice({
         setIllness: (state, action) => {
             state.illness = action.payload;
         },
+
+        // Exercises
+        setTrabalenguasExercise: (state, action) => {
+            state.exercisesDone = { ...state.exercisesDone, 
+                // key as the name of the exercise
+                [action.payload.name]: action.payload
+            };
+        }
     }
 });
 
-export const { setNameEmailPassword, setAge, setIllness, setGender } = userSlice.actions;
+export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise } = userSlice.actions;
