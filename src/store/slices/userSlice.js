@@ -7,7 +7,19 @@ const initialState = {
     gender: "",
     age: "",
     illness: false,
-    exercisesDone: {}
+    exercisesDone: {},
+    currentDiagnostic: {
+        url: '',
+        genero: '',
+        buena_diccion: null,
+        buena_modulacion: null,
+        palabras_correctas: 0,
+        palabras_incorrectas: 0,
+        total_palabras_transcritas: 0,
+        tono_voz: '',
+        loading: false
+    },
+    diagnostics: []
 };
 
 export const userSlice = createSlice({
@@ -35,8 +47,21 @@ export const userSlice = createSlice({
                 // key as the name of the exercise
                 [action.payload.name]: action.payload
             };
+        },
+
+        // Diagnostics
+        setCurrentDiagnostic: (state, action) => {
+            state.currentDiagnostic = { ...state.currentDiagnostic, ...action.payload };
+        },
+        setDiagnostics: (state, action) => {
+            state.diagnostics = [...state.diagnostics, action.payload]; 
+        },
+        setDiagnosticLoading: (state, action) => {
+            state.currentDiagnostic.loading = action.payload;
         }
     }
 });
 
-export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise } = userSlice.actions;
+export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading
+ } = userSlice.actions;

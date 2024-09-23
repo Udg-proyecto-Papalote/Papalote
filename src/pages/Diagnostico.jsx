@@ -1,5 +1,5 @@
 import { TextDecrease, TextIncrease, FormatBold, InfoOutlined, Info } from "@mui/icons-material";
-import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip } from "@mui/joy"
+import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip, Button } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
 import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
@@ -110,6 +110,9 @@ export const Diagnostico = () => {
     return (
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
+                <Grid xs={2} xsOffset={10} justifyContent='flex-end' mb={2}>
+                    <Button size='lg' variant='outlined' fullWidth color='success' onClick={() => {}}>Resultados anteriores</Button>
+                </Grid>
                 <Card sx={{
                     width: '100%',
                     height: 'calc(100vh - 150px)',
@@ -181,7 +184,7 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} />
+                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} time={time}/>
                         )}
                     </Grid>
                 </Card >

@@ -1,22 +1,52 @@
 import { Warning } from '@mui/icons-material';
-import { Alert, Button, CircularProgress, DialogContent, DialogTitle, Modal, ModalDialog, Stack, Typography } from '@mui/joy'
-import { ArrowCounterClockwise, Checks } from '@phosphor-icons/react'
-import axios from 'axios'
+import { Alert, Button, CircularProgress, DialogContent, DialogTitle, Modal, ModalDialog, Stack, Typography } from '@mui/joy';
+import { ArrowCounterClockwise, Checks } from '@phosphor-icons/react';
+import axios from 'axios';
 import { Cloudinary } from 'cloudinary-core';
-import { useState } from 'react'
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setCurrentDiagnostic, setDiagnosticLoading } from '../../store/slices/userSlice';
 
-const cloudName = 'ds8hfmrth'
-const presetName = 'papalote'
+const cloudName = 'ds8hfmrth';
+const presetName = 'papalote';
 const cld = new Cloudinary({ cloud_name: cloudName });
 
 const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL, time }) => {
-
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
 
     const urlToBlob = async (url) => {
         const response = await fetch(url);
         const blob = await response.blob();
         return blob;
+    };
+    
+    const doDiagnostic = async (audioURL) => {
+        // const data = {
+        //     url: audioURL,
+        //     genero: 'mujer' 
+        // };
+        const data = {
+            url: 'https://res.cloudinary.com/ds8hfmrth/video/upload/v1726717337/papalote/audio_recortado_1_fxdeju.wav',
+            genero: 'mujer'
+        };
+    
+        try {
+            dispatch(setDiagnosticLoading(true));
+            const response = await axios.post('http://localhost:5000/diagnostico', data, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                timeout: 2000000 // Timeout de 2000 segundos (2000000 ms)
+            });
+            console.log('Diagnóstico procesado:', response);
+            dispatch(setCurrentDiagnostic({ ...response.data, ...data }));
+            
+            return response;
+        } catch (error) {
+            console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
+            throw error;
+        }
     };
 
     const uploadAudio = async () => {
@@ -54,12 +84,13 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             setLoading(false);
             sendRecording(wavURL); // Send the transformed .wav URL
 
+            const diagnosticResponse = await doDiagnostic(wavURL);
+            dispatch(setDiagnosticLoading(false));
         } catch (error) {
             setLoading(false);
             console.error('Error uploading audio:', error);
         }
     };
-
 
     return (
         <Modal open={open}
@@ -105,21 +136,19 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                                             Volver a grabar
                                         </Button>
                                         <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg"
-                                            // Disabled if the audio lasts less tahn 180 seconds
-                                            disabled={time < 180}
+                                        // Disabled if the audio lasts less tahn 180 seconds
+                                        // disabled={time < 180}
                                         >
                                             Enviar diagnóstico
                                         </Button>
                                     </Stack>
-
-
                                 </>
                             )
                     }
                 </DialogContent>
             </ModalDialog>
         </Modal>
-    )
-}
+    );
+};
 
-export default CheckAudioModal
+export default CheckAudioModal;
