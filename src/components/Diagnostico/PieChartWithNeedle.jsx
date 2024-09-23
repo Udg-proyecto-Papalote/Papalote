@@ -6,18 +6,18 @@ import DiagnosticLegend from './DiagnosticLegend';
 
 const RADIAN = Math.PI / 180;
 const data = [
-    { name: 'Bajo', value: 1, color: '#86efac' },
+    { name: 'Grave', value: 1, color: '#86efac' },
     { name: 'Moderado', value: 1, color: '#22c55e' },
-    { name: 'Alto', value: 1, color: '#15803d' },
+    { name: 'Agudo', value: 1, color: '#15803d' },
 ];
 const cx = 100;
 const cy = 120;
 const iR = 50;
 const oR = 100;
 const tono = {
-    'alto': 2.5,
+    'agudo': 2.5,
     'moderado': 1.5,
-    'bajo': 0.5
+    'grave': 0.5
 }
 
 const needle = (value, data, cx, cy, iR, oR, color) => {
@@ -40,12 +40,12 @@ const needle = (value, data, cx, cy, iR, oR, color) => {
     const yp = y0 + length * sin;
 
     return [
-        <circle cx={x0} cy={y0} r={r} fill={color} stroke="none" />,
-        <path d={`M${xba} ${yba}L${xbb} ${ybb} L${xp} ${yp} L${xba} ${yba}`} stroke="#none" fill={color} />,
+        <circle cx={x0} cy={y0} r={r} fill={color} stroke="none" key='circle' />,
+        <path d={`M${xba} ${yba}L${xbb} ${ybb} L${xp} ${yp} L${xba} ${yba}`} stroke="#none" fill={color} key='path'/>,
     ];
 };
 
-const PieChartWithNeedle = ({ value = 'moderado', title = <></> }) => {
+const PieChartWithNeedle = ({ value = 'grave', title = <></> }) => {
     return (
         <Card>
             {title}
@@ -69,14 +69,14 @@ const PieChartWithNeedle = ({ value = 'moderado', title = <></> }) => {
                                 <Cell key={`cell-${index}`} fill={entry.color} radius={100} />
                             ))}
                         </Pie>
-                        {needle(tono[value], data, cx, cy, iR, oR, '#000000')}
+                        {needle(tono[value], data, cx, cy, iR, oR, 'var(--joy-palette-text-primary)')}
                     </PieChart>
                 </CardContent>
                 <DiagnosticLegend data={data} />
             </Stack>
             <Typography textAlign='center'>
                 <Typography level='h4' >Tu tono es </Typography>
-                <Typography level='h4' sx={{ textDecoration: 'underline', textDecorationThickness: 3, textDecorationColor: (value === 'alto' ? '#15803d' : value === 'moderado' ? '#22c55e' : '#86efac') }}
+                <Typography level='h4' sx={{ textDecoration: 'underline', textDecorationThickness: 3, textDecorationColor: (value === 'agudo' ? '#15803d' : value === 'moderado' ? '#22c55e' : '#86efac') }}
                     textAlign='center'>{value}</Typography>
                     .
             </Typography>

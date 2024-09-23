@@ -1,14 +1,15 @@
-import { ChatRounded, EnergySavingsLeaf, Equalizer, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
+import { ChatRounded, EnergySavingsLeaf, Equalizer, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
 import { Card, CardContent, Grid, Typography } from '@mui/joy';
 import PieChartWithNeedle from '../components/Diagnostico/PieChartWithNeedle';
 import Modulacion from '../components/Diagnostico/Modulacion';
 import AreasDeMejora from '../components/Diagnostico/AreasDeMejora';
+import RecommendedExercises from '../components/Diagnostico/RecommendedExercises';
 
 const Title = ({ title, icon, level = 'h3' }) => {
     return (
         <CardContent orientation='horizontal' sx={{ display: 'flex', alignItems: 'center' }}>
             {icon}
-            <Typography level={level} ml={-1.5}>{title}</Typography>
+            <Typography level={level} ml={-1}>{title}</Typography>
         </CardContent>
     )
 }
@@ -21,15 +22,16 @@ const MyPieChart = () => {
             </Grid>
             <Grid lg={4} gap={3} sm={12} md={8} xs={12}>
                 <AreasDeMejora title={<Title title='Áreas de mejora' icon={<EnergySavingsLeaf />} />} />
+                <RecommendedExercises title={<Title title='Ejercicios recomendados' icon={<RollerSkatingRounded />} />} />
+            </Grid>
+            <Grid lg={4} md={6} sm={12} xs={12}>
+                <Modulacion title={<Title title='Modulación' icon={<StickyNote2 />} />} />
                 <Card sx={{ mt: 2 }}>
                     <Title title='Audio' icon={<VolumeUpRounded />} />
                     <CardContent sx={{ my: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <audio controls src={''} style={{ maxWidth: '100%', zoom: .8 }} />
                     </CardContent>
                 </Card>
-            </Grid>
-            <Grid lg={4} md={6} sm={12} xs={12}>
-                <Modulacion title={<Title title='Modulación' icon={<StickyNote2 />} />} />
             </Grid>
             <Grid lg={4} md={6} sm={12} xs={12}>
                 <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />} />
