@@ -1,5 +1,5 @@
-import { TextDecrease, TextIncrease, FormatBold, InfoOutlined, Info } from "@mui/icons-material";
-import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip, Button } from "@mui/joy"
+import { TextDecrease, TextIncrease, FormatBold, InfoOutlined, Info, Error } from "@mui/icons-material";
+import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip, Button, Snackbar } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
 import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
@@ -46,6 +46,9 @@ export const Diagnostico = () => {
 
     // navigate
     const navigate = useNavigate();
+
+    // snackbar
+    const [open, setOpen] = useState(true);
 
     const startRecording = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -98,9 +101,10 @@ export const Diagnostico = () => {
         setAudioURL(null);
     };
 
-    const sendDiagnostic = ( ok ) => {
+    const sendDiagnostic = (ok) => {
         setAudioURL(null);
         ok ? navigate('/diagnostico/resultado') : navigate('/diagnostico');
+        !ok && setOpen(true);
     }
 
     // rich text
@@ -120,7 +124,7 @@ export const Diagnostico = () => {
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
                 <Grid xs={2} xsOffset={10} justifyContent='flex-end' mb={2}>
-                    <Button size='lg' variant='outlined' fullWidth color='success' onClick={() => {}}>Resultados anteriores</Button>
+                    <Button size='lg' variant='outlined' fullWidth color='success' onClick={() => { }}>Resultados anteriores</Button>
                 </Grid>
                 <Card sx={{
                     width: '100%',
@@ -193,11 +197,32 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} time={maxTime}/>
+                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} time={maxTime} />
                         )}
                     </Grid>
                 </Card >
             </Grid >
+            <Snackbar
+                size="lg"
+                variant="outlined"
+                color="danger"
+                open={open}
+                onClose={() => setOpen(false)}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                startDecorator={<Error />}
+                endDecorator={
+                    <Button
+                        onClick={() => setOpen(false)}
+                        size="sm"
+                        variant="soft"
+                        color="danger"
+                    >
+                        Entendido
+                    </Button>
+                }
+            >
+                Hubo un error al procesar tu diagnóstico, por favor inténtalo de nuevo.
+            </Snackbar>
         </>
     )
 }
