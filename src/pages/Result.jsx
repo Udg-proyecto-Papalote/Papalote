@@ -21,13 +21,14 @@ const Title = ({ title, icon, level = 'h3' }) => {
 const MyPieChart = () => {
     const { loading, url, buena_diccion, buena_modulacion, palabras_correctas, palabras_incorrectas, total_palabras_transcritas, tono_voz, recomendaciones = ['Respiración I'] } = useSelector(state => state.user.currentDiagnostic);
 
+    const { name } = useSelector(state => state.user);
     
     const areas = [ 'Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'tono_moderado' ? 'Tono' : '' ].filter((area) => area !== '');
     return (
         loading ? <LoadingReport /> :
             <Grid container lg={10} lgOffset={1} spacing={2} md={12} sm={12} xs={12} px={4}>
                 <Grid lg={12} sm={12} md={12} xs={12}>
-                    <Typography level='h1' mt={2} ml={2}>Resultados</Typography>
+                    <Typography level='h1' mt={2} ml={2}>🌟 Tus resultados, {name.split(' ')[0]}</Typography>
                 </Grid>
                     <Grid lg={4} gap={3} sm={12} md={8} xs={12}>
                     

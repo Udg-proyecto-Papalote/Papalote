@@ -39,6 +39,7 @@ export const Diagnostico = () => {
     // time
     const [time, setTime] = useState(0);
     const intervalRef = useRef(null);
+    const [maxTime, setMaxTime] = useState(0);
 
     // switch theme
     const isNotMobile = useMediaQuery('(min-width: 400px)');
@@ -89,14 +90,17 @@ export const Diagnostico = () => {
         return () => clearInterval(intervalRef.current);
     }, [isRecording]);
 
+    useEffect(() => {
+        setMaxTime(Math.max(time, maxTime));
+    }, [time]);
+
     const deleteRecording = () => {
         setAudioURL(null);
     };
 
-    const sendDiagnostic = ( url ) => {
+    const sendDiagnostic = ( ok ) => {
         setAudioURL(null);
-        // navigate to the results page '/diagnotico/resultados'
-        navigate('/diagnostico/resultado');
+        ok ? navigate('/diagnostico/resultado') : navigate('/diagnostico');
     }
 
     // rich text
@@ -189,7 +193,7 @@ export const Diagnostico = () => {
                             ) : null
                         }
                         {audioURL && (
-                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} time={time}/>
+                            <CheckAudioModal open={audioURL} deleteRecording={deleteRecording} sendRecording={sendDiagnostic} audioRef={audioRef} audioURL={audioURL} time={maxTime}/>
                         )}
                     </Grid>
                 </Card >

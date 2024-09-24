@@ -14,7 +14,7 @@ const cld = new Cloudinary({ cloud_name: cloudName });
 const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL, time }) => {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
-    const { genre } = useSelector(state => state.user);
+    const { gender } = useSelector(state => state.user);
 
     const urlToBlob = async (url) => {
         const response = await fetch(url);
@@ -26,7 +26,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
 
         const data = {
             url: audioURL,
-            genero: genre
+            genero: gender.toLowerCase()
         };
 
         try {
@@ -67,7 +67,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                 formData
             );
 
-            console.log('Audio uploaded:', response);
+            console.log('Audio uploaded:', response.data.url);
 
             const publicId = response.data.public_id;
 
@@ -80,14 +80,16 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             console.log('Audio in .wav format:', wavURL);
 
             setLoading(false);
-            sendRecording(wavURL); // Send the transformed .wav URL
+            sendRecording(true); // Send the transformed .wav URL
 
             const diagnosticResponse = await doDiagnostic(wavURL);
             dispatch(setDiagnosticLoading(false));
-            dispatch(setUrl(response.url || wavURL));
+            dispatch(setUrl(response.data.url || wavURL));
         } catch (error) {
             setLoading(false);
             console.error('Error uploading audio:', error);
+            dispatch(setDiagnosticLoading(false));
+            sendRecording(false);
         }
     };
 
@@ -138,7 +140,6 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                                             Volver a grabar
                                         </Button>
                                         <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg"
-                                            // Disabled if the audio lasts less tahn 180 seconds
                                             disabled={time < 120}
                                         >
                                             Enviar diagnóstico
