@@ -130,7 +130,7 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Impostación1':{
+    'Impostación I':{
         'title': 'Calentamiento de voz - Primera semana',
         'theme': 'Impostacion',
         'type': 'Video/Gif',
@@ -211,7 +211,7 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
-    'Respiracion I':{
+    'Respiración I':{
         'title': 'Respiración diafragmática',
         'theme': 'Respiración',
         'type': 'Video/Gif',

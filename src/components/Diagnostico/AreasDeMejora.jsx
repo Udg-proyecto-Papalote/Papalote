@@ -6,10 +6,11 @@ const data = [
     { name: 'Dicción', value: 1, color: '#FF8042' },
     { name: 'Modulación', value: 1, color: '#8b5cf6' },
     { name: 'Tono', value: 1, color: '#22c55e' },
+    { name: 'Respiración', value: 1, color: '#fcd34d' },
 ];
 
 
-const AreasDeMejora = ({ title, areasDeMejora = ['Dicción', 'Modulación'] }) => {
+const AreasDeMejora = ({ title, areasDeMejora = ['Respiración'] }) => {
     const [areas, setAreas] = useState([])
 
     useEffect(() => {
