@@ -4,8 +4,8 @@ import { ArrowCounterClockwise, Checks } from '@phosphor-icons/react';
 import axios from 'axios';
 import { Cloudinary } from 'cloudinary-core';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setCurrentDiagnostic, setDiagnosticLoading } from '../../store/slices/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCurrentDiagnostic, setDiagnosticLoading, setUrl } from '../../store/slices/userSlice';
 
 const cloudName = 'ds8hfmrth';
 const presetName = 'papalote';
@@ -14,23 +14,21 @@ const cld = new Cloudinary({ cloud_name: cloudName });
 const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL, time }) => {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
+    const { genre } = useSelector(state => state.user);
 
     const urlToBlob = async (url) => {
         const response = await fetch(url);
         const blob = await response.blob();
         return blob;
     };
-    
+
     const doDiagnostic = async (audioURL) => {
-        // const data = {
-        //     url: audioURL,
-        //     genero: 'mujer' 
-        // };
+
         const data = {
-            url: 'https://res.cloudinary.com/ds8hfmrth/video/upload/v1726717337/papalote/audio_recortado_1_fxdeju.wav',
-            genero: 'mujer'
+            url: audioURL,
+            genero: genre
         };
-    
+
         try {
             dispatch(setDiagnosticLoading(true));
             const response = await axios.post('http://localhost:5000/diagnostico', data, {
@@ -41,7 +39,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             });
             console.log('Diagnóstico procesado:', response);
             dispatch(setCurrentDiagnostic({ ...response.data, ...data }));
-            
+
             return response;
         } catch (error) {
             console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
@@ -69,7 +67,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                 formData
             );
 
-            console.log('Audio uploaded:', response.url);
+            console.log('Audio uploaded:', response);
 
             const publicId = response.data.public_id;
 
@@ -86,6 +84,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
 
             const diagnosticResponse = await doDiagnostic(wavURL);
             dispatch(setDiagnosticLoading(false));
+            dispatch(setUrl(response.url || wavURL));
         } catch (error) {
             setLoading(false);
             console.error('Error uploading audio:', error);
@@ -112,9 +111,9 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                             (
                                 <>
                                     {
-                                        time < 180 && (
+                                        time < 120 && (
                                             <Alert color='danger' variant='soft' sx={{ mb: 1 }} startDecorator={<Warning />}>
-                                                <Typography level='title-md' color='error'>Audio demasiado corto. El audio debe durar al menos 3 minutos.</Typography>
+                                                <Typography level='title-md' color='error'>Audio demasiado corto. El audio debe durar al menos 2 minutos.</Typography>
                                             </Alert>
                                         )
                                     }
@@ -125,19 +124,22 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                                     <Typography mb={3} level='body-lg'>
                                         Si no es así, puedes volver a grabar el audio.
                                     </Typography>
+                                    <Stack justifyContent="center"
+                                        alignItems="center" mb={2}>
+                                        <audio ref={audioRef} src={audioURL} controls />
+                                    </Stack>
                                     <Stack
                                         direction={{ sm: 'column', md: 'row' }}
                                         justifyContent="center"
                                         alignItems="center"
                                         gap={2}
                                     >
-                                        <audio ref={audioRef} src={audioURL} controls />
                                         <Button startDecorator={<ArrowCounterClockwise size={32} />} onClick={deleteRecording} sx={{ borderRadius: '100px' }} color='neutral' variant='outlined' size='lg'>
                                             Volver a grabar
                                         </Button>
                                         <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg"
-                                        // Disabled if the audio lasts less tahn 180 seconds
-                                        // disabled={time < 180}
+                                            // Disabled if the audio lasts less tahn 180 seconds
+                                            disabled={time < 120}
                                         >
                                             Enviar diagnóstico
                                         </Button>
