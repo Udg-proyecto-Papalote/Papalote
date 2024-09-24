@@ -14,8 +14,17 @@ const RecommendedExercises = ({ title = <></>, ex = [] }) => {
     }])
 
     useEffect(() => {
-        ex?.length > 0 && setRecommended(ex.map((name) => { return { id: name, title: exercises[name].title, theme: exercises[name].theme, type: exercises[name].type } }))
-    }, [])
+                ex?.length > 0 && setRecommended(
+          ex
+            .filter((name) => exercises.hasOwnProperty(name)) // Check if the key exists
+            .map((name) => ({
+              id: name,
+              title: exercises[name].title,
+              theme: exercises[name].theme,
+              type: exercises[name].type
+            }))
+        );
+    }, [ex])    
     return (
         <Card sx={{ mt: 2.5 }}>
             <CardContent>

@@ -5,6 +5,7 @@ import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
 import CheckAudioModal from "../components/Modal/CheckAudioModal";
 import ModeToggle from "../components/ToggleTheme"
+import { useNavigate } from "react-router-dom";
 
 const text = `Los primeros reportes de actividad aeronáutica irregular detectada sobre los municipios del Sotavento (Veracruz, Boca del Río, Alvarado y Tlalixcoyan, principalmente) datan de finales de los años ochenta. Los habitantes de las zonas agrestes -dedicados principalmente a la pesca y la cría de ganado- estaban ya habituados a la presencia de las luces nocturnas. Los más viejos las llamaban "brujas"; los más informados, "avionetas". Incluso conocían el lugar en donde las luces descendían: el Llano de la Víbora, una brecha natural bordeada de matorrales y espinos que el Ejército y la Policía Judicial Federal empleaban a menudo como pista de aterrizaje.
 
@@ -41,6 +42,9 @@ export const Diagnostico = () => {
 
     // switch theme
     const isNotMobile = useMediaQuery('(min-width: 400px)');
+
+    // navigate
+    const navigate = useNavigate();
 
     const startRecording = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -91,7 +95,8 @@ export const Diagnostico = () => {
 
     const sendDiagnostic = ( url ) => {
         setAudioURL(null);
-        
+        // navigate to the results page '/diagnotico/resultados'
+        navigate('/diagnostico/resultado');
     }
 
     // rich text

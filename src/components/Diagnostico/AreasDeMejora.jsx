@@ -36,8 +36,8 @@ const AreasDeMejora = ({ title, areasDeMejora = ['Respiración'] }) => {
                         cornerRadius={7}
                         paddingAngle={5}
                     >
-                        {areas.map((entry, index) => (
-                            entry.value > 0 && <Cell key={`cell-${index}`} fill={entry.color} />
+                        {areas.map(({ value, color }, index) => (
+                            <Cell key={`cell-${index}`} fill={color} fillOpacity={value > 0 ? 1 : 0.3} />
                         ))}
                     </Pie>
                 </PieChart>

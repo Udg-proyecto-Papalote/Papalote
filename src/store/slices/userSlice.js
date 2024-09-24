@@ -10,13 +10,13 @@ const initialState = {
     exercisesDone: {},
     currentDiagnostic: {
         url: '',
-        genero: '',
         buena_diccion: null,
         buena_modulacion: null,
         palabras_correctas: 0,
         palabras_incorrectas: 0,
         total_palabras_transcritas: 0,
         tono_voz: '',
+        recomendaciones: ['Respiración I'],
         loading: false
     },
     diagnostics: []
@@ -58,10 +58,13 @@ export const userSlice = createSlice({
         },
         setDiagnosticLoading: (state, action) => {
             state.currentDiagnostic.loading = action.payload;
+        },
+        setUrl: (state, action) => {
+            state.currentDiagnostic.url = action.payload;
         }
     }
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl
  } = userSlice.actions;

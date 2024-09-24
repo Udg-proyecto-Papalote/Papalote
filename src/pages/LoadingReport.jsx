@@ -5,14 +5,14 @@ import { setDiagnosticLoading } from '../store/slices/userSlice'
 import { Warning } from '@mui/icons-material'
 
 const LoadingReport = () => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    // when leaving the page, clear the report
-    useEffect(() => {
-        return () => {
-            dispatch(setDiagnosticLoading(false))
-        }
-    }, [dispatch])
+    // // when leaving the page, clear the report
+    // useEffect(() => {
+    //     return () => {
+    //         dispatch(setDiagnosticLoading(false))
+    //     }
+    // }, [dispatch])
     return (
         <Grid container justifyContent="center" alignItems="center" sx={{ height: '80vh' }} direction='column' gap={2}>
             <Typography level='h4' align='center' textAlign='center'>
