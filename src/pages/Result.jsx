@@ -46,7 +46,7 @@ const MyPieChart = () => {
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
                     <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />} 
-                    value={tono_voz ==='tono_moderado' ? 'moderado' : tono_voz === 'tono_bajo' ? 'grave' : 'agudo'}
+                    value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
                         />
                     <Card sx={{ mt: 2 }}>
                         <Title title='Dicción' icon={<ChatRounded />} />
