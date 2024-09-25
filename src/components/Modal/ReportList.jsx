@@ -1,6 +1,6 @@
 import { DialogContent, DialogTitle, Modal, ModalDialog, Sheet, Typography } from "@mui/joy"
 
-const ListReports = ({ open, onClose }) => {
+const ReportList = ({ open, onClose }) => {
     return (
         <Modal
             open={open}
@@ -19,4 +19,4 @@ const ListReports = ({ open, onClose }) => {
     )
 }
 
-export default ListReports
+export default ReportList
