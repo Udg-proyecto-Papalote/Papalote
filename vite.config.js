@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: 'https://udg-proyecto-papalote.github.io/',
+  build: {
+    rollupOptions: {
+      external: ['@mui/system/Unstable_Grid'],
+    },
+  },
 })

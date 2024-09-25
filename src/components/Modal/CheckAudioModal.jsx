@@ -74,7 +74,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             const wavURL = cld.url(publicId, {
                 resource_type: 'video',
                 format: 'wav',
-                transformation: [{ start_offset: "0", duration: "180" }]
+                transformation: [{ start_offset: "0", duration: "120" }]
             });
 
             console.log('Audio in .wav format:', wavURL);
