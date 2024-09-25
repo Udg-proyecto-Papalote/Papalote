@@ -14,11 +14,14 @@ export const Trabalenguas = () => {
 
     const { exercisesDone } = useSelector((state) => state.user)
     
-    const { title, theme, instructions, recommendations, trabalenguas, ending } = exercises[id]
+    const { title, theme, instructions, recommendations, trabalenguas = [], ending } = exercises[id]
     const [trabalengua, setTrabalengua] = useState(0)
     const [maxTrabalengua, setMaxTrabalengua] = useState(0)
     const [ready, setReady] = useState(false)
     const { mode } = useColorScheme()
+
+    // is rendered
+    const [isRendered, setIsRendered] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -49,13 +52,16 @@ export const Trabalenguas = () => {
     }, [trabalengua]);
     
     useEffect(() => {
-        dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua + 1, percentage: (100 * (maxTrabalengua + 1) / trabalenguas.length) }))
+        trabalenguas.length > 0 &&
+        dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
     }, [maxTrabalengua]);
 
-
+    useEffect(() => {
+        setIsRendered(true)
+    }, [])
 
     return (
-        <Grid container width='100%' direction='column' gap={1} lg={6} mx='auto' sm={12} md={8}>
+        isRendered && <Grid container width='100%' direction='column' gap={1} lg={6} mx='auto' sm={12} md={8}>
             <Title title={title} theme={theme} />
             {!ready ?
                 <>
@@ -81,7 +87,7 @@ export const Trabalenguas = () => {
                         <CardContent sx={{ py: 2, px: 5 }}>
                             <Typography textAlign='center'>
                                 {
-                                    trabalenguas[trabalengua].map((sentence, index) => (
+                                    trabalenguas[trabalengua]?.length > 0 && trabalenguas[trabalengua].map((sentence, index) => (
                                         <Typography fontSize={{ sm: 22, lg: 26, xs: 20, md: 24 }} letterSpacing={1} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} key={index} textAlign='justify'>
                                             {sentence}
                                         </Typography>
@@ -93,7 +99,7 @@ export const Trabalenguas = () => {
                     <Stack direction='row' alignItems='center' gap={2}>
                         <LinearProgress determinate value={(100 * (trabalengua + 1) / trabalenguas.length)} size='lg' />
                         {
-                            trabalengua === trabalenguas.length - 1 ?
+                            trabalengua === trabalenguas?.length - 1 ?
                                 <Button color='neutral' size='lg' variant="outlined" onClick={() => setReady(true)} startDecorator='🎉'>
                                     ¡Listo!
                                 </Button> :
