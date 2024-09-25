@@ -17,7 +17,8 @@ const initialState = {
         total_palabras_transcritas: 0,
         tono_voz: '',
         recomendaciones: ['Respiración I'],
-        loading: false
+        loading: false,
+        date: new Date().toLocaleDateString()
     },
     diagnostics: []
 };
@@ -54,17 +55,20 @@ export const userSlice = createSlice({
             state.currentDiagnostic = { ...state.currentDiagnostic, ...action.payload };
         },
         setDiagnostics: (state, action) => {
-            state.diagnostics = [...state.diagnostics, action.payload]; 
+            state.diagnostics = [...state.diagnostics, {...action.payload}];
         },
         setDiagnosticLoading: (state, action) => {
             state.currentDiagnostic.loading = action.payload;
         },
         setUrl: (state, action) => {
             state.currentDiagnostic.url = action.payload;
+        },
+        setDate: (state, action) => {
+            state.currentDiagnostic.date = action.payload;
         }
     }
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate
  } = userSlice.actions;

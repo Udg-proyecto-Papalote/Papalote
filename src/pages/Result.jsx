@@ -4,10 +4,10 @@ import PieChartWithNeedle from '../components/Diagnostico/PieChartWithNeedle';
 import Modulacion from '../components/Diagnostico/Modulacion';
 import AreasDeMejora from '../components/Diagnostico/AreasDeMejora';
 import RecommendedExercises from '../components/Diagnostico/RecommendedExercises';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import LoadingReport from './LoadingReport';
-import { exercises } from './exercises/data';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { setDate, setDiagnostics } from '../store/slices/userSlice';
 
 const Title = ({ title, icon, level = 'h3' }) => {
     return (
@@ -19,21 +19,31 @@ const Title = ({ title, icon, level = 'h3' }) => {
 }
 
 const MyPieChart = () => {
-    const { loading, url, buena_diccion, buena_modulacion, palabras_correctas, palabras_incorrectas, total_palabras_transcritas, tono_voz, recomendaciones = ['Respiración I'] } = useSelector(state => state.user.currentDiagnostic);
+    const { name, currentDiagnostic } = useSelector(state => state.user);
+    const { loading, url, buena_diccion, buena_modulacion, palabras_correctas, palabras_incorrectas, total_palabras_transcritas, tono_voz, recomendaciones = ['Respiración I'] } = currentDiagnostic;
 
-    const { name } = useSelector(state => state.user);
+    const dispatch = useDispatch();
+
     
     const areas = [ 'Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'tono_moderado' ? 'Tono' : '' ].filter((area) => area !== '');
+
+    useEffect(() => {
+        if(!loading && Object.keys(currentDiagnostic).length > 0) {
+            dispatch(setDate(new Date().toLocaleDateString()));
+            dispatch(setDiagnostics(currentDiagnostic));
+        }
+    }, [loading]);
+
     return (
         loading ? <LoadingReport /> :
             <Grid container lg={10} lgOffset={1} spacing={2} md={12} sm={12} xs={12} px={4}>
                 <Grid lg={12} sm={12} md={12} xs={12}>
-                    <Typography level='h1' mt={2} ml={2}>🌟 Tus resultados, {name.split(' ')[0]}</Typography>
+                    <Typography level='h1' mt={2} ml={2}>🌟 Tus resultados, {name.split(' ')[0] || 'usuario favorito'}</Typography>
                 </Grid>
                     <Grid lg={4} gap={3} sm={12} md={8} xs={12}>
                     
                         <AreasDeMejora title={<Title title='Áreas de mejora' icon={<EnergySavingsLeaf />} />} areasDeMejora={areas}/>                    
-                        <RecommendedExercises title={<Title title='Ejercicios recomendados' icon={<RollerSkatingRounded />} />} ex={[...recomendaciones, 'Respiración I']}/>
+                        <RecommendedExercises title={<Title title='Ejercicios recomendados' icon={<RollerSkatingRounded />} />} ex={[...recomendaciones]}/>
                     
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>

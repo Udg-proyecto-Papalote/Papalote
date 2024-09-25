@@ -48,7 +48,7 @@ export const Diagnostico = () => {
     const navigate = useNavigate();
 
     // snackbar
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const startRecording = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -123,8 +123,8 @@ export const Diagnostico = () => {
     return (
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
-                <Grid xs={2} xsOffset={10} justifyContent='flex-end' mb={2}>
-                    <Button size='lg' variant='outlined' fullWidth color='success' onClick={() => { }}>Resultados anteriores</Button>
+                <Grid xs={4} xsOffset={8} justifyContent='flex-end' mb={2}>
+                    <Button size='sm' variant='outlined' fullWidth color='success' onClick={() => { }}>Resultados anteriores</Button>
                 </Grid>
                 <Card sx={{
                     width: '100%',
