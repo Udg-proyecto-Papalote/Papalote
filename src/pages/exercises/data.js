@@ -49,6 +49,8 @@ export const exercises = {
         'title': 'Sonido KS',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
+        'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727137868/xddrioqkklnbowcznoyu.mp4',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147755/icer6ejpyiyijfmdfqji.mp4',
         'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations 1': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -65,6 +67,8 @@ export const exercises = {
         'title': 'Palabras con letra "D"',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
+        'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147184/lftuge6i5f1wjrd5scoj.mp4',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147804/nrxi6wotkqcrrz7noryl.mp4',
         'intructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -76,6 +80,7 @@ export const exercises = {
         'title': 'Combinación consonántica “GN”',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147867/bqetjtkretocmoatcteo.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -98,6 +103,8 @@ export const exercises = {
         'title': 'Fonema /ɲ/',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
+        'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147302/eafaddufuiburqiysjvn.mp4',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147904/exnllqbprmwveh2s3l4c.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -118,6 +125,8 @@ export const exercises = {
         'title': 'Molde articulatorio fonema /P/',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
+        'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147368/bkod0lvctmfmcwwvao12.mp4',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147946/ejtyefe7a8r6p5r78994.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
@@ -228,6 +237,7 @@ export const exercises = {
         'title': 'De aire a sonido',
         'theme': 'Vocalización',
         'type': 'TBD',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148017/jeebfa39gvenpxdgthev.mp4',
         'instructions': 'Discutir con Ximena, .Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'excercise': [
@@ -248,6 +258,7 @@ export const exercises = {
         'title': 'De aire a sonido',
         'theme': 'Vocalización',
         'type': 'TBD',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148057/lyywujgyo6iyjqzhmggh.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes vocales con claridad y precisión. Respeta el molde de cada una de las letras para que el sonido sea lo más diferenciado posible. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'excercise': [
