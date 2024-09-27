@@ -2,8 +2,11 @@ import { Box, Card, CardContent, Grid, Typography } from "@mui/joy"
 import { Sparkle } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
-export const StartDiagnostic = ({ isFirstTime = true }) => {
+export const StartDiagnostic = () => {
+    const { currentDiagnostic } = useSelector((state) => state.user)
+    const isFirstTime = !currentDiagnostic.url; 
     return (
         isFirstTime &&
         <Grid width='185px'>

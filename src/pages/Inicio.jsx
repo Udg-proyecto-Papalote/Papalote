@@ -10,8 +10,8 @@ export const Inicio = () => {
         <Grid container >
             <Grid container lg={8} lgOffset={2} gap={2} mx={3}>
                 <StreakDays />
-                <ProgressBar percentage={20} />
-                <StartDiagnostic isFirstTime={true} />
+                <ProgressBar />
+                <StartDiagnostic />
                 <Carousel />
             </Grid>
         </Grid>

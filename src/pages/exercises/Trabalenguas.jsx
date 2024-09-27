@@ -100,7 +100,11 @@ export const Trabalenguas = () => {
                         <LinearProgress determinate value={(100 * (trabalengua + 1) / trabalenguas.length)} size='lg' />
                         {
                             trabalengua === trabalenguas?.length - 1 ?
-                                <Button color='neutral' size='lg' variant="outlined" onClick={() => setReady(true)} startDecorator='🎉'>
+                                <Button color='neutral' size='lg' variant="outlined" onClick={() => {
+                                    setTrabalengua(trabalengua + 1)
+                                    setReady(true)
+                                } 
+                                } startDecorator='🎉'>
                                     ¡Listo!
                                 </Button> :
                                 <Button color='neutral' size='lg' variant='soft' onClick={() => setTrabalengua(trabalengua + 1)}>
