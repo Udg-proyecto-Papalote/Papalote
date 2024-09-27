@@ -114,8 +114,8 @@ const EscuchaYRepite = () => {
                             </Stack>
                             {wordNumber === words.length - 1 ?
                                 <Button color='neutral' size='lg' variant="outlined" onClick={() => {
-                                    setReady(true)
                                     setWordNumber(wordNumber + 1)
+                                    setReady(true)
                                 }} startDecorator='🎉'>
                                     ¡Listo!
                                 </Button> :
