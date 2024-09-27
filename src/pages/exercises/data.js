@@ -144,7 +144,7 @@ export const exercises = {
         'title': 'Calentamiento de voz - Primera semana',
         'theme': 'Impostación',
         'type': 'Video/Gif',
-        'instructions': 'Discutir con Ximena',
+        "instructions": "Realiza este ejercicio en un ambiente tranquilo donde puedas enfocarte en tu voz y en tu respiración. Asegúrate de estar cómodo y libre de distracciones.",
         'excercise': [
             '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
             '2. Al exhalar, vamos a pronunciar una B, con los labios y mejillas distendidas, la cual hará que se inflen levemente. No debe haber tensión en este ejercicio. Con el sonido emitido por la letra b que ya es vibrante, empezarás a sentir comienza a vibrar tu garganta, torax e incluso tu cabeza. Puedes subir o variar la intensidad del sonido producido para notar aún mejor cómo se activan tus resonadores naturales.',
@@ -156,7 +156,7 @@ export const exercises = {
         'title': 'Soy un motor',
         'theme': 'Letra R',
         'type': 'Video/Gif',
-        'instructions': 'Discutir con Ximena',
+        "instructions": "Practica este ejercicio en un ambiente relajado, donde puedas enfocarte en tu voz y la vibración que produce. Asegúrate de estar cómodo y sin distracciones.",
         'recommendations': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
         'excercise': [
             'Imitar el sonido de un motor. Primero hay que inflar el abdomen y luego hacer el sonido “rrrrrrrrrrrr” hasta que nos quedemos sin aire.',
@@ -203,7 +203,7 @@ export const exercises = {
         'title': 'La tira de papel',
         'theme': 'Caudal y control de aire',
         'type': 'Video/Gif',
-        'instructions': 'Discutir con Ximena',
+        "instructions": "Realiza este ejercicio en un espacio tranquilo y cómodo, donde puedas concentrarte en tu flujo de aire. Es importante evitar distracciones para que puedas escuchar tu respiración y controlar tu soplo.",
         'excercise': [
             ['Colocar una tira de papel a 20 centímetros lejos de tu boca y soplar. Hay que controlar el aire del aire y gastarlo de una manera paulatina, la tira de papel te indicará qué tan fuerte está soplando. La idea del ejercicio es contar los segundos que demoramos en que se nos acabe el aire, luego ir practicando cada dia e ir aumentando los segundos en los que se nos acaba el aire.'],
             ['Al realizar este ejercicio, es fundamental que mantengas una postura erguida y relajada, con los hombros sueltos y el abdomen activo. Al soplar, concéntrate en controlar el flujo de aire desde el diafragma, no desde los pulmones o la garganta. Mantén la boca ligeramente abierta y usa los labios para dirigir el aire de manera suave y constante hacia la tira de papel. Al principio, no te preocupes tanto por la duración, sino por lograr un flujo de aire estable.'],
@@ -214,7 +214,7 @@ export const exercises = {
         'title': 'Inflar un globo',
         'theme': 'Potencia',
         'type': 'Video/Gif',
-        'instructions': 'Discutir con Ximena',
+        "instructions": "Practica este ejercicio en un lugar tranquilo donde puedas concentrarte en tu respiración y en la potencia de tu soplo. Asegúrate de tener un globo a la mano y de estar cómodo.",
         'excercise': [
             ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
             ['Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.'],
@@ -225,7 +225,7 @@ export const exercises = {
         'title': 'Respiración diafragmática',
         'theme': 'Respiración',
         'type': 'Video/Gif',
-        'instructions': 'Discutir con Ximena',
+        "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
         'excercise': [
             ['Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.'],
             ['Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).'],
@@ -239,7 +239,7 @@ export const exercises = {
         'theme': 'Vocalización',
         'type': 'TBD',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148017/jeebfa39gvenpxdgthev.mp4',
-        'instructions': 'Discutir con Ximena, .Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
+        'instructions': 'Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'excercise': [
             ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
