@@ -1,7 +1,9 @@
 import { Replay } from '@mui/icons-material'
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/joy'
+import { useNavigate } from 'react-router-dom'
 
 const Ending = ({ image = <></>, ending = "uno.dos", resetFunction, theme = '' }) => {
+    const navigate = useNavigate()
     return (
         <Card sx={{ mt: 0 }}>
             <CardContent sx={{ alignItems: 'center', justifyItems: 'center' }}>
@@ -26,7 +28,7 @@ const Ending = ({ image = <></>, ending = "uno.dos", resetFunction, theme = '' }
                 </Button>
 
                 {/* Volver */}
-                <Button color='danger' size='lg' variant='outlined' onClick={() => { }}>
+                <Button color='danger' size='lg' variant='outlined' onClick={() => navigate('/ejercicios')}>
                     Volver a la página de ejercicios
                 </Button>
             </CardActions>
