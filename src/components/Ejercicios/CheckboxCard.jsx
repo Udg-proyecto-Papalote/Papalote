@@ -15,14 +15,14 @@ const CheckboxCard = ({ icon = <HouseOutlined />, title = "Escucha", coso = <></
                         {icon}
                         <Typography level="title-lg">{title}</Typography>
                     </CardContent>
-                    <Checkbox variant='outlined' color='neutral' checked={checked} onChange={(e) => {
+                    <Checkbox variant='outlined' color='neutral' checked={checked} size="lg" onChange={(e) => {
                         setChecked(e.target.checked)
                         e.target.checked ? setCheckedBoxes(checkedBoxes + 1) : setUncheckedBoxes(checkedBoxes - 1)
                     }} />
                 </CardContent>
                 <CardContent sx={{ alignItems: 'center', flex: 2, gap:2 }}>
                     {coso || word}
-                    <Typography level='body-lg' textAlign='center' px={4}>
+                    <Typography  fontWeight={600} fontSize={20} textAlign='center' px={4} fontStyle='italic' mx={4}>
                         {description}
                     </Typography>
                 </CardContent>
