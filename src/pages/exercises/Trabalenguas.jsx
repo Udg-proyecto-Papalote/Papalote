@@ -14,8 +14,8 @@ export const Trabalenguas = () => {
 
     const { exercisesDone } = useSelector((state) => state.user)
     
-    const { title, theme, instructions, recommendations, trabalenguas = [], ending } = exercises[id]
-    const [trabalengua, setTrabalengua] = useState(exercisesDone[id]?.maxLevel || 0)
+    const { title, theme, instructions, recommendations, trabalenguas = [' '], ending } = exercises[id]
+    const [trabalengua, setTrabalengua] = useState(!!exercisesDone[id]?.maxLevel ? exercisesDone[id].maxLevel : 0)
     const [maxTrabalengua, setMaxTrabalengua] = useState(0)
     const [ready, setReady] = useState(false)
     const { mode } = useColorScheme()
