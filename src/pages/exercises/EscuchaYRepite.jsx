@@ -80,9 +80,8 @@ const EscuchaYRepite = () => {
                             }
                         </Select>
                         <Grid container spacing={1} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }}>
-                            <Grid item='true' lg={8} sm={12} md={12} xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
-                                <CheckboxCard title={!!video ? 'Video' : 'Audio'} description={!!video ? 'Posiciona tu lengua de esta manera al pronunciar el sonido' : 'Pronuncia de esta manera el sonido'} icon={<LooksOne size={32} />} coso={
-                                    !!video ?
+                            {!!video && <Grid item='true' lg={8} sm={12} md={12} xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <CheckboxCard title={'Video'} description={'Posiciona tu lengua de esta manera al pronunciar el sonido'} icon={<LooksOne size={32} />} coso={
                                     <AspectRatio ratio={1} sx={{ maxWidth: '380px', width: '100%', minWidth: '100px' }} color='none'>
                                         <video
                                             controls
@@ -93,13 +92,13 @@ const EscuchaYRepite = () => {
                                             />
                                         </video>
                                     </AspectRatio>
-                                    :
-                                    <Audio src={audio} />
                                 } checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
                                 } />
-                            </Grid>
-                            <Grid item='true' lg={4} sm={12} md={12} xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
-                                <CheckboxCard title='Lee' description="Lee la palabra en voz alta" icon={<LooksTwo size={32} />} coso={<WordToSay word={words[wordNumber]} mode={mode} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
+                            </Grid>}
+                            <Grid item='true' lg={!!video ? 4 : 12} sm={12} md={12} xs={12} sx={{ display: 'flex', flexDirection: !!video ?'column' : 'row' }} gap={1}>
+                                <CheckboxCard title='Audio' description="Pronuncia de esta manera el sonido" icon={<LooksTwo size={32} />} coso={<Audio src={audio} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
+                                } />
+                                <CheckboxCard title='Lee' description="Lee la palabra en voz alta" icon={!!audio && !!video ? <Looks3 size={32} /> : <LooksTwo size={32} />} coso={<WordToSay word={words[wordNumber]} mode={mode} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
                                 } />
                             </Grid>
                         </Grid>
@@ -117,7 +116,7 @@ const EscuchaYRepite = () => {
                                     ¡Listo!
                                 </Button> :
                                 <Button
-                                    color='neutral' size='lg' variant="soft" onClick={() => setWordNumber(wordNumber + 1)} disabled={checkedBoxes !== 2}>Siguiente</Button>
+                                    color='neutral' size='lg' variant="soft" onClick={() => setWordNumber(wordNumber + 1)} disabled={checkedBoxes !== (!!video + !!audio + 1)}>Siguiente</Button>
                             }
                         </Stack>
                     </> :
