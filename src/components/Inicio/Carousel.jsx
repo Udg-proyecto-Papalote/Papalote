@@ -1,23 +1,27 @@
 import { Box, Button, Card, CardContent, Divider, Grid, IconButton, Stack, Typography } from '@mui/joy'
 import { ArrowLeft, ArrowRight, Ear, SoundcloudLogo, UserSound, Star, MicrophoneStage } from '@phosphor-icons/react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 const slides = [
 	{
-		title: 'Ejercicio 1',
+		title: 'Trabalenguas Populares I',
 		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis nec nisl ultricies aliquam. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Ear size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>
+		icon: <Ear size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>,
+		location: '/ejercicios/trabalenguas/Dicción 1'
 	},
 	{
 		title: 'Ejercicio 2',
 		content: 'Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <MicrophoneStage size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>
+		icon: <MicrophoneStage size={110} color='#7dd3fc' weight='duotone' style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }}/>,
+		location: '/ejercicios/trabalenguas/Dicción 2'
 	},
 	{
 		title: 'Ejercicio 3',
 		content: 'Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Donec nec ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia. Aenean nec nisl ultricies, aliquam nisl nec, ultricies nisi. Nulla facilisi. Sed nec libero nec enim lacinia lacinia.',
-		icon: <Star size={110} color='#7dd3fc' weight='duotone'style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }} />
+		icon: <Star size={110} color='#7dd3fc' weight='duotone'style={{ filter: 'drop-shadow(0 0 0.4rem #7dd3fc)' }} />,
+		location: '/ejercicios/trabalenguas/Dicción 3'
 	}
 ]
 
@@ -35,6 +39,7 @@ const Dot = ({ isSelected }) => (
 );
 
 const Carousel = () => {
+	const navigate = useNavigate();
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const nextSlide = () => {
 		setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -72,7 +77,8 @@ const Carousel = () => {
 											slides[currentSlide].icon
 										}
 									</IconButton>
-									<Button variant='soft' size='lg'>Iniciar</Button>
+									<Button variant='soft' size='lg' onClick={() => 
+										navigate(slides[currentSlide].location)}>Iniciar</Button>
 								</Stack>
 							</Stack>
 						</CardContent>
