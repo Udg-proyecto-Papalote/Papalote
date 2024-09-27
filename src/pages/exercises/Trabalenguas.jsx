@@ -76,7 +76,7 @@ export const Trabalenguas = () => {
                             </CardContent>
                             <Select defaultValue={trabalengua} value={trabalengua} variant="soft" size='sm' onChange={(e) => setTrabalengua(e?.target?.value)}>
                                 {
-                                    Array.from({ length: maxTrabalengua + 1 }, (_, index) => (
+                                    Array.from({ length: Math.min(maxTrabalengua + 1, trabalenguas.length) }, (_, index) => (
                                         <Option key={index} value={index}>
                                             {`Trabalenguas ${index + 1}`}
                                         </Option>

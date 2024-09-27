@@ -9,6 +9,7 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setTrabalenguasExercise } from "../../store/slices/userSlice"
 import { useParams } from "react-router-dom"
+import { set } from "lodash"
 
 
 const Audio = ({ src }) => {
@@ -112,7 +113,10 @@ const EscuchaYRepite = () => {
                                 </Typography>
                             </Stack>
                             {wordNumber === words.length - 1 ?
-                                <Button color='neutral' size='lg' variant="outlined" onClick={() => setReady(true)} startDecorator='🎉'>
+                                <Button color='neutral' size='lg' variant="outlined" onClick={() => {
+                                    setReady(true)
+                                    setWordNumber(wordNumber + 1)
+                                }} startDecorator='🎉'>
                                     ¡Listo!
                                 </Button> :
                                 <Button
