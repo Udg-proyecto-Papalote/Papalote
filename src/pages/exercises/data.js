@@ -142,7 +142,7 @@ export const exercises = {
     },
     'Impostación I':{
         'title': 'Calentamiento de voz - Primera semana',
-        'theme': 'Impostacion',
+        'theme': 'Impostación',
         'type': 'Video/Gif',
         'instructions': 'Discutir con Ximena',
         'excercise': [
