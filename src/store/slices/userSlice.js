@@ -18,9 +18,9 @@ const initialState = {
         tono_voz: '',
         recomendaciones: ['Respiración I'],
         loading: false,
-        date: new Date().toLocaleDateString()
+        date: null
     },
-    diagnostics: []
+    diagnostics: {}
 };
 
 export const userSlice = createSlice({
@@ -55,7 +55,7 @@ export const userSlice = createSlice({
             state.currentDiagnostic = { ...state.currentDiagnostic, ...action.payload };
         },
         setDiagnostics: (state, action) => {
-            state.diagnostics = [...state.diagnostics, {...action.payload}];
+            state.diagnostics[action.payload.date] = action.payload;
         },
         setDiagnosticLoading: (state, action) => {
             state.currentDiagnostic.loading = action.payload;
