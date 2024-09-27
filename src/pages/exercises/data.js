@@ -185,17 +185,17 @@ export const exercises = {
     'Letra R III': {
         'title': 'Combinaciones consonantes con R',
         'theme': 'Letra R',
-        'type': 'escuchayrepite',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
-        'words': [
-            ['CRANEO', 'INCRUSTAR', 'CRISANTEMO', 'CRUDO', 'CRÁTER', 'ACRÓBATA', 'CRITERIO', 'ACROSTICO', 'DEMACRADO', 'HIPÓCRITA', 'CRISIS', 'CREMA', 'LACRADO', 'SACRAMENTO', 'SECRETARIA', 'CREDO', 'CRIN', 'CRUCIGRAMA'],
-            ['DRAMA', 'DRAMATICO', 'DROMEDARIO', 'DRENAR', 'DRAGON', 'DRAGA', 'CUADRA', 'CATEDRAL', 'LADRILLO', 'LIENDRE', 'DRON', 'DRAMATIZAR', 'ESCUADRON', 'CUADRUPEDO', 'CUADRADO', 'ADRIATICO', 'DRAMATURGO'],
-            ['BRUMA', 'HAMBRE', 'BRUNO', 'CABRA', 'BRAZO', 'BROCHA', 'BRONQUITIS', 'BRUJULA', 'BREVE', 'BRECHA', 'BRINDIS', 'BRISA', 'BRAVO', 'BRINCAR', 'BREVAJE', 'BRAVÍO', 'BRILLANTES', 'BRONCEADOR', 'BRUSCO', 'BRONCE'],
-            ['COFRE', 'FRESA', 'FRANCIA', 'FRASCO', 'FRENOS', 'OFRECER', 'REFRESCAR', 'FRÍVOLO', 'RESFRIADO', 'FRONDA', 'SUFRO', 'DESCIFRÓ', 'AFRONTAR', 'FRONTERA', 'AFRODITA', 'FRUTOS', 'FRANQUEZA', 'REFRIGERADOR', 'FRÍO'],
-            ['GRANDE', 'GRUÑON', 'GRULLA', 'ENGRANAJE', 'GRUPO', 'ENGRANDECER', 'GRILLO', 'GRANITO', 'BAGRE', 'CANGREJO', 'EGRESAR', 'ENGRUDO', 'ESGRIMA', 'LOGRO', 'GRUMOSO', 'GRANATE', 'GRAMO', 'GRÁFICO', 'GROSELLA', 'GRASA'],
-            ['TROMPO', 'TRONCO', 'TRUCO', 'TRINEO', 'TRAZO', 'TEATRO', 'TRIGO', 'TRISTE', 'CICATRIZ', 'FILTRO', 'TRAICIÓN', 'TRÁFICO', 'TRANSICIÓN', 'TRACTOR', 'ENTRENAMIENTO', 'LETRA', 'KILÓMETRO', 'INSTRUMENTO', 'INTRIGA', 'CENTRO'],
-            ['PREMIO', 'PRIMO', 'PRADO', 'PRESA', 'PRINCESA', 'PROTEGER', 'PROBLEMA', 'PREDICAR', 'COMPRA', 'EXPRIMIR', 'PAPRIKA', 'COMPROBAR', 'REPROBAR', 'PROCRASTINAR', 'PRISA', 'PRIMARIA', 'APRENDER', 'PRUSIA', 'PRIVILEGIO'],
+        'trabalenguas': [
+            ['CRANEO, ', 'INCRUSTAR, ', 'CRISANTEMO, ', 'CRUDO, ', 'CRÁTER, ', 'ACRÓBATA, ', 'CRITERIO, ', 'ACROSTICO, ', 'DEMACRADO, ', 'HIPÓCRITA, ', 'CRISIS, ', 'CREMA, ', 'LACRADO, ', 'SACRAMENTO, ', 'SECRETARIA, ', 'CREDO, ', 'CRIN, ', 'CRUCIGRAMA'],
+            ['DRAMA, ', 'DRAMATICO, ', 'DROMEDARIO, ', 'DRENAR, ', 'DRAGON, ', 'DRAGA, ', 'CUADRA, ', 'CATEDRAL, ', 'LADRILLO, ', 'LIENDRE, ', 'DRON, ', 'DRAMATIZAR, ', 'ESCUADRON, ', 'CUADRUPEDO, ', 'CUADRADO, ', 'ADRIATICO, ', 'DRAMATURGO'],
+            ['BRUMA, ', 'HAMBRE, ', 'BRUNO, ', 'CABRA, ', 'BRAZO, ', 'BROCHA, ', 'BRONQUITIS, ', 'BRUJULA, ', 'BREVE, ', 'BRECHA, ', 'BRINDIS, ', 'BRISA, ', 'BRAVO, ', 'BRINCAR, ', 'BREVAJE, ', 'BRAVÍO, ', 'BRILLANTES, ', 'BRONCEADOR, ', 'BRUSCO, ', 'BRONCE'],
+            ['COFRE, ', 'FRESA, ', 'FRANCIA, ', 'FRASCO, ', 'FRENOS, ', 'OFRECER, ', 'REFRESCAR, ', 'FRÍVOLO, ', 'RESFRIADO, ', 'FRONDA, ', 'SUFRO, ', 'DESCIFRÓ, ', 'AFRONTAR, ', 'FRONTERA, ', 'AFRODITA, ', 'FRUTOS, ', 'FRANQUEZA, ', 'REFRIGERADOR, ', 'FRÍO'],
+            ['GRANDE, ', 'GRUÑON, ', 'GRULLA, ', 'ENGRANAJE, ', 'GRUPO, ', 'ENGRANDECER, ', 'GRILLO, ', 'GRANITO, ', 'BAGRE, ', 'CANGREJO, ', 'EGRESAR, ', 'ENGRUDO, ', 'ESGRIMA, ', 'LOGRO, ', 'GRUMOSO, ', 'GRANATE, ', 'GRAMO, ', 'GRÁFICO, ', 'GROSELLA, ', 'GRASA'],
+            ['TROMPO, ', 'TRONCO, ', 'TRUCO, ', 'TRINEO, ', 'TRAZO, ', 'TEATRO, ', 'TRIGO, ', 'TRISTE, ', 'CICATRIZ, ', 'FILTRO, ', 'TRAICIÓN, ', 'TRÁFICO, ', 'TRANSICIÓN, ', 'TRACTOR, ', 'ENTRENAMIENTO, ', 'LETRA, ', 'KILÓMETRO, ', 'INSTRUMENTO, ', 'INTRIGA, ', 'CENTRO'],
+            ['PREMIO, ', 'PRIMO, ', 'PRADO, ', 'PRESA, ', 'PRINCESA, ', 'PROTEGER, ', 'PROBLEMA, ', 'PREDICAR, ', 'COMPRA, ', 'EXPRIMIR, ', 'PAPRIKA, ', 'COMPROBAR, ', 'REPROBAR, ', 'PROCRASTINAR, ', 'PRISA, ', 'PRIMARIA, ', 'APRENDER, ', 'PRUSIA, ', 'PRIVILEGIO'],
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
@@ -280,22 +280,22 @@ export const exercises = {
     'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
         'theme': 'Palabras de difícil pronunciación',
-        'type': 'escuchayrepite',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
-        'words': [
-            'APOCALÍPTICO', 'ARBATRISTA', 'ARCHIMANDRITA', 'BILBILITANO', 'BONIFICACIÓN', 'CAAGUAZENSE', 'CAMASTRONERÍA', 'CANALÍCULO', 'CANELONENSE', 'CATECÚMENO', 'DICOTILEDONA', 'CELASTRÁCEAS', 'CILINDROAXIL', 'CIRCUNSPECTO', 'COGNOSCITIVO', 'DESHINIBIDO', 'ENCALABERNARSE', 'ENJALBEGADURA', 'ENLADRILLADURA', 'FLATULENTO', 'FLEBOTOMISTA', 'FRUMENTICIO', 'FRUSTRATORIO', 'GENITOURINARIO', 'GIMNOSPERMAS', 'GLANDÍGERO', 'GORGOJEARSE', 'GRANDÍLOCUA',
+        'trabalenguas': [
+            ['APOCALÍPTICO, ', 'ARBATRISTA, ', 'ARCHIMANDRITA, ', 'BILBILITANO, ', 'BONIFICACIÓN, ', 'CAAGUAZENSE, ', 'CAMASTRONERÍA, ', 'CANALÍCULO, ', 'CANELONENSE, ', 'CATECÚMENO, ', 'DICOTILEDONA, ', 'CELASTRÁCEAS, ', 'CILINDROAXIL, ', 'CIRCUNSPECTO'], ['COGNOSCITIVO, ', 'DESHINIBIDO, ', 'ENCALABERNARSE, ', 'ENJALBEGADURA, ', 'ENLADRILLADURA, ', 'FLATULENTO, ', 'FLEBOTOMISTA, ', 'FRUMENTICIO, ', 'FRUSTRATORIO, ', 'GENITOURINARIO, ', 'GIMNOSPERMAS, ', 'GLANDÍGERO, ', 'GORGOJEARSE, ', 'GRANDÍLOCUA',]
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
     'Palabras de difícil pronunciación II': {
         'title': 'Parte 2',
         'theme': 'Palabras de difícil pronunciación',
-        'type': 'escuchayrepite',
+        'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
-        'words': [
-            'HABITABILIDAD', 'HAMAMELICLÁCEAS', 'HEBDOMADARIO', 'HIERÁTICAMENTE', 'HIEROSOLIMITANO', 'HIPERCLORHÍDRICO', 'HIDRARGIRISMO', 'HIDROSULFURO', 'HIPOCONDRÍACO', 'HOMOGEIZACIÓN', 'IMPALPABILIDAD', 'IMPARIDÍGITO', 'IMPENETRABILIDAD', 'IMPENSADAMENTE', 'GUANGOCHO', 'GUANGOCHO', 'IMPERMEABILIZACIÓN', 'IMPLACABLEMENTE', 'IGNOMIOSAMENTE', 'ILESGIBLE', 'IMPERCEPTIBLEMENTE', 'IMPOSTERGABLE', 'IMPERTURBABLEMENTE', 'KAFKIANO', 'MALTRATAMIENTO', 'MIRAMAMOLÍN', 'MIRAMELINDOS', 'MOJIGATERÍA', 'MORONGADA', 'MUNICIPALIZACIÓN',
+        'trabalenguas': [[
+            'HABITABILIDAD, ', 'HAMAMELICLÁCEAS, ', 'HEBDOMADARIO, ', 'HIERÁTICAMENTE, ', 'HIEROSOLIMITANO, ', 'HIPERCLORHÍDRICO, ', 'HIDRARGIRISMO, ', 'HIDROSULFURO, ', 'HIPOCONDRÍACO, ', 'HOMOGEIZACIÓN, ', 'IMPALPABILIDAD, ', 'IMPARIDÍGITO, ', 'IMPENETRABILIDAD, ', 'IMPENSADAMENTE, ', 'GUANGOCHO'], ['GUANGOCHO, ', 'IMPERMEABILIZACIÓN, ', 'IMPLACABLEMENTE, ', 'IGNOMIOSAMENTE, ', 'ILESGIBLE, ', 'IMPERCEPTIBLEMENTE, ', 'IMPOSTERGABLE, ', 'IMPERTURBABLEMENTE, ', 'KAFKIANO, ', 'MALTRATAMIENTO, ', 'MIRAMAMOLÍN, ', 'MIRAMELINDOS, ', 'MOJIGATERÍA, ', 'MORONGADA, ', 'MUNICIPALIZACIÓN',]
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
