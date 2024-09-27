@@ -51,10 +51,11 @@ export const exercises = {
         'type': 'escuchayrepite',
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727137868/xddrioqkklnbowcznoyu.mp4',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147755/icer6ejpyiyijfmdfqji.mp4',
-        'instructions 1': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
-        'recommendations 1': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar las palabras de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
-            'ANEXO', 'APROXIMAR', 'ASFIXIA', 'AXILA', 'AXIOLOGÍA', 'BOXEADOR', 'BOXER', 'CLAXON', 'CLÍMAX', 'COEXISTIR', 'COMPLEXIÓN', 'CONEXIÓN', 'CONTEXTO', 'CONTEXTUALIZAR', 'CONTEXTURA', 'CONVEXO', 'FLEXIBILIZAR', 'HETERODOXO', 'HEXÁGONO', 'HIPERTEXTO', 'INEXACTO', 'INTOXICAR', 'LÁTEX', 'LEXICOGRAFÍA', 'LUXACIÓN', 'MONÓXIDO', 'PROXIMIDAD', 'SAXOFONISTA', 'SINTAXIS', 'TOXICOLOGÍA', 'APROXIMADAMENTE', 'AUTOEXPLICATIVA', 'EXAMINANDO', 'EXAGERARLA', 'EXCLAMAMOS', 'EXCLUÍRTELE', 'EXISTENCIALISMO', 'EXITOSO'
+            'ANEXO', 'APROXIMAR', 'ASFIXIA', 'AXILA', 'AXIOLOGÍA', 'BOXEADOR', 'BOXER', 'CLAXON', 'CLÍMAX', 'COEXISTIR', 'COMPLEXIÓN', 'CONEXIÓN', 'CONTEXTO', 'CONTEXTUALIZAR', 'CONTEXTURA', 'CONVEXO', 'FLEXIBILIZAR', 'HETERODOXO', 'HEXÁGONO', 'HIPERTEXTO', 'INEXACTO', 'INTOXICAR', 'LÁTEX', 'LEXICOGRAFÍA', 'LUXACIÓN', 'MONÓXIDO', 'PROXIMIDAD', 'SAXOFONISTA', 'SINTAXIS', 'TOXICOLOGÍA', 'APROXIMADAMENTE', 'AUTOEXPLICATIVA', 'EXAMINANDO', 'EXAGERARLA', 'EXCLAMAMOS', 'EXCLUÍRTELE', 'EXISTENCIALISMO', 'EXITOSO',
+            'Hubo un extraño experto que exploraba, esperando expandir experiencias increíbles,  y extrañado de no extraer nada. Quedó decimosexto en el torneo en Texas.  El experto declaró, esperar tener más éxito en el próximo año.',
         ],
         'instructions 2': 'Pronuncia en voz alta la siguiente frase con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations 2': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
@@ -69,7 +70,7 @@ export const exercises = {
         'type': 'escuchayrepite',
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147184/lftuge6i5f1wjrd5scoj.mp4',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147804/nrxi6wotkqcrrz7noryl.mp4',
-        'intructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'ACTIVIDAD', 'ACTITUD', 'ACTUALIDAD', 'ADVERSIDAD', 'ALUD', 'ALTITUD', 'AMISTAD', 'ANTIGÜEDAD', 'AUTORIDAD', 'BONDAD', 'CADUCIDAD', 'CALIDAD', 'CANTIDAD',  'CAPACIDAD', 'CARIDAD', 'CIUDAD', 'CLARIDAD', 'COMODIDAD', 'COMPLICIDAD', 'CULPABILIDAD', 'DEBILIDAD', 'DIFICULTAD', 'EDAD', 'ELASTICIDAD', 'ENFERMEDAD', 'FACILIDAD', 'FALSEDAD', 'FELICIDAD', 'HUÉSPED', 'HUMANIDAD', 'HUMEDAD', 'INQUIETUD', 'JUVENTUD', 'LATITUD', 'LAÚD', 'LIBERTAD', 'LONGITUD', 'MAGNITUD', 'MALDAD', 'MITAD', 'NAVIDAD', 'NECESIDAD', 'OBESIDAD', 'OSCURIDAD', 'PARED', 'PROFUNDIDAD', 'PROPIEDAD', 'PULCRITUD', 'PUNTUALIDAD', 'RED', 'RESPONSABILIDAD', 'SALUD', 'SERIEDAD', 'SOCIEDAD', 'SOLEDAD', 'SOLICITUD', 'JUVENTUD ESTUDIOSA', 'LIBERTAD ABSOLUTA', 'EDAD MEDIA', 'EDAD DORADA', 'CON VOLUNTAD', 'TODO ES POSIBLE', 'ES UNA GRAN VERDAD DE LA HUMANIDAD'
