@@ -60,9 +60,9 @@ const MyPieChart = () => {
                     value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
                         />
                     <Card sx={{ mt: 2 }}>
-                        <Title title='Dicción' icon={<ChatRounded />} />
+                        <Title title='Pronunciación' icon={<ChatRounded />} />
                         <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
-                            La dicción es la forma en que pronuncias las palabras.
+                            La pronunciación es la forma en que expresas las palabras.
                         </Typography>
                         <Typography level='title-lg' textAlign='center' mb={4}>Leíste {(100 * palabras_correctas / total_palabras_transcritas).toFixed(1)}% de las palabras correctamente.</Typography>
                     </Card>
