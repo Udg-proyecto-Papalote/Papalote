@@ -7,15 +7,15 @@ import DiagnosticLegend from './DiagnosticLegend';
 const dataa = [
     {
         name: 'Modulación',
-        Lento: 120,
-        Ideal: 30,
+        Lento: 135,
+        Ideal: 25,
         Rápido: 50,
     }
 ];
 
 const data = [
-    { name: 'Lento', color: '#c4b5fd', value: 120 },
-    { name: 'Ideal', color: '#a78bfa', value: 30 },
+    { name: 'Lento', color: '#c4b5fd', value: 135 },
+    { name: 'Ideal', color: '#a78bfa', value: 25 },
     { name: 'Rápido', color: '#8b5cf6', value: 50 },
     { name: 'Tu modulación', color: '#f43f5e', value: 130 },
 ];
