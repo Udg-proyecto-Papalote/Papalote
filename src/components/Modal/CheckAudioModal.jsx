@@ -43,6 +43,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             return response;
         } catch (error) {
             console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
+            sendRecording(false);
             throw error;
         }
     };
