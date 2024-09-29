@@ -41,11 +41,11 @@ export const Trabalenguas = () => {
         e.target.style.padding = '0px'
     }
 
-    useEffect(() => {
-        Object.keys(exercisesDone).length > 0 &&
-            Object.keys(exercisesDone).includes(id) &&
-            setTrabalengua(exercisesDone[id].maxLevel - 1);            
-    }, []);
+    // useEffect(() => {
+    //     Object.keys(exercisesDone).length > 0 &&
+    //         Object.keys(exercisesDone).includes(id) &&
+    //         setTrabalengua(exercisesDone[id].maxLevel - 1);            
+    // }, []);
 
     useEffect(() => {
         setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
