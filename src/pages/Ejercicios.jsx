@@ -15,7 +15,7 @@ export const Ejercicios = () => {
 
 	const [isRendered, setIsRendered] = useState(false)
 	const [filteredExercises, setFilteredExercises] = useState(exercises)
-	const [recommendedExercises, setRecommendedExercises] = useState(recomendaciones)
+	const [recommendedExercises, setRecommendedExercises] = useState({})
 
 	const [value, setValue] = useState(themes)
 
@@ -30,19 +30,21 @@ export const Ejercicios = () => {
 		setFilteredExercises(filtered)
 
 		// set recommended exercises depending on the themes selected
-		const recommended = Object.keys(exercises).reduce((acc, key) => {
-			if (recomendaciones.includes(key) && value.some((theme) => exercises[key].theme.includes(theme))) {
-				acc[key] = exercises[key]
+		const recommended = Object.keys(exercises).map((key) => {
+			const exercise = exercises[key]
+			if (recomendaciones.includes(key) && value.some((theme) => exercise.theme.includes(theme))) {
+				return key
 			}
-			return acc
-		}, {})
-
+		}).filter((key) => key !== undefined)
+		
 		setRecommendedExercises(recommended)
+
 	}, [value])
 
 	useEffect(() => {
 		setIsRendered(true)
 		setValue(themes)
+		setRecommendedExercises(Object.keys(exercises).filter((key) => recomendaciones.includes(key)))
 	}, [isRendered])
 	return (
 		isRendered && <Grid mx={4} my={3} >
@@ -124,9 +126,9 @@ export const Ejercicios = () => {
 						<Grid item xs={12}>
 							<Typography level="h2" my={2}>✨ Ejercicios recomendados</Typography>
 						</Grid>
-						<Grid container xs={12} mx={1}>
+						<Grid container xs={12} mx={1} spacing={1}>
 							{
-								recommendedExercises.map((key) => {
+								recommendedExercises.length > 0 && recommendedExercises.map((key) => {
 									const exercise = exercises[key];
 									return (
 										<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }} key={key}>
