@@ -38,7 +38,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                 timeout: 2000000 // Timeout de 2000 segundos (2000000 ms)
             });
             console.log('Diagnóstico procesado:', response);
-            dispatch(setCurrentDiagnostic({ ...response.data, ...data }));
+            dispatch(setCurrentDiagnostic({ ...response.data, ...data, date: new Date().toLocaleString() }));
 
             return response;
         } catch (error) {
