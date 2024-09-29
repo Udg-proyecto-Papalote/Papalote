@@ -29,7 +29,6 @@ const MyPieChart = () => {
 
     useEffect(() => {
         if(!loading && Object.keys(currentDiagnostic).length > 0) {
-            dispatch(setDate(new Date().toLocaleDateString()));
             dispatch(setDiagnostics(currentDiagnostic));
         }
     }, [loading]);

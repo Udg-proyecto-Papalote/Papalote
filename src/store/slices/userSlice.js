@@ -52,7 +52,7 @@ export const userSlice = createSlice({
 
         // Diagnostics
         setCurrentDiagnostic: (state, action) => {
-            state.currentDiagnostic = { ...state.currentDiagnostic, ...action.payload };
+            state.currentDiagnostic = { ...state.currentDiagnostic, ...action.payload, date: new Date().toLocaleDateString() };
         },
         setDiagnostics: (state, action) => {
             state.diagnostics[action.payload.date] = action.payload;
