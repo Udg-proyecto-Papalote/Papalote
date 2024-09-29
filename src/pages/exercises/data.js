@@ -241,7 +241,7 @@ export const exercises = {
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148017/jeebfa39gvenpxdgthev.mp4',
         'instructions': 'Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
-        'excercise': [
+        'words': [
             'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
             'EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE',
             'IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII',
@@ -262,7 +262,7 @@ export const exercises = {
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148057/lyywujgyo6iyjqzhmggh.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes vocales con claridad y precisión. Respeta el molde de cada una de las letras para que el sonido sea lo más diferenciado posible. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
-        'excercise': [
+        'words': [
             'AEIOU',
             'UOIEA',
             'AIUEO',
