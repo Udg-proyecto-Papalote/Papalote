@@ -49,6 +49,7 @@ export const Trabalenguas = () => {
 
     useEffect(() => {
         setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
+        setTrabalengua(Math.min(Math.max(trabalengua, 0), trabalenguas.length - 1))
     }, [trabalengua]);
     
     useEffect(() => {
@@ -78,7 +79,7 @@ export const Trabalenguas = () => {
                                 {
                                     Array.from({ length: Math.min(maxTrabalengua + 1, trabalenguas.length) }, (_, index) => (
                                         <Option key={index} value={index}>
-                                            {`Trabalenguas ${index + 1}`}
+                                            {`Ejercicio ${index + 1}`}
                                         </Option>
                                     ))
                                 }
