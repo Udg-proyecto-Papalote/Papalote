@@ -45,7 +45,8 @@ const EscuchaYRepite = () => {
     const [isRendered, setIsRendered] = useState(false)
 
     useEffect(() => {
-        setMaxWordNumber(Math.max(maxWordNumber, wordNumber))
+        setMaxWordNumber(Math.min(Math.max(maxWordNumber, wordNumber), words.length - 1))
+        setWordNumber(Math.min(Math.max(wordNumber, 0), words.length - 1))
     }, [wordNumber]);
 
     useEffect(() => {
@@ -97,7 +98,7 @@ const EscuchaYRepite = () => {
                                 } />
                             </Grid>}
                             <Grid item='true' lg={!!video ? 4 : 12} sm={12} md={12} xs={12} sx={{ display: 'flex', flexDirection: !!video ?'column' : 'row' }} gap={1}>
-                                <CheckboxCard title='Audio' description="Pronuncia de esta manera el sonido" icon={<LooksTwo size={32} />} coso={<Audio src={audio} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
+                                <CheckboxCard title='Audio' description="Pronuncia de esta manera el sonido" icon={!!video ? <LooksTwo size={32} /> :<LooksOne size={32} />} coso={<Audio src={audio} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
                                 } />
                                 <CheckboxCard title='Lee' description="Lee la palabra en voz alta" icon={!!audio && !!video ? <Looks3 size={32} /> : <LooksTwo size={32} />} coso={<WordToSay word={words[wordNumber]} mode={mode} />} checkedBoxes={checkedBoxes} setCheckedBoxes={setCheckedBoxes} setUncheckedBoxes={() => setCheckedBoxes(checkedBoxes - 1)
                                 } />
@@ -120,7 +121,11 @@ const EscuchaYRepite = () => {
                                     ¡Listo!
                                 </Button> :
                                 <Button
-                                    color='neutral' size='lg' variant="soft" onClick={() => setWordNumber(wordNumber + 1)} disabled={checkedBoxes !== (!!video + !!audio + 1)}>Siguiente</Button>
+                                    color='neutral' size='lg' variant="soft" onClick={() => {
+                                        setWordNumber(wordNumber + 1)
+                                        setCheckedBoxes(0)
+                                        // unselect all checkboxes
+                                    }} disabled={checkedBoxes !== (!!video + !!audio + 1)}>Siguiente</Button>
                             }
                         </Stack>
                     </> :
