@@ -4,6 +4,7 @@ export const exercises = {
         'theme': 'Dicción',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Trabalenguas Populares I se centra en la dicción. Ayuda a mejorar la articulación de las palabras y la fluidez al hablar, mediante la repetición de trabalenguas populares.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
             ['Parra tenía una perra. ', 'Guerra tenía una parra. ', 'La perra de Parra subió a la parra de Guerra. ', 'Guerra pegó con la porra a la perra de Parra. ', 'Y Parra le dijo a Guerra: ', '¿Por qué ha pegado Guerra con la porra a la perra de Parra? ', 'Y Guerra le contestó: ', 'Si la perra de Parra no hubiera subido a la parra de Guerra, ', 'Guerra no habría pegado con la porra a la perra de Parra.'],
@@ -17,6 +18,7 @@ export const exercises = {
         'title': 'Trabalenguas Populares II',
         'theme': 'Dicción',
         'type': 'trabalenguas',
+        'content': 'Trabalenguas Populares II esta diseñado para desarrollar la dicción y precisión al hablar. Mejora la velocidad y articulación de las palabras, enfocándose en trabalenguas con mayor dificultad.',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
@@ -34,6 +36,7 @@ export const exercises = {
         'theme': 'Dicción',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Trabalenguas Populares III es una continuación de los trabalenguas enfocados en mejorar la dicción, precisión y rapidez al hablar. Este ejercicio está pensado para desarrollar una mayor habilidad en la articulación clara de sonidos complejos.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
             ['Cantinflas frota con franela su frasco flamenco,', 'on franela Cantinflas frota su flamenco frasco.'],
@@ -52,6 +55,7 @@ export const exercises = {
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727137868/xddrioqkklnbowcznoyu.mp4',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147755/icer6ejpyiyijfmdfqji.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Sonido KS  se enfoca en mejorar la pronunciación del sonido "KS" a través de la repetición de palabras y frases que contienen esta combinación consonántica, ayudando a afinar la claridad en la dicción.',
         'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar las palabras de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'ANEXO', 'APROXIMAR', 'ASFIXIA', 'AXILA', 'AXIOLOGÍA', 'BOXEADOR', 'BOXER', 'CLAXON', 'CLÍMAX', 'COEXISTIR', 'COMPLEXIÓN', 'CONEXIÓN', 'CONTEXTO', 'CONTEXTUALIZAR', 'CONTEXTURA', 'CONVEXO', 'FLEXIBILIZAR', 'HETERODOXO', 'HEXÁGONO', 'HIPERTEXTO', 'INEXACTO', 'INTOXICAR', 'LÁTEX', 'LEXICOGRAFÍA', 'LUXACIÓN', 'MONÓXIDO', 'PROXIMIDAD', 'SAXOFONISTA', 'SINTAXIS', 'TOXICOLOGÍA', 'APROXIMADAMENTE', 'AUTOEXPLICATIVA', 'EXAMINANDO', 'EXAGERARLA', 'EXCLAMAMOS', 'EXCLUÍRTELE', 'EXISTENCIALISMO', 'EXITOSO',
@@ -71,6 +75,7 @@ export const exercises = {
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147184/lftuge6i5f1wjrd5scoj.mp4',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147804/nrxi6wotkqcrrz7noryl.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Fonema /d/ esta diseñado para mejorar la pronunciación del fonema /d/, este ejercicio permite trabajar en la claridad y fluidez de palabras que contienen este sonido, optimizando la dicción en contextos diversos.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'ACTIVIDAD', 'ACTITUD', 'ACTUALIDAD', 'ADVERSIDAD', 'ALUD', 'ALTITUD', 'AMISTAD', 'ANTIGÜEDAD', 'AUTORIDAD', 'BONDAD', 'CADUCIDAD', 'CALIDAD', 'CANTIDAD',  'CAPACIDAD', 'CARIDAD', 'CIUDAD', 'CLARIDAD', 'COMODIDAD', 'COMPLICIDAD', 'CULPABILIDAD', 'DEBILIDAD', 'DIFICULTAD', 'EDAD', 'ELASTICIDAD', 'ENFERMEDAD', 'FACILIDAD', 'FALSEDAD', 'FELICIDAD', 'HUÉSPED', 'HUMANIDAD', 'HUMEDAD', 'INQUIETUD', 'JUVENTUD', 'LATITUD', 'LAÚD', 'LIBERTAD', 'LONGITUD', 'MAGNITUD', 'MALDAD', 'MITAD', 'NAVIDAD', 'NECESIDAD', 'OBESIDAD', 'OSCURIDAD', 'PARED', 'PROFUNDIDAD', 'PROPIEDAD', 'PULCRITUD', 'PUNTUALIDAD', 'RED', 'RESPONSABILIDAD', 'SALUD', 'SERIEDAD', 'SOCIEDAD', 'SOLEDAD', 'SOLICITUD', 'JUVENTUD ESTUDIOSA', 'LIBERTAD ABSOLUTA', 'EDAD MEDIA', 'EDAD DORADA', 'CON VOLUNTAD', 'TODO ES POSIBLE', 'ES UNA GRAN VERDAD DE LA HUMANIDAD'
@@ -83,6 +88,7 @@ export const exercises = {
         'type': 'escuchayrepite',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147867/bqetjtkretocmoatcteo.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Combinación consonántica “GN”  trabaja en la correcta pronunciación de la combinación "GN", ayudando a mejorar la dicción y precisión al hablar mediante la repetición de palabras y frases que contienen este grupo consonántico.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'DIGNO', 'SIGNO', 'IGNORAR', 'DESIGNAR', 'REGENERAR', 'MAGNÍFICO', 'MAGNITUD', 'DIGNIDAD', 'CONDIGNAR', 'FIGNAR', 'IGNORANCIA', 'RESIGNAR', 'LIGNITO', 'SIGNIFICAR', 'DIAGNÓSTICO', 'IGNICIÓN', 'PREGNANTE', 'INDIGNACIÓN', 'IMPREGNAR', 'DESIGNIO', 'MAGNATE', 'FEIGNIR', 'REGNAR', 'IMPUGNACIÓN', 'RESIGNACIÓN', 'INDIGNO', 'COGNITIVO', 'MAGNÍFICO', 'LIGNIFICAR', 'CONSIGNAR'
@@ -112,6 +118,7 @@ export const exercises = {
             'NIÑO', 'MAÑANA', 'AÑO', 'ESPAÑA', 'SEÑOR', 'ENSEÑAR', 'COMPAÑÍA', 'CARIÑO', 'DUEÑO', 'MONTAÑA', 'CAÑA', 'BAÑO', 'PEQUEÑO', 'LEÑA', 'PIÑA', 'ÑANDÚ', 'CASTAÑA', 'ARAÑA', 'RAÑA', 'REBAÑO', 'CAMPAÑA', 'AÑADIR', 'AÑORANZA', 'TIÑA', 'ÑOÑO', 'RETOÑO', 'SUEÑO', 'CASTAÑUELA', 'CABAÑA', 'MIÑO', 'CEÑO', 'ÑAPA', 'GRUÑÓN', 'RUÑIR', 'TAMAÑO', 'ÑANGO', 'ÑAME', 'PUÑAL', 'OTOÑO', 'MONTAÑÉS', 'TAMAÑO', 'CASTAÑAR', 'MOÑO', 'BAÑADOR', 'AÑICOS', 'PUÑO', 'GAÑIDO', 'ÑOQUIS', 'AÑADIDO', 'TOÑO'
         ],
         'instructions 2': 'Pronuncia en voz alta las siguientes frases con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Fonema /ɲ/ Se enfoca en el fonema /ɲ/, mejorando la pronunciación de este sonido a través de la repetición de palabras comunes y frases, ayudando a afinar la dicción y articulación clara de este fonema.',
         'recommendations 2': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'sentences': [
             ['EL NIÑO JUEGA EN LA MONTAÑA CADA MAÑANA.'],
@@ -129,6 +136,7 @@ export const exercises = {
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147368/bkod0lvctmfmcwwvao12.mp4',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147946/ejtyefe7a8r6p5r78994.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Fonema /p/ fortalece la pronunciación del fonema /p/. A través de la repetición de palabras y frases que contienen este sonido, se mejora la articulación precisa y la dicción general.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'words': [
             'PAN', 'CAPÍTULO', 'PAPA', 'COMPUTADORA', 'PATO', 'IMPONER', 'PIPA', 'IMPORTAR', 'PERA', 'CAMPANA', 'PILA', 'CAMPAMENTO', 'PINO', 'TAPAR', 'PURO', 'MAPA', 'PISO', 'SOPA', 'PESA', 'APIO', 'PAGA', 'CAPO', 'PELO', 'TAPA', 'PASA', 'SOPLAR', 'PITA', 'CAPACITAR', 'POCA', 'COPIA', 'PECA', 'OPERAR', 'PALO', 'CAPAZ', 'PUPA', 'CAPTURA', 'PASA', 'ESPEJO', 'PATA', 'TEMPLO', 'POMO', 'CAMPO', 'PALA', 'COMPRA', 'PEPE', 'DESPACHO', 'PULA', 'RÁPIDO', 'PLUMA', 'TRANSPORTE', 'PLANTA', 'CUMPLEAÑOS', 'PREMIO', 'HELIPUERTO', 'PROBAR', 'OPORTUNIDAD', 'PAPEL', 'DESPERTAR', 'PULPO', 'IMPRESIÓN',
@@ -145,6 +153,7 @@ export const exercises = {
         'theme': 'Impostación',
         'type': 'Video/Gif',
         "instructions": "Realiza este ejercicio en un ambiente tranquilo donde puedas enfocarte en tu voz y en tu respiración. Asegúrate de estar cómodo y libre de distracciones.",
+        "content": 'Calentamiento de voz - Primera semana es un ejercicio de impostación diseñado para ayudar a mejorar la resonancia y el control vocal, centrándose en la respiración diafragmática y la relajación vocal.',
         'excercise': [
             '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
             '2. Al exhalar, vamos a pronunciar una B, con los labios y mejillas distendidas, la cual hará que se inflen levemente. No debe haber tensión en este ejercicio. Con el sonido emitido por la letra b que ya es vibrante, empezarás a sentir comienza a vibrar tu garganta, torax e incluso tu cabeza. Puedes subir o variar la intensidad del sonido producido para notar aún mejor cómo se activan tus resonadores naturales.',
@@ -158,6 +167,7 @@ export const exercises = {
         'type': 'Video/Gif',
         'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587358/lxbdnhnm1g0pcfvzzuux.jpg',
         "instructions": "Practica este ejercicio en un ambiente relajado, donde puedas enfocarte en tu voz y la vibración que produce. Asegúrate de estar cómodo y sin distracciones.",
+        "content": "Soy un motor está diseñado para mejorar la pronunciación de la letra 'R', fortaleciendo la capacidad de hacer vibrar la lengua y controlar la respiración.",
         'recommendations': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
         'excercise': [
             'Imitar el sonido de un motor. Primero hay que inflar el abdomen y luego hacer el sonido “rrrrrrrrrrrr” hasta que nos quedemos sin aire.',
@@ -169,6 +179,7 @@ export const exercises = {
         'theme': 'Letra R',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Trabalenguas con R ayuda a mejorar la pronunciación de la letra 'R' mediante la práctica de trabalenguas, lo que incrementa la precisión y la velocidad de articulación.",
         'recommendations' : 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición',
         'trabalenguas': [
             ['Parra tenía una perra. ', 'Guerra tenía una parra. ', 'La perra de Parra subió a la parra de Guerra. ', 'Guerra pegó con la porra a la perra de Parra. ', 'Y Parra le dijo a Guerra: ', '¿Por qué ha pegado Guerra con la porra a la perra de Parra? ', 'Y Guerra le contestó: ', 'Si la perra de Parra no hubiera subido a la parra de Guerra, ', 'Guerra no habría pegado con la porra a la perra de Parra.'],
@@ -188,6 +199,7 @@ export const exercises = {
         'theme': 'Letra R',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Combinaciones consonantes con R está enfocado en mejorar la pronunciación de palabras complejas que contienen la letra 'R', ayudando a la fluidez y precisión en su articulación.",
         'recommendations' : 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
             ['CRANEO, ', 'INCRUSTAR, ', 'CRISANTEMO, ', 'CRUDO, ', 'CRÁTER, ', 'ACRÓBATA, ', 'CRITERIO, ', 'ACROSTICO, ', 'DEMACRADO, ', 'HIPÓCRITA, ', 'CRISIS, ', 'CREMA, ', 'LACRADO, ', 'SACRAMENTO, ', 'SECRETARIA, ', 'CREDO, ', 'CRIN, ', 'CRUCIGRAMA'],
@@ -205,6 +217,7 @@ export const exercises = {
         'theme': 'Caudal y control de aire',
         'type': 'Video/Gif',
         "instructions": "Realiza este ejercicio en un espacio tranquilo y cómodo, donde puedas concentrarte en tu flujo de aire. Es importante evitar distracciones para que puedas escuchar tu respiración y controlar tu soplo.",
+        "content": "La tira de papel está diseñado para mejorar el caudal y control de aire, ayudando al usuario a controlar mejor su respiración y flujo de aire al hablar.",
         'excercise': [
             ['Colocar una tira de papel a 20 centímetros lejos de tu boca y soplar. Hay que controlar el aire del aire y gastarlo de una manera paulatina, la tira de papel te indicará qué tan fuerte está soplando. La idea del ejercicio es contar los segundos que demoramos en que se nos acabe el aire, luego ir practicando cada dia e ir aumentando los segundos en los que se nos acaba el aire.'],
             ['Al realizar este ejercicio, es fundamental que mantengas una postura erguida y relajada, con los hombros sueltos y el abdomen activo. Al soplar, concéntrate en controlar el flujo de aire desde el diafragma, no desde los pulmones o la garganta. Mantén la boca ligeramente abierta y usa los labios para dirigir el aire de manera suave y constante hacia la tira de papel. Al principio, no te preocupes tanto por la duración, sino por lograr un flujo de aire estable.'],
@@ -217,6 +230,7 @@ export const exercises = {
         'type': 'Video/Gif',
         'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587287/wfrs7bjytbb1zc0oilr0.jpg',
         "instructions": "Practica este ejercicio en un lugar tranquilo donde puedas concentrarte en tu respiración y en la potencia de tu soplo. Asegúrate de tener un globo a la mano y de estar cómodo.",
+        "content": "Inflar un globo ayuda a aumentar la potencia de la voz al mejorar la capacidad de soplar con más fuerza y en menos respiraciones.",
         'excercise': [
             ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
             ['Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.'],
@@ -229,6 +243,7 @@ export const exercises = {
         'type': 'Video/Gif',
         'image' : 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727585833/eyihsru7qfrzoblireny.jpg',
         "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
+        "content": "Respiración diafragmática enseña a respirar desde el diafragma, mejorando el control de la respiración y optimizando la emisión de la voz.",
         'excercise': [
             ['Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.'],
             ['Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).'],
@@ -243,6 +258,7 @@ export const exercises = {
         'type': 'escuchayrepite',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148017/jeebfa39gvenpxdgthev.mp4',
         'instructions': 'Tomar aire por la nariz y expulsarlo en forma de sonido sin cortar. Tiene que ser un sonido vibrante y continuo (que no suba ni baje). Hacerlo hasta que tu aire se acabe',
+        "content": "De aire a sonido está diseñado para mejorar la vocalización, permitiendo que el aire se convierta en un sonido continuo y vibrante.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días.. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'words': [
             'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
@@ -264,6 +280,7 @@ export const exercises = {
         'type': 'escuchayrepite',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727148057/lyywujgyo6iyjqzhmggh.mp4',
         'instructions': 'Pronuncia en voz alta las siguientes vocales con claridad y precisión. Respeta el molde de cada una de las letras para que el sonido sea lo más diferenciado posible. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        "content": "Exigencia con vocales se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'words': [
             'AEIOU',
@@ -285,6 +302,7 @@ export const exercises = {
         'theme': 'Palabras de difícil pronunciación',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Palabras de difícil pronunciación Parte 1 ayuda a mejorar la dicción mediante la práctica de palabras complejas, aumentando la claridad y fluidez.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [
             ['APOCALÍPTICO, ', 'ARBATRISTA, ', 'ARCHIMANDRITA, ', 'BILBILITANO, ', 'BONIFICACIÓN, ', 'CAAGUAZENSE, ', 'CAMASTRONERÍA, ', 'CANALÍCULO, ', 'CANELONENSE, ', 'CATECÚMENO, ', 'DICOTILEDONA, ', 'CELASTRÁCEAS, ', 'CILINDROAXIL, ', 'CIRCUNSPECTO'], ['COGNOSCITIVO, ', 'DESHINIBIDO, ', 'ENCALABERNARSE, ', 'ENJALBEGADURA, ', 'ENLADRILLADURA, ', 'FLATULENTO, ', 'FLEBOTOMISTA, ', 'FRUMENTICIO, ', 'FRUSTRATORIO, ', 'GENITOURINARIO, ', 'GIMNOSPERMAS, ', 'GLANDÍGERO, ', 'GORGOJEARSE, ', 'GRANDÍLOCUA',]
@@ -296,6 +314,7 @@ export const exercises = {
         'theme': 'Palabras de difícil pronunciación',
         'type': 'trabalenguas',
         'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Palabras de difícil pronunciación Parte 2 continúa el trabajo de precisión en la pronunciación de palabras complejas, reforzando la claridad y fluidez en la dicción.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'trabalenguas': [[
             'HABITABILIDAD, ', 'HAMAMELICLÁCEAS, ', 'HEBDOMADARIO, ', 'HIERÁTICAMENTE, ', 'HIEROSOLIMITANO, ', 'HIPERCLORHÍDRICO, ', 'HIDRARGIRISMO, ', 'HIDROSULFURO, ', 'HIPOCONDRÍACO, ', 'HOMOGEIZACIÓN, ', 'IMPALPABILIDAD, ', 'IMPARIDÍGITO, ', 'IMPENETRABILIDAD, ', 'IMPENSADAMENTE, ', 'GUANGOCHO'], ['GUANGOCHO, ', 'IMPERMEABILIZACIÓN, ', 'IMPLACABLEMENTE, ', 'IGNOMIOSAMENTE, ', 'ILESGIBLE, ', 'IMPERCEPTIBLEMENTE, ', 'IMPOSTERGABLE, ', 'IMPERTURBABLEMENTE, ', 'KAFKIANO, ', 'MALTRATAMIENTO, ', 'MIRAMAMOLÍN, ', 'MIRAMELINDOS, ', 'MOJIGATERÍA, ', 'MORONGADA, ', 'MUNICIPALIZACIÓN',]
@@ -307,6 +326,7 @@ export const exercises = {
         'theme': 'Articulación',
         'type': 'trabalenguas',
         'instructions': 'Lee el siguiente texto en silencio, moviendo tus labios lentamente y asegurándote de articular correctamente cada palabra. Mantén un ritmo moderado, prestando especial atención a la precisión de los movimientos de tu boca.',
+        "content": "Leer sin voz ayuda a mejorar la articulación, asegurando que las palabras se pronuncien con claridad y precisión.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada palabra para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'trabalenguas': [
             ['Las ondas sonoras se producen cuando un cuerpo vibra rápidamente. ', 'La frecuencia es el número de vibraciones u oscilaciones completas que se efectúan por segundo. ', 'La intensidad de un sonido está relacionada con el cuadrado de la amplitud de presión de la onda sonora. ', 'Un sonido grave corresponde a onda sonora con frecuencia baja, ', 'mientras que los sonidos agudos se corresponden con frecuencias más altas.'],
@@ -319,6 +339,7 @@ export const exercises = {
         'theme': 'Articulación',
         'type': 'trabalenguas',
         'instructions': 'Lee en voz alta el siguiente texto, que está separado en sílabas, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
+        "content": "Leer separado en sílabas se enfoca en la pronunciación clara de cada sílaba, mejorando la articulación y la precisión en el habla.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'trabalenguas': [
             ['LAS ON-DAS SO-NO-RAS SE PRO-DU-CEN CUAN-DO UN CUER-PO VI-BRA RÁ-PI-DA-MEN-TE. ', 'LA FRE-CUEN-CIA ES EL NÚ-ME-RO DE VI-BRA-CIO-NES U O-SCI-LA-CIO-NES COM-PLE-TAS QUE E-FEC-TÚ-AN POR SE-GUN-DO. ', 'LA IN-TEN-SI-DAD DE UN SO-NI-DO ES-TÁ RE-LA-CIO-NA- DA CON EL CUA-DRA-DO DE LA AM-PLI-TUD DE PRE-SIÓN DE LA ON-DA SO-NO-RA. ', 'UN SO-NI-DO GRA-VE CO-RRES-PON-DE A ON-DA SO-NO-RA CON FRE-CUEN-CIA BA-JA, ', 'MIEN-TRAS QUE LOS SO-NI-DOS A-GU-DOS SE CO-RRES-PON-DEN CON FRE-CUEN-CIAS MÁS AL-TAS.'],

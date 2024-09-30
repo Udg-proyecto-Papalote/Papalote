@@ -24,7 +24,7 @@ const getIconByType = (type) => {
 
 const slides = Object.entries(exercises).map(([key, exercise]) => ({
     title: exercise.title,
-    content: exercise.instructions || exercise.recommendations || '',
+    content: exercise.content || exercise.instructions || '',
     icon: getIconByType(exercise.type),
     location: `/ejercicios/${exercise.type}/${key.replace(/\s+/g, '%20')}`
 }));
