@@ -65,7 +65,7 @@ export const exercises = {
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
     'Dicción 7': {
-        'title': 'Palabras con letra "D"',
+        'title': 'Fonema /d/',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147184/lftuge6i5f1wjrd5scoj.mp4',
@@ -123,7 +123,7 @@ export const exercises = {
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
     'Dicción 15': {
-        'title': 'Molde articulatorio fonema /P/',
+        'title': 'Fonema /p/',
         'theme': 'Dicción',
         'type': 'escuchayrepite',
         'video': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1727147368/bkod0lvctmfmcwwvao12.mp4',
@@ -156,6 +156,7 @@ export const exercises = {
         'title': 'Soy un motor',
         'theme': 'Letra R',
         'type': 'Video/Gif',
+        'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587358/lxbdnhnm1g0pcfvzzuux.jpg',
         "instructions": "Practica este ejercicio en un ambiente relajado, donde puedas enfocarte en tu voz y la vibración que produce. Asegúrate de estar cómodo y sin distracciones.",
         'recommendations': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
         'excercise': [
@@ -214,6 +215,7 @@ export const exercises = {
         'title': 'Inflar un globo',
         'theme': 'Potencia',
         'type': 'Video/Gif',
+        'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587287/wfrs7bjytbb1zc0oilr0.jpg',
         "instructions": "Practica este ejercicio en un lugar tranquilo donde puedas concentrarte en tu respiración y en la potencia de tu soplo. Asegúrate de tener un globo a la mano y de estar cómodo.",
         'excercise': [
             ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
@@ -225,6 +227,7 @@ export const exercises = {
         'title': 'Respiración diafragmática',
         'theme': 'Respiración',
         'type': 'Video/Gif',
+        'image' : 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727585833/eyihsru7qfrzoblireny.jpg',
         "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
         'excercise': [
             ['Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.'],
