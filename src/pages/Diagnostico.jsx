@@ -7,6 +7,7 @@ import CheckAudioModal from "../components/Modal/CheckAudioModal";
 import ModeToggle from "../components/ToggleTheme"
 import { useNavigate } from "react-router-dom";
 import ReportList from "../components/Modal/ReportList";
+import { useSelector } from "react-redux";
 
 const text = `Los primeros reportes de actividad aeronáutica irregular detectada sobre los municipios del Sotavento (Veracruz, Boca del Río, Alvarado y Tlalixcoyan, principalmente) datan de finales de los años ochenta. Los habitantes de las zonas agrestes -dedicados principalmente a la pesca y la cría de ganado- estaban ya habituados a la presencia de las luces nocturnas. Los más viejos las llamaban "brujas"; los más informados, "avionetas". Incluso conocían el lugar en donde las luces descendían: el Llano de la Víbora, una brecha natural bordeada de matorrales y espinos que el Ejército y la Policía Judicial Federal empleaban a menudo como pista de aterrizaje.
 
@@ -53,6 +54,8 @@ export const Diagnostico = () => {
 
     // previous reports modal
     const [openReports, setOpenReports] = useState(false);
+
+    const { diagnostics } = useSelector((state) => state.user);
 
     const startRecording = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -127,9 +130,10 @@ export const Diagnostico = () => {
     return (
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
-                <Grid xs={4} xsOffset={8} justifyContent='flex-end' mb={2}>
+                { Object.keys(diagnostics).length > 0 &&
+                    <Grid xs={4} xsOffset={8} justifyContent='flex-end' mb={2}>
                     <Button size='sm' variant='outlined' fullWidth color='success' onClick={() => setOpenReports(true)}>Resultados anteriores</Button>
-                </Grid>
+                </Grid>}
                 <Card sx={{
                     width: '100%',
                     height: 'calc(100vh - 150px)',
