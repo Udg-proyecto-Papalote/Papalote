@@ -55,7 +55,7 @@ const Modulacion = ({ title, miModulacion = { 'Tu modulación': 130 } }) => {
                     </BarChart>
                 </Grid>
                 <Grid lg={6} md={6} sm={6} xs={6}>
-                <Typography level='title-lg' mb={4}>Leíste {miModulacion['Tu modulación']} palabras por minuto.
+                <Typography level='title-lg' mb={4}> Pronunciaste {miModulacion['Tu modulación']} palabras por minuto.
                 </Typography>
                     <DiagnosticLegend data={data} />
                 </Grid>

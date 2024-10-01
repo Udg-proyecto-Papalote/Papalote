@@ -25,7 +25,7 @@ const MyPieChart = () => {
     const dispatch = useDispatch();
 
     
-    const areas = [ 'Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'tono_moderado' ? 'Tono' : '' ].filter((area) => area !== '');
+    const areas = [ 'Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'moderado' ? 'Tono' : '' ].filter((area) => area !== '');
 
     useEffect(() => {
         if(!loading && Object.keys(currentDiagnostic).length > 0) {
@@ -46,7 +46,19 @@ const MyPieChart = () => {
                     
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
-                    <Modulacion title={<Title title='Modulación' icon={<StickyNote2 />} />} miModulacion={{ 'Tu modulación': (total_palabras_transcritas / 2).toFixed(0) }} />
+                    {total_palabras_transcritas < 100 ? (
+                        <Card sx={{ mt: 2 }}>
+                            <Title title='Modulación' icon={<StickyNote2 />} />
+                            <Typography level='title-lg' textAlign='center' mb={4}>
+                                Mala modulación: 
+                            </Typography>
+                            <Typography level='title-lg' textAlign='center' mb={4}>
+                            No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
+                            </Typography>
+                        </Card>
+                    ) : (
+                        <Modulacion title={<Title title='Modulación' icon={<StickyNote2 />} />} miModulacion={{ 'Tu modulación': (total_palabras_transcritas / 2).toFixed(0) }} />
+                    )}
                     <Card sx={{ mt: 2 }}>
                         <Title title='Audio' icon={<VolumeUpRounded />} />
                         <CardContent sx={{ my: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -57,14 +69,23 @@ const MyPieChart = () => {
                 <Grid lg={4} md={6} sm={12} xs={12}>
                     <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />} 
                     value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
-                        />
-                    <Card sx={{ mt: 2 }}>
-                        <Title title='Pronunciación' icon={<ChatRounded />} />
-                        <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
-                            La pronunciación es la forma en que expresas las palabras.
-                        </Typography>
-                        <Typography level='title-lg' textAlign='center' mb={4}>Leíste {(100 * palabras_correctas / total_palabras_transcritas).toFixed(1)}% de las palabras correctamente.</Typography>
-                    </Card>
+                    />
+                        <Card sx={{ mt: 2 }}>
+                            <Title title='Pronunciación' icon={<ChatRounded />} />
+                            <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
+                                La pronunciación es la forma en que expresas las palabras.
+                            </Typography>
+                            {total_palabras_transcritas < 100 ? (
+                                <Typography level='body-lg' textAlign='center' mb={4}>
+                                    Mala pronunciacion: No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
+                                </Typography>
+                                
+                            ) : (
+                                <Typography level='title-lg' textAlign='center' mb={4}>
+                                    Pronunciaste el {(100 * palabras_correctas / total_palabras_transcritas).toFixed(1)}% de las palabras correctamente.
+                                </Typography>
+                            )}
+                        </Card>
                 </Grid>
             </Grid>
     );
