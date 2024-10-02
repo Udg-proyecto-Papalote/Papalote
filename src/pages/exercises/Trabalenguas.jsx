@@ -62,7 +62,7 @@ export const Trabalenguas = () => {
     }, [])
 
     return (
-        isRendered && <Grid container width='100%' direction='column' gap={1} lg={6} mx='auto' sm={12} md={8}>
+        isRendered && <Grid container direction='column' gap={1} lg={6} sm={12} md={8} mx='auto' px={2}>
             <Title title={title} theme={theme} />
             {!ready ?
                 <>
