@@ -1,7 +1,27 @@
-import { Avatar } from "@mui/joy"
+import { Logout, Settings } from "@mui/icons-material"
+import { Avatar, Dropdown, IconButton, ListItemDecorator, Menu, MenuButton, MenuItem } from "@mui/joy"
 
 export const Logo = () => {
     return (
-        <Avatar src="/kite.png" size="lg" variant="plain" sx={{ borderRadius: '0px', width: '35px', height: '35px', mr: '20px' }} />
+        <Dropdown>
+            <MenuButton
+                slots={{ root: IconButton }}
+                slotProps={{ root: { sx: { borderRadius: '0px', width: '35px', height: '35px', mr: '20px', backgroundColor: 'transparent' } } }}
+            >
+                <Avatar src="/kite.png" size="lg" sx={{ borderRadius: '0px', width: '35px', height: '35px', backgroundColor: 'transparent' }} />
+            </MenuButton>
+            <Menu placement="bottom-end">
+                <MenuItem>
+                    <ListItemDecorator>
+                        <Settings />
+                    </ListItemDecorator>{' '}
+                    Configuración</MenuItem>
+                <MenuItem>
+                    <ListItemDecorator>
+                        <Logout />
+                    </ListItemDecorator>{' '}
+                    Cerrar Sesión</MenuItem>
+            </Menu>
+        </Dropdown>
     )
 }
