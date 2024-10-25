@@ -1,4 +1,4 @@
-import { ChatRounded, EnergySavingsLeaf, Equalizer, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
+import { ChatRounded, EnergySavingsLeaf, Equalizer, Notes, RMobiledata, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
 import { Card, CardContent, Grid, Typography } from '@mui/joy';
 import PieChartWithNeedle from '../components/Diagnostico/PieChartWithNeedle';
 import Modulacion from '../components/Diagnostico/Modulacion';
@@ -7,7 +7,7 @@ import RecommendedExercises from '../components/Diagnostico/RecommendedExercises
 import { useDispatch, useSelector } from 'react-redux';
 import LoadingReport from './LoadingReport';
 import { useEffect } from 'react';
-import { setDate, setDiagnostics } from '../store/slices/userSlice';
+import { setDiagnostics } from '../store/slices/userSlice';
 
 const Title = ({ title, icon, level = 'h3' }) => {
     return (
@@ -24,11 +24,11 @@ const MyPieChart = () => {
 
     const dispatch = useDispatch();
 
-    
-    const areas = [ 'Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'moderado' ? 'Tono' : '' ].filter((area) => area !== '');
+
+    const areas = ['Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'moderado' ? 'Tono' : ''].filter((area) => area !== '');
 
     useEffect(() => {
-        if(!loading && Object.keys(currentDiagnostic).length > 0) {
+        if (!loading && Object.keys(currentDiagnostic).length > 0) {
             dispatch(setDiagnostics(currentDiagnostic));
         }
     }, [loading]);
@@ -39,21 +39,21 @@ const MyPieChart = () => {
                 <Grid lg={12} sm={12} md={12} xs={12}>
                     <Typography level='h1' mt={2} ml={2}>🌟 Tus resultados, {name.split(' ')[0] || 'usuario favorito'}</Typography>
                 </Grid>
-                    <Grid lg={4} gap={3} sm={12} md={8} xs={12}>
-                    
-                        <AreasDeMejora title={<Title title='Áreas de mejora' icon={<EnergySavingsLeaf />} />} areasDeMejora={areas}/>                    
-                        <RecommendedExercises title={<Title title='Ejercicios recomendados' icon={<RollerSkatingRounded />} />} ex={[...recomendaciones]}/>
-                    
+                <Grid lg={4} gap={3} sm={12} md={8} xs={12}>
+
+                    <AreasDeMejora title={<Title title='Áreas de mejora' icon={<EnergySavingsLeaf />} />} areasDeMejora={areas} />
+                    <RecommendedExercises title={<Title title='Ejercicios recomendados' icon={<RollerSkatingRounded />} />} ex={[...recomendaciones]} />
+
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
                     {total_palabras_transcritas < 100 ? (
                         <Card sx={{ mt: 2 }}>
                             <Title title='Modulación' icon={<StickyNote2 />} />
                             <Typography level='title-lg' textAlign='center' mb={4}>
-                                Mala modulación: 
+                                Mala modulación:
                             </Typography>
                             <Typography level='title-lg' textAlign='center' mb={4}>
-                            No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
+                                No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
                             </Typography>
                         </Card>
                     ) : (
@@ -67,25 +67,28 @@ const MyPieChart = () => {
                     </Card>
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
-                    <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />} 
-                    value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
+                    <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />}
+                        value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
                     />
-                        <Card sx={{ mt: 2 }}>
-                            <Title title='Pronunciación' icon={<ChatRounded />} />
-                            <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
-                                La pronunciación es la forma en que expresas las palabras.
+                    <Card sx={{ mt: 2 }}>
+                        <Title title='Pronunciación' icon={<ChatRounded />} />
+                        <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
+                            La pronunciación es la forma en que expresas las palabras.
+                        </Typography>
+                        {total_palabras_transcritas < 100 ? (
+                            <Typography level='body-lg' textAlign='center' mb={4}>
+                                Mala pronunciacion: No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
                             </Typography>
-                            {total_palabras_transcritas < 100 ? (
-                                <Typography level='body-lg' textAlign='center' mb={4}>
-                                    Mala pronunciacion: No pronunciaste correctamente suficientes palabras para poder darte un resultado. Puedes mejorar tu dicción haciendo más ejercicios.
-                                </Typography>
-                                
-                            ) : (
-                                <Typography level='title-lg' textAlign='center' mb={4}>
-                                    Pronunciaste el {(100 * palabras_correctas / total_palabras_transcritas).toFixed(1)}% de las palabras correctamente.
-                                </Typography>
-                            )}
-                        </Card>
+
+                        ) : (
+                            <Typography level='title-lg' textAlign='center' mb={4}>
+                                Pronunciaste el {(100 * palabras_correctas / total_palabras_transcritas).toFixed(1)}% de las palabras correctamente.
+                            </Typography>
+                        )}
+                    </Card>
+                    <Card sx={{ mt: 2 }}>
+                        <Title title='Letra R' icon={<Notes />} />
+                    </Card>
                 </Grid>
             </Grid>
     );
