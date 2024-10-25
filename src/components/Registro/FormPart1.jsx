@@ -8,6 +8,7 @@ import { Link as LinkRouter } from "react-router-dom"
 import PropTypes from 'prop-types'
 import { useDispatch } from "react-redux"
 import { setNameEmailPassword } from "../../store/slices/userSlice"
+import AvisoDePrivacidad from "../../pages/AvisoDePrivacidad"
 
 const formData = {
     name: "",
@@ -68,6 +69,9 @@ export const FormPart1 = ({ nextFunction }) => {
         setIsNameValid(true)
     }
 
+    // Modal de Aviso de Privacidad
+    const [open, setOpen] = useState(false)
+
     return (
 
         <>
@@ -97,6 +101,11 @@ export const FormPart1 = ({ nextFunction }) => {
             <Button onClick={handleClick}>Registrarse</Button>
 
             <Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
+            <Typography level='body-xs'>Al crear una cuenta, aceptas nuestro <Link onClick={
+                () => setOpen(true)
+            }>Política de Privacidad</Link>.
+            </Typography>
+            <AvisoDePrivacidad open={open} onClose={() => setOpen(false)} />
         </>
     )
 }
