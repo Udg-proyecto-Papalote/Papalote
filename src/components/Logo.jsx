@@ -1,7 +1,9 @@
 import { Logout, Settings } from "@mui/icons-material"
 import { Avatar, Dropdown, IconButton, ListItemDecorator, Menu, MenuButton, MenuItem } from "@mui/joy"
+import { useNavigate } from "react-router-dom"
 
-export const Logo = () => {
+export const Logo = ({ onOpen }) => {
+    const navigate = useNavigate()
     return (
         <Dropdown>
             <MenuButton
@@ -11,7 +13,8 @@ export const Logo = () => {
                 <Avatar src="/kite.png" size="lg" sx={{ borderRadius: '0px', width: '35px', height: '35px', backgroundColor: 'transparent' }} />
             </MenuButton>
             <Menu placement="bottom-end">
-                <MenuItem>
+                {/* <MenuItem onClick={() => navigate('/configuracion')}> */}
+                <MenuItem onClick={onOpen}>
                     <ListItemDecorator>
                         <Settings />
                     </ListItemDecorator>{' '}
