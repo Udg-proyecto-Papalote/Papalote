@@ -48,6 +48,40 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
     },
+    'Dicción 4': {
+        'title': 'Trabalenguas Populares IV',
+        'theme': 'Dicción',
+        'type': 'trabalenguas',
+        'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Trabalenguas Populares IV es una continuación de los trabalenguas enfocados en mejorar la dicción, precisión y rapidez al hablar. Este ejercicio está pensado para desarrollar una mayor habilidad en la articulación clara de sonidos complejos.',
+        'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [
+            ['La anatomía patológica,', 'adentrándose hasta la fisiopatología histiositaria microscópica y la morfología macroscópica,', 'significó desde los tiempos pretéritos de su doctrinario fundador,', 'Juan Bautista Morgagni,', 'un decisivo paso adelante para la investigación clínica.'],
+            ['Las especialidades otorrinolaringológicas,', 'neurológica,', 'psiquiátrica,', 'gastroenterológica,', 'hepatopancreática,', 'hemolinfática,', 'urogenital,', 'ginecológica,', 'cardiocirculatoria pulmonar y broncopleural cutánea y parasitológica,', 'ueron consecuencia obligada del desarrollo de aquella disciplina.'],
+            ['En el triple trapecio de Trípoli trabajaban,', 'trigonométricamente trastrocados,', 'tres tristes triunviros trogloditas,', 'tropezando atribulados contra trípodes y otros trastos triturados por el tremendo terrible trapense.'],
+            ['Si supieran señoras y señores,', 'que su silencio siempre suena a sordo sonido,', 'sucederían sin solución y sin suscitar soluciones,', 'sucesos soñados sin ser solamente sueños solapados.'],
+            ['Posibles pozos pudieron perfectamente parar el paso para peatones permitiendo provocar prontas y previsibles perturbaciones.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
+    },
+    'Dicción 5': {
+        'title': 'Trabalenguas Populares V',
+        'theme': 'Dicción',
+        'type': 'trabalenguas',
+        'instructions': 'Pronuncia en voz alta el siguiente trabalenguas con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Trabalenguas Populares V es una continuación de los trabalenguas enfocados en mejorar la dicción, precisión y rapidez al hablar. Este ejercicio está pensado para desarrollar una mayor habilidad en la articulación clara de sonidos complejos.',
+        'recommendations': 'Cada ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el trabalenguas de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [
+            ['Un carguero cargado de cogullas y de togas guiado por Gumersindo Candonga,', 'ganó cuantas galas tocaban al Cacique Gomoso que goteando grasa bailaba conga ante los cuatro gatos del aguerrido contrario.'],
+            ['Vino,', 'vinín de copa,', 'quien no diga vino,', 'vinón de copa,', 'no probará de esto ni una gota.', 'Vino,', 'vinín de copón,', 'quien no diga vino,', 'inín de copa,', '¿para qué vino?'],
+            ['Con los lentes de Lola Rolo lee los lunes las listas de lana y lona de Nolo y de Lunes.'],
+            ['La sucesión sucesiva de sucesos sucede sucesivamente con la sucesión del tiempo.'],
+            ['Rosa Ramírez se le ríe a Larra.', 'Larry, de rabia,', 'le rompe la ropa de raso a Rosa Ramírez.'],
+            ['Juan junta juncos junto a la zanja.'],
+            ['La Rata rabiosa reía mientras Rogelio Garrido corría.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'    
+    },
     'Dicción 6': {
         'title': 'Sonido KS',
         'theme': 'Dicción',
