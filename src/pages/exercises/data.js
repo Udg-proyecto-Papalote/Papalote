@@ -355,6 +355,30 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Palabras de difícil pronunciación III': {
+        'title': 'Parte 3',
+        'theme': 'Palabras de difícil pronunciación',
+        'type': 'trabalenguas',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Palabras de difícil pronunciación Parte 3 continúa el trabajo de precisión en la pronunciación de palabras complejas, reforzando la claridad y fluidez en la dicción.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [[
+            'SINDICALISTA','NEORDARWISMO', 'NEOHEGELIANISMO', 'NITROTOLUENO', 'NOVENTAYOCHISTA', 'OBLIGATORIEDAD', 'OBSCENAMENTE', 'OCTOSILÁBICO', 'OFTALMOLÓGICO', 'OMNISCIENTE', 'ORNITORRINCO', 'OXIACETILÉNICO', 'OSTEALGIA', 'OXIHEMOGLOBINA', 'OTORRINOLARINGOLOGÍA', 'PALATIZACIÓN', 'PALEONTOLOGÍA', 'PALINGENÉSICO', 'PAMPSIQUISMO', 'PANANDABUÁN', 'PATETISMO', 'PASTERIZACIÓN', 'PASTEURIANO', 'PASTEURIANO', 'PATENTEMENTE', 'PATALETEAR', 'PATERNÓSTER', 'PAULATINAMENTE', 'RADIOSEÑALIZACIÓN',]
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Palabras de difícil pronunciación IV': {
+        'title': 'Parte 4',
+        'theme': 'Palabras de difícil pronunciación',
+        'type': 'trabalenguas',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        "content": "Palabras de difícil pronunciación Parte 4 continúa el trabajo de precisión en la pronunciación de palabras complejas, reforzando la claridad y fluidez en la dicción.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'trabalenguas': [[
+            'SELENOLOGÍA', 'SEGUNDOGENITURA', 'SENSUTEPEQUENSE', 'SOMPANCLE', 'SORROSTRADA', 'SUSCINTAMENTE', 'SULFHÍDRICA', 'TAMARRIZQUITO', 'TARRABASQUIÑA', 'TARRACONENSE', 'DESOXIRRIBONUCLEICO', 'DIETILPROPIÓN', 'ELECTROENCEFALOGRAMA', 'ESTERNOCLEIDOMASTOIDEO', 'FENILISOPROPILAMINA', 'HETEROCEDASTICIDAD', 'HOMOCEDASTICIDAD', 'INSTITUCIONALIZACIÓN', 'MULTICOLINEALIDAD', 'NEUROFIBROMATOSIS', 'PARALELEPÍPEDOS', 'PARANGARICUTIRIMÍCUARO', 'ROMBICOSIDODECAEDRO', 'VENTRÍLOCUO']
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás dicción, articulación y vocalización . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Articulación I': {
         'title': 'Leer sin voz',
         'theme': 'Articulación',
