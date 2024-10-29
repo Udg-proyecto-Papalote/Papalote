@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, FormControl, Input, Option, Select, Stack, Typography } from "@mui/joy"
+import { Button, ButtonGroup, Checkbox, FormControl, Input, Option, Select, Stack, Typography } from "@mui/joy"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -20,6 +20,9 @@ const Profile = () => {
 
     const isDisabled = isIll !== illness || userGender !== gender || userName !== name || userEmail !== email;
 
+    const [showPassword, setShowPassword] = useState(false)
+    const [password, setPassword] = useState('')
+
     const handleClick = () => {
     }
     
@@ -28,10 +31,6 @@ const Profile = () => {
             <FormControl>
                 <Texto>Nombre</Texto>
                 <Input placeholder='Nombre' defaultValue={name} onChange={(e) => setUserName(e.target.value)} />
-            </FormControl>
-            <FormControl>
-                <Texto>Correo electrónico</Texto>
-                <Input placeholder='Correo electrónico' defaultValue={email} onChange={(e) => setUserEmail(e.target.value)} />
             </FormControl>
             <FormControl>
                 <Texto>Género</Texto>
@@ -48,15 +47,13 @@ const Profile = () => {
                 </Select>
             </FormControl>
             <FormControl>
-                <Texto>¿Cuentas con algún padecimiento que te impida hablar fluidamente?</Texto>
-                <ButtonGroup size="lg">
-                    <Button sx={isIll && { ...style }} onClick={() => setIsIll(true)}>Sí</Button>
-                    <Button sx={!isIll && { ...style }} onClick={() => setIsIll(false)}>No</Button>
-                </ButtonGroup>
+                <Texto>Introduce tu contraseña para guardar los cambios</Texto>
+                <Input placeholder='Contraseña' type={showPassword ? 'text' : 'password'} sx={{ mb: 1 }} onChange={(e) => setPassword(e.target.value)} disabled={!isDisabled} />
+                <Checkbox label='Mostrar contraseña' checked={showPassword} onChange={() => setShowPassword(!showPassword)} disabled={!isDisabled} />
             </FormControl>
             <Stack direction='row' spacing={1} display={'flex'} justifyContent={'flex-end'}>
                 <Button disabled={!isDisabled}>Guardar</Button>
-                {isDisabled && <Button color='neutral' variant='soft'>Cancelar</Button> }
+                {/* {isDisabled && <Button color='neutral' variant='soft'>Cancelar</Button> } */}
             </Stack>
         </Stack>
     )

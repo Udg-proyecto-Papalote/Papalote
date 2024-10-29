@@ -12,7 +12,7 @@ const Settings = ({ open, onClose }) => {
                     <Tabs
                         aria-label="Vertical tabs"
                         orientation="vertical"
-                        sx={{ width: 600, height: 400, pt: -1 }}
+                        sx={{ width: 600, height: 350, pt: -1 }}
                     >
                         <TabList>
                             <Tab color="neutral">Perfil</Tab>
