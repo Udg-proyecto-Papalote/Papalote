@@ -1,26 +1,24 @@
-import { DialogContent, Modal, ModalDialog, Typography, Tabs, Tab, TabList, TabPanel } from "@mui/joy"
+import { DialogContent, Modal, ModalDialog, Typography, Tabs, Tab, TabList, TabPanel, Divider, ModalClose } from "@mui/joy"
 import Profile from "./settings/Profile"
 
 const Settings = ({ open, onClose }) => {
     return (
-        <Modal open={open} onClose={onClose}>
+        <Modal open={open} onClose={onClose} disableEscapeKeyDown>
             <ModalDialog size='lg' minWidth={'30%'}>
+                <ModalClose />
                 <Typography level='h2'>⚙️ Configuración</Typography>
+                <Divider />
                 <DialogContent>
                     <Tabs
                         aria-label="Vertical tabs"
                         orientation="vertical"
-                        sx={{ width: 600, height: 400 , pt:-1}}
+                        sx={{ width: 600, height: 400, pt: -1 }}
                     >
                         <TabList>
-                            <Tab color="primary">Perfil</Tab>
-                            <Tab>Ejercicios</Tab>
+                            <Tab color="neutral">Perfil</Tab>
                         </TabList>
-                        <TabPanel value={0} sx={{mt:-2}}>
+                        <TabPanel value={0} sx={{ mt: -2 }}>
                             <Profile />
-                        </TabPanel>
-                        <TabPanel value={1} sx={{mt:-2}}>
-                            <b>Second</b> tab panel
                         </TabPanel>
                     </Tabs>
                 </DialogContent>

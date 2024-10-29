@@ -50,7 +50,7 @@ const Profile = () => {
             <FormControl>
                 <Texto>¿Cuentas con algún padecimiento que te impida hablar fluidamente?</Texto>
                 <ButtonGroup size="lg">
-                    <Button sx={isIll && { ...style }} onClick={() => {}}>Sí</Button>
+                    <Button sx={isIll && { ...style }} onClick={() => setIsIll(true)}>Sí</Button>
                     <Button sx={!isIll && { ...style }} onClick={() => setIsIll(false)}>No</Button>
                 </ButtonGroup>
             </FormControl>
