@@ -2,23 +2,19 @@ import { Button, ButtonGroup, Checkbox, FormControl, Input, Option, Select, Stac
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-const style = { backgroundColor: 'var(--joy-palette-neutral-outlinedHoverBg)' }
-
 const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
 
 const Texto = ({ children }) => <Typography ml={0} mb={1} level='body-sm' sx={{ color: 'var(--joy-palette-text-tertiary)', fontWeight: 600 }}>{children}</Typography>
 
 const Profile = () => {
-    const { name, email, gender, illness } = useSelector(state => state.user)
-    const [isIll, setIsIll] = useState(illness);
+    const { name, gender } = useSelector(state => state.user)
     const [userGender, setUserGender] = useState(gender)
     const [userName, setUserName] = useState(name)
-    const [userEmail, setUserEmail] = useState(email)
 
     const dispatch = useDispatch()
     // console.log(userGender, userName, userEmail, isIll);
 
-    const isDisabled = isIll !== illness || userGender !== gender || userName !== name || userEmail !== email;
+    const isDisabled = userGender !== gender || userName !== name;
 
     const [showPassword, setShowPassword] = useState(false)
     const [password, setPassword] = useState('')
@@ -53,7 +49,6 @@ const Profile = () => {
             </FormControl>
             <Stack direction='row' spacing={1} display={'flex'} justifyContent={'flex-end'}>
                 <Button disabled={!isDisabled}>Guardar</Button>
-                {/* {isDisabled && <Button color='neutral' variant='soft'>Cancelar</Button> } */}
             </Stack>
         </Stack>
     )
