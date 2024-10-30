@@ -1,5 +1,5 @@
 import { ChatRounded, EnergySavingsLeaf, Equalizer, Notes, RMobiledata, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
-import { Card, CardContent, Grid, Typography } from '@mui/joy';
+import { Card, CardContent, Grid, Stack, Typography } from '@mui/joy';
 import PieChartWithNeedle from '../components/Diagnostico/PieChartWithNeedle';
 import Modulacion from '../components/Diagnostico/Modulacion';
 import AreasDeMejora from '../components/Diagnostico/AreasDeMejora';
@@ -20,7 +20,7 @@ const Title = ({ title, icon, level = 'h3' }) => {
 
 const MyPieChart = () => {
     const { name, currentDiagnostic } = useSelector(state => state.user);
-    const { loading, url, buena_diccion, buena_modulacion, palabras_correctas, palabras_incorrectas, total_palabras_transcritas, tono_voz, recomendaciones = ['Respiración I'] } = currentDiagnostic;
+    const { loading, url, buena_diccion, buena_modulacion, palabras_correctas, palabras_incorrectas, total_palabras_transcritas, tono_voz, recomendaciones = ['Respiración I'], palabras_con_r_correctas, palabras_con_r_incorrectas } = currentDiagnostic;
 
     const dispatch = useDispatch();
 
@@ -88,6 +88,38 @@ const MyPieChart = () => {
                     </Card>
                     <Card sx={{ mt: 2 }}>
                         <Title title='Letra R' icon={<Notes />} />
+                        <Typography level='body-lg' fontStyle='italic' textAlign='center' mx={4}>
+                            La letra R es una de las letras más difíciles de pronunciar.
+                        </Typography>
+                        <Typography level='title-lg' textAlign='center'>
+                            Palabras con R
+                        </Typography>
+                        <Grid direction='row' container>
+                            <Grid spacing={1} xs={12} lg={4} md={12}>
+                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                    {palabras_con_r_correctas + palabras_con_r_incorrectas}
+                                </Typography>
+                                <Typography level='title-lg' textAlign='center' textColor='primary.300'>
+                                    Capturadas
+                                </Typography>
+                            </Grid>
+                            <Grid spacing={1} xs={12} lg={4} md={12}>
+                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                    {palabras_con_r_correctas}
+                                </Typography>
+                                <Typography level='title-lg' textAlign='center' textColor='success.300'>
+                                    Pronunciaste correctamente
+                                </Typography>
+                            </Grid>
+                            <Grid spacing={1} xs={12} lg={4} md={12}>
+                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                    {palabras_con_r_incorrectas}
+                                </Typography>
+                                <Typography level='title-lg' textAlign='center' textColor='danger.300'>
+                                    Pronunciaste incorrectamente
+                                </Typography>
+                            </Grid>
+                        </Grid>
                     </Card>
                 </Grid>
             </Grid>
