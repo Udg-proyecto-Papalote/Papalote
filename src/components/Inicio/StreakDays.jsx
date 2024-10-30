@@ -16,13 +16,13 @@ export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles',
     }, [])
 
     return (
-        <Grid width='300px'>
-            <Card sx={{padding:'34px', height: '180px'}}>
-                <CardContent orientation="horizontal">
-                    <Heart size={65} weight="duotone" color="#fb7185" />
+        <Grid width='500px'>
+            <Card sx={{padding:'34px', height: '233px'}}>
+                <CardContent orientation="horizontal" sx={{mb:2, mt:1}}>
+                    <Heart size={85} weight="duotone" color="#fb7185" />
                     <CardContent>
-                        <Typography level="body-md">Racha de días</Typography>
-                        <Typography level="h2">{streakDays} días</Typography>
+                        <Typography level="title-lg">Racha de días</Typography>
+                        <Typography level="h1">{streakDays} días</Typography>
                     </CardContent>
                 </CardContent>
                 <CardContent orientation="horizontal">
@@ -32,8 +32,8 @@ export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles',
                             {
                                 days.map((day, index) => (
                                     <Step key={index} indicator={
-                                        <StepIndicator color={isDay(day) ? 'success' : 'neutral'}>
-                                            <Typography fontWeight="lg" level="title-sm" color="neutral">
+                                        <StepIndicator color={isDay(day) ? 'success' : 'neutral'} sx={{ width: 400}}>
+                                            <Typography fontWeight="lg" level="h4" color="neutral" p={1}>
                                                 {day[0]}
                                             </Typography>
                                         </StepIndicator>

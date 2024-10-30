@@ -1,9 +1,10 @@
 import { Box, Button, Card, CardContent, Divider, Grid, IconButton, Stack, Typography } from '@mui/joy';
 import { ArrowLeft, ArrowRight, Ear, UserSound, MicrophoneStage, Eye, Article } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { exercises } from '../../pages/exercises/data.js';
 import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked'; 
+import { useMediaQuery } from '@mui/material';
 
 const getIconByType = (type) => { 
     const commonStyle = { filter: 'drop-shadow(0 0 0.4rem #7dd3fc)', color: '#7dd3fc' };
@@ -41,6 +42,12 @@ const Carousel = () => {
         setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
+    const isMobile = useMediaQuery('(max-width: 900px)');
+
+    useEffect(() => {
+        isMobile && setCurrentSlide(0);
+    }, [isMobile]);
+
     return (
         <Grid md={12} lg={12}>
             <Card>
@@ -74,7 +81,12 @@ const Carousel = () => {
                 </CardContent>
                 <CardContent>
                     <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }} gap={1}>
-                        {slides.map((_, index) => (
+                        {
+                        // if isMobile is true, then show the 5 dots, else show all the dots
+                        isMobile ? [...Array(8)].map((_, index) => (
+                            <RadioButtonUnchecked key={index} sx={{ opacity: currentSlide === index ? 1 : 0.5 }} />
+                        )) :
+                        slides.map((_, index) => (
                             <RadioButtonUnchecked key={index} sx={{ opacity: currentSlide === index ? 1 : 0.5 }} />
                         ))}
                     </Box>
