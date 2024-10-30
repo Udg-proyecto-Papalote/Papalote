@@ -9,7 +9,7 @@ export const Inicio = () => {
     return (
         <Grid container >
             <Grid container lg={8} lgOffset={2} gap={2} mx={3}>
-                {/* <StreakDays /> */}
+                <StreakDays />
                 <ProgressBar />
                 <StartDiagnostic />
                 <Carousel />
