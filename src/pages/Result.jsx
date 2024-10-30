@@ -96,26 +96,26 @@ const MyPieChart = () => {
                         </Typography>
                         <Grid direction='row' container>
                             <Grid spacing={1} xs={12} lg={4} md={12}>
-                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                <Typography level='title-lg' textAlign='center' >
                                     {palabras_con_r_correctas + palabras_con_r_incorrectas}
                                 </Typography>
-                                <Typography level='title-lg' textAlign='center' textColor='primary.300'>
+                                <Typography level='title-lg' textAlign='center' textColor='primary.400'>
                                     Capturadas
                                 </Typography>
                             </Grid>
                             <Grid spacing={1} xs={12} lg={4} md={12}>
-                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                <Typography level='title-lg' textAlign='center' >
                                     {palabras_con_r_correctas}
                                 </Typography>
-                                <Typography level='title-lg' textAlign='center' textColor='success.300'>
+                                <Typography level='title-lg' textAlign='center' textColor='success.400'>
                                     Pronunciaste correctamente
                                 </Typography>
                             </Grid>
                             <Grid spacing={1} xs={12} lg={4} md={12}>
-                                <Typography level='title-lg' textAlign='center' textColor='neutral.300'>
+                                <Typography level='title-lg' textAlign='center' >
                                     {palabras_con_r_incorrectas}
                                 </Typography>
-                                <Typography level='title-lg' textAlign='center' textColor='danger.300'>
+                                <Typography level='title-lg' textAlign='center' textColor='danger.400'>
                                     Pronunciaste incorrectamente
                                 </Typography>
                             </Grid>
