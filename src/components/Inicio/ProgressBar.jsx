@@ -19,16 +19,16 @@ export const ProgressBar = () => {
 		setPercentage(totalExercises * 100 / Object.keys(exercises).length)
 	}, [exercisesDone])
 	return (
-		<Grid width='185px'>
+		<Grid width='230px'>
 			<Card>
 				<CardContent>
-					<CircularProgress sx={{ '--CircularProgress-size': '145px', '--CircularProgress-thickness': '12px' }} determinate value={ percentage }>
+					<CircularProgress sx={{ '--CircularProgress-size': '200px', '--CircularProgress-thickness': '15px' }} determinate value={ percentage }>
 						<Box
 							sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 }}
 						>
-							<Typography level="h3">{ percentage.toFixed(2) }%</Typography>
-							<Typography level="body-sm">Ejercicios</Typography>
-							<Typography level="body-sm">realizados</Typography>
+							<Typography level="h2">{ percentage.toFixed(2) }%</Typography>
+							<Typography level="body-md">Ejercicios</Typography>
+							<Typography level="body-md">realizados</Typography>
 						</Box>
 					</CircularProgress>
 				</CardContent>

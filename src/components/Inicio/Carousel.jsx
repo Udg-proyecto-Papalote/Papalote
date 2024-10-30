@@ -10,13 +10,13 @@ const getIconByType = (type) => {
 
     switch(type) {
         case 'trabalenguas':
-            return <Article size={110} weight='duotone' style={commonStyle} />; 
+            return <Article size={150} weight='duotone' style={commonStyle} />; 
         case 'Video/Gif':
-            return <Eye size={110} weight='duotone' style={commonStyle} />; 
+            return <Eye size={150} weight='duotone' style={commonStyle} />; 
         case 'escuchayrepite':
-            return <MicrophoneStage size={110} weight='duotone' style={commonStyle} />;
+            return <MicrophoneStage size={150} weight='duotone' style={commonStyle} />;
         case 'TBD':
-            return <Ear size={110} weight='duotone' style={commonStyle} />;
+            return <Ear size={150} weight='duotone' style={commonStyle} />;
         default:
             return null;
     }
@@ -47,16 +47,16 @@ const Carousel = () => {
                 <CardContent>
                     <CardContent orientation='horizontal'>
                         <UserSound size={35} color='#7dd3fc' weight='duotone' />
-                        <Typography level='h3'>Ejercicios disponibles</Typography>
+                        <Typography fontSize={30} fontWeight={600}>Ejercicios disponibles</Typography>
                     </CardContent>
                     <Divider sx={{ my: 1 }} />
                     <Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
                         <IconButton onClick={prevSlide}><ArrowLeft /></IconButton>
                         <CardContent orientation='horizontal'>
                             <Stack direction={{ xs: 'column', md: 'row' }} gap={2}>
-                                <CardContent>
-                                    <Typography level='h4'>{slides[currentSlide].title}</Typography>
-                                    <Typography align="justify">{slides[currentSlide].content}</Typography>
+                                <CardContent sx={{pr:5}}>
+                                    <Typography fontSize={25} fontWeight={500}>{slides[currentSlide].title}</Typography>
+                                    <Typography align="justify" fontSize={22}>{slides[currentSlide].content}</Typography>
                                 </CardContent>
                                 <Stack mx={1} gap={1} alignContent='center' justifyContent='center'>
                                     <IconButton sx={{
