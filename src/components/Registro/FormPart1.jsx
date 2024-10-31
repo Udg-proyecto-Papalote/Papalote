@@ -100,7 +100,7 @@ export const FormPart1 = ({ nextFunction }) => {
             </FormControl>
             <Button onClick={handleClick}>Registrarse</Button>
 
-            <Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/iniciarsesion'>Inicia Sesión</Link></Typography>
+            <Typography level='body-xs'>¿Ya estás registrado? <Link component={LinkRouter} to='/auth/iniciarsesion'>Inicia Sesión</Link></Typography>
             <Typography level='body-xs'>Al crear una cuenta, aceptas nuestro <Link onClick={
                 () => setOpen(true)
             }>Política de Privacidad</Link>.

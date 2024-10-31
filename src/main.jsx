@@ -11,6 +11,7 @@ import { Provider } from 'react-redux'
 import { store } from './store/store.js'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
+import { AppRouter } from './router/AppRouter.jsx'
 const theme = extendTheme({
 	components: {
 		JoyButton: {
@@ -44,7 +45,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 					>
 						<CssBaseline />
 						<Grid container justifyContent="center" sx={{ height: '100vh' }}>
-							<App />
+							{/* <App /> */}
+							<AppRouter />
 						</Grid>
 					</CssVarsProvider>
 				</BrowserRouter>

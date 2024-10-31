@@ -81,7 +81,7 @@ export const InicioSesion = () => {
 					</FormControl>
 					<Button onClick={ handleClick }>Iniciar sesión</Button>
 					
-					<Typography level='body-xs'>¿Aún no tienes cuenta? <Link component={LinkRouter} to='/registro'>Regístrate</Link></Typography>
+					<Typography level='body-xs'>¿Aún no tienes cuenta? <Link component={LinkRouter} to='/auth/registro'>Regístrate</Link></Typography>
 				</Stack>
 			</Grid>
 			{
