@@ -14,18 +14,18 @@ export const Registro = () => {
 
 	const [nForm, setnForm] = useState(1);
 
-	// const setNumberForm = (number) => {
-	// 	setnForm(number)
-	// 	// Store the number in the local storage
-	// 	localStorage.setItem('formNumber', number)
-	// }
+	const setNumberForm = (number) => {
+		setnForm(number)
+		// Store the number in the local storage
+		localStorage.setItem('formNumber', number)
+	}
 
-	// useEffect(() => {
-	// 	const number = localStorage.getItem('formNumber') || 1
-	// 	if (number) {
-	// 		setnForm(parseInt(number))
-	// 	}
-	// }, [])
+	useEffect(() => {
+		const number = localStorage.getItem('formNumber') || 1
+		if (number) {
+			setnForm(parseInt(number))
+		}
+	}, [])
 
 	return (
 		<Grid container height='100vh' >
