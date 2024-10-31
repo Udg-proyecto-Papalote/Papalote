@@ -3,8 +3,9 @@ import { ArrowLeft, Warning } from "@phosphor-icons/react";
 import { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setIllness } from "../../store/slices/userSlice";
+import { startCreateUserWithEmailAndPassword } from "../../store/slices/authThunks";
 
 const style = { backgroundColor: 'var(--joy-palette-neutral-outlinedHoverBg)' }
 
@@ -12,6 +13,8 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
     const [isIll, setIsIll] = useState(false);
     const [understood, setUnderstood] = useState(false)
     const [open, setOpen] = useState(false)
+
+    const { email, name, password } = useSelector(state => state.user)
 
     const dispatch = useDispatch()
 
@@ -27,6 +30,11 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
 
     const handleClick = () => {
         dispatch(setIllness(isIll))
+        dispatch(startCreateUserWithEmailAndPassword({
+            email: email,
+            password: password,
+            displayName: name
+        }))
         nextFunction()
     }
 
