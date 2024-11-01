@@ -1,11 +1,12 @@
 import { Button, ButtonGroup, DialogActions, DialogContent, DialogTitle, Divider, FormControl, FormLabel, Grid, Modal, ModalDialog, Stack, Typography } from "@mui/joy";
 import { ArrowLeft, Warning } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { setIllness } from "../../store/slices/userSlice";
+import { useDispatch } from "react-redux";
+import { setProfile } from "../../store/slices/userSlice";
 import { startCreateUserWithEmailAndPassword } from "../../store/slices/authThunks";
+import { UserContext } from "../../router/AuthRoutes";
 
 const style = { backgroundColor: 'var(--joy-palette-neutral-outlinedHoverBg)' }
 
@@ -14,7 +15,8 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
     const [understood, setUnderstood] = useState(false)
     const [open, setOpen] = useState(false)
 
-    const { email, name, password } = useSelector(state => state.user)
+    const { user, setUser } = useContext(UserContext)
+    const { email, name, password, gender, age } = user;
 
     const dispatch = useDispatch()
 
@@ -29,11 +31,20 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
     }
 
     const handleClick = () => {
-        dispatch(setIllness(isIll))
+        // dispatch(setIllness(isIll))
+        setUser({ ...user, illness: isIll })
+
         dispatch(startCreateUserWithEmailAndPassword({
             email: email,
             password: password,
             displayName: name
+        }))
+        dispatch(setProfile({
+            email: email,
+            name: name,
+            illness: isIll,
+            gender,
+            age
         }))
         nextFunction()
     }

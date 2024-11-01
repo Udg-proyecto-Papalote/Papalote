@@ -46,6 +46,13 @@ export const userSlice = createSlice({
             state.name = action.payload.name;
             state.gender = action.payload.gender;
         },
+        setProfile: (state, action) => {
+            state.name = action.payload.name;
+            state.age = action.payload.age;
+            state.email = action.payload.email;
+            state.gender = action.payload.gender;
+            state.illness = action.payload.illness;
+        },
 
         // Exercises
         setTrabalenguasExercise: (state, action) => {
@@ -75,5 +82,5 @@ export const userSlice = createSlice({
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile
  } = userSlice.actions;

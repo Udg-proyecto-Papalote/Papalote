@@ -1,14 +1,13 @@
 import { FormControl, Input, FormLabel, Typography, Button, Divider, Link, FormHelperText } from "@mui/joy"
-import { Google, Mail, Person } from "@mui/icons-material"
+import { Mail, Person } from "@mui/icons-material"
 import { Key } from "@mui/icons-material"
-import { Star } from "@phosphor-icons/react"
 import { useForm } from "../../hooks/useForm"
 import { useContext, useState } from "react"
 import { Link as LinkRouter } from "react-router-dom"
 import PropTypes from 'prop-types'
 import { useDispatch } from "react-redux"
-import { setNameEmailPassword } from "../../store/slices/userSlice"
 import AvisoDePrivacidad from "../../pages/AvisoDePrivacidad"
+import { UserContext } from "../../router/AuthRoutes"
 
 const formData = {
     name: "",
@@ -38,6 +37,8 @@ export const FormPart1 = ({ nextFunction }) => {
 
     const dispatch = useDispatch()
 
+    const { user, setUser } = useContext(UserContext)
+   
     const {
         name,
         email,
@@ -58,7 +59,8 @@ export const FormPart1 = ({ nextFunction }) => {
             !!nameValid && setIsNameValid(false)
         }
         else {
-            dispatch(setNameEmailPassword(formState))
+            // dispatch(setNameEmailPassword(formState))
+            setUser(formState)
             nextFunction()
         }
     }
@@ -75,8 +77,8 @@ export const FormPart1 = ({ nextFunction }) => {
     return (
 
         <>
-            <Button startDecorator={<Google />} variant='soft' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
-            <Divider><Star weight="fill" /></Divider>
+            {/* <Button startDecorator={<Google />} variant='soft' color='neutral' size="lg"><Typography level="body-lg">Regístrate con Google</Typography></Button>
+            <Divider><Star weight="fill" /></Divider> */}
             <FormControl>
                 <FormLabel sx={{ fontWeight: 'bold' }}>Nombre</FormLabel>
                 <Input type='text' name="name" startDecorator={<Person color='primary' />} value={name} onChange={onInputChange} onFocus={handleFocus} />

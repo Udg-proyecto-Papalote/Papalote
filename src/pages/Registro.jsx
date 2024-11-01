@@ -4,8 +4,9 @@ import { useMediaQuery } from "@mui/material"
 import { FormPart2 } from "../components/Registro/FormPart2"
 import { FormPart3 } from "../components/Registro/FormPart3"
 import { FormPart1 } from "../components/Registro/FormPart1"
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import LandingPage from "../components/Registro/LandingPage";
+import { UserContext } from "../router/AuthRoutes"
 
 
 export const Registro = () => {
@@ -13,19 +14,23 @@ export const Registro = () => {
 	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
 	const [nForm, setnForm] = useState(1);
+	const { user } = useContext(UserContext)
+
+	console.log(user);
+	
 
 	const setNumberForm = (number) => {
 		setnForm(number)
 		// Store the number in the local storage
-		localStorage.setItem('formNumber', number)
+		// localStorage.setItem('formNumber', number)
 	}
 
-	useEffect(() => {
-		const number = localStorage.getItem('formNumber') || 1
-		if (number) {
-			setnForm(parseInt(number))
-		}
-	}, [])
+	// useEffect(() => {
+	// 	const number = localStorage.getItem('formNumber') || 1
+	// 	if (number) {
+	// 		setnForm(parseInt(number))
+	// 	}
+	// }, [])
 
 	return (
 		<Grid container height='100vh' >

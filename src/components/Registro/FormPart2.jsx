@@ -1,22 +1,21 @@
 import { Button, FormControl, FormLabel, Grid, Input, Option, Select } from "@mui/joy"
 import { ArrowRight } from "@phosphor-icons/react"
 import PropTypes from 'prop-types'
-import { useState } from "react"
-import { useDispatch } from "react-redux"
-import { setAge as ssetAge, setGender } from "../../store/slices/userSlice"
+import { useContext, useState } from "react"
+import { UserContext } from "../../router/AuthRoutes"
 
 const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
 
 export const FormPart2 = ({ prevFunction, nextFunction }) => {
 	const [userGenre, setUserGenre] = useState('')
 	const [age, setAge] = useState(0)
-	const dispatch = useDispatch()
 
-
+	const { user, setUser } = useContext(UserContext)
 	const handleClick = () => {
 		if (userGenre && age) {
-			dispatch(setGender(userGenre))
-			dispatch(ssetAge(age))
+			// dispatch(setGender(userGenre))
+			// dispatch(ssetAge(age))
+			setUser({ ...user, gender: userGenre, age })
 			nextFunction()
 		}
 	}
