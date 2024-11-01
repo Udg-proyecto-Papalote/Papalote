@@ -1,9 +1,14 @@
 import { Logout, Settings } from "@mui/icons-material"
 import { Avatar, Dropdown, IconButton, ListItemDecorator, Menu, MenuButton, MenuItem } from "@mui/joy"
-import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { startLogOut } from "../store/slices/authThunks"
 
 export const Logo = ({ onOpen }) => {
-    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const handleLogout = () => {
+        dispatch(startLogOut())
+    }
+
     return (
         <Dropdown>
             <MenuButton
@@ -19,7 +24,7 @@ export const Logo = ({ onOpen }) => {
                         <Settings />
                     </ListItemDecorator>{' '}
                     Configuración</MenuItem>
-                <MenuItem>
+                <MenuItem onClick={handleLogout}>
                     <ListItemDecorator>
                         <Logout />
                     </ListItemDecorator>{' '}

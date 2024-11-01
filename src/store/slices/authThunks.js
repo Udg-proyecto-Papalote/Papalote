@@ -19,6 +19,8 @@ import {
 // import { clearPeople } from "../profiles/peopleSlice";
 // import { clearStatePublications } from "../publications/publicationsSlice";
 import { checkingCredentials, login, logout, setError } from "./authSlice";
+import { clearUser, loadingProfile, setProfile } from "./userSlice";
+import { startNewProfile } from "./userThunks";
 
 export const checkingAuthentication = (email, password) => {
     return async (dispatch) => {
@@ -49,6 +51,9 @@ export const startCreateUserWithEmailAndPassword = ({
     email,
     password,
     displayName,
+    illness,
+    gender,
+    age
 }) => {
     return async (dispatch) => {
         dispatch(checkingCredentials());
@@ -62,7 +67,13 @@ export const startCreateUserWithEmailAndPassword = ({
         if (result.ok) {
             const { uid, email, displayName } = result;
             dispatch(login({ uid, email, displayName }));
-            // dispatch(setProfile({ type: null, displayName, photoURL, uid, voted_type: null, publications: [] }));
+            dispatch(startNewProfile({ 
+                email, name: displayName,
+                illness,
+                gender,
+                age,
+                uid
+            }));
         } else {
             dispatch(logout({ errorMessage: result.message }));
         }
@@ -79,8 +90,8 @@ export const startLogInWithEmailAndPassword = ({ email, password }) => {
         });
 
         if (result.ok) {
-            const { uid, email, displayName, photoURL } = result;
-            dispatch(login({ uid, email, displayName, photoURL }));
+            const { uid, email, displayName } = result;
+            dispatch(login({ uid, email, displayName }));
 
             dispatch(loadingProfile());
             const profile = await loadProfile(uid);
@@ -96,22 +107,11 @@ export const startLogOut = () => {
     return async (dispatch) => {
         await logoutFirebase();
         dispatch(
-            setProfile({
-                type: null,
-                displayName: null,
-                photoURL: null,
-                uid: null,
-                voted_type: null,
-                id: null,
-            })
-        );
-        dispatch(
             logout({
                 errorMessage: "",
             })
         );
-        dispatch(clearPeople());
-        dispatch(clearStatePublications());
+        dispatch(clearUser());
     };
 };
 
