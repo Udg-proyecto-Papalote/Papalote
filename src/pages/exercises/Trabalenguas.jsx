@@ -41,12 +41,6 @@ export const Trabalenguas = () => {
         e.target.style.padding = '0px'
     }
 
-    // useEffect(() => {
-    //     Object.keys(exercisesDone).length > 0 &&
-    //         Object.keys(exercisesDone).includes(id) &&
-    //         setTrabalengua(exercisesDone[id].maxLevel - 1);            
-    // }, []);
-
     useEffect(() => {
         setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
         setTrabalengua(Math.min(Math.max(trabalengua, 0), trabalenguas.length - 1))
@@ -54,7 +48,6 @@ export const Trabalenguas = () => {
     
     useEffect(() => {
         trabalenguas.length > 0 &&
-        // dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
         dispatch(startSaveTrackExercises({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
     }, [maxTrabalengua]);
 
@@ -63,7 +56,7 @@ export const Trabalenguas = () => {
     }, [])
 
     return (
-        isRendered && <Grid container direction='column' gap={1} lg={6} sm={12} md={8} mx='auto' px={2}>
+        isRendered && <Grid container direction='column' gap={1} lg={6} sm={8} xs={8} md={8} xl={6} mx='auto' px={2}>
             <Title title={title} theme={theme} />
             {!ready ?
                 <>
