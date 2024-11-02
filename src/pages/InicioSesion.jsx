@@ -63,8 +63,8 @@ export const InicioSesion = () => {
 				<Stack spacing={3} width={isMobile ? '100%' : '75%'} marginX='auto' >
 					<h1>Inicio de sesión</h1>
 					<ModeToggle />
-					<Button variant='soft' startDecorator={<Google />} color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
-					<Divider><Star weight="fill" /></Divider>
+					{/* <Button variant='soft' startDecorator={<Google />} color='neutral' size="lg"><Typography level="body-lg">Iniciar con Google</Typography></Button>
+					<Divider><Star weight="fill" /></Divider> */}
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Correo electrónico</FormLabel>
 						<Input type='email' name="email" startDecorator={<Mail color='warning' />} value={ email } onChange={ onInputChange } onFocus={ handleFocus }/>
