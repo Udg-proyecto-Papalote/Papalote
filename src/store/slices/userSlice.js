@@ -53,6 +53,7 @@ export const userSlice = createSlice({
             state.email = action.payload.email;
             state.gender = action.payload.gender;
             state.illness = action.payload.illness;
+            state.loading = false;
         },
 
         // Exercises
@@ -63,6 +64,9 @@ export const userSlice = createSlice({
                 [action.payload.name]: action.payload
             };
         },
+        setExercises: (state, action) => {
+            state.exercisesDone = action.payload;
+        },
 
         // Diagnostics
         setCurrentDiagnostic: (state, action) => {
@@ -70,6 +74,9 @@ export const userSlice = createSlice({
         },
         setDiagnostics: (state, action) => {
             state.diagnostics[action.payload.date] = action.payload;
+        },
+        setAllDiagnostics: (state, action) => {
+            state.diagnostics = action.payload;
         },
         setDiagnosticLoading: (state, action) => {
             state.currentDiagnostic.loading = action.payload;
@@ -110,5 +117,5 @@ export const userSlice = createSlice({
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser, setExercises, setAllDiagnostics
 } = userSlice.actions;

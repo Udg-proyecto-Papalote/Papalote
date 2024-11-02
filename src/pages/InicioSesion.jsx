@@ -8,6 +8,8 @@ import { useForm } from "../hooks/useForm"
 import { useState } from "react"
 import { Link as LinkRouter } from "react-router-dom"
 import LandingPage from "../components/Registro/LandingPage"
+import { useDispatch } from "react-redux"
+import { startLogInWithEmailAndPassword } from "../store/slices/authThunks"
 
 const formData = {
     email: "",
@@ -32,6 +34,8 @@ export const InicioSesion = () => {
 	const [isPasswordValid, setIsPasswordValid] = useState(true)
 	const [isEmailValid, setIsEmailValid] = useState(true)
 
+	const dispatch = useDispatch()
+
 	const {
         email,
         password,
@@ -49,6 +53,8 @@ export const InicioSesion = () => {
 
 			!!emailValid && setIsEmailValid(false)
 			!!passwordValid && setIsPasswordValid(false)
+		} else {
+			dispatch(startLogInWithEmailAndPassword({ email, password }))
 		}
 	}
 
