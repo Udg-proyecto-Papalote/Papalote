@@ -1,4 +1,4 @@
-import { DialogContent, DialogTitle, Modal, ModalDialog, List, ListItem, Typography, Box } from "@mui/joy";
+import { DialogContent, DialogTitle, Modal, ModalDialog, List, ListItem, Typography, Box, ModalClose } from "@mui/joy";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentDiagnostic } from "../../store/slices/userSlice";
 import { useNavigate } from "react-router-dom";
@@ -20,6 +20,7 @@ const ReportList = ({ open, onClose }) => {
         >
             <ModalDialog>
                 <DialogTitle>Diagnósticos Previos</DialogTitle>
+                <ModalClose onClick={onClose} />
                 <DialogContent>
                     {/* Lista de reportes visual */}
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', borderRadius: 'sm', boxShadow: 'md' }}>
@@ -55,7 +56,7 @@ const ReportList = ({ open, onClose }) => {
                                         color: color
                                     }}>
                                         <Typography level="title-sm" sx={{ color: color }}>
-                                            Diagnóstico {Object.keys(diagnostics).length - index}
+                                            Diagnóstico {index + 1}
                                         </Typography>
                                         <Typography level="body-sm" sx={{ color: 'text.secondary' }}>
                                             Fecha: {report.date}

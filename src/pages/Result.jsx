@@ -1,4 +1,4 @@
-import { ChatRounded, EnergySavingsLeaf, Equalizer, Notes, RMobiledata, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
+import { ChatRounded, EnergySavingsLeaf, Equalizer, Notes, RollerSkatingRounded, StickyNote2, VolumeUpRounded } from '@mui/icons-material';
 import { Card, CardContent, Grid, Stack, Typography } from '@mui/joy';
 import PieChartWithNeedle from '../components/Diagnostico/PieChartWithNeedle';
 import Modulacion from '../components/Diagnostico/Modulacion';
@@ -7,7 +7,7 @@ import RecommendedExercises from '../components/Diagnostico/RecommendedExercises
 import { useDispatch, useSelector } from 'react-redux';
 import LoadingReport from './LoadingReport';
 import { useEffect } from 'react';
-import { setDiagnostics } from '../store/slices/userSlice';
+import { startSaveDiagnostics } from '../store/slices/userThunks';
 
 const Title = ({ title, icon, level = 'h3' }) => {
     return (
@@ -29,7 +29,8 @@ const MyPieChart = () => {
 
     useEffect(() => {
         if (!loading && Object.keys(currentDiagnostic).length > 0) {
-            dispatch(setDiagnostics(currentDiagnostic));
+            // dispatch(setDiagnostics(currentDiagnostic));
+            dispatch(startSaveDiagnostics(currentDiagnostic));
         }
     }, [loading]);
 
