@@ -7,6 +7,7 @@ const initialState = {
     gender: "",
     age: "",
     illness: false,
+    loading: false,
     exercisesDone: {},
     currentDiagnostic: {
         url: '',
@@ -56,7 +57,8 @@ export const userSlice = createSlice({
 
         // Exercises
         setTrabalenguasExercise: (state, action) => {
-            state.exercisesDone = { ...state.exercisesDone, 
+            state.exercisesDone = {
+                ...state.exercisesDone,
                 // key as the name of the exercise
                 [action.payload.name]: action.payload
             };
@@ -77,10 +79,36 @@ export const userSlice = createSlice({
         },
         setDate: (state, action) => {
             state.currentDiagnostic.date = action.payload;
+        },
+
+        loadingProfile: (state) => {
+            state.loading = true;
+        },
+        clearUser: (state) => {
+            state.name = "";
+            state.email = "";
+            state.password = "";
+            state.illness = false;
+            state.gender = "";
+            state.age = "";
+            state.exercisesDone = {};
+            state.currentDiagnostic = {
+                url: '',
+                buena_diccion: null,
+                buena_modulacion: null,
+                palabras_correctas: 0,
+                palabras_incorrectas: 0,
+                total_palabras_transcritas: 0,
+                tono_voz: '',
+                recomendaciones: ['Respiración I'],
+                loading: false,
+                date: null
+            };
+            state.diagnostics = {};
         }
     }
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile
- } = userSlice.actions;
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser
+} = userSlice.actions;

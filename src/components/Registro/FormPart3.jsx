@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setProfile } from "../../store/slices/userSlice";
 import { startCreateUserWithEmailAndPassword } from "../../store/slices/authThunks";
 import { UserContext } from "../../router/AuthRoutes";
 
@@ -37,11 +36,7 @@ export const FormPart3 = ({ prevFunction, nextFunction }) => {
         dispatch(startCreateUserWithEmailAndPassword({
             email: email,
             password: password,
-            displayName: name
-        }))
-        dispatch(setProfile({
-            email: email,
-            name: name,
+            displayName: name,
             illness: isIll,
             gender,
             age
