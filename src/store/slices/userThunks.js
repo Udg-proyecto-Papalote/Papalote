@@ -1,6 +1,6 @@
 import { collection, doc, setDoc } from "firebase/firestore";
 import { FirebaseDB } from "../../firebase/config";
-import { loadingProfile, setProfile } from "./userSlice";
+import { loadingProfile, setProfile, setTrabalenguasExercise } from "./userSlice";
 
 export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
     return async (dispatch, getState) => {
@@ -27,3 +27,20 @@ export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
         await setDoc(doc(diagnosticsRef, `${uid}`), {});
     };
 };
+
+export const startSaveTrackExercises = (exercise) => {
+    return async (dispatch, getState) => {
+        const { uid } = getState().auth;
+        const { exercisesDone } = getState().user;
+        const exercisesRef = doc(FirebaseDB, `exercises/${uid}`);
+        console.log(exercisesRef, exercise, exercisesDone);
+        
+        await setDoc(exercisesRef, { ...exercisesDone,
+            [exercise.name]: {
+                maxLevel: exercise.maxLevel,
+                percentage: exercise.percentage
+            }
+         }, { merge: true });
+        dispatch(setTrabalenguasExercise(exercise));
+    };
+}

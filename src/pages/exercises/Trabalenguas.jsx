@@ -7,7 +7,7 @@ import Title from "../../components/Ejercicios/Title"
 import Ending from "../../components/Ejercicios/Ending"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { setTrabalenguasExercise } from "../../store/slices/userSlice"
+import { startSaveTrackExercises } from "../../store/slices/userThunks"
 
 export const Trabalenguas = () => {
     const { id } = useParams()
@@ -54,7 +54,8 @@ export const Trabalenguas = () => {
     
     useEffect(() => {
         trabalenguas.length > 0 &&
-        dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
+        // dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
+        dispatch(startSaveTrackExercises({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
     }, [maxTrabalengua]);
 
     useEffect(() => {
