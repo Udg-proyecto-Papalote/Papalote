@@ -414,6 +414,32 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Vocalización III':{
+        'title': 'Hiatos y diptongos',
+        'theme': 'Vocalización',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730613193/jhvhtlb67fsswaetz5io.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Esforzarse por mantener el sonido claro de cada vocal SIN OMITIR, ni siquiera en las vocales dobles. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        "content": "Hiatos y diptongos se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'words': [
+            'SAAVEDRA', 'CONTRAAVISO', 'VEHEMENTE', 'VEEDOR', 'CHIÍ', 'CHIÍTA', 'FRIÍSIMO', 'COOPERAR', 'ALCOHOLISMO', 'ZOÓLOGO', 'MICROONDAS', 'CAE', 'ATRÁELO', 'FAENA', 'AÉREO', 'RAHEZ', 'FARAÓN', 'CAOBA', 'AHORA', 'ORQUÍDEA', 'FEHACIENTE', 'REALMENTE', 'MUSEO', 'EÓLICO', 'BAILE', 'PAULINO', 'REINA', 'VIRREY', 'CRIATURA', 'HISTORIA', 'HIERRO', 'DIETÉTICO', 'ESTUDIE', 'ANTIGÜEDAD', 'MUEBLERÍA', 'DESHUESAR', 'CONTINUO', 'DUODENO', 'TRIUNFO', 'TUITEAR', 'ACUOSO', 'AGUA', 'BUHÍTO', 'PORTAAERONAVES', 'VIDEOAFICIONADO', 'NEOALEMÁN', 'GEOESTACIONARIO', 'ANTIAUTORITARISMO', 'CREDIAUTO', 'VIEIRA'
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Vocalización IV':{
+        'title': 'Leer sin cortar',
+        'theme': 'Vocalización',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730613257/oye7bxceiyd3qvcwleoi.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes letras con claridad y precisión. Esforzarse por mantener el sonido claro de cada vocal. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        "content": "Leer sin cortar se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'words': [
+            'AEA AEI AEO AEU', 'AIA AIE AIO AIU', 'AOA AOE AOI AOU', 'AUA AUE AUI AUO', 'EAC EAI EAO EAU', 'EIA, EIE EÍO EIU', 'EOA EOE EOI EOU', 'EUA EUE EUI EUO', 'IAE IAI IAO IAU', 'IEA IEI IEO IEU', 'IOA IOE IOI IUO', 'IUA IUE IUI IUO', 'OAE OAI OAO OAU', 'OEA OEI OEO OEU', 'OIA OIE OIO OIU', 'OUA OUE OUI OUO', 'UAE UAI UAO UAU', 'UEA UEI UEO UEU', 'UIA UIE UIO UIU', 'UOA UOE UOI UOU'
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
         'theme': 'Palabras de difícil pronunciación',
