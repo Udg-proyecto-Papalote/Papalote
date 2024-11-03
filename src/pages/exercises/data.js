@@ -116,6 +116,69 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Dicción 8': {
+        'title': 'Combinación consonántica “MN”',
+        'theme': 'Dicción',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730602506/jfrhzqe2g1qvionozab5.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Combinación consonántica “MN”  trabaja en la correcta pronunciación de la combinación "MN", ayudando a mejorar la dicción y precisión al hablar mediante la repetición de palabras y frases que contienen este grupo consonántico.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'ALUMNADO', 'DAMNIFICAR', 'MNEMOTÉCNICO', 'ALUMNO', 'DISMNESIA', 'ÓMNIBUS', 'AMNESIA', 'GIMNASIA', 'OMNICOMPRENSIVO', 'AMNÉSICO', 'GIMNASIO', 'OMNIPOTENCIA', 'AMNISTÍA', 'GIMNASTA', 'OMNIPOTENTE', 'AMNISTIAR', 'GIMNÁSTICA', 'OMNIPRESENCIA', 'CALUMNIA', 'HIMNO', 'OMNIPRESENTE', 'CALUMNIADOR', 'INCALUMNIABLE', 'OMNISAPIENTE', 'CALUMNIAR', 'INDEMNE', 'OMNISCIENCIA', 'CALUMNIOSAMENTE', 'INDEMNIDAD', 'OMNISCIENTE', 'CALUMNIOSO', 'INDEMNIZACIÓN', 'OMNÍVORO', 'COLUMNA', 'INDEMNIZADO', 'SOLEMNIDAD', 'COLUMNATA', 'INDEMNIZAR', 'SOMNÍFERO', 'COLUMNISTA', 'INSOMNE', 'SOMNOLENCIA', 'DAMNIFICACIÓN', 'INSOMNIO', 'SOMNOLIENTO', 'DAMNIFICADO', 'MNEMÓNICA', 'SOMNAMBULISMO', 'DAMNIFICADOR', 'MNEMOTECNIA', 'SOMNÁMBULO'
+        ],
+        'sentences': [
+            ['LA AMNISTÍA PERMITIÓ QUE MUCHOS PRESOS POLÍTICOS FUERAN LIBERADOS.'],
+            ['SUFRIR DE AMNESIA PUEDE SER UNA EXPERIENCIA MUY DESORIENTADORA.'],
+            ['DECIDIERON AMNISTIAR A LOS SOLDADOS QUE PARTICIPARON EN EL CONFLICTO.'],
+            ['LOS OSOS SON ANIMALES OMNÍVOROS, COMEN TANTO PLANTAS COMO CARNE.'],
+            ['LAS COLUMNAS DEL EDIFICIO ERAN IMPRESIONANTES.'],
+            ['CANTAMOS EL HIMNO NACIONAL CON GRAN FERVOR.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Dicción 9': {
+        'title': 'Combinación consonántica “NM”',
+        'theme': 'Dicción',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730602623/frcyslaxi5dhufmskq4j.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Combinación consonántica “NM”  trabaja en la correcta pronunciación de la combinación "NM", ayudando a mejorar la dicción y precisión al hablar mediante la repetición de palabras y frases que contienen este grupo consonántico.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'INMENSO', 'INMERSIÓN', 'INMADURO', 'INMUNIDAD', 'INMINENTE', 'INMIGRANTE', 'INMÓVIL', 'INMUNIZACIÓN', 'INMEMORIAL', 'INMISCUIRSE', 'INMATERIAL', 'INMORTAL', 'INMUNODEFICIENCIA', 'INMIGRACIÓN', 'INMUEBLE', 'INMUNOLÓGICO', 'INMISIBILIDAD', 'INMORAL', 'INMISCIBLE', 'INMUTABLE', 'INMOLACIÓN', 'INMUNOSUPRESIÓN', 'INMEDIBLE', 'INMORTALIDAD', 'INMUNOTERAPIA', 'INMOLAR', 'INMORTALIZAR', 'INMUNOSUPRESOR', 'INMISCUIDO', 'INMATERIALIDAD', 'INMUNDICIA', 'INMEDIATISMO', 'INMISCIBILIDAD', 'INMOBILIARIO', 'INMINENCIA', 'INMUNODEFICIENTE', 'INMIGRAR', 'INMORALIDAD', 'INMUNIZAR', 'INMOVILIZAR', 'INMINENTEMENTE', 'INMUNOCOMPROMETIDO', 'INMERSIONES', 'INMORTALIZADA', 'INMANENTE', 'INMISCIBLES', 'INMUNITARIO', 'CONMIGO', 'ENMUDECER'
+        ],
+        'sentences': [
+            ['EL MAR ES INMENSO Y LLENO DE MISTERIOS.'],
+            ['LA INMERSIÓN EN AGUAS PROFUNDAS PUEDE SER PELIGROSA.'],
+            ['EL NIÑO ES AÚN INMADURO PARA TOMAR DECISIONES IMPORTANTES.'],
+            ['LA VACUNA PROPORCIONA INMUNIDAD CONTRA EL VIRUS.'],
+            ['EL EVENTO ES INMINENTE Y DEBEMOS PREPARARNOS.'],
+            ['EL INMIGRANTE ENCONTRÓ UNA NUEVA VIDA EN EL EXTRANJERO.'],
+            ['EL OBJETO PERMANECÍA INMÓVIL EN LA MESA.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Dicción 10': {
+        'title': 'Combinación consonántica “NN”',
+        'theme': 'Dicción',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730602669/reqm3lsgs9h031dckuhc.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Combinación consonántica “NN”  trabaja en la correcta pronunciación de la combinación "NN", ayudando a mejorar la dicción y precisión al hablar mediante la repetición de palabras y frases que contienen este grupo consonántico.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            'CONNOTACIÓN', 'INNOVACIÓN', 'INNATO', 'CONNOTAR', 'CONNOTATIVO', 'INNOVADOR', 'INNOVAR', 'CONNIVENCIA', 'ANNALES', 'ANÓNIMO', 'ANEMIA', 'ANNEXION', 'ANIVERSARIO', 'ANTERIOR', 'INNOMBRABLE', 'INNECESARIO', 'INNEGABLE', 'INNEGABLEMENTE', 'INNOVATIVAMENTE', 'INNECESARIAMENTE', 'INNUMERABLE', 'INNOVACIONES', 'INNOVADORA', 'INNOVATIVOS', 'INNOVANDO', 'INNECESARIEDAD', 'INNEGOCIABLE', 'INNEGOCIABLES', 'INNOMINADO', 'INNOMBRABLES', 'INNOMINADA', 'INNECESARIEDAD', 'INNECESARIAMENTE', 'INNOVATIVOS', 'INNOVADORAMENTE', 'INNATAMENTE', 'CONNATURAL', 'CONNIVENTE', 'CONNOTACIONES', 'CONNOTADOS', 'INNOVACIONES', 'INNOVATIVA', 'INNEGABLES', 'INNAVEGABLE', 'INNATURAL', 'INNOVA', 'INNOBLE', 'ENNOBLECER', 'ENNEGRECER', 'ENNEGRECIMIENTO'
+        ],
+        'sentences': [
+            ['LA INNOVACIÓN TECNOLÓGICA ESTÁ CAMBIANDO EL MUNDO RÁPIDAMENTE.'],
+            ['DECIDIERON INNOVAR SUS MÉTODOS DE ENSEÑANZA.'],
+            ['SU TALENTO INNATO PARA LA MÚSICA ES IMPRESIONANTE.'],
+            ['LA CONNOTACIÓN DE ESA PALABRA PUEDE VARIAR SEGÚN EL CONTEXTO.'],
+            ['LA ACTITUD CONNOTATIVA DEL AUTOR ES EVIDENTE EN SU ESCRITURA.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Dicción 12': {
         'title': 'Combinación consonántica “GN”',
         'theme': 'Dicción',
@@ -179,6 +242,26 @@ export const exercises = {
         'recommendations 2': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
         'sentences': [
             'EL PRISMA ÓPTICO INTERCEPTA LA LUZ Y NOS PERMITE CAPTAR LA DESCOMPOSICIÓN DE ESTA:', 'OBTENEMOS ASÍ LOS SIETE COLORES DEL ESPECTRO VISIBLE Y OBSERVAMOS NÍTIDAMENTE SU POLICROMÍA',
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Dicción 17': {
+        'title': 'Combinación consonántica “PC y CC”',
+        'theme': 'Dicción',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1730602706/ajkamiicenzl6fh14jve.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes palabras con claridad y precisión. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada palabra.',
+        'content': 'Combinación consonántica “PC y CC”  trabaja en la correcta pronunciación de la combinación "PC y CC", ayudando a mejorar la dicción y precisión al hablar mediante la repetición de palabras y frases que contienen este grupo consonántico.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar cada palabra de forma correcta y fluida. Repite al menos tres veces por sesión, buscando mejorar tu pronunciación y velocidad en cada repetición.',
+        'words': [
+            ['OPCIÓN', 'EXCEPCIÓN', 'EXCEPCIONAL', 'PRESCRIPCIÓN', 'DECEPCIÓN', 'DESCRIPCIÓN', 'TRANSCRIPCIÓN', 'RECEPCIÓN', 'EGIPCIO', 'NUPCIAS', 'CUPCAKE', 'IRRUPCIÓN', 'CORRUPCIÓN', 'DECEPCIONANTE', 'INEPCIA', 'RECEPCIONISTA', 'ADOPCIÓN', 'CAPCIOSIDAD', 'ERUPCIÓN', 'EXCEPCIONALMENTE', 'PERCEPCIÓN', 'SUSCEPCIÓN', 'INCORRUPCIÓN', 'CIRCUNSCRIPCIÓN'],
+            ['ACCIDENTE', 'ACCEDER', 'ACCIÓN', 'CORRECCIÓN', 'DIRECCIÓN', 'ELECCIÓN', 'INFECCIÓN', 'INTERACCIÓN', 'INTRODUCCIÓN', 'OBSTRUCCIÓN', 'PROTECCIÓN', 'REACCIÓN', 'SECCIÓN', 'TRADUCCIÓN', 'ACCESIBLE', 'DISECCIÓN', 'SUCCIÓN', 'REFACCIÓN', 'TRACCIÓN', 'VACCIÓN'],
+        ],
+        'sentences': [
+            ['EL CONCEPTO DE LA TEORÍA ES COMPLICADO.'],
+            ['SU RENDIMIENTO FUE EXCEPCIONAL EN LA PRUEBA.'],
+            ['LA CONCEPCIÓN DEL PLAN FUE BRILLANTE.'],
+            ['LA ACCIÓN DEL ACCIDENTE FUE RÁPIDA Y EFICIENTE.'],
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
