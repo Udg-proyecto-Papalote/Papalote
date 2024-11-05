@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Checkbox, DialogContent, DialogTitle, FormControl,
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setNameGender } from "../../store/slices/userSlice"
+import { startUpdateProfile } from "../../store/slices/userThunks"
 
 const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
 
@@ -18,13 +19,11 @@ const Profile = () => {
 
     const isDisabled = userGender !== gender || userName !== name;
 
-    const [showPassword, setShowPassword] = useState(false)
-    const [password, setPassword] = useState('')
-
     const [open, setOpen] = useState(false)
 
     const handleClick = () => {
-        dispatch(setNameGender({ name: userName, gender: userGender }))
+        // dispatch(setNameGender({ name: userName, gender: userGender }))
+        dispatch(startUpdateProfile({ name: userName, gender: userGender }))
         setOpen(false)
     }
 
@@ -49,13 +48,8 @@ const Profile = () => {
                         }
                     </Select>
                 </FormControl>
-                <FormControl>
-                    <Texto>Introduce tu contraseña para guardar los cambios</Texto>
-                    <Input placeholder='Contraseña' type={showPassword ? 'text' : 'password'} sx={{ mb: 1 }} onChange={(e) => setPassword(e.target.value)} disabled={!isDisabled} />
-                    <Checkbox label='Mostrar contraseña' checked={showPassword} onChange={() => setShowPassword(!showPassword)} disabled={!isDisabled} />
-                </FormControl>
                 <Stack direction='row' spacing={1} display={'flex'} justifyContent={'flex-end'}>
-                    <Button disabled={!isDisabled || password.length === 0} onClick={() => setOpen(true)}>Guardar</Button>
+                    <Button disabled={!isDisabled} onClick={() => setOpen(true)} mt='20px'>Guardar</Button>
                 </Stack>
             </Stack>
             <Modal open={open} onClose={() => setOpen(false)} disableEscapeKeyDown>

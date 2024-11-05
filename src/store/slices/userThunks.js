@@ -1,6 +1,6 @@
 import { collection, doc, setDoc } from "firebase/firestore";
 import { FirebaseDB } from "../../firebase/config";
-import { loadingProfile, setDiagnostics, setProfile, setTrabalenguasExercise } from "./userSlice";
+import { loadingProfile, setDiagnostics, setNameGender, setProfile, setTrabalenguasExercise } from "./userSlice";
 
 export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
     return async (dispatch, getState) => {
@@ -25,6 +25,17 @@ export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
         
         const diagnosticsRef = collection(FirebaseDB, 'diagnostics/');
         await setDoc(doc(diagnosticsRef, `${uid}`), {});
+    };
+};
+
+export const startUpdateProfile = ({ name, gender }) => {
+    return async (dispatch, getState) => {
+        const { uid } = getState().auth;
+        const profileRef = doc(FirebaseDB, `profile/${uid}`);
+        await setDoc(profileRef, { name, gender }, { merge: true });
+        dispatch(setNameGender({
+            name, gender
+        }));
     };
 };
 

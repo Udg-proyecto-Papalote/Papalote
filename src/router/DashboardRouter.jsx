@@ -26,7 +26,7 @@ const DashboardRouter = () => {
                     <Routes>
                         <Route path='/' element={<Inicio />} />
                         <Route path='/diagnostico' element={<Diagnostico />} />
-                        <Route path='/diagnostico/resultado' element={currentDiagnostic.url === '' ? <Navigate to='/'/> : <Result />} />
+                        <Route path='/diagnostico/resultado' element={<Result />} />
                         <Route path='/ejercicios' element={<Ejercicios />} />
                         <Route path='/ejercicios/trabalenguas/:id' element={<Trabalenguas />} />
                         <Route path='/ejercicios/escuchayrepite/:id' element={<EscuchaYRepite />} />
