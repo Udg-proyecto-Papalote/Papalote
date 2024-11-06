@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, CardContent, CardCover, Grid, LinearProgress, Option, Select, Stack, Typography, useColorScheme } from "@mui/joy"
+import { AspectRatio, Button, Grid, LinearProgress, Option, Select, Stack, Typography, useColorScheme } from "@mui/joy"
 import Instructions from "../../components/Ejercicios/Instructions"
 import Title from "../../components/Ejercicios/Title"
 import { exercises } from "./data"
@@ -7,8 +7,8 @@ import CheckboxCard from "../../components/Ejercicios/CheckboxCard"
 import { Looks3, LooksOne, LooksTwo } from "@mui/icons-material"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { setTrabalenguasExercise } from "../../store/slices/userSlice"
 import { useParams } from "react-router-dom"
+import { startSaveTrackExercises } from "../../store/slices/userThunks"
 
 const Audio = ({ src }) => {
     return (
@@ -56,7 +56,8 @@ const EscuchaYRepite = () => {
 
     useEffect(() => {
         words.length > 0 &&
-        dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxWordNumber, percentage: (100 * (maxWordNumber) / words.length) }))
+        // dispatch(setTrabalenguasExercise({ name: id, maxLevel: maxWordNumber, percentage: (100 * (maxWordNumber) / words.length) }))
+        dispatch(startSaveTrackExercises({ name: id, maxLevel: maxWordNumber, percentage: (100 * (maxWordNumber) / words.length) }))
     }, [maxWordNumber]);
 
     useEffect(() => {
