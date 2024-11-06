@@ -354,13 +354,14 @@ export const exercises = {
     'Letra R I': {
         'title': 'Soy un motor',
         'theme': 'Letra R',
-        'type': 'Video/Gif',
+        'type': 'leeyrepite',
         'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587358/lxbdnhnm1g0pcfvzzuux.jpg',
         "instructions": "Practica este ejercicio en un ambiente relajado, donde puedas enfocarte en tu voz y la vibración que produce. Asegúrate de estar cómodo y sin distracciones.",
         "content": "Soy un motor está diseñado para mejorar la pronunciación de la letra 'R', fortaleciendo la capacidad de hacer vibrar la lengua y controlar la respiración.",
         'recommendations': 'Al hacer este ejercicio, asegúrate de relajar la lengua y mantenerla ligeramente elevada en el centro de la boca, permitiendo que vibre mientras produces el sonido \'rrrrrrrrrrrr\'. No fuerces el sonido, deja que fluya de manera natural. Es importante que controles tu respiración: infla el abdomen antes de comenzar y exhala lentamente mientras haces el sonido, tratando de mantener una vibración constante hasta quedarte sin aire. Si te resulta difícil al principio, comienza con un sonido suave y ve incrementando la intensidad a medida que te sientas más cómodo.',
-        'excercise': [
+        'exercise': [
             'Imitar el sonido de un motor. Primero hay que inflar el abdomen y luego hacer el sonido “rrrrrrrrrrrr” hasta que nos quedemos sin aire.',
+            'Hazlo durante 5 segundos por cada intento. Puedes repetirlo las veces que quieras.'
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },

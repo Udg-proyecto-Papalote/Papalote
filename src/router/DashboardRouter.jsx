@@ -11,6 +11,7 @@ import ModeToggle from "../components/ToggleTheme"
 import { useMediaQuery } from "@mui/material"
 import { useSelector } from "react-redux"
 import LoadingProfile from "../pages/LoadingProfile"
+import Design4 from "../pages/exercises/Design4"
 
 const DashboardRouter = () => {
     const { pathname } = useLocation()
@@ -30,6 +31,7 @@ const DashboardRouter = () => {
                         <Route path='/ejercicios' element={<Ejercicios />} />
                         <Route path='/ejercicios/trabalenguas/:id' element={<Trabalenguas />} />
                         <Route path='/ejercicios/escuchayrepite/:id' element={<EscuchaYRepite />} />
+                        <Route path='/ejercicios/leeyrepite/:id' element={<Design4 />} />
                         <Route path='*' element={<Navigate to='/' />} />
                     </Routes>
                 </Grid> :
