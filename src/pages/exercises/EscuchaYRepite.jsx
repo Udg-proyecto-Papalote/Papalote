@@ -9,8 +9,6 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setTrabalenguasExercise } from "../../store/slices/userSlice"
 import { useParams } from "react-router-dom"
-import { set } from "lodash"
-
 
 const Audio = ({ src }) => {
     return (
