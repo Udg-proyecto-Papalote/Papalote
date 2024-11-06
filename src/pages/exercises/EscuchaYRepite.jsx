@@ -65,6 +65,13 @@ const EscuchaYRepite = () => {
         setIsRendered(true)
     }, [])
 
+    const unselectCheckboxes = () => {
+        // unselect all checkboxes by clicking on the unselect button
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+        checkboxes.forEach(checkbox => checkbox.click())
+        setCheckedBoxes(0)
+    }
+
     return (
         isRendered && <Grid container direction='column' gap={1} lg={6} lgOffset={3} mdOffset={2} sm={12} md={8} xs={12} px={{ xs: 2 }}>
             <Title title={title} theme={theme} />
@@ -76,7 +83,8 @@ const EscuchaYRepite = () => {
                             {
                                 Array.from({ length: words.length }, (_, index) => (
                                     <Option key={index} value={index} onClick={() => setWordNumber(index)} disabled={index > maxWordNumber}>
-                                        {words[index]?.length > 10 ? words[index].slice(0, 10) + '...' : words[index]}
+                                        {/* {words[index]?.length > 10 ? words[index].slice(0, 10) + '...' : words[index]} */}
+                                        Nivel {index + 1}
                                     </Option>
                                 ))
                             }
@@ -123,8 +131,7 @@ const EscuchaYRepite = () => {
                                 <Button
                                     color='neutral' size='lg' variant="soft" onClick={() => {
                                         setWordNumber(wordNumber + 1)
-                                        setCheckedBoxes(0)
-                                        // unselect all checkboxes
+                                        unselectCheckboxes()
                                     }} disabled={checkedBoxes !== (!!video + !!audio + 1)}>Siguiente</Button>
                             }
                         </Stack>
