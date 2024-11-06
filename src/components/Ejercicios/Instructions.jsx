@@ -1,9 +1,13 @@
 import { Info, StarRounded } from '@mui/icons-material'
-import { Alert, List, ListItem, Tab, TabList, TabPanel, Tabs, Typography } from '@mui/joy'
+import { Alert, Badge, List, ListItem, Tab, TabList, TabPanel, Tabs, Typography } from '@mui/joy'
+import { useState } from 'react'
 
 const Instructions = ({ instructions = 'uno.dos', recommendations = 'uno.dos' }) => {
+    const [invisible, setInvisible] = useState(false)
     return (
-        <Tabs aria-label="tabs" defaultValue={0} sx={{ bgcolor: 'transparent' }}>
+        <Tabs aria-label="tabs" defaultValue={0} sx={{ bgcolor: 'transparent' }}
+        onClick={e => e.target.innerText === 'Recomendaciones' && setInvisible(true)}
+        >
             <TabList
                 disableUnderline
                 sx={{
@@ -13,7 +17,10 @@ const Instructions = ({ instructions = 'uno.dos', recommendations = 'uno.dos' })
                 }}
             >
                 <Tab disableIndicator variant="outlined" color='primary'>Instrucciones</Tab>
-                <Tab disableIndicator variant="outlined" color='success'>Recomendaciones</Tab>
+                <Badge invisible={invisible} color='primary' size='lg'>
+                    <Tab disableIndicator variant="outlined" color='success'
+                    >Recomendaciones</Tab>
+                </Badge>
             </TabList>
             <TabPanel value={0} sx={{ px: 0, pt: 0.4, pb: 1 }}>
                 <Alert variant='soft' color='primary' size='lg'>
