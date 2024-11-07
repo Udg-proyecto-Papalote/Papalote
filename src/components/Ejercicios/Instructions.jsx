@@ -6,7 +6,7 @@ const Instructions = ({ instructions = 'uno.dos', recommendations = 'uno.dos' })
     const [invisible, setInvisible] = useState(false)
     return (
         <Tabs aria-label="tabs" defaultValue={0} sx={{ bgcolor: 'transparent' }}
-        onClick={e => e.target.innerText === 'Recomendaciones' && setInvisible(true)}
+            onClick={e => e.target.innerText === 'Recomendaciones' && setInvisible(true)}
         >
             <TabList
                 disableUnderline
@@ -17,10 +17,13 @@ const Instructions = ({ instructions = 'uno.dos', recommendations = 'uno.dos' })
                 }}
             >
                 <Tab disableIndicator variant="outlined" color='primary'>Instrucciones</Tab>
-                <Badge invisible={invisible} color='primary' size='lg'>
-                    <Tab disableIndicator variant="outlined" color='success'
-                    >Recomendaciones</Tab>
-                </Badge>
+                {
+                    recommendations !== 'uno.dos' &&
+                    <Badge invisible={invisible} color='primary' size='lg'>
+                        <Tab disableIndicator variant="outlined" color='success'
+                        >Recomendaciones</Tab>
+                    </Badge>
+                }
             </TabList>
             <TabPanel value={0} sx={{ px: 0, pt: 0.4, pb: 1 }}>
                 <Alert variant='soft' color='primary' size='lg'>
