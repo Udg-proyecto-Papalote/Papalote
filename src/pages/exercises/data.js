@@ -355,6 +355,7 @@ export const exercises = {
         'title': 'Soy un motor',
         'theme': 'Letra R',
         'type': 'leeyrepite',
+        'temporizador': true,
         'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587358/lxbdnhnm1g0pcfvzzuux.jpg',
         "instructions": "Practica este ejercicio en un ambiente relajado, donde puedas enfocarte en tu voz y la vibración que produce. Asegúrate de estar cómodo y sin distracciones.",
         "content": "Soy un motor está diseñado para mejorar la pronunciación de la letra 'R', fortaleciendo la capacidad de hacer vibrar la lengua y controlar la respiración.",
@@ -418,13 +419,14 @@ export const exercises = {
     'Potencia II': {
         'title': 'Inflar un globo',
         'theme': 'Potencia',
-        'type': 'Video/Gif',
+        'type': 'leeyrepite',
+        'temporizador': false,
         'image': 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727587287/wfrs7bjytbb1zc0oilr0.jpg',
         "instructions": "Practica este ejercicio en un lugar tranquilo donde puedas concentrarte en tu respiración y en la potencia de tu soplo. Asegúrate de tener un globo a la mano y de estar cómodo.",
         "content": "Inflar un globo ayuda a aumentar la potencia de la voz al mejorar la capacidad de soplar con más fuerza y en menos respiraciones.",
-        'excercise': [
-            ['Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.'],
-            ['Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.'],
+        'exercise': [
+            'Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.',
+            'Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.',
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
@@ -436,10 +438,10 @@ export const exercises = {
         "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
         "content": "Respiración diafragmática enseña a respirar desde el diafragma, mejorando el control de la respiración y optimizando la emisión de la voz.",
         'excercise': [
-            ['Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.'],
-            ['Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).'],
-            ['Exhala lentamente por la boca, vaciando completamente los pulmones. Siente cómo tu abdomen baja.'],
-            ['Repetir: Repite este proceso durante 5-10 minutos cada día.']
+            'Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.',
+            'Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).',
+            'Exhala lentamente por la boca, vaciando completamente los pulmones. Siente cómo tu abdomen baja.',
+            'Repetir: Repite este proceso durante 5-10 minutos cada día.'
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu respiración. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },

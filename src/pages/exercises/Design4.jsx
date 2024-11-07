@@ -5,14 +5,29 @@ import { exercises } from "./data"
 import { useEffect, useState } from "react"
 import Instructions from "../../components/Ejercicios/Instructions"
 import Ending from "../../components/Ejercicios/Ending"
-import { SelfImprovement, AccessAlarm, PlayArrow } from "@mui/icons-material"
+import { SelfImprovement, AccessAlarm, PlayArrow, Accessibility } from "@mui/icons-material"
 import { useDispatch } from "react-redux"
-import { setTrabalenguasExercise } from "../../store/slices/userSlice"
 import { startSaveTrackExercises } from "../../store/slices/userThunks"
+
+
+const Temporizador = ({ seconds, play }) => {
+    return (
+        <CardContent orientation="horizontal" sx={{ justifyContent: 'center', alignItems: 'center' }}>
+            <ButtonGroup>
+                <IconButton onClick={() => setPlay(true)} disabled={play} color='primary'>
+                    <PlayArrow />
+                </IconButton>
+            </ButtonGroup>
+            <Typography fontWeight={600} fontSize={20} fontStyle='italic'>
+                {seconds} s
+            </Typography>
+        </CardContent>
+    )
+}
 
 const Design4 = () => {
     const { id } = useParams()
-    const { title, theme, image, instructions, recommendations, exercise, ending } = exercises[id]
+    const { title, theme, image, instructions, recommendations, exercise, ending, temporizador } = exercises[id]
 
     const [ready, setReady] = useState(false)
     const [seconds, setSeconds] = useState(0)
@@ -66,20 +81,21 @@ const Design4 = () => {
                         <Card sx={{ flex: 1, mb: 1 }}>
                             <CardContent sx={{ flexDirection: 'column', gap: 2, justifyContent: 'center', justifyItems: 'center' }}>
                                 <CardContent orientation="horizontal" sx={{ gap: 1 }}>
-                                    <AccessAlarm />
-                                    <Typography level="title-lg">Temporizador</Typography>
+                                    {
+                                        temporizador ?
+                                            <><AccessAlarm />
+                                                <Typography level="title-lg">Temporizador</Typography>
+                                            </> :
+                                            <>
+                                                <Accessibility />
+                                                <Typography level="title-lg">Lee con atención</Typography>
+                                            </>
+                                    }
                                 </CardContent>
                                 <CardContent sx={{ alignItems: 'center', flex: 2, gap: 2 }}>
-                                    <CardContent orientation="horizontal" sx={{ justifyContent: 'center', alignItems: 'center' }}>
-                                        <ButtonGroup>
-                                            <IconButton onClick={() => setPlay(true)} disabled={play} color='primary'>
-                                                <PlayArrow />
-                                            </IconButton>
-                                        </ButtonGroup>
-                                        <Typography fontWeight={600} fontSize={20} fontStyle='italic'>
-                                            {seconds} s
-                                        </Typography>
-                                    </CardContent>
+                                    {
+                                        temporizador && <Temporizador seconds={seconds} play={play} />
+                                    }
                                     <Typography fontWeight={600} fontSize={20} textAlign='center' px={4} fontStyle='italic' mx={4}>
                                         {exercise[1]}
                                     </Typography>
