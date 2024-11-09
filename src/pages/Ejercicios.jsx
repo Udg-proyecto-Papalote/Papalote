@@ -46,6 +46,9 @@ export const Ejercicios = () => {
 		setValue(themes)
 		setRecommendedExercises(Object.keys(exercises).filter((key) => recomendaciones.includes(key)))
 	}, [isRendered])
+
+	// open first accordion by default
+	const [expanded, setExpanded] = useState(true)
 	return (
 		isRendered && <Grid mx={4} my={3} >
 			<Grid container spacing={2} lg={8} lgOffset={2} md={12} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }}>
@@ -67,7 +70,7 @@ export const Ejercicios = () => {
 							},
 						})}
 					>
-						<Accordion>
+						<Accordion expanded={expanded} onChange={() => setExpanded((prev) => !prev)}>
 							<AccordionSummary>Filtros</AccordionSummary>
 							<AccordionDetails variant="soft">
 								<Typography id="rank" level="body-sm" sx={{ fontWeight: 'lg', mb: 1.5 }}>
