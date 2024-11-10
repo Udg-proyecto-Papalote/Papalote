@@ -405,18 +405,19 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Caudal I': {
-        'title': 'La tira de papel',
-        'theme': 'Caudal y control de aire',
-        'type': 'Video/Gif',
-        "instructions": "Realiza este ejercicio en un espacio tranquilo y cómodo, donde puedas concentrarte en tu flujo de aire. Es importante evitar distracciones para que puedas escuchar tu respiración y controlar tu soplo.",
-        "content": "La tira de papel está diseñado para mejorar el caudal y control de aire, ayudando al usuario a controlar mejor su respiración y flujo de aire al hablar.",
-        'excercise': [
-            ['Colocar una tira de papel a 20 centímetros lejos de tu boca y soplar. Hay que controlar el aire del aire y gastarlo de una manera paulatina, la tira de papel te indicará qué tan fuerte está soplando. La idea del ejercicio es contar los segundos que demoramos en que se nos acabe el aire, luego ir practicando cada dia e ir aumentando los segundos en los que se nos acaba el aire.'],
-            ['Al realizar este ejercicio, es fundamental que mantengas una postura erguida y relajada, con los hombros sueltos y el abdomen activo. Al soplar, concéntrate en controlar el flujo de aire desde el diafragma, no desde los pulmones o la garganta. Mantén la boca ligeramente abierta y usa los labios para dirigir el aire de manera suave y constante hacia la tira de papel. Al principio, no te preocupes tanto por la duración, sino por lograr un flujo de aire estable.'],
-        ],
-        'ending': 'Recuerda, la práctica constante es clave para el dominio. Con la práctica diaria, ve aumentando progresivamente el tiempo de soplo, manteniendo siempre el control sin apresurarte. Recuerda registrar los segundos que logres para medir tu avance y así mejoraras tu caudal y control de aire'
-    },
+    // !Descomentar hasta que contenga contenido visual
+    // 'Caudal I': {
+    //     'title': 'La tira de papel',
+    //     'theme': 'Caudal y control de aire',
+    //     'type': 'Video/Gif',
+    //     "instructions": "Realiza este ejercicio en un espacio tranquilo y cómodo, donde puedas concentrarte en tu flujo de aire. Es importante evitar distracciones para que puedas escuchar tu respiración y controlar tu soplo.",
+    //     "content": "La tira de papel está diseñado para mejorar el caudal y control de aire, ayudando al usuario a controlar mejor su respiración y flujo de aire al hablar.",
+    //     'excercise': [
+    //         ['Colocar una tira de papel a 20 centímetros lejos de tu boca y soplar. Hay que controlar el aire del aire y gastarlo de una manera paulatina, la tira de papel te indicará qué tan fuerte está soplando. La idea del ejercicio es contar los segundos que demoramos en que se nos acabe el aire, luego ir practicando cada dia e ir aumentando los segundos en los que se nos acaba el aire.'],
+    //         ['Al realizar este ejercicio, es fundamental que mantengas una postura erguida y relajada, con los hombros sueltos y el abdomen activo. Al soplar, concéntrate en controlar el flujo de aire desde el diafragma, no desde los pulmones o la garganta. Mantén la boca ligeramente abierta y usa los labios para dirigir el aire de manera suave y constante hacia la tira de papel. Al principio, no te preocupes tanto por la duración, sino por lograr un flujo de aire estable.'],
+    //     ],
+    //     'ending': 'Recuerda, la práctica constante es clave para el dominio. Con la práctica diaria, ve aumentando progresivamente el tiempo de soplo, manteniendo siempre el control sin apresurarte. Recuerda registrar los segundos que logres para medir tu avance y así mejoraras tu caudal y control de aire'
+    // },
     'Potencia II': {
         'title': 'Inflar un globo',
         'theme': 'Potencia',
