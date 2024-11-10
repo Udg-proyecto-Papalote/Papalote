@@ -338,19 +338,20 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu dicción. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
-    'Impostación I':{
-        'title': 'Calentamiento de voz - Primera semana',
-        'theme': 'Impostación',
-        'type': 'Video/Gif',
-        "instructions": "Realiza este ejercicio en un ambiente tranquilo donde puedas enfocarte en tu voz y en tu respiración. Asegúrate de estar cómodo y libre de distracciones.",
-        "content": 'Calentamiento de voz - Primera semana es un ejercicio de impostación diseñado para ayudar a mejorar la resonancia y el control vocal, centrándose en la respiración diafragmática y la relajación vocal.',
-        'excercise': [
-            '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
-            '2. Al exhalar, vamos a pronunciar una B, con los labios y mejillas distendidas, la cual hará que se inflen levemente. No debe haber tensión en este ejercicio. Con el sonido emitido por la letra b que ya es vibrante, empezarás a sentir comienza a vibrar tu garganta, torax e incluso tu cabeza. Puedes subir o variar la intensidad del sonido producido para notar aún mejor cómo se activan tus resonadores naturales.',
-            '3. Puedes realizar este ejercicio tres veces al día (una vez en la mañana, otra en la tarde y otra en la noche) de 3 a 5 minutos. Este simple ejercicio que no te llevará más de 15 minutos diarios te ayudará a familiarizarte con los diferentes resonadores del cuerpo y realizándose de forma paulatina, pero constante, notarás que tu voz comienza a tomar más resonancia.',
-        ],
-        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
-    },
+    // !Descomentar hasta que contenga contenido visual
+    // 'Impostación I':{
+    //     'title': 'Calentamiento de voz - Primera semana',
+    //     'theme': 'Impostación',
+    //     'type': 'Video/Gif',
+    //     "instructions": "Realiza este ejercicio en un ambiente tranquilo donde puedas enfocarte en tu voz y en tu respiración. Asegúrate de estar cómodo y libre de distracciones.",
+    //     "content": 'Calentamiento de voz - Primera semana es un ejercicio de impostación diseñado para ayudar a mejorar la resonancia y el control vocal, centrándose en la respiración diafragmática y la relajación vocal.',
+    //     'excercise': [
+    //         '1. De pie, en forma recta, o sentado con la espalda recostada contra el respaldo de una silla, respira profundo. Es muy importante no levantar el pecho ni los hombros al inhalar el oxígeno. La respiración debe ser diafragmática, por lo cual, en vez de inflarse el pecho, debe inflarse la parte abdominal.',
+    //         '2. Al exhalar, vamos a pronunciar una B, con los labios y mejillas distendidas, la cual hará que se inflen levemente. No debe haber tensión en este ejercicio. Con el sonido emitido por la letra b que ya es vibrante, empezarás a sentir comienza a vibrar tu garganta, torax e incluso tu cabeza. Puedes subir o variar la intensidad del sonido producido para notar aún mejor cómo se activan tus resonadores naturales.',
+    //         '3. Puedes realizar este ejercicio tres veces al día (una vez en la mañana, otra en la tarde y otra en la noche) de 3 a 5 minutos. Este simple ejercicio que no te llevará más de 15 minutos diarios te ayudará a familiarizarte con los diferentes resonadores del cuerpo y realizándose de forma paulatina, pero constante, notarás que tu voz comienza a tomar más resonancia.',
+    //     ],
+    //     'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    // },
     'Letra R I': {
         'title': 'Soy un motor',
         'theme': 'Letra R',
