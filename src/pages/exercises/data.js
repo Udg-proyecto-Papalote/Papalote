@@ -432,21 +432,22 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
-    'Respiración I':{
-        'title': 'Respiración diafragmática',
-        'theme': 'Respiración',
-        'type': 'Video/Gif',
-        'image' : 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727585833/eyihsru7qfrzoblireny.jpg',
-        "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
-        "content": "Respiración diafragmática enseña a respirar desde el diafragma, mejorando el control de la respiración y optimizando la emisión de la voz.",
-        'excercise': [
-            'Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.',
-            'Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).',
-            'Exhala lentamente por la boca, vaciando completamente los pulmones. Siente cómo tu abdomen baja.',
-            'Repetir: Repite este proceso durante 5-10 minutos cada día.'
-        ],
-        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu respiración. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
-    },
+    // TODO: Diseño pendiente
+    // 'Respiración I':{
+    //     'title': 'Respiración diafragmática',
+    //     'theme': 'Respiración',
+    //     'type': 'Video/Gif',
+    //     'image' : 'https://res.cloudinary.com/dd3znbbxc/image/upload/v1727585833/eyihsru7qfrzoblireny.jpg',
+    //     "instructions": "Encuentra un lugar cómodo y tranquilo para realizar este ejercicio, permitiéndote concentrarte en tu respiración. Asegúrate de que el ambiente sea relajado, y si es posible, cierra los ojos para centrarte más en tus sensaciones.",
+    //     "content": "Respiración diafragmática enseña a respirar desde el diafragma, mejorando el control de la respiración y optimizando la emisión de la voz.",
+    //     'excercise': [
+    //         'Posición Inicial: Siéntate o acuéstate en una posición cómoda con una mano en el pecho y la otra en el abdomen.',
+    //         'Inhalar: Inhala lentamente por la nariz, asegurándose de que el aire llegue hasta el diafragma (tu abdomen debería levantarse más que el pecho).',
+    //         'Exhala lentamente por la boca, vaciando completamente los pulmones. Siente cómo tu abdomen baja.',
+    //         'Repetir: Repite este proceso durante 5-10 minutos cada día.'
+    //     ],
+    //     'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu respiración. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    // },
     'Vocalización I':{
         'title': 'De aire a sonido',
         'theme': 'Vocalización',
