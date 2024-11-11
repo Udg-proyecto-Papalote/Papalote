@@ -519,6 +519,20 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Vocalización V':{
+        'title': 'Vocalización con ingreso de consonantes',
+        'theme': 'Vocalización',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286159/ad60wf4pyua0l5u8skls.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes letras con claridad y precisión. Esforzarse por mantener el sonido claro de cada vocal. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        "content": "Vocalización con ingreso de consonantes se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'words': [
+            ['BLA, BLE, BLI, BLO, BLU', 'CLA, CLE, CLI, CLO, CLU', 'ELA, ELE, ELI, ELO, ELU', 'FLA, FLE, FLI, FLO, FLU', 'GLA, GLE, GLI, GLO, GLU', 'ILA, ILE, ILI, ILO, ILU', 'LA, LE, LI, LO LU', 'MA, ME, MI, MO, MU', 'NALA, NELE, NILI, NOLO, NULU', 'OLA, OLE, OLI, OLO, OLU', 'TLA, TLE, TLI, TLO, TLU', 'ULA, ULE, ULI, ULO, ULU'],
+            ['AMIGO', 'LECHE', 'MIRA', 'PASO', 'LEGO', 'TIRA', 'DELGADO', 'ERA', 'RISA', 'PAN', 'MESA', 'DIJE', 'CASA', 'PERO', 'CÁLIDO', 'TIENE', 'PELIGROSO', 'PERRO', 'NIÑO', 'BAÑO', 'REMO', 'AIRE', 'ALMA', 'LEJOS', 'PAISANO', 'CAUSA', 'PEINE', 'PIEDRA', 'PÁJARO', 'BELGA', 'VINO', 'AMADOR', 'TENEDOR', 'TESTIGO', 'PATO', 'BOCA', 'MAMA', 'TIERRA', 'TIGRE', 'LUNA', 'LLUVIA', 'JUEGO', 'CAJON', 'EXAMEN']
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
         'theme': 'Palabras de difícil pronunciación',
@@ -590,6 +604,23 @@ export const exercises = {
         'trabalenguas': [
             ['LAS ON-DAS SO-NO-RAS SE PRO-DU-CEN CUAN-DO UN CUER-PO VI-BRA RÁ-PI-DA-MEN-TE. ', 'LA FRE-CUEN-CIA ES EL NÚ-ME-RO DE VI-BRA-CIO-NES U O-SCI-LA-CIO-NES COM-PLE-TAS QUE E-FEC-TÚ-AN POR SE-GUN-DO. ', 'LA IN-TEN-SI-DAD DE UN SO-NI-DO ES-TÁ RE-LA-CIO-NA- DA CON EL CUA-DRA-DO DE LA AM-PLI-TUD DE PRE-SIÓN DE LA ON-DA SO-NO-RA. ', 'UN SO-NI-DO GRA-VE CO-RRES-PON-DE A ON-DA SO-NO-RA CON FRE-CUEN-CIA BA-JA, ', 'MIEN-TRAS QUE LOS SO-NI-DOS A-GU-DOS SE CO-RRES-PON-DEN CON FRE-CUEN-CIAS MÁS AL-TAS.'],
             ['LA AR-TI-CU-LA-CIÓN ES CRU-CIAL EN LA CO-MU-NI-CA-CIÓN E-FEC-TI-VA, ', 'YA QUE PER-MI-TE QUE LAS PA-LA-BRAS SE PRO-NUN-CIEN CON CLA-RI-DAD Y PRE-CI-SIÓN, ', 'FA-CI-LI-TAN-DO LA COM-PREN-SIÓN EN-TRE HA-BLAN-TES. ', 'U-NA AR-TI-CU-LA-CIÓN A-DE-CUA-DA A-SE-GU-RA QUE EL MEN-SA-JE LLE-GUE DE MA-NE-RA CLA-RA Y SIN MA-LEN-TEN-DI-DOS, ', 'LO CUAL ES VI-TAL EN DIS-CUR-SOS,', ' PRE-SEN-TA-CIO-NES Y CON-VER-SA-CIO-NES CO-TI-DIA-NAS. ', 'A-DE-MÁS, U-NA BUE-NA AR-TI-CU-LA-CIÓN RE-FLE-JA PRO-FE-SIO-NA-LIS-MO Y CON-FIAN-ZA, AS-PEC-TOS IM-POR-TAN-TES EN EN-TOR-NOS LA-BO-RA-LES Y A-CA-DÉ-MI-COS.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Articulación III': {
+        'title': 'Consonantes L - M - N - D - T',
+        'theme': 'Articulación',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286308/pspz25ljbcu8wwilyhtc.m4a',
+        'instructions': 'Lee en voz alta las siguientes oraciones, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
+        "content": "Consonantes L - M - N - D - T se enfoca en la pronunciación clara de cada sílaba, mejorando la articulación y la precisión en el habla.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees las palabras. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
+        'words': [
+            ['LALALALALALA', 'LELELELELELE', 'LILILILILILI', 'LOLOLOLOLOLO', 'LULULULULULULU'],
+            ['MAMAMAMAMAMA', 'MEMEMEMEMEME', 'MIMIMIMIMIMI', 'MOMOMOMOMOMO', 'MUMUMUMUMUMUMU'],
+            ['NANANANANANA', 'NENENENENENE', 'NINININININI', 'NONONONONONO', 'NUNUNUNUNUNUNU'],
+            ['DADADADADADA', 'DEDEDEDEDEDE', 'DIDIDIDIDIDI', 'DODODODODODO', 'DUDUDUDUDUDUDU'],
+            ['TATATATATATA', 'TETETETETETE', 'TITITITITITI', 'TOTOTOTOTOTO', 'TUTUTUTUTUTUTU']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
