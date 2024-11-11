@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/joy"
+import { Grid } from "@mui/joy"
 import { StreakDays } from "../components/Inicio/StreakDays"
 import { ProgressBar } from "../components/Inicio/ProgressBar"
 import { StartDiagnostic } from "../components/Inicio/StartDiagnostic"
