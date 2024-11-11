@@ -352,6 +352,27 @@ export const exercises = {
     //     ],
     //     'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     // },
+    'Impostación III':{
+        'title': 'Leer con sentimiento',
+        'theme': 'Impostación',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286433/acdrmwhlaiyz0v59z0bz.m4a',
+        'instructions': 'Leer el siguiente poema. Leer en un tono bajo, lento y con voz profunda y emotiva.',
+        "content": 'Leer con sentimiento es un ejercicio de impostación diseñado para ayudar a mejorar la resonancia y el control vocal, centrándose en la respiración diafragmática y la relajación vocal.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el poema de forma profunda y emotiva. Repite al menos dos veces por sesión, buscando mejorar tu impostación con cada repetición.',
+        'excercise': [
+            'POEMA XX - PABLO NERUDA',
+            'En las noches como ésta la tuve entre mis brazos. La besé tantas veces bajo el cielo infinito. Ella me quiso, a veces yo también la quería. Cómo no haber amado sus grandes ojos fijos.',
+            'Puedo escribir los versos más tristes esta noche. Pensar que no la tengo. Sentir que la he perdido. Oír la noche inmensa, más inmensa sin ella. Y el verso cae al alma como al pasto el rocío.',
+            'Qué importa que mi amor no pudiera guardarla. La noche está estrellada y ella no está conmigo. Eso es todo. A lo lejos alguien canta. A lo lejos. Mi alma no se contenta con haberla perdido.',
+            'Como para acercarla mi mirada la busca. Mi corazón la busca, y ella no está conmigo. La misma noche que hace blanquear los mismos árboles. Nosotros, los de entonces, ya no somos los mismos.',
+            'Ya no la quiero, es cierto, pero cuánto la quise. Mi voz buscaba el viento para tocar su oído. De otro. Será de otro. Como antes de mis besos. Su voz, su cuerpo claro. Sus ojos infinitos.',
+            'Ya no la quiero, es cierto, pero tal vez la quiero. Es tan corto el amor, y es tan largo el olvido.',
+            'Porque en noches como ésta la tuve entre mis brazos, mi alma no se contenta con haberla perdido.',
+            'Aunque éste sea el último dolor que ella me causa, y éstos sean los últimos versos que yo le escribo.'
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación.',
+    },
     'Letra R I': {
         'title': 'Soy un motor',
         'theme': 'Letra R',
@@ -430,6 +451,19 @@ export const exercises = {
             'Contar con cuantos soplidos inflamos un globo. Con cada vez que se practica se deben de acortar la cantidad de soplidos.',
             'Asegúrate de usar respiración diafragmática, tomando aire profundo desde el abdomen antes de cada soplada. Mantén los labios firmes alrededor de la boquilla del globo y exhala de manera controlada y potente. Con cada práctica, enfócate en aumentar la cantidad de aire que expulsas en cada soplada, reduciendo así el número total de sopladas. Mantén la calma y la concentración para evitar la fatiga rápida.',
         ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
+    },
+    'Potencia III': {
+        'title': 'Potencia con la letra U',
+        'theme': 'Potencia',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286364/tmi1ntzefyk3vuyjcj3a.m4a',
+        "instructions": "Toma aire de forma diafragmática (repasa los ejercicios de Respiración si tienes alguna duda). Emite el sonido de la letra U y ve aumentando la potencia con cada segundo que pase hasta que ya no puedas contener la respiración.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu potencia con cada repetición.',
+        "content": "Potencia con la letra U ayuda a aumentar la potencia de la voz al mejorar la capacidad de soplar con más fuerza y en menos respiraciones.",
+        'exercise': [
+            'Solo hay que escuchar el audio y repetir'
+       ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
     // TODO: Diseño pendiente
@@ -519,6 +553,20 @@ export const exercises = {
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
+    'Vocalización V':{
+        'title': 'Vocalización con ingreso de consonantes',
+        'theme': 'Vocalización',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286159/ad60wf4pyua0l5u8skls.m4a',
+        'instructions': 'Pronuncia en voz alta las siguientes letras con claridad y precisión. Esforzarse por mantener el sonido claro de cada vocal. Hazlo a un ritmo moderado, asegurándote de articular correctamente cada vocal.',
+        "content": "Vocalización con ingreso de consonantes se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
+        'words': [
+            ['BLA, BLE, BLI, BLO, BLU', 'CLA, CLE, CLI, CLO, CLU', 'ELA, ELE, ELI, ELO, ELU', 'FLA, FLE, FLI, FLO, FLU', 'GLA, GLE, GLI, GLO, GLU', 'ILA, ILE, ILI, ILO, ILU', 'LA, LE, LI, LO LU', 'MA, ME, MI, MO, MU', 'NALA, NELE, NILI, NOLO, NULU', 'OLA, OLE, OLI, OLO, OLU', 'TLA, TLE, TLI, TLO, TLU', 'ULA, ULE, ULI, ULO, ULU'],
+            ['AMIGO', 'LECHE', 'MIRA', 'PASO', 'LEGO', 'TIRA', 'DELGADO', 'ERA', 'RISA', 'PAN', 'MESA', 'DIJE', 'CASA', 'PERO', 'CÁLIDO', 'TIENE', 'PELIGROSO', 'PERRO', 'NIÑO', 'BAÑO', 'REMO', 'AIRE', 'ALMA', 'LEJOS', 'PAISANO', 'CAUSA', 'PEINE', 'PIEDRA', 'PÁJARO', 'BELGA', 'VINO', 'AMADOR', 'TENEDOR', 'TESTIGO', 'PATO', 'BOCA', 'MAMA', 'TIERRA', 'TIGRE', 'LUNA', 'LLUVIA', 'JUEGO', 'CAJON', 'EXAMEN']
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
     'Palabras de difícil pronunciación I': {
         'title': 'Parte 1',
         'theme': 'Palabras de difícil pronunciación',
@@ -586,10 +634,27 @@ export const exercises = {
         'type': 'trabalenguas',
         'instructions': 'Lee en voz alta el siguiente texto, que está separado en sílabas, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
         "content": "Leer separado en sílabas se enfoca en la pronunciación clara de cada sílaba, mejorando la articulación y la precisión en el habla.",
-        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto en silencio. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees el texto. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'trabalenguas': [
             ['LAS ON-DAS SO-NO-RAS SE PRO-DU-CEN CUAN-DO UN CUER-PO VI-BRA RÁ-PI-DA-MEN-TE. ', 'LA FRE-CUEN-CIA ES EL NÚ-ME-RO DE VI-BRA-CIO-NES U O-SCI-LA-CIO-NES COM-PLE-TAS QUE E-FEC-TÚ-AN POR SE-GUN-DO. ', 'LA IN-TEN-SI-DAD DE UN SO-NI-DO ES-TÁ RE-LA-CIO-NA- DA CON EL CUA-DRA-DO DE LA AM-PLI-TUD DE PRE-SIÓN DE LA ON-DA SO-NO-RA. ', 'UN SO-NI-DO GRA-VE CO-RRES-PON-DE A ON-DA SO-NO-RA CON FRE-CUEN-CIA BA-JA, ', 'MIEN-TRAS QUE LOS SO-NI-DOS A-GU-DOS SE CO-RRES-PON-DEN CON FRE-CUEN-CIAS MÁS AL-TAS.'],
             ['LA AR-TI-CU-LA-CIÓN ES CRU-CIAL EN LA CO-MU-NI-CA-CIÓN E-FEC-TI-VA, ', 'YA QUE PER-MI-TE QUE LAS PA-LA-BRAS SE PRO-NUN-CIEN CON CLA-RI-DAD Y PRE-CI-SIÓN, ', 'FA-CI-LI-TAN-DO LA COM-PREN-SIÓN EN-TRE HA-BLAN-TES. ', 'U-NA AR-TI-CU-LA-CIÓN A-DE-CUA-DA A-SE-GU-RA QUE EL MEN-SA-JE LLE-GUE DE MA-NE-RA CLA-RA Y SIN MA-LEN-TEN-DI-DOS, ', 'LO CUAL ES VI-TAL EN DIS-CUR-SOS,', ' PRE-SEN-TA-CIO-NES Y CON-VER-SA-CIO-NES CO-TI-DIA-NAS. ', 'A-DE-MÁS, U-NA BUE-NA AR-TI-CU-LA-CIÓN RE-FLE-JA PRO-FE-SIO-NA-LIS-MO Y CON-FIAN-ZA, AS-PEC-TOS IM-POR-TAN-TES EN EN-TOR-NOS LA-BO-RA-LES Y A-CA-DÉ-MI-COS.'],
+        ],
+        'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
+    },
+    'Articulación III': {
+        'title': 'Consonantes L - M - N - D - T',
+        'theme': 'Articulación',
+        'type': 'escuchayrepite',
+        'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286308/pspz25ljbcu8wwilyhtc.m4a',
+        'instructions': 'Lee en voz alta las siguientes oraciones, prestando especial atención a la pronunciación clara de cada sílaba. Mantén un ritmo lento y constante para asegurarte de articular correctamente cada sonido.',
+        "content": "Consonantes L - M - N - D - T se enfoca en la pronunciación clara de cada sílaba, mejorando la articulación y la precisión en el habla.",
+        'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees las palabras. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
+        'words': [
+            ['LALALALALALA', 'LELELELELELE', 'LILILILILILI', 'LOLOLOLOLOLO', 'LULULULULULULU'],
+            ['MAMAMAMAMAMA', 'MEMEMEMEMEME', 'MIMIMIMIMIMI', 'MOMOMOMOMOMO', 'MUMUMUMUMUMUMU'],
+            ['NANANANANANA', 'NENENENENENE', 'NINININININI', 'NONONONONONO', 'NUNUNUNUNUNUNU'],
+            ['DADADADADADA', 'DEDEDEDEDEDE', 'DIDIDIDIDIDI', 'DODODODODODO', 'DUDUDUDUDUDUDU'],
+            ['TATATATATATA', 'TETETETETETE', 'TITITITITITI', 'TOTOTOTOTOTO', 'TUTUTUTUTUTUTU']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
