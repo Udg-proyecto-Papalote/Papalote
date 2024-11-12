@@ -1,4 +1,4 @@
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import {
     logInWithEmailAndPassword,
     logoutFirebase,
@@ -9,6 +9,7 @@ import { checkingCredentials, login, logout } from "./authSlice";
 import { clearUser, loadingProfile, setAllDiagnostics, setExercises, setProfile } from "./userSlice";
 import { startNewProfile } from "./userThunks";
 import { FirebaseDB } from "../../firebase/config";
+import { setStreakDays } from "./streakDaysSlice";
 
 export const checkingAuthentication = (email, password) => {
     return async (dispatch) => {
@@ -90,6 +91,9 @@ export const startLogInWithEmailAndPassword = ({ email, password }) => {
             const diagnostics = await loadDiagnostics(uid);
             dispatch(setAllDiagnostics(diagnostics));
 
+            const streakDays = await loadStreakDays(uid);
+            dispatch(setStreakDays(streakDays));
+
             dispatch(setProfile(profile));
         } else {
             dispatch(logout({ errorMessage: result.message }));
@@ -131,11 +135,31 @@ const loadDiagnostics = async (uid) => {
     const docSnap = await getDoc(diagnosticsRef);
 
     if (docSnap.exists()) {
-        console.log(docSnap.data(), { ...docSnap.data() });
-        
         return { ...docSnap.data() };
     } else {
         return {};
+    }
+}
+
+const loadStreakDays = async (uid) => {
+    const streakDaysRef = doc(FirebaseDB, `streakDays/${uid}`);
+    const docSnap = await getDoc(streakDaysRef);
+
+    if (docSnap.exists() && docSnap.data().days && docSnap.data().streak) {
+        return docSnap.data();
+    } else {
+        // Create reference to the document
+        const streakDaysRef = doc(FirebaseDB, `streakDays/${uid}`);
+
+        // Set the document
+        await setDoc(streakDaysRef, {
+            streak: 1,
+            days: [new Date().toDateString()]
+        });
+        return {
+            streak: 1,
+            days: [new Date().toDateString()]
+        };
     }
 }
 

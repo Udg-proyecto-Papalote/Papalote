@@ -3,20 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 export const streakDaysSlice = createSlice({
     name: "streakDays",
     initialState: {
-        streakDays: [],
-        days: 0,
+        streak: 0,
+        days: []
     },
 
     reducers: {
         setStreakDays: (state, action) => {
-            state.streakDays = action.payload;
-            state.days = action.payload.length;
+            state.streak = action.payload.streak;
+            state.days = action.payload.days;
         },
-        addStreakDay: (state, action) => {
-            state.streakDays = [...state.streakDays, action.payload];
-            state.days += 1;
+        incrementStreak: (state) => {
+            state.days = [...new Set([...state.days, new Date().toDateString()])];
         },
     },
 });
 
-export const { setStreakDays, addStreakDay } = streakDaysSlice.actions;
+export const { setStreakDays, incrementStreak } = streakDaysSlice.actions;

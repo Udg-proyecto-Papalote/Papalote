@@ -2,16 +2,40 @@ import { Card, CardContent, Grid, Step, StepIndicator, Stepper, Typography } fro
 import PropTypes from "prop-types";
 import { Heart } from "@phosphor-icons/react"
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { incrementStreak } from "../../store/slices/streakDaysSlice";
+import { startSaveStreakDays } from "../../store/slices/userThunks";
 
 const weekDays = ['Lunes', 'Martes', 'Xiércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
 
-export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles', 'Jueves' ] }) => {
+const mapDays = {
+    'Lunes': 'Mon',
+    'Martes': 'Tue',
+    'Xiércoles': 'Wed',
+    'Jueves': 'Thu',
+    'Viernes': 'Fri',
+    'Sábado': 'Sat',
+    'Domingo': 'Sun'
+}
+
+export const StreakDays = () => {
     const today = new Date().getDay()
     const [days, setDays] = useState(weekDays)
-    const isDay = (day) => lastWeek.includes(day)
+
+    const { days: streakDays } = useSelector(state => state.streakDays)
+    const dispatch = useDispatch()
+
+    const isDay = (day) => {
+        return streakDays.some(d => d.includes(mapDays[day]))
+    }
 
     useEffect(() => {
         setDays([...weekDays.slice(today), ...weekDays.slice(0, today)])
+
+        if(streakDays[streakDays.length - 1] !== new Date().toDateString()) {
+            dispatch(incrementStreak())
+            dispatch(startSaveStreakDays())
+        }
         // eslint-disable-next-line
     }, [])
 
@@ -22,7 +46,7 @@ export const StreakDays = ({ streakDays = 12, lastWeek = ['Lunes', 'Miércoles',
                     <Heart size={85} weight="duotone" color="#fb7185" />
                     <CardContent>
                         <Typography level="title-lg">Racha de días</Typography>
-                        <Typography level="h1">{streakDays} días</Typography>
+                        <Typography level="h1">{streakDays.length} días</Typography>
                     </CardContent>
                 </CardContent>
                 <CardContent orientation="horizontal">

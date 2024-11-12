@@ -67,3 +67,17 @@ export const startSaveDiagnostics = (diagnostic) => {
         dispatch(setDiagnostics(diagnostic));
     }
 }
+
+export const startSaveStreakDays = () => {
+    return async (dispatch, getState) => {
+        const { auth, streakDays } = getState();
+        const { uid } = auth;
+        const { streak, days } = streakDays;
+        
+        const streakDaysRef = doc(FirebaseDB, `streakDays/${uid}`);
+        await setDoc(streakDaysRef, {
+            streak,
+            days
+        });
+    };
+}
