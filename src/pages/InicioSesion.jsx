@@ -46,8 +46,6 @@ export const InicioSesion = () => {
     } = useForm(formData, formValidations);
 
 	const handleClick = () => {
-		console.log(formState)
-
 		if(!isFormValid) {
 
 			!!emailValid && setIsEmailValid(false)
