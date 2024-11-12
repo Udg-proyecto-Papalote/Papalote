@@ -3,12 +3,12 @@ import { userSlice } from "./slices/userSlice";
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import { authSlice } from './slices/authSlice';
-import { streakDaysSlice } from './slices/streakDaysSlice';
+// import { streakDaysSlice } from './slices/streakDaysSlice';
 
 const reducers = combineReducers({
     user: userSlice.reducer,
     auth: authSlice.reducer,
-    streakDays: streakDaysSlice.reducer
+    // streakDays: streakDaysSlice.reducer
 })
 
 const persistConfig = {
