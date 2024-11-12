@@ -45,8 +45,8 @@ export const StreakDays = () => {
                 <CardContent orientation="horizontal" sx={{mb:2, mt:1}}>
                     <Heart size={85} weight="duotone" color="#fb7185" />
                     <CardContent>
-                        <Typography level="title-lg">Racha de días</Typography>
-                        <Typography level="h1">{streakDays.length} días</Typography>
+                        <Typography level="title-lg">Racha</Typography>
+                        <Typography level="h1">{streakDays.length} {streakDays.length === 1 ? 'día' : 'días'} </Typography>
                     </CardContent>
                 </CardContent>
                 <CardContent orientation="horizontal">
