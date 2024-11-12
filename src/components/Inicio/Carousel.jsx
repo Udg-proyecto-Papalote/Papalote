@@ -28,7 +28,7 @@ const slides = Object.entries(exercises).map(([key, exercise]) => ({
     content: exercise.content || exercise.instructions || '',
     icon: getIconByType(exercise.type),
     location: `/ejercicios/${exercise.type}/${key.replace(/\s+/g, '%20')}`
-}));
+})).sort(() => Math.random() - 0.5).slice(0, 8);
 
 const Carousel = () => {
     const navigate = useNavigate();
