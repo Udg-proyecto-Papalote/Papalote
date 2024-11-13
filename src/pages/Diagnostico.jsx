@@ -110,7 +110,7 @@ export const Diagnostico = () => {
 
     const sendDiagnostic = (ok) => {
         setAudioURL(null);
-        ok ? navigate('/diagnostico/resultado') : navigate('/diagnostico');
+        ok && navigate('/diagnostico/resultado');// : navigate('/diagnostico');
         !ok && setOpen(true);
     }
 
