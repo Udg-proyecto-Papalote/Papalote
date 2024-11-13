@@ -14,8 +14,19 @@ const colors = {
 
 const ExerciseCard = ({ title, level = 0, theme = '', type = '', id = '' }) => {
     return (
-        <Link to={`/ejercicios/${type}/${id}`} style={{ textDecoration: 'none' }}>
-            <Card orientation='horizontal' sx={{ ":hover": { transition: "background-color 0.5s ease-in-out", backgroundColor: 'var(--joy-palette-neutral-softHoverBg)' }, 'mouse': 'cursor', flex: 1 }}>
+        <Link to={`/ejercicios/${type}/${id}`} style={{ textDecoration: 'none', height: '100%' }}>
+            <Card 
+                orientation="horizontal" 
+                sx={{
+                    transition: "background-color 0.5s ease-in-out",  // Apply transition to the base style
+                    ":hover": { backgroundColor: 'var(--joy-palette-neutral-softHoverBg)', border:
+                    '1px solid', borderColor: 'var(--joy-palette-neutral-400)'
+                     }, // Only background color changes on hover
+                    cursor: 'pointer', 
+                    flex: 1 ,
+                    height: '100%'
+                }}
+            >
                 <CircularProgress size="lg" determinate value={level}>
                     {level.toFixed(0)} %
                 </CircularProgress>

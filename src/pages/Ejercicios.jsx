@@ -130,52 +130,54 @@ export const Ejercicios = () => {
 						</Accordion>
 					</AccordionGroup>
 				</Grid>
-				{recomendaciones.length > 1 &&
+				{recomendaciones.length > 1 && (
 					<>
 						<Grid item xs={12}>
 							<Typography level="h2" my={2}>✨ Ejercicios recomendados</Typography>
 						</Grid>
-						<Grid container xs={12} mx={1} spacing={1}>
-							{
-								recommendedExercises.length > 0 && recommendedExercises.map((key) => {
+						<Grid container xs={12} mx={1} spacing={1} alignItems="stretch">
+							{recommendedExercises.length > 0 &&
+								recommendedExercises.map((key) => {
 									const exercise = exercises[key];
 									return (
-										<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }} key={key}>
+										<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column', flex: 1 }} key={key}>
 											<ExerciseCard
 												title={exercise.title}
 												id={key}
 												theme={exercise.theme}
 												type={exercise.type}
 												level={isClicked(key) ? exercisesDone[key].percentage : 0}
+												sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}  // Ensure card takes full height of Grid item
 											/>
 										</Grid>
-									)
-								})
-							}
+									);
+								})}
 						</Grid>
 						<Grid item xs={12}>
 							<Typography level="h2" my={2}>🍃 Otros ejercicios</Typography>
 						</Grid>
-					</>}
-				<Grid container xs={12}>
-					{
-						Object.keys(filteredExercises).map((key) => {
-							const exercise = exercises[key];
-							return (
-								(!recomendaciones.includes(key) || key === 'Respiración I') &&
-								<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column' }} key={key}>
+					</>
+				)}
+				<Grid container xs={12} alignItems="stretch">
+					{Object.keys(filteredExercises).map((key) => {
+						const exercise = exercises[key];
+						return (
+							(!recomendaciones.includes(key) || key === 'Respiración I') && (
+								<Grid item xs={12} sm={6} md={6} lg={6} sx={{ display: 'flex', flexDirection: 'column', flex: 1 }} key={key}>
 									<ExerciseCard
 										title={exercise.title}
 										id={key}
 										theme={exercise.theme}
 										type={exercise.type}
 										level={isClicked(key) ? exercisesDone[key].percentage : 0}
+										sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}  // Ensure card takes full height of Grid item
 									/>
 								</Grid>
 							)
-						})
-					}
+						);
+					})}
 				</Grid>
+
 			</Grid>
 		</Grid>
 	)
