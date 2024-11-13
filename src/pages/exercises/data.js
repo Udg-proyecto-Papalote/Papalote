@@ -355,13 +355,14 @@ export const exercises = {
     'Impostación III':{
         'title': 'Leer con sentimiento',
         'theme': 'Impostación',
-        'type': 'escuchayrepite',
+        'type': 'trabalenguas',
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286433/acdrmwhlaiyz0v59z0bz.m4a',
         'instructions': 'Leer el siguiente poema. Leer en un tono bajo, lento y con voz profunda y emotiva.',
         "content": 'Leer con sentimiento es un ejercicio de impostación diseñado para ayudar a mejorar la resonancia y el control vocal, centrándose en la respiración diafragmática y la relajación vocal.',
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días, hasta que logres pronunciar el poema de forma profunda y emotiva. Repite al menos dos veces por sesión, buscando mejorar tu impostación con cada repetición.',
-        'excercise': [
-            'POEMA XX - PABLO NERUDA',
+        'poema': true,
+        'trabalenguas': [
+            ['POEMA XX - PABLO NERUDA','\n\n', 
             'En las noches como ésta la tuve entre mis brazos. La besé tantas veces bajo el cielo infinito. Ella me quiso, a veces yo también la quería. Cómo no haber amado sus grandes ojos fijos.',
             'Puedo escribir los versos más tristes esta noche. Pensar que no la tengo. Sentir que la he perdido. Oír la noche inmensa, más inmensa sin ella. Y el verso cae al alma como al pasto el rocío.',
             'Qué importa que mi amor no pudiera guardarla. La noche está estrellada y ella no está conmigo. Eso es todo. A lo lejos alguien canta. A lo lejos. Mi alma no se contenta con haberla perdido.',
@@ -369,7 +370,7 @@ export const exercises = {
             'Ya no la quiero, es cierto, pero cuánto la quise. Mi voz buscaba el viento para tocar su oído. De otro. Será de otro. Como antes de mis besos. Su voz, su cuerpo claro. Sus ojos infinitos.',
             'Ya no la quiero, es cierto, pero tal vez la quiero. Es tan corto el amor, y es tan largo el olvido.',
             'Porque en noches como ésta la tuve entre mis brazos, mi alma no se contenta con haberla perdido.',
-            'Aunque éste sea el último dolor que ella me causa, y éstos sean los últimos versos que yo le escribo.'
+            'Aunque éste sea el último dolor que ella me causa, y éstos sean los últimos versos que yo le escribo.']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu impostación.',
     },

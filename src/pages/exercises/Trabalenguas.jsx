@@ -9,16 +9,24 @@ import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { startSaveTrackExercises } from "../../store/slices/userThunks"
 
+const colors = [
+    ['#5E4DB2', '#9F8FEF'],
+    ['#0055CC', '#388BFF'],
+    ['#4d7c0f', '#a3e635'],
+]
+
 export const Trabalenguas = () => {
     const { id } = useParams()
 
     const { exercisesDone } = useSelector((state) => state.user)
-    
-    const { title, theme, instructions, recommendations, trabalenguas = [' '], ending } = exercises[id]
+
+    const { title, theme, instructions, recommendations, trabalenguas = [' '], ending, poema = false } = exercises[id]
     const [trabalengua, setTrabalengua] = useState(!!exercisesDone[id]?.maxLevel ? exercisesDone[id].maxLevel : 0)
     const [maxTrabalengua, setMaxTrabalengua] = useState(0)
     const [ready, setReady] = useState(false)
     const { mode } = useColorScheme()
+
+    const [randomNumber, setRandomNumber] = useState(0)
 
     // is rendered
     const [isRendered, setIsRendered] = useState(false)
@@ -26,7 +34,7 @@ export const Trabalenguas = () => {
     const dispatch = useDispatch()
 
     const handleMouseOver = (e) => {
-        e.target.style.backgroundColor = mode === 'dark' ? '#4d7c0f' : '#a3e635'
+        e.target.style.backgroundColor = mode === 'dark' ? colors[randomNumber][0] : colors[randomNumber][1]
         e.target.style.borderRadius = '5px'
         // Transition
         e.target.style.transition = 'ease 0.2s'
@@ -45,14 +53,15 @@ export const Trabalenguas = () => {
         setMaxTrabalengua(Math.max(maxTrabalengua, trabalengua))
         setTrabalengua(Math.min(Math.max(trabalengua, 0), trabalenguas.length - 1))
     }, [trabalengua]);
-    
+
     useEffect(() => {
         trabalenguas.length > 0 &&
-        dispatch(startSaveTrackExercises({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
+            dispatch(startSaveTrackExercises({ name: id, maxLevel: maxTrabalengua, percentage: (100 * (maxTrabalengua) / trabalenguas.length) }))
     }, [maxTrabalengua]);
 
     useEffect(() => {
         setIsRendered(true)
+        setRandomNumber(Math.floor(Math.random() * colors.length))
     }, [])
 
     return (
@@ -80,15 +89,24 @@ export const Trabalenguas = () => {
                             </Select>
                         </CardContent>
                         <CardContent sx={{ py: 2, px: 5 }}>
-                            <Typography textAlign='center'>
-                                {
+                            {
+                                !poema ?
+                                    <Typography textAlign='center'>
+                                        {
+                                            trabalenguas[trabalengua]?.length > 0 && trabalenguas[trabalengua].map((sentence, index) => (
+                                                <Typography fontSize={{ sm: 22, lg: 26, xs: 20, md: 24 }} letterSpacing={1} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} key={index} textAlign='justify'>
+                                                    {sentence}
+                                                </Typography>
+                                            ))
+                                        }
+                                    </Typography> :
                                     trabalenguas[trabalengua]?.length > 0 && trabalenguas[trabalengua].map((sentence, index) => (
-                                        <Typography fontSize={{ sm: 22, lg: 26, xs: 20, md: 24 }} letterSpacing={1} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} key={index} textAlign='justify'>
+                                        <Typography fontSize={{ sm: 22, lg: 26, xs: 20, md: 24 }} letterSpacing={1} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} key={index} textAlign='center'>
                                             {sentence}
                                         </Typography>
                                     ))
-                                }
-                            </Typography>
+
+                            }
                         </CardContent>
                     </Card>
                     <Stack direction='row' alignItems='center' gap={2}>
