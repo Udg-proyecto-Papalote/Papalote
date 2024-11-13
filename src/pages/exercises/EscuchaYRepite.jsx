@@ -18,7 +18,7 @@ const Audio = ({ src }) => {
 
 const WordToSay = ({ word, mode }) => {
     return (
-        <Typography level='h2' textAlign='center' sx={{ textDecoration: 'underline', textDecorationColor: mode === 'dark' ? '#db2777' : '#ec4899', textDecorationThickness: 5, overflowWrap: "break-word" }} px={2} >
+        <Typography level='h2' textAlign='center' sx={{ textDecoration: 'underline', textDecorationColor: mode === 'dark' ? '#db2777' : '#ec4899', textDecorationThickness: 5, wordBreak: 'break-all' }} px={2}>
             {word}
         </Typography>
     )
