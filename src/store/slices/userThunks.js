@@ -44,7 +44,7 @@ export const startSaveTrackExercises = (exercise) => {
         const { uid } = getState().auth;
         const { exercisesDone } = getState().user;
         const exercisesRef = doc(FirebaseDB, `exercises/${uid}`);
-        console.log(exercisesRef, exercise, exercisesDone);
+        // console.log(exercisesRef, exercise, exercisesDone);
         
         await setDoc(exercisesRef, { ...exercisesDone,
             [exercise.name]: {
