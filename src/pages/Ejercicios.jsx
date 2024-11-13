@@ -1,8 +1,9 @@
-import { Accordion, AccordionDetails, accordionDetailsClasses, AccordionGroup, AccordionSummary, accordionSummaryClasses, Checkbox, Grid, List, ListItem, Typography } from "@mui/joy"
+import { Accordion, AccordionDetails, accordionDetailsClasses, AccordionGroup, AccordionSummary, accordionSummaryClasses, Checkbox, Grid, Input, List, ListItem, Stack, Typography } from "@mui/joy"
 import ExerciseCard from "../components/Ejercicios/ExerciseCard"
 import { exercises } from "./exercises/data";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { Search } from "@mui/icons-material";
 
 
 const themes = ['Dicción', 'Letra R', 'Impostación', 'Caudal y control de aire', 'Vocalización', 'Palabras de difícil pronunciación', 'Potencia', 'Articulación', 'Respiración']
@@ -19,10 +20,12 @@ export const Ejercicios = () => {
 
 	const [value, setValue] = useState(themes)
 
+	const [search, setSearch] = useState('')
+
 	useEffect(() => {
 		// set filtered exercises depending on the themes selected. 'exercises' is the object with all the exercises
 		const filtered = Object.keys(exercises).reduce((acc, key) => {
-			if (value.some((theme) => exercises[key].theme.includes(theme))) {
+			if (value.some((theme) => exercises[key].theme.includes(theme) && exercises[key].title.toLowerCase().includes(search.toLowerCase()))) {
 				acc[key] = exercises[key]
 			}
 			return acc
@@ -32,14 +35,14 @@ export const Ejercicios = () => {
 		// set recommended exercises depending on the themes selected
 		const recommended = Object.keys(exercises).map((key) => {
 			const exercise = exercises[key]
-			if (recomendaciones.includes(key) && value.some((theme) => exercise.theme.includes(theme))) {
+			if (recomendaciones.includes(key) && value.some((theme) => exercise.theme.includes(theme) && exercise.title.toLowerCase().includes(search.toLowerCase()))) {
 				return key
 			}
 		}).filter((key) => key !== undefined)
-		
+
 		setRecommendedExercises(recommended)
 
-	}, [value])
+	}, [value, search])
 
 	useEffect(() => {
 		setIsRendered(true)
@@ -53,7 +56,10 @@ export const Ejercicios = () => {
 		isRendered && <Grid mx={4} my={3} >
 			<Grid container spacing={2} lg={8} lgOffset={2} md={12} sx={{ flexGrow: 1, alignItems: 'stretch', justifyItems: 'center' }}>
 				<Grid item xs={12}>
-					<Typography level="h1" my={2}>🌀 Ejercicios</Typography>
+					<Stack direction='row' justifyContent='space-between' alignItems='baseline'>
+						<Typography level="h1" my={2}>🌀 Ejercicios</Typography>
+						<Input placeholder="Busca un ejercicio..." variant="outlined" startDecorator={<Search />} size='lg' onChange={(e) => setSearch(e.target.value)} />
+					</Stack>
 					<AccordionGroup
 						variant="outlined"
 						transition="0.2s"
