@@ -1,7 +1,7 @@
 import { Button, FormControl, FormLabel, Grid, Input, Option, Select } from "@mui/joy"
 import { ArrowRight } from "@phosphor-icons/react"
 import PropTypes from 'prop-types'
-import { useContext, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { UserContext } from "../../router/AuthRoutes"
 
 const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
@@ -19,6 +19,8 @@ export const FormPart2 = ({ prevFunction, nextFunction }) => {
 			nextFunction()
 		}
 	}
+
+	const inputRef = useRef < HTMLInputElement | null > (null);
 
 	return (
 		<Grid className='animate__fadeInRight'>
@@ -46,7 +48,14 @@ export const FormPart2 = ({ prevFunction, nextFunction }) => {
 				<Grid sm={6} xs={12} md={12} lg={6} xl={6} gap={1}>
 					<FormControl>
 						<FormLabel sx={{ fontWeight: 'bold' }}>Edad</FormLabel>
-						<Input type='number' name="edad" variant="soft" placeholder="Escribe tu edad" value={age} onChange={(e) => setAge(e.target.value)} />
+						<Input type='number' name="edad" variant="soft" placeholder="Escribe tu edad" value={age} onChange={(e) => setAge(e.target.value)} slotProps={{
+							input: {
+								ref: inputRef,
+								min: 18,
+								max: 100,
+								step: 1,
+							},
+						}} />
 					</FormControl>
 				</Grid>
 			</Grid>
