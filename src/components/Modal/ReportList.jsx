@@ -34,7 +34,7 @@ const ReportList = ({ open, onClose }) => {
 
                             return (
                                 <ListItem
-                                    key={report.id}
+                                    key={report.id + report.date}
                                     onClick={() => onClick(report)}
                                     sx={{
                                         cursor: 'pointer',
