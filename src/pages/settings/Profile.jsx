@@ -10,7 +10,7 @@ const genres = ['Mujer', 'Hombre', 'No binario', 'Otro']
 const Texto = ({ children }) => <Typography ml={0} mb={1} level='body-sm' sx={{ color: 'var(--joy-palette-text-tertiary)', fontWeight: 600 }}>{children}</Typography>
 
 const Profile = () => {
-    const { name, gender } = useSelector(state => state.user)
+    const { name, gender, email } = useSelector(state => state.user)
     const [userGender, setUserGender] = useState(gender)
     const [userName, setUserName] = useState(name)
 
@@ -30,6 +30,10 @@ const Profile = () => {
     return (
         <>
             <Stack spacing={2}>
+                <FormControl>
+                    <Texto>Correo electrónico</Texto>
+                    <Input placeholder='Nombre' defaultValue={email} disabled/>
+                </FormControl>
                 <FormControl>
                     <Texto>Nombre</Texto>
                     <Input placeholder='Nombre' defaultValue={name} onChange={(e) => setUserName(e.target.value)} />
