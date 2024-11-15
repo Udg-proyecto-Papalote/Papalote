@@ -172,5 +172,6 @@ export const startLogOut = () => {
             })
         );
         dispatch(clearUser());
+        dispatch(setStreakDays({ streak: 0, days: [] }));
     };
 };
