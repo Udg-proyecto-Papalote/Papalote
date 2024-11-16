@@ -31,9 +31,8 @@ const ReportList = ({ open, onClose }) => {
 
                             const colors = ['primary', 'success', 'warning'];
                             const color = colors[index % colors.length]; // Ciclar entre los tres colores 
-
                             return (
-                                <ListItem
+                                key !== 'null' && <ListItem
                                     key={report.id + report.date}
                                     onClick={() => onClick(report)}
                                     sx={{
