@@ -1,5 +1,5 @@
 import { TextDecrease, TextIncrease, FormatBold, InfoOutlined, Info, Error, FormatColorFill } from "@mui/icons-material";
-import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip, Button, Snackbar, useColorScheme } from "@mui/joy"
+import { Grid, Typography, Card, Stack, IconButton, CardContent, ButtonGroup, Alert, Chip, Tooltip, Button, Snackbar, useColorScheme, Badge } from "@mui/joy"
 import { useMediaQuery } from "@mui/material";
 import { PlayCircle, Record } from "@phosphor-icons/react"
 import { useEffect, useRef, useState } from "react";
@@ -108,6 +108,9 @@ export const Diagnostico = () => {
     // snackbar
     const [open, setOpen] = useState(false);
 
+    // badge
+    const [invisible, setInvisible] = useState(true);
+
     // previous reports modal
     const [openReports, setOpenReports] = useState(false);
 
@@ -185,6 +188,7 @@ export const Diagnostico = () => {
     const isError = localStorage.getItem('error');
     useEffect(() => {
         if (isError) {
+            setInvisible(false);
             setOpen(true);
             localStorage.removeItem('error');
         }
@@ -212,8 +216,10 @@ export const Diagnostico = () => {
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
                 {Object.keys(diagnostics).length > 0 &&
-                    <Grid xs={4} xsOffset={8} justifyContent='flex-end' mb={2}>
-                        <Button size='sm' variant='outlined' fullWidth color='success' onClick={() => setOpenReports(true)}>Resultados anteriores</Button>
+                    <Grid xs={2} xsOffset={10} justifyContent='flex-end' mb={2}>
+                        <Badge color='danger' size="lg" invisible={invisible}>
+                            <Button size='sm' variant='outlined' fullWidth color='success' onClick={() => setOpenReports(true)}>Resultados anteriores</Button>
+                        </Badge>
                     </Grid>}
                 <Card sx={{
                     width: '100%',
@@ -258,17 +264,17 @@ export const Diagnostico = () => {
                             <Grid overflow='auto' height='100%' px={2}>
                                 <CardContent>
                                     <Typography level='h3' fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}
-                                    onMouseLeave={isHighlighted ? handleMouseLeave : null}
-                                    onMouseOver={isHighlighted ? handleMouseOver : null}
+                                        onMouseLeave={isHighlighted ? handleMouseLeave : null}
+                                        onMouseOver={isHighlighted ? handleMouseOver : null}
                                     >Aquí no es Miami</Typography>
                                     <Typography textAlign='justify'>
                                         {
                                             text.split('\n').map((sentence, index) =>
                                                 sentence === '' ? <br key={index} /> :
-                                                <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize} 
-                                                    onMouseOver={isHighlighted ? handleMouseOver : null}
-                                                    onMouseLeave={isHighlighted ? handleMouseLeave : null}
-                                                >{sentence}</Typography>
+                                                    <Typography key={index} fontWeight={isBold ? 'bold' : ''} fontSize={fontSize}
+                                                        onMouseOver={isHighlighted ? handleMouseOver : null}
+                                                        onMouseLeave={isHighlighted ? handleMouseLeave : null}
+                                                    >{sentence}</Typography>
                                             )
                                         }
                                     </Typography>
@@ -322,7 +328,8 @@ export const Diagnostico = () => {
                     </Button>
                 }
             >
-                Hubo un error al procesar tu diagnóstico, por favor inténtalo de nuevo.
+                Hubo un error al procesar tu diagnóstico, por favor inténtalo de nuevo. 
+                Da click en `Resultados anteriores` para reintentar.
             </Snackbar>
             <ReportList open={openReports} onClose={() => setOpenReports(false)} />
         </>
