@@ -1,13 +1,14 @@
 import { DialogContent, DialogTitle, Modal, ModalDialog, List, ListItem, Typography, Box, ModalClose, Button, IconButton } from "@mui/joy";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentDiagnostic } from "../../store/slices/userSlice";
+import { setCurrentDiagnostic, setDiagnosticLoading, setUrl } from "../../store/slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Delete } from "@mui/icons-material";
-import { startDeleteFailedAudio } from "../../store/slices/userThunks";
+import { startDeleteFailedAudio, startSaveFailedAudios } from "../../store/slices/userThunks";
+import axios from "axios";
 
 
-const FailedAudios = ({ audios }) => {
+const FailedAudios = ({ audios, handleClickFailedAudio }) => {
 
     const [open, setOpen] = useState(false);
     const [currentAudio, setCurrentAudio] = useState(null);
@@ -19,6 +20,47 @@ const FailedAudios = ({ audios }) => {
     const handleDelete = () => {
         dispatch(startDeleteFailedAudio(currentAudioKey));
         setOpen(false);
+    }
+
+    const doDiagnostic = async (url, gender) => {
+
+        const data = {
+            url,
+            genero: gender.toLowerCase()
+        };
+
+        try {
+            dispatch(setDiagnosticLoading(true));
+            const response = await axios.post('http://127.0.0.1:5000/diagnostico', data, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                timeout: 2000000 // Timeout de 2000 segundos (2000000 ms)
+            });
+            // console.log('Diagnóstico procesado:', response);
+            dispatch(setCurrentDiagnostic({ ...response.data, ...data, date: new Date().toLocaleString() }));
+            dispatch(startDeleteFailedAudio(currentAudioKey));
+            return response;
+        } catch (error) {
+            console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
+            // sendRecording(false);
+            localStorage.setItem('error', true);
+            dispatch(startSaveFailedAudios(data));
+            throw error;
+        }
+    };
+
+    const handleDiagnostic = async (url) => {
+        try {
+            handleClickFailedAudio(true);
+            await doDiagnostic(url, 'mujer');
+            dispatch(setUrl(url));
+            dispatch(setDiagnosticLoading(false));
+            setOpen(false);
+        } catch (error) {
+            dispatch(setDiagnosticLoading(false));
+            console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
+        }
     }
     return (
         <>
@@ -49,7 +91,7 @@ const FailedAudios = ({ audios }) => {
                                     }}>
                                         <Box sx={{ display: 'row', gap: 1, alignItems: 'center' }}>
                                             <Typography level="title-sm">
-                                                Audio {index + 1}
+                                                Audio
                                             </Typography>
                                             <Typography level="body-sm">
                                                 {audio.date}
@@ -82,7 +124,7 @@ const FailedAudios = ({ audios }) => {
                             Tu navegador no soporta el elemento audio.
                         </audio>
                         <Box sx={{ display: 'flex', gap: 1, justifyContent: 'flex-end', marginTop: 2 }}>
-                            <Button color="primary" variant="outlined" size="sm">
+                            <Button color="primary" variant="outlined" size="sm" onClick={() => handleDiagnostic(currentAudio.url)}>
                                 Reintentar diagnóstico
                             </Button>
                             <IconButton color='danger' variant="outlined" onClick={handleDelete}><Delete /></IconButton>
@@ -102,6 +144,12 @@ const ReportList = ({ open, onClose }) => {
     const onClick = (report) => {
         dispatch(setCurrentDiagnostic(report));
         navigate('/diagnostico/resultado');
+    }
+
+    const handleClickFailedAudio = (ok) => {
+        if (ok) {
+            navigate('/diagnostico/resultado');
+        }
     }
     return (
         <Modal
@@ -144,7 +192,7 @@ const ReportList = ({ open, onClose }) => {
                                         color: color
                                     }}>
                                         <Typography level="title-sm" sx={{ color: color }}>
-                                            Diagnóstico {index + 1}
+                                            Diagnóstico
                                         </Typography>
                                         <Typography level="body-sm" sx={{ color: 'text.secondary' }}>
                                             Fecha: {report.date}
@@ -156,7 +204,7 @@ const ReportList = ({ open, onClose }) => {
                     </List>
                 </DialogContent>{
                     Object.keys(failedAudios).length > 0 &&
-                    <FailedAudios audios={failedAudios} />
+                    <FailedAudios audios={failedAudios} handleClickFailedAudio={handleClickFailedAudio}/>
                 }
             </ModalDialog>
         </Modal>

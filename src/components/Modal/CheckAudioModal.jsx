@@ -33,7 +33,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
 
         try {
             dispatch(setDiagnosticLoading(true));
-            const response = await axios.post('http://localhost:5000/diagnostico', data, {
+            const response = await axios.post('http://127.0.0.1:5000/diagnostico', data, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -93,7 +93,6 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             setLoading(false);
             console.error('Error uploading audio:', error);
             dispatch(setDiagnosticLoading(false));
-            localStorage.setItem('audioURL', audioURL);
             localStorage.setItem('error', true);
             sendRecording(false);
         }
