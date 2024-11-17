@@ -21,7 +21,8 @@ const initialState = {
         loading: false,
         date: null
     },
-    diagnostics: {}
+    diagnostics: {},
+    failedAudios: {},
 };
 
 export const userSlice = createSlice({
@@ -87,6 +88,25 @@ export const userSlice = createSlice({
         setDate: (state, action) => {
             state.currentDiagnostic.date = action.payload;
         },
+        setFailedAudio: (state, action) => {
+            const url = action.payload.url;
+            // Extract the name of the audio file from the URL
+            const audioName = url.split('/').pop().split('.').shift();
+            // Extract the date from the audio file name
+            
+            state.failedAudios= {
+                ...state.failedAudios,
+                [audioName]: {
+                    ...action.payload,
+                }
+            }
+        },
+        setFailedAudios: (state, action) => {
+            state.failedAudios = action.payload;
+        },
+        deleteFailedAudio : (state, action) => {
+            delete state.failedAudios[action.payload];
+        },
 
         loadingProfile: (state) => {
             state.loading = true;
@@ -112,10 +132,11 @@ export const userSlice = createSlice({
                 date: null
             };
             state.diagnostics = {};
+            state.failedAudios = {};
         }
     }
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser, setExercises, setAllDiagnostics
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser, setExercises, setAllDiagnostics, setFailedAudios, setFailedAudio, deleteFailedAudio
 } = userSlice.actions;
