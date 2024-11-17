@@ -88,8 +88,7 @@ export const userSlice = createSlice({
         setDate: (state, action) => {
             state.currentDiagnostic.date = action.payload;
         },
-        setFailedAudios: (state, action) => {
-            // url is like http://res.cloudinary.com/ds8hfmrth/video/upload/v1730586875/papalote/lztkkl6h2vqhg3n1nhzk.webm
+        setFailedAudio: (state, action) => {
             const url = action.payload.url;
             // Extract the name of the audio file from the URL
             const audioName = url.split('/').pop().split('.').shift();
@@ -101,6 +100,12 @@ export const userSlice = createSlice({
                     ...action.payload,
                 }
             }
+        },
+        setFailedAudios: (state, action) => {
+            state.failedAudios = action.payload;
+        },
+        deleteFailedAudio : (state, action) => {
+            delete state.failedAudios[action.payload];
         },
 
         loadingProfile: (state) => {
@@ -133,5 +138,5 @@ export const userSlice = createSlice({
 });
 
 export const { setNameEmailPassword, setAge, setIllness, setGender, setTrabalenguasExercise,
-    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser, setExercises, setAllDiagnostics, setFailedAudios
+    setCurrentDiagnostic, setDiagnostics, setDiagnosticLoading, setUrl, setDate, setNameGender, setProfile, loadingProfile, clearUser, setExercises, setAllDiagnostics, setFailedAudios, setFailedAudio, deleteFailedAudio
 } = userSlice.actions;

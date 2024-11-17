@@ -1,6 +1,7 @@
 import { collection, doc, setDoc } from "firebase/firestore";
 import { FirebaseDB } from "../../firebase/config";
-import { loadingProfile, setDiagnostics, setFailedAudios, setNameGender, setProfile, setTrabalenguasExercise } from "./userSlice";
+import { deleteFailedAudio, loadingProfile, setDiagnostics, setFailedAudio, setFailedAudios, setNameGender, setProfile, setTrabalenguasExercise } from "./userSlice";
+import { set } from "lodash";
 
 export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
     return async (dispatch, getState) => {
@@ -87,9 +88,23 @@ export const startSaveFailedAudios = (failedAudio) => {
         const { auth, user } = getState();
         const { uid } = auth;
         const { failedAudios } = user;
+
+        const today = new Date().toLocaleString();
         
         const failedAudiosRef = doc(FirebaseDB, `failedAudios/${uid}`);
-        dispatch(setFailedAudios(failedAudio));
-        await setDoc(failedAudiosRef, { ...failedAudios, [failedAudio.url.split('/').pop().split('.').shift()]: failedAudio });
+        dispatch(setFailedAudio({ ...failedAudio, ['date']: today }));
+        await setDoc(failedAudiosRef, { ...failedAudios, [failedAudio.url.split('/').pop().split('.').shift()]: { ...failedAudio, ['date']: today } });
     }
 };
+
+export const startDeleteFailedAudio = (audio) => {
+    return async (dispatch, getState) => {
+        const { auth, user } = getState();
+        const { uid } = auth;
+        const { failedAudios } = user;
+        const { [audio]: value, ...rest } = failedAudios;
+        const failedAudiosRef = doc(FirebaseDB, `failedAudios/${uid}`);
+        dispatch(deleteFailedAudio(audio));
+        await setDoc(failedAudiosRef, { ...rest });
+    }
+}
