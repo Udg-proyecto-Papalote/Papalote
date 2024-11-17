@@ -110,8 +110,7 @@ export const Diagnostico = () => {
 
     const sendDiagnostic = (ok) => {
         setAudioURL(null);
-        ok && navigate('/diagnostico/resultado');// : navigate('/diagnostico');
-        !ok && setOpen(true);
+        ok ? navigate('/diagnostico/resultado') : navigate('/diagnostico');
     }
 
     // rich text
@@ -126,6 +125,15 @@ export const Diagnostico = () => {
     const clickOnIncrease = () => {
         setFontSize(Math.min(fontSize + 2, 40));
     }
+
+    const isError = localStorage.getItem('error');
+    useEffect(() => {
+        if (isError) {
+            setOpen(true);
+            localStorage.removeItem('error');
+        }
+    }, [isError]);
+
 
     return (
         <>

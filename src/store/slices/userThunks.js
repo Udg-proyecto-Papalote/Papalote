@@ -1,6 +1,6 @@
 import { collection, doc, setDoc } from "firebase/firestore";
 import { FirebaseDB } from "../../firebase/config";
-import { loadingProfile, setDiagnostics, setNameGender, setProfile, setTrabalenguasExercise } from "./userSlice";
+import { loadingProfile, setDiagnostics, setFailedAudios, setNameGender, setProfile, setTrabalenguasExercise } from "./userSlice";
 
 export const startNewProfile = ({ email, name, illness, gender, age, uid }) => {
     return async (dispatch, getState) => {
@@ -81,3 +81,15 @@ export const startSaveStreakDays = () => {
         });
     };
 }
+
+export const startSaveFailedAudios = (failedAudio) => {
+    return async (dispatch, getState) => {
+        const { auth, user } = getState();
+        const { uid } = auth;
+        const { failedAudios } = user;
+        
+        const failedAudiosRef = doc(FirebaseDB, `failedAudios/${uid}`);
+        dispatch(setFailedAudios(failedAudio));
+        await setDoc(failedAudiosRef, { ...failedAudios, [failedAudio.url.split('/').pop().split('.').shift()]: failedAudio });
+    }
+};

@@ -4,8 +4,10 @@ import { ArrowCounterClockwise, Checks } from '@phosphor-icons/react';
 import axios from 'axios';
 import { Cloudinary } from 'cloudinary-core';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentDiagnostic, setDiagnosticLoading, setUrl } from '../../store/slices/userSlice';
+import { startSaveFailedAudios } from '../../store/slices/userThunks';
 
 const cloudName = 'ds8hfmrth';
 const presetName = 'papalote';
@@ -44,6 +46,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
         } catch (error) {
             console.error('Error al procesar el diagnóstico:', error.response ? error.response.data : error.message);
             sendRecording(false);
+            dispatch(startSaveFailedAudios(data));
             throw error;
         }
     };
@@ -83,13 +86,15 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             setLoading(false);
             sendRecording(true); // Send the transformed .wav URL
 
-            const diagnosticResponse = await doDiagnostic(wavURL);
+            await doDiagnostic(wavURL);
             dispatch(setDiagnosticLoading(false));
             dispatch(setUrl(response.data.url || wavURL));
         } catch (error) {
             setLoading(false);
             console.error('Error uploading audio:', error);
             dispatch(setDiagnosticLoading(false));
+            localStorage.setItem('audioURL', audioURL);
+            localStorage.setItem('error', true);
             sendRecording(false);
         }
     };
@@ -141,7 +146,7 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                                             Volver a grabar
                                         </Button>
                                         <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg"
-                                            disabled={time < 120}
+                                            // disabled={time < 120}
                                         >
                                             Enviar diagnóstico
                                         </Button>
@@ -153,6 +158,16 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
             </ModalDialog>
         </Modal>
     );
+};
+
+// PropTypes
+CheckAudioModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    deleteRecording: PropTypes.func.isRequired,
+    sendRecording: PropTypes.func.isRequired,
+    audioRef: PropTypes.object.isRequired,
+    audioURL: PropTypes.string.isRequired,
+    time: PropTypes.number.isRequired
 };
 
 export default CheckAudioModal;
