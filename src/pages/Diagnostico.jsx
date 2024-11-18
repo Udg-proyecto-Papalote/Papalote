@@ -216,7 +216,7 @@ export const Diagnostico = () => {
         <>
             <Grid lg={8} lgOffset={2} md={8} mdOffset={2} mx={5}>
                 {Object.keys(diagnostics).length > 0 &&
-                    <Grid xs={2} xsOffset={10} justifyContent='flex-end' mb={2}>
+                    <Grid mb={2}>
                         <Badge color='danger' size="lg" invisible={invisible}>
                             <Button size='sm' variant='outlined' fullWidth color='success' onClick={() => setOpenReports(true)}>Resultados anteriores</Button>
                         </Badge>
