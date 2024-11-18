@@ -6,7 +6,7 @@ import {
     signInWithGoogle,
 } from "../../firebase/providers";
 import { checkingCredentials, login, logout } from "./authSlice";
-import { clearUser, loadingProfile, setAllDiagnostics, setExercises, setProfile } from "./userSlice";
+import { clearUser, loadingProfile, setAllDiagnostics, setExercises, setFailedAudios, setProfile } from "./userSlice";
 import { startNewProfile } from "./userThunks";
 import { FirebaseDB } from "../../firebase/config";
 import { setStreakDays } from "./streakDaysSlice";
@@ -94,6 +94,9 @@ export const startLogInWithEmailAndPassword = ({ email, password }) => {
             const streakDays = await loadStreakDays(uid);
             dispatch(setStreakDays(streakDays));
 
+            const failedAudios = await loadFailedAudios(uid);
+            dispatch(setFailedAudios(failedAudios));
+
             dispatch(setProfile(profile));
         } else {
             dispatch(logout({ errorMessage: result.message }));
@@ -160,6 +163,17 @@ const loadStreakDays = async (uid) => {
             streak: 1,
             days: [new Date().toDateString()]
         };
+    }
+}
+
+const loadFailedAudios = async (uid) => {
+    const failedAudiosRef = doc(FirebaseDB, `failedAudios/${uid}`);
+    const docSnap = await getDoc(failedAudiosRef);
+
+    if (docSnap.exists()) {
+        return docSnap.data();
+    } else {
+        return {};
     }
 }
 
