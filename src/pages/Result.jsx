@@ -24,7 +24,6 @@ const MyPieChart = () => {
 
     const dispatch = useDispatch();
 
-
     const areas = ['Respiración', !buena_diccion ? 'Dicción' : '', !buena_modulacion ? 'Modulación' : '', tono_voz !== 'moderado' ? 'Tono' : ''].filter((area) => area !== '');
 
     useEffect(() => {
@@ -33,6 +32,9 @@ const MyPieChart = () => {
             dispatch(startSaveDiagnostics(currentDiagnostic));
         }
     }, [loading]);
+
+    // Validación y mapeo del valor de tono_voz
+    const tonoValido = ['grave', 'moderado', 'agudo'].includes(tono_voz) ? tono_voz : 'moderado';  // Se valida que tono_voz sea uno de los tres valores
 
     return (
         loading ? <LoadingReport /> :
@@ -68,8 +70,9 @@ const MyPieChart = () => {
                     </Card>
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
+                    {/* Aquí se pasa el valor validado de tono_voz */}
                     <PieChartWithNeedle title={<Title title='Tono' icon={<Equalizer />} />}
-                        value={tono_voz.includes('moderado') ? 'moderado' : tono_voz.includes('bajo') ? 'grave' : 'agudo'}
+                        value={tonoValido}  // Pasamos el valor ya validado
                     />
                     <Card sx={{ mt: 2 }}>
                         <Title title='Pronunciación' icon={<ChatRounded />} />

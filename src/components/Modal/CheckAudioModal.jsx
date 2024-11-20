@@ -16,7 +16,9 @@ const cld = new Cloudinary({ cloud_name: cloudName });
 const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audioURL, time }) => {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
-    const { gender } = useSelector(state => state.user);
+    
+    // Obtener el estado de `gender` desde Redux
+    const { gender } = useSelector((state) => state.user);
 
     const urlToBlob = async (url) => {
         const response = await fetch(url);
@@ -24,11 +26,10 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
         return blob;
     };
 
-    const doDiagnostic = async (audioURL) => {
-
+    const doDiagnostic = async (audioURL, gender) => {
         const data = {
             url: audioURL,
-            genero: gender.toLowerCase()
+            genero: gender.toLowerCase() // Aquí estamos usando el `gender` pasado como argumento
         };
 
         try {
@@ -57,21 +58,22 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
         try {
             setLoading(true);
 
-            // Convert URL of the recorded audio into Blob
+            // Convertir la URL del audio grabado en Blob
             const audioBlob = await urlToBlob(audioURL);
 
-            // Create FormData and add the .webm audio Blob
+            // Crear FormData y agregar el archivo de audio .webm
             const formData = new FormData();
             formData.append('file', audioBlob, 'audio.webm');
-            formData.append('upload_preset', presetName); // Replace with your Cloudinary upload preset
+            formData.append('upload_preset', presetName); // Reemplazar con tu preset de Cloudinary
 
-            // Upload the audio file to Cloudinary
+            // Subir el archivo de audio a Cloudinary
             const response = await axios.post(
                 `https://api.cloudinary.com/v1_1/${cloudName}/upload`,
                 formData
             );
 
-            console.log('Audio uploaded:', response.data.url);
+            console.log('Audio subido:', response.data.url);
+            console.log('Género enviado:', gender); // Aquí estamos verificando que `gender` tiene el valor correcto
 
             const publicId = response.data.public_id;
 
@@ -81,17 +83,18 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
                 transformation: [{ start_offset: "0", duration: "120" }]
             });
 
-            console.log('Audio in .wav format:', wavURL);
+            console.log('Audio en formato .wav:', wavURL);
 
             setLoading(false);
-            sendRecording(true); // Send the transformed .wav URL
+            sendRecording(true); // Enviar la URL transformada .wav
 
-            await doDiagnostic(wavURL);
+            // Pasar `gender` como argumento a la función `doDiagnostic`
+            await doDiagnostic(wavURL, gender);
             dispatch(setDiagnosticLoading(false));
             dispatch(setUrl(response.data.url || wavURL));
         } catch (error) {
             setLoading(false);
-            console.error('Error uploading audio:', error);
+            console.error('Error al subir el audio:', error);
             dispatch(setDiagnosticLoading(false));
             localStorage.setItem('error', true);
             sendRecording(false);
@@ -99,59 +102,44 @@ const CheckAudioModal = ({ open, deleteRecording, sendRecording, audioRef, audio
     };
 
     return (
-        <Modal open={open}
-            // disableBackdropClick={true}
-            disableEscapeKeyDown={true}
-        >
+        <Modal open={open} disableEscapeKeyDown>
             <ModalDialog variant='outlined' size='lg' sx={{ p: 4 }}>
                 <DialogTitle>Audio grabado</DialogTitle>
-                <DialogContent >
+                <DialogContent>
                     {
-                        loading ?
-                            (
-                                <Stack justifyContent="center" alignItems="center" gap={2}>
-                                    <CircularProgress size="lg" />
-                                    <Typography>Cargando...</Typography>
+                        loading ? (
+                            <Stack justifyContent="center" alignItems="center" gap={2}>
+                                <CircularProgress size="lg" />
+                                <Typography>Cargando...</Typography>
+                            </Stack>
+                        ) : (
+                            <>
+                                {
+                                    time < 120 && (
+                                        <Alert color='danger' variant='soft' sx={{ mb: 1 }} startDecorator={<Warning />}>
+                                            <Typography level='title-md' color='error'>Audio demasiado corto. El audio debe durar al menos 2 minutos.</Typography>
+                                        </Alert>
+                                    )
+                                }
+                                <Typography level='body-lg'>
+                                    Comprueba que el audio grabado sea claro y audible.
+                                </Typography>
+                                <Typography mb={3} level='body-lg'>
+                                    Si no es así, puedes volver a grabar el audio.
+                                </Typography>
+                                <Stack justifyContent="center" alignItems="center" mb={2}>
+                                    <audio ref={audioRef} src={audioURL} controls />
                                 </Stack>
-                            )
-                            :
-                            (
-                                <>
-                                    {
-                                        time < 120 && (
-                                            <Alert color='danger' variant='soft' sx={{ mb: 1 }} startDecorator={<Warning />}>
-                                                <Typography level='title-md' color='error'>Audio demasiado corto. El audio debe durar al menos 2 minutos.</Typography>
-                                            </Alert>
-                                        )
-                                    }
-                                    <Typography level='body-lg'>
-                                        Comprueba que el audio grabado sea claro y audible.
-
-                                    </Typography>
-                                    <Typography mb={3} level='body-lg'>
-                                        Si no es así, puedes volver a grabar el audio.
-                                    </Typography>
-                                    <Stack justifyContent="center"
-                                        alignItems="center" mb={2}>
-                                        <audio ref={audioRef} src={audioURL} controls />
-                                    </Stack>
-                                    <Stack
-                                        direction={{ sm: 'column', md: 'row' }}
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        gap={2}
-                                    >
-                                        <Button startDecorator={<ArrowCounterClockwise size={32} />} onClick={deleteRecording} sx={{ borderRadius: '100px' }} color='neutral' variant='outlined' size='lg'>
-                                            Volver a grabar
-                                        </Button>
-                                        <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg"
-                                            // disabled={time < 120}
-                                        >
-                                            Enviar diagnóstico
-                                        </Button>
-                                    </Stack>
-                                </>
-                            )
+                                <Stack direction={{ sm: 'column', md: 'row' }} justifyContent="center" alignItems="center" gap={2}>
+                                    <Button startDecorator={<ArrowCounterClockwise size={32} />} onClick={deleteRecording} sx={{ borderRadius: '100px' }} color='neutral' variant='outlined' size='lg'>
+                                        Volver a grabar
+                                    </Button>
+                                    <Button startDecorator={<Checks size={32} />} onClick={uploadAudio} sx={{ borderRadius: '100px' }} color="success" variant="outlined" size="lg">
+                                        Enviar diagnóstico
+                                    </Button>
+                                </Stack>
+                            </>
+                        )
                     }
                 </DialogContent>
             </ModalDialog>
