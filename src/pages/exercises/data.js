@@ -457,13 +457,15 @@ export const exercises = {
     'Potencia III': {
         'title': 'Potencia con la letra U',
         'theme': 'Potencia',
-        'type': 'escuchayrepite',
+        'type': 'leeyrepite',
+        'temporizador': true,
         'audio': 'https://res.cloudinary.com/dd3znbbxc/video/upload/v1731286364/tmi1ntzefyk3vuyjcj3a.m4a',
         "instructions": "Toma aire de forma diafragmática (repasa los ejercicios de Respiración si tienes alguna duda). Emite el sonido de la letra U y ve aumentando la potencia con cada segundo que pase hasta que ya no puedas contener la respiración.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu potencia con cada repetición.',
         "content": "Potencia con la letra U ayuda a aumentar la potencia de la voz al mejorar la capacidad de soplar con más fuerza y en menos respiraciones.",
         'exercise': [
-            'Solo hay que escuchar el audio y repetir'
+            'Escucha el audio',
+            'Repite un par de veces más'
        ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu potencia.'
     },
