@@ -10,11 +10,12 @@ import { useDispatch } from "react-redux"
 import { startSaveTrackExercises } from "../../store/slices/userThunks"
 
 
-const Temporizador = ({ seconds, play }) => {
+const Temporizador = ({ seconds, play, setPlay }) => {
+
     return (
         <CardContent orientation="horizontal" sx={{ justifyContent: 'center', alignItems: 'center' }}>
             <ButtonGroup>
-                <IconButton onClick={() => setPlay(true)} disabled={play} color='primary'>
+                <IconButton onClick={setPlay} disabled={play} color='primary'>
                     <PlayArrow />
                 </IconButton>
             </ButtonGroup>
@@ -27,7 +28,7 @@ const Temporizador = ({ seconds, play }) => {
 
 const Design4 = () => {
     const { id } = useParams()
-    const { title, theme, image, instructions, recommendations, exercise, ending, temporizador } = exercises[id]
+    const { title, theme, image, instructions, recommendations, exercise, ending, temporizador, audio = null } = exercises[id]
 
     const [ready, setReady] = useState(false)
     const [seconds, setSeconds] = useState(0)
@@ -69,9 +70,11 @@ const Design4 = () => {
                                     <Typography level="title-lg">Imita</Typography>
                                 </CardContent>
                                 <CardContent sx={{ alignItems: 'center', flex: 2, gap: 2 }}>
+                                    {audio !== null ?
+                                        <audio controls src={audio} /> :
                                     <AspectRatio ratio={1} sx={{ width: '200px' }} color='none'>
                                         <img src={image} />
-                                    </AspectRatio>
+                                    </AspectRatio>}
                                     <Typography fontWeight={600} fontSize={20} textAlign='center' px={4} fontStyle='italic' mx={4}>
                                         {exercise[0]}
                                     </Typography>
@@ -94,7 +97,7 @@ const Design4 = () => {
                                 </CardContent>
                                 <CardContent sx={{ alignItems: 'center', flex: 2, gap: 2 }}>
                                     {
-                                        temporizador && <Temporizador seconds={seconds} play={play} />
+                                        temporizador && <Temporizador seconds={seconds} play={play} setPlay={() => setPlay(true)}/>
                                     }
                                     <Typography fontWeight={600} fontSize={20} textAlign='center' px={4} fontStyle='italic' mx={4}>
                                         {exercise[1]}
