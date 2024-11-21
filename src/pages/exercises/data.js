@@ -565,8 +565,8 @@ export const exercises = {
         "content": "Vocalización con ingreso de consonantes se enfoca en la pronunciación precisa de las vocales para mejorar la vocalización y la diferenciación de los sonidos.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Repite al menos tres veces por sesión, buscando mejorar tu vocalización en cada repetición.',
         'words': [
-            ['BLA, BLE, BLI, BLO, BLU', 'CLA, CLE, CLI, CLO, CLU', 'ELA, ELE, ELI, ELO, ELU', 'FLA, FLE, FLI, FLO, FLU', 'GLA, GLE, GLI, GLO, GLU', 'ILA, ILE, ILI, ILO, ILU', 'LA, LE, LI, LO LU', 'MA, ME, MI, MO, MU', 'NALA, NELE, NILI, NOLO, NULU', 'OLA, OLE, OLI, OLO, OLU', 'TLA, TLE, TLI, TLO, TLU', 'ULA, ULE, ULI, ULO, ULU'],
-            ['AMIGO', 'LECHE', 'MIRA', 'PASO', 'LEGO', 'TIRA', 'DELGADO', 'ERA', 'RISA', 'PAN', 'MESA', 'DIJE', 'CASA', 'PERO', 'CÁLIDO', 'TIENE', 'PELIGROSO', 'PERRO', 'NIÑO', 'BAÑO', 'REMO', 'AIRE', 'ALMA', 'LEJOS', 'PAISANO', 'CAUSA', 'PEINE', 'PIEDRA', 'PÁJARO', 'BELGA', 'VINO', 'AMADOR', 'TENEDOR', 'TESTIGO', 'PATO', 'BOCA', 'MAMA', 'TIERRA', 'TIGRE', 'LUNA', 'LLUVIA', 'JUEGO', 'CAJON', 'EXAMEN']
+            ['BLA, BLE, BLI, BLO, BLU, ', 'CLA, CLE, CLI, CLO, CLU, ', 'ELA, ELE, ELI, ELO, ELU, ', 'FLA, FLE, FLI, FLO, FLU, ', 'GLA, GLE, GLI, GLO, GLU, ', 'ILA, ILE, ILI, ILO, ILU, ', 'LA, LE, LI, LO LU, ', 'MA, ME, MI, MO, MU, ', 'NALA, NELE, NILI, NOLO, NULU, ', 'OLA, OLE, OLI, OLO, OLU, ', 'TLA, TLE, TLI, TLO, TLU, ', 'ULA, ULE, ULI, ULO, ULU'],
+            ['AMIGO, ', 'LECHE, ', 'MIRA, ', 'PASO, ', 'LEGO, ', 'TIRA, ', 'DELGADO, ', 'ERA, ', 'RISA, ', 'PAN, ', 'MESA, ', 'DIJE, ', 'CASA, ', 'PERO, ', 'CÁLIDO, ', 'TIENE, ', 'PELIGROSO, ', 'PERRO, ', 'NIÑO, ', 'BAÑO, ', 'REMO, ', 'AIRE, ', 'ALMA, ', 'LEJOS, ', 'PAISANO, ', 'CAUSA, ', 'PEINE, ', 'PIEDRA, ', 'PÁJARO, ', 'BELGA, ', 'VINO, ', 'AMADOR, ', 'TENEDOR, ', 'TESTIGO, ', 'PATO, ', 'BOCA, ', 'MAMA, ', 'TIERRA, ', 'TIGRE, ', 'LUNA, ', 'LLUVIA, ', 'JUEGO, ', 'CAJON, ', 'EXAMEN']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu vocalización. Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
@@ -653,11 +653,11 @@ export const exercises = {
         "content": "Consonantes L - M - N - D - T se enfoca en la pronunciación clara de cada sílaba, mejorando la articulación y la precisión en el habla.",
         'recommendations': 'Este ejercicio puede practicarse varias veces al día y durante varios días. Concéntrate en los movimientos precisos de tus labios mientras lees las palabras. Asegúrate de exagerar suavemente la articulación de cada sílaba para mejorar la conciencia de cómo se mueve tu boca. Mantén una postura relajada y presta atención a cómo se mueven los músculos faciales.',
         'words': [
-            ['LALALALALALA', 'LELELELELELE', 'LILILILILILI', 'LOLOLOLOLOLO', 'LULULULULULULU'],
-            ['MAMAMAMAMAMA', 'MEMEMEMEMEME', 'MIMIMIMIMIMI', 'MOMOMOMOMOMO', 'MUMUMUMUMUMUMU'],
-            ['NANANANANANA', 'NENENENENENE', 'NINININININI', 'NONONONONONO', 'NUNUNUNUNUNUNU'],
-            ['DADADADADADA', 'DEDEDEDEDEDE', 'DIDIDIDIDIDI', 'DODODODODODO', 'DUDUDUDUDUDUDU'],
-            ['TATATATATATA', 'TETETETETETE', 'TITITITITITI', 'TOTOTOTOTOTO', 'TUTUTUTUTUTUTU']
+            ['LALALALALALA, ', 'LELELELELELE, ', 'LILILILILILI, ', 'LOLOLOLOLOLO, ', 'LULULULULULULU'],
+            ['MAMAMAMAMAMA, ', 'MEMEMEMEMEME, ', 'MIMIMIMIMIMI, ', 'MOMOMOMOMOMO, ', 'MUMUMUMUMUMUMU'],
+            ['NANANANANANA, ', 'NENENENENENE, ', 'NINININININI, ', 'NONONONONONO, ', 'NUNUNUNUNUNUNU'],
+            ['DADADADADADA, ', 'DEDEDEDEDEDE, ', 'DIDIDIDIDIDI, ', 'DODODODODODO, ', 'DUDUDUDUDUDUDU'],
+            ['TATATATATATA, ', 'TETETETETETE, ', 'TITITITITITI, ', 'TOTOTOTOTOTO, ', 'TUTUTUTUTUTUTU']
         ],
         'ending': 'Recuerda, la práctica constante es clave para el dominio. Cuanto más practiques, más mejorarás tu articulación . Avanza al siguiente nivel solo cuando te sientas completamente seguro de haber realizado este ejercicio con precisión y fluidez.'
     },
