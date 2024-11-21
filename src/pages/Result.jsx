@@ -50,7 +50,7 @@ const MyPieChart = () => {
                 </Grid>
                 <Grid lg={4} md={6} sm={12} xs={12}>
                     {total_palabras_transcritas < 100 ? (
-                        <Card sx={{ mt: 2 }}>
+                        <Card>
                             <Title title='Modulación' icon={<StickyNote2 />} />
                             <Typography level='title-lg' textAlign='center' mb={4}>
                                 Mala modulación:
